@@ -22,11 +22,12 @@ prompts/output use and verification when assembling the final report.
   assumption, not an invented reflection example.
 - Earlier guidance risked treating the five existing folds as a default. The
   user requested genuinely EDA-driven choices. The methodology compared designs
-  and audited actual class/motif/coverage support. Evaluation proposal v1 now
-  recommends retaining the five groups for stated support/training-coverage
-  reasons, with inner stopping and fresh refits. Agreement and execution remain
-  pending. It also requires context/coverage diagnostics and EDA-motivated
-  comparisons, rather than treating the old folds as an automatic choice.
+  and audited actual class/motif/coverage support. Elgin subsequently accepted
+  the five-group methodology. The minimum contract standardises outer splits,
+  fitting boundaries, scores and dataset roles while retaining model freedom.
+  Rotating inner roles and specific EDA comparisons are recommendations, not
+  identical compulsory model-development tasks. Samuel's acknowledgement and
+  new candidate training remain pending.
 - The visual prototype explicitly uses simulated modification scores.
   Inspection confirmed that these cannot become evidence of model performance
   or biological differences. Its full upstream data provenance remains pending.
@@ -35,10 +36,13 @@ prompts/output use and verification when assembling the final report.
   files and training-core hashes were preserved and the receipt discloses the
   change. Git attributes preserve exact received/archive bytes across platforms.
 
-On 15 October, AI helped draft the shared evaluation proposal and Samuel's
-starter context. Public repository visibility was independently checked using
-anonymous GitHub metadata. These are documentation/checking actions, not new
-training or evaluation results. Required shared scoring/role code remains pending.
+On 15 October, AI helped draft the methodology and Samuel's starter context,
+then updated them following Elgin's acceptance. Public visibility was checked
+using anonymous GitHub metadata. AI implemented a common prediction validator/
+scorer with 14 small correctness and failure-case tests, plus optional default
+inner roles. Tests cover PR/AP distinction, joins, fold consistency, score/label
+validation and mean-fold scoring. These are software checks, not new candidate
+performance results. No new training or inference has run in this update.
 
 No AI should fill missing experiments or comparisons with expected results.
 Each contributor checks their section and Elgin reviews the integrated report.

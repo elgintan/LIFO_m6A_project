@@ -4,18 +4,19 @@ NUS DSA4262 team project. We develop two candidate predictors, compare them
 under one evidence-based protocol, and use the selected model to explore m6A
 patterns across the required SG-NEx direct-RNA datasets.
 
-**Current stage: public repository and evaluation proposal v1, 15 October 2026.**
-No new model has been trained under this repository's proposed methodology.
+**Current stage: methodology accepted by Elgin, 15 October 2026.**
+Samuel's acknowledgement has not yet been reported. No new model has been
+trained under this methodology.
 The saved October 7 neural model is a historical starting point. The explorer
 is a prototype: its modification scores are simulated.
 
 ## Start here
 
 1. Read [project context](PROJECT_CONTEXT.md).
-2. Read the [EDA-informed methodology](DATA_METHODOLOGY.md) and concrete
-   [shared evaluation proposal v1](model_evaluation/EVALUATION_PROTOCOL.md).
-   The recommendation retains audited gene groups with an explicit reason;
-   feature/model choices remain flexible. Agreement and execution are pending.
+2. Read the [minimum shared evaluation rules](model_evaluation/SHARED_RULES.md).
+   Use the existing exact gene assignments and common scoring code. Features,
+   architecture and tuning remain independent. The [detailed methodology](model_evaluation/EVALUATION_PROTOCOL.md)
+   and [EDA rationale](DATA_METHODOLOGY.md) provide background.
 3. Open your folder below and follow its README.
 4. Use [contributing instructions](CONTRIBUTING.md) for simple handovers.
 
@@ -52,8 +53,10 @@ remain outside this clean repository.
 
 ## Next actions
 
-Agree the concrete evaluation proposal, implement one checked shared evaluator
-and group-role export, then train the two fresh candidates. Samuel can use the
+Samuel acknowledges the shared rules, verifies his local data against the
+existing fold manifest, then each owner develops a fresh candidate. Use the
+common scorer for five-fold data0 results, freeze/refit on all data0 and
+evaluate on already-exposed data1. Samuel can use the
 [AI starter/context package](model_samuel/AI_START_HERE.md). Candidate comparison and
 the required simple-baseline/m6Anet checks precede selecting one pipeline for
 real SG-NEx predictions. Members 4/5 can prepare inventory, analysis and the

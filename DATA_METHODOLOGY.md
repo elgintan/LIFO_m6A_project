@@ -1,6 +1,6 @@
 # Data methodology for the two model candidates
 
-Status: proposed protocol, 15 October 2026. No new split, training run, cleaning rule or model result has been created under this protocol. The concrete recommendation is now [shared evaluation proposal v1](model_evaluation/EVALUATION_PROTOCOL.md); it remains subject to team agreement and implementation.
+Status: accepted by Elgin on 15 October 2026; Samuel's acknowledgement has not yet been reported. The [minimum shared rules](model_evaluation/SHARED_RULES.md) define the common requirements; [the detailed protocol](model_evaluation/EVALUATION_PROTOCOL.md) provides rationale. Outer assignments are unchanged. No new candidate training or model result has been produced under this methodology.
 
 Elgin and Samuel will build separate candidates. Elgin currently intends to explore neural networks; Samuel may enhance LightGBM. These are starting directions, not restrictions. Both candidates must answer the same prediction question on the same eligible evaluation sites.
 
@@ -25,22 +25,19 @@ The current target is the supplied site-level m6A label. It is not a true label 
 
 Site-read entries are not independent biological replicates. Transcript/gene IDs, dataset identity, processing offsets and fold IDs are metadata for joining and checks, not default predictive inputs. The supplied `start`/`end` columns are not verified biological region annotations.
 
-## Choose the shared evaluation design before training
+## Shared evaluation design
 
 The main development question is how well a learned predictor handles eligible sites from genes excluded from its fitting. Task 2 asks a further question: how predictions vary across SG-NEx samples and how much evidence supports those differences. A gene split alone does not establish transfer to an unseen cell line.
 
 Both candidate models need the same grouping rule and actual assignments. Gene grouping is justified because sites and transcript isoforms from one gene are related. Randomly separating rows can place closely related examples in both training and evaluation.
 
-The recommendation is now **reuse the audited five gene groups for development comparison**, with an inner group for stopping and a fresh four-group refit before scoring the held-out group. This is a proposal, not an executed or agreed change. Both owners retain freedom over their candidate's features, architecture and tuning within the common boundaries.
+Elgin has accepted **reuse of the audited five gene groups for development comparison**, followed by all-data0 refitting and frozen data1 transfer diagnostics. Both owners retain freedom over features, architecture and tuning. Gene-separated inner validation is required when used for selection/stopping; the rotating inner group is an optional common default, followed by a fresh four-group refit. Fixed-duration models can fit the four permitted groups directly. No new fit has run.
 
-The alternatives considered were:
+Use identical outer rotations, train only on permitted data0 groups and keep the held-out assessment fold outside stopping, learned preprocessing and within-round selection. Scores used across development cycles to select models remain development results; previous EDA/model exposure is disclosed.
 
-- **Grouped cross-validation:** train on some gene groups and validate on the remainder, rotating the held-out groups. This uses limited positives efficiently and shows variation between partitions, but costs more training. Compare models on identical rotations. Hyperparameter tuning and early stopping need separate gene groups inside each round's training portion, or a documented fixed setting decided before scoring that round. Scores used to select models are development results.
-- **One fixed gene-grouped training/validation/test allocation:** training learns the model, validation selects settings, and the reserved test is assessed after choices are frozen. This is simpler and cheaper, but one partition may contain too few positives for rare contexts and gives a less stable comparison. Retrospectively separating already explored data does not turn it into a blind independent test.
+Five is a practical evaluation choice: every site obtains a held-out prediction, each assessed fit can use 80% of data0, and the audited groups each contain roughly 24,400 sites and 1,100 positives. Member 1's EDA does not prove five optimal. It informs representation, subgroup checks and interpretation. Do not change assignments independently or replace them in response to poor scores.
 
-The recommendation retains five because every site obtains a held-out prediction, each assessed refit uses 80% of data0, and the audited assessment groups each contain roughly 24,400 sites and 1,100 positives. A single three-way split sacrifices comparison coverage; three folds use smaller assessed training populations. Neither can fix a motif with one positive in the entire dataset. The existing manifest is not being retained merely because it exists. A replacement would require a stated benefit and distinct historical reporting.
-
-A descriptive check of the existing assignments is now complete: [composition audit](eda/split_review/README.md), with gene/class totals, central motif and coverage counts. Overall positive prevalence is balanced, but 8 of 90 motif-by-fold validation groups lack both classes, 38 have fewer than 20 positives, and one training motif/fold has no positive example. These are subgroup-support limitations, not reasons to remove those sites. The audit itself generated no new assignments or model result. The concrete proposal now specifies rotating inner roles, scoring, data1 exposure, subgroup reporting and the final refit. Agree it, check the inner populations and implement shared role/scoring files before either new candidate trains. Do not independently regenerate nominally identical splits.
+A descriptive check of the existing assignments is complete: [composition audit](eda/split_review/README.md), with gene/class totals, central motif and coverage counts. Overall positive prevalence is balanced, but 8 of 90 motif-by-fold validation groups lack both classes, 38 have fewer than 20 positives, and one training motif/fold has no positive example. These are subgroup-support limitations, not reasons to remove those sites. The audit generated no new assignments or model result. The minimum rules link the frozen manifest, optional inner roles and common scorer. Verify local data before training; do not independently regenerate nominally identical splits.
 
 The assignment file should identify dataset/sample, transcript, numeric position, gene, partition/fold and exclusions where relevant. Record input versions, generation rule, seed, counts and checksum. Keep the shared protocol in this document and implementation in shared code; a separate team-wide administration system is unnecessary.
 
@@ -54,11 +51,11 @@ The assignment file should identify dataset/sample, transcript, numeric position
 
 ## Dataset roles and unresolved questions
 
-**data0:** the present labelled development source, with gene IDs. It contains 121,838 sites and 5,475 positive labels. Inspect context and coverage support when deciding the next shared partitions.
+**data0:** HCT116, the labelled development source with gene IDs. It contains 121,838 sites and 5,475 positive labels. Preserve the accepted assignments and inspect context/coverage support for interpretation.
 
-**data1:** 90,810 sites and 6,593 positive labels; already exposed in earlier model comparisons and Member 1's EDA. Only 75,673 sites map to genes through data0, leaving 15,137 sites on 1,019 transcripts unresolved. New site IDs do not prove new genes. Confirm sample/cell line, run, chemistry, preprocessing, assay definition and reference annotation before pooling or claiming independence. A new split cannot erase prior exposure.
+**data1:** HEK293T, 90,810 sites and 6,593 positive labels; already exposed in earlier model comparisons and Member 1's EDA. Only 75,673 sites map to genes through data0, leaving 15,137 sites on 1,019 transcripts unresolved. New site IDs do not prove new genes. The official intermediate leaderboard slides confirm the broad cell-line identity, but exact run, chemistry, preprocessing, assay and annotation provenance remain relevant. A new split cannot erase prior exposure.
 
-**data2:** 1,323 rows, seven fractional-label groups, 189 repeated positions and much higher coverage. Do not round fractions into binary labels, use its transcript IDs as predictors, call rows independent biological replicates, or score all rows with ordinary binary ROC/PR. Official label meaning, construction and possible source-read reuse remain unresolved. A future template grouping would also need to address underlying source dependence.
+**data2:** synthetic sequences, 1,323 rows, seven fractional-label groups, 189 repeated positions and much higher coverage. Do not round fractions into binary labels, use its transcript IDs as predictors, call rows independent biological replicates, or score all rows with ordinary binary ROC/PR. Broad source type is now officially confirmed; fractional-target scoring, detailed construction and possible source-read reuse remain unresolved.
 
 **SG-NEx:** establish sample/run/cell-line/biological-replicate metadata and reference compatibility. Missing sites are not negative sites. Coverage and RNA abundance can change which sites are observed. These application predictions do not become trusted training labels simply because a model produced them.
 

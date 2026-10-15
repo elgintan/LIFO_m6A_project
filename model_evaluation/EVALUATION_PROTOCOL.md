@@ -1,9 +1,11 @@
-# Shared candidate evaluation: proposal v1
+# Shared candidate evaluation: methodology v1
 
-**Status: proposed on 15 October 2026; not yet agreed or executed.** This is
-the recommended common contract for Elgin and Samuel. No new fits, split
-assignments or metrics were produced when writing it. Agree this contract,
-then implement one shared evaluator before running the new comparison.
+**Status: accepted by Elgin on 15 October 2026; Samuel's acknowledgement has
+not yet been reported.** No new candidate has been trained or selected under
+this methodology. The [minimum shared rules](SHARED_RULES.md) define what must
+match; this longer document explains the rationale and recommended checks.
+Model design and tuning remain independent. Existing outer assignments are
+unchanged; [cv_rounds.csv](cv_rounds.csv) supplies optional inner roles.
 
 ## 1. Common question and freedom to develop
 
@@ -22,7 +24,7 @@ prevalence in every assessment population. Keep valid rare, low-coverage and
 unusual sites. Structural problems must be reported and resolved consistently
 before fitting; a model cannot quietly omit difficult assessment sites.
 
-## 2. Recommended split, with an EDA-based reason
+## 2. Accepted outer split, with an EDA-based reason
 
 Reuse the exact [historical gene assignments](../eda/received/shared_folds/data0_folds.csv),
 whose SHA256 is
@@ -55,7 +57,10 @@ owner** for the first full comparison. A shared screening round can reduce
 cost. Record screened changes and the actual work performed; an equal number
 of hyperparameter trials is not necessarily an equal computation budget.
 
-For each assessment group `f = 0, 1, 2, 3, 4`, use this fixed rotation:
+For each assessment group `f = 0, 1, 2, 3, 4`, keep that group outside fitting.
+The following inner rotation is a convenient default, not a requirement to
+use identical tuning algorithms. Another documented inner strategy can be
+used if genes remain separated and the outer assessment group is excluded:
 
 1. Put group `f` aside for assessment. Use group `(f + 1) % 5` for inner
    validation; the other three groups fit the initial model (about 60% of
@@ -71,7 +76,7 @@ For each assessment group `f = 0, 1, 2, 3, 4`, use this fixed rotation:
    on all four non-assessment groups** (about 80%), including refitting their
    preprocessing, for that fixed duration. Score group `f` once and save its
    full-precision predictions. There is no stopping on group `f`.
-4. Repeat for the next `f`. Both owners use these same group roles. Retain all
+4. Repeat for the next `f`. Retain all
    five assessment predictions; each data0 site has exactly one out-of-fold
    prediction, meaning it was excluded from the fit that scored it.
 
@@ -82,9 +87,10 @@ the actual cost. Proposed reference training seed: 2026; a seed does not make
 different libraries or hardware produce identical randomness.
 
 Check inner populations' motif/class support as well as the already audited
-four-group refits before execution. Sparse contexts require a documented
-fallback, not reassignment based on model results. The shared role export and
-checker are still to be implemented.
+four-group refits before using an inner strategy. Sparse contexts require a
+documented fallback, not reassignment based on model results. The supplied
+role file identifies default roles; it does not certify every rare subgroup
+has positive examples. The existing fold verifier checks the outer assignments.
 
 The old Elgin checkpoint was fitted on all data0. **Do not warm-start any of
 these fits from it.** Reusing source/architecture is fine; reusing weights or
@@ -140,14 +146,15 @@ do not claim statistical superiority without suitable evidence. If performance
 is practically unresolved, explain the choice using robustness, reproducibility
 and measured cost rather than declaring a universal winner.
 
-## 5. How Member 1 changes the required evidence
+## 5. How Member 1 guides development and report evidence
 
-The architecture is flexible; these common diagnostics are part of the proposal:
+The architecture is flexible. These are useful shared diagnostic/report ideas,
+not compulsory identical modelling experiments for both owners:
 
 - **Sequence context:** show counts/performance for all 18 central motifs,
   including sparse ones; use the seven-base context where relevant. Pooled
   current direction reverses within many motifs, so test context-dependent
-  signal handling. Include one sequence-only reference and a controlled
+  signal handling. Consider a sequence-only reference and a controlled
   context/signal comparison. Existing Elgin sequence inputs are not a new
   contribution merely because the new report discusses them.
 - **Coverage:** show bins 20-49, 50-99, 100-199, 200-499 and 500+ reads with
@@ -164,8 +171,8 @@ The architecture is flexible; these common diagnostics are part of the proposal:
   weakly supported. Twenty is a display warning, not an eligibility cutoff.
   Do not make a new headline score by averaging only the well-performing motifs.
 
-For a manageable first cycle, each owner supplies two concise comparisons
-motivated by EDA, rather than an exhaustive feature search. Screening-round
+For a manageable first cycle, two concise comparisons motivated by EDA are
+recommended, rather than an exhaustive feature search. Screening-round
 evidence is allowed when clearly labelled; it does not replace the common
 five-round finalist comparison. Small read-
 subsampling checks are optional further evidence: use the same held-out sites
@@ -176,7 +183,9 @@ independent biological replicates.
 
 ## 6. data1, data2 and SG-NEx have different roles
 
-**data1: exposed transfer diagnostic.** Do not use it for fitting, early
+**data1: exposed cross-cell-line transfer diagnostic.** Official intermediate
+leaderboard slides identify data0 as HCT116, data1 as HEK293T and data2 as
+synthetic sequences. Do not use data1 for fitting, early
 stopping, hyperparameter choice or winner selection in this cycle. Nominate
 both final configurations, refit each on all data0 and save/hash both artifacts
 before scoring data1. Report both frozen artifacts on all 90,810 sites, plus
@@ -190,15 +199,17 @@ Its previous evaluation and EDA exposure remain disclosed. If its result
 changes our selection or prompts a revision, say explicitly that it informed
 development; it has not become a blind test again.
 
-Use the median of the five inner-selected stopping counts for each all-data0 refit, with
-the nominated hyperparameters and newly fitted data0 preprocessing. Archive
+If using the supplied inner-stopping default, use the median of the five
+selected stopping counts for each all-data0 refit. Otherwise declare a
+training-duration rule derived within data0. Use nominated hyperparameters
+and newly fitted data0 preprocessing. Archive
 the other candidate for comparison. The selected **single saved pipeline**
 then generates all three required dataset predictions and the SG-NEx outputs;
 do not use out-of-fold scores for data0 and the final artifact for the others
 while claiming all three came from one saved model. Label final-model data0
 metrics as in-sample; they are not the out-of-fold evaluation.
 
-**data2: fractional/template diagnostic pending clarification.** Preserve its
+**data2: synthetic fractional/template diagnostic.** Preserve its
 fractional labels and 189 repeated position/context templates across seven
 groups. Describe scores, matched-template ordering and coverage. Do not round
 fractions into binary targets, compute ordinary binary AUC on all rows, assume
@@ -215,9 +226,12 @@ dashboard scores are simulated and must be replaced before scientific use.
 Choose replicate aggregation and comparable-site populations before drawing
 biological conclusions; do not tune until biological differences disappear.
 
-No independent new final test is established here. If eligible future official
-or external labels become available, check provenance/overlap and reserve them
-from selection. Do not describe a retrospective split as a fresh blind test.
+The official intermediate leaderboard slides announce four additional datasets
+for final ranking, with final-model results also required for the original
+three. Check availability, provenance and overlap; reserve eligible new
+evaluation data from selection. A fresh independent result requires keeping
+its answers and assessment scores outside tuning. A retrospective split does
+not become a fresh blind test.
 
 ## 7. Lightweight handover and next implementation
 
@@ -229,9 +243,10 @@ cost; do not compare timings from different machines as a controlled speed test.
 Keep large checkpoints locally or in agreed storage rather than committing
 every intermediate file. New claims need actual results, including failures.
 
-Next implement one shared assignment-role exporter, prediction validator and
-scorer, test them on small known examples and existing outputs, then start the
-new fits. They do not exist yet under this protocol. Coordinate the required
+The [minimum shared rules](SHARED_RULES.md) link the exact outer manifest,
+default inner roles, common prediction validator/scorer and commands. Scoring
+checks file consistency, not a model's actual training history. New candidate
+training and comparisons remain pending. Coordinate the required
 simple baseline and m6Anet benchmark, documenting pretrained-data overlap and
 any different eligible populations/settings. Historical rounded LightGBM
 metrics are not a fresh controlled baseline.
@@ -245,4 +260,4 @@ Method references: [group-aware validation and preprocessing boundaries](https:/
 [precision-recall curve API](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html),
 [AP differs from trapezoidal area](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html).
 Project-specific evidence is in Member 1's received package and the linked
-composition audit; this proposal does not replace the course handout.
+composition audit; this methodology does not replace the course handout.

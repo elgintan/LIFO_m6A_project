@@ -25,15 +25,18 @@ data2/dataset2.json.gz
 data2/data.info
 ```
 
-Dataset identity/provenance matters; names alone do not identify a cell line,
-run or experimental design. Compare hashes with
+Official intermediate leaderboard slides identify data0 as HCT116, data1 as
+HEK293T and data2 as synthetic sequences. Exact run/preprocessing provenance
+and fractional-label scoring are separate questions. Compare hashes with
 `eda/received/tables/source_manifest.json`. Do not replace original labels or
 regenerate historical folds. New shared assignments, if selected, need a
 separate filename and documented generation method.
 
 Member 1's extraction code accepts `--data-root` and `--out`; see her received
 README for the exact workflow. New candidate training entry points and their
-data paths will be documented after the protocol is agreed. Do not copy a
+data paths will be documented as those models are implemented. The accepted
+outer assignments and shared scoring commands are in
+[minimum shared rules](model_evaluation/SHARED_RULES.md). Do not copy a
 virtual environment from another computer; install each candidate's recorded
 dependencies in a local environment when needed.
 

@@ -8,7 +8,7 @@ Received and inspected locally: `Member1_Analysis_Package/Member1_Analysis`, sup
 
 All 43 manifest-listed files matched their supplied hashes. Selected small-table totals and signal-effect directions were independently checked; the raw signals were not reparsed for that review. The original five-gene-fold CSV is intact and matches the historical file. This does not decide the next split design.
 
-The received package has been copied unchanged into `received/`; `../SOURCE_RECEIPT.json` records its hashes. It is now included in the public project repository. The old handoff describes Samuel mainly as evaluator; the current plan is that **Elgin and Samuel each build a separate candidate model**. See the concrete [shared evaluation proposal](../model_evaluation/EVALUATION_PROTOCOL.md) for how these findings affect their common comparison.
+The received package has been copied unchanged into `received/`; `../SOURCE_RECEIPT.json` records its hashes. It is included in the public project repository. The old handoff describes Samuel mainly as evaluator; the current plan is that **Elgin and Samuel each build a separate candidate model**. The [minimum shared rules](../model_evaluation/SHARED_RULES.md), accepted by Elgin, define the common comparison and take precedence over older received role/evaluation wording.
 
 ## Findings both model builders should use
 
@@ -20,7 +20,7 @@ The received package has been copied unchanged into `received/`; `../SOURCE_RECE
 
 The existing Elgin network already receives sequence, individual reads, and all-read means/SD/quantiles. Its next changes must address a specific gap or test a component's contribution. Samuel's candidate should be reviewed against the same feature specification.
 
-Read [the shared data methodology](../DATA_METHODOLOGY.md) and [concrete evaluation proposal v1](../model_evaluation/EVALUATION_PROTOCOL.md) before selecting features, cleaning data or making new partitions. The proposal recommends the audited five gene groups with inner stopping and fresh refits; agreement and execution are pending. The [historical composition audit](split_review/README.md) describes context, class and coverage support. Check the proposed inner populations and agree the design before exporting shared roles.
+Read [the minimum shared rules](../model_evaluation/SHARED_RULES.md) and [EDA-informed methodology](../DATA_METHODOLOGY.md). Elgin accepted reuse of the audited five outer gene groups; Samuel's acknowledgement has not yet been reported. Model design remains independent. The [historical composition audit](split_review/README.md) describes context, class and coverage support. Gene-separated inner validation is required when used, with optional default roles supplied. No new candidate has been fitted.
 
 ## Material to retain here
 
@@ -35,6 +35,6 @@ The full received package can remain a preserved source copy; the report needs o
 
 The package proposes exact-context/coverage-controlled comparisons, repeated read-subsampling stability and unusual-site read-level case reviews. These have **not** been completed. Site-summary tables alone cannot recreate the individual-read matrices for the latter two analyses.
 
-data1 sample provenance and complete gene mapping, data2 label semantics/source dependence, and SG-NEx sample/replicate inventory remain unresolved. Do not infer cell-line differences or modification fractions from generic file names.
+The official intermediate leaderboard slides confirm data0 as HCT116, data1 as HEK293T and data2 as synthetic sequences. Exact run provenance, complete data1 gene mapping, fractional-label scoring/source dependence, and SG-NEx sample/replicate inventory remain unresolved. Confirm broad identities from that official source rather than generic filenames; predicted differences alone do not establish biological mechanisms or modification fractions.
 
 For a useful handoff, explain: **what was observed → what it might mean → what model/data decision it suggests → how we will check it**. Keep plausible biology separate from verified evidence.

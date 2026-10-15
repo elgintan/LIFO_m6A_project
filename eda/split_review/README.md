@@ -31,11 +31,11 @@ Changing the ratio cannot make one rare positive appear independently in both
 training and testing; retaining difficult examples and obtaining more suitable
 labelled evidence are different decisions from hiding them through exclusions.
 
-Compare grouped cross-validation with a fixed grouped holdout using the
-available support and computation. These findings do not automatically approve
-the five-fold design or establish that a proposed replacement will be better.
-The common next protocol remains undecided. Use observed composition rather
-than model scores to justify partition design and report the complete population.
+These findings do not prove a fold count optimal. After reviewing support and
+computation, Elgin accepted the five-group development methodology on 15 October;
+Samuel's acknowledgement has not yet been reported. See the
+[minimum shared rules](../../model_evaluation/SHARED_RULES.md). Existing outer
+assignments remain unchanged. Report the complete assessment population.
 
 `coverage_support.csv` gives counts at the same descriptive coverage bins as
 Member 1's EDA. These are not new minimum-coverage rules or causal effects.

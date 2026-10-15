@@ -1,39 +1,37 @@
 # Samuel's model
 
-Owner: Samuel (Member 3). This is an independent candidate; enhanced LightGBM
-is the provisional direction. No Samuel implementation or new result has been
-supplied in this repository yet. Earlier rounded teammate metrics are historical
-comparison evidence, not independently rerun benchmarks here.
+Owner: Samuel (Member 3). Enhanced LightGBM is a provisional direction; model
+family and features remain his choice. No new Samuel implementation or result
+has been supplied yet. Historical rounded baseline metrics are not a fresh
+controlled comparison.
 
-## First work
+## Start here
 
-Start with the [AI starter/context package](AI_START_HERE.md),
-`../PROJECT_CONTEXT.md`, `../DATA_METHODOLOGY.md` and `../eda/README.md`.
-The concrete common recommendation is
-[evaluation proposal v1](../model_evaluation/EVALUATION_PROTOCOL.md).
-Inventory actual current features/code before proposing additions. Member 1's
-EDA suggests testing sequence/signal relationships, robust distribution
-summaries and coverage dependence. A motif-present feature is uninformative
-because all supplied candidate sites already satisfy DRACH. Avoid separate
-unconstrained classifiers for contexts with almost no positives.
+Read the [minimum shared rules](../model_evaluation/SHARED_RULES.md) and
+[AI context](AI_START_HERE.md), then Member 1's findings in `../eda/received/`.
+Elgin accepted the methodology on 15 October 2026. Samuel's acknowledgement has
+not yet been reported. Assuming agreement, use the existing exact outer splits
+and common scorer. No new split needs generating.
 
-Useful candidates may include motif/full-context encodings, distribution
-features, training-fitted motif references and a with/without-coverage control.
-Use the same eligible evaluation sites, actual assignments and metric
-definitions as Elgin; the models may use different representations. Fit any
-learned preprocessing or label-dependent sampling on training only. No next
-split/ratio or training run is approved by this README. Proposal v1 now
-recommends the audited five gene groups, inner stopping and fresh refits;
-agreement and implementation remain pending.
+The common requirements are data0-only fitting/tuning, the exact five outer
+gene groups and assessment sites, training-only learning, common scores and
+frozen all-data0 models before the exposed data1 transfer diagnostic. Inner
+validation must keep genes separate when used; supplied inner roles are an
+optional default. Features, architecture, search, loss and stopping settings
+can differ from Elgin's. Record them rather than matching them artificially.
+
+Member 1's EDA suggests context-dependent signals, sparse-motif fallbacks,
+distribution summaries and coverage-shift checks. These guide experiments;
+they do not require both owners to run identical feature comparisons. All
+sites already satisfy DRACH, so a motif-present flag adds no information.
 
 ## Upload and report contribution
 
-Upload your source, dependency specification, methods/results draft and
-essential evidence within this folder. Document input paths, commands, model
-version, assignments, seeds, actual metrics/variation, computation and failures.
-Keep a saved predictor with a small example and full-precision predictions.
-Do not upload environments, raw data, tokens or private keys.
+Keep source/dependencies, a saved predictor and small real example, one concise
+methods/results draft, essential plots, full-precision predictions, commands,
+configurations, input/split hashes and computation measurements. Retain local
+checkpoints/logs for resuming fits and record unsuccessful changes. Do not
+upload raw inputs, environments, large caches or credentials/private keys.
 
-Coordinate shared comparison and the required simple-baseline/m6Anet evidence
-with Elgin. Later selection should cite measured strengths, weaknesses and the
-effect on SG-NEx interpretation, not presume one family must win.
+Use the common scoring commands in the shared rules. Coordinate any changes
+to shared evaluation with Elgin. No model family is presumed to win.

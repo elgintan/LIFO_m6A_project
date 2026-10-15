@@ -26,12 +26,13 @@ motif residuals with sparse-group fallbacks, read aggregation and coverage
 stability. Signal-only/sequence-only controls can reveal what a combined model
 uses. These are hypotheses, not selected experiments or proven gains.
 
-Agree evaluation populations and preprocessing boundaries with Samuel before
-new training. Fresh-fit models inside each permitted partition, preserve
+Use the [minimum shared rules](../model_evaluation/SHARED_RULES.md), accepted
+by Elgin; Samuel's acknowledgement has not yet been reported. Fresh-fit models
+inside each permitted partition, preserve
 checkpoints/configuration/commands/costs, and retain negative findings. The
-[concrete evaluation proposal v1](../model_evaluation/EVALUATION_PROTOCOL.md)
-recommends the audited five gene groups, rotating inner stopping and fresh
-four-group refits. It awaits agreement and implementation; no new fit has run.
+[detailed methodology](../model_evaluation/EVALUATION_PROTOCOL.md) explains
+the exact five outer gene groups and optional rotating inner default. Common
+scoring code is included; no new candidate fit has run.
 
 ## Handover
 

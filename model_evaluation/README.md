@@ -5,13 +5,27 @@ has won. Candidate-specific experiment history stays in its model folder;
 this folder will consolidate comparable evidence, selection rationale and
 the frozen selected model's evaluation.
 
-Read [shared evaluation proposal v1](EVALUATION_PROTOCOL.md), which gives the
-concrete recommendation and rationale. It is not yet agreed or executed.
+Start with [minimum shared rules](SHARED_RULES.md): Elgin accepted the
+methodology on 15 October 2026; Samuel's acknowledgement has not yet been
+reported. Exact outer assignments already exist, so no resplitting is needed.
+The common [scorer](evaluate.py), [dependencies](requirements.txt) and
+[optional default inner roles](cv_rounds.csv) are included. The
+[detailed methodology](EVALUATION_PROTOCOL.md) gives rationale and EDA/report
+suggestions. Architecture, features and tuning remain independent.
 
-Before new training, agree that proposal and `../DATA_METHODOLOGY.md`: target/eligible populations,
-actual gene-group assignments, tuning/early-stopping boundaries, input versions,
-metric definitions and final-assessment exposure. Member 1's context/coverage
-findings and the historical-split audit must inform those decisions.
+Verify local inputs against the manifest before new fitting. Keep assessment
+genes outside all learned fitting and use the same evaluation population.
+No new model has been trained or selected under these rules yet.
+
+Software verification on 15 October: 14 scorer tests passed, and the existing
+fold verifier passed against the real 121,838-site data0 labels with 3,852
+genes. The exact fold file and all archived source hashes are unchanged.
+These are file/software checks, not new model results. Checked on Windows
+with Python 3.12; a clean Ubuntu run remains pending. To run the small checks:
+
+```text
+python -B model_evaluation/test_evaluate.py
+```
 
 Both models use the same evaluation sites and score conventions. Record ROC
 AUC, explicitly named trapezoidal PR AUC and AP separately. Keep thresholds

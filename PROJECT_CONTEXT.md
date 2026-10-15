@@ -24,10 +24,12 @@ not default predictive features. Site labels come from m6ACE-seq; individual
 read labels are unavailable. A site score is not a modified-molecule fraction,
 and attention weights are not verified read modification probabilities.
 
-Data0 has 121,838 sites/5,475 positives and gene IDs. Data1 has 90,810 sites/
+Data0 is HCT116 and has 121,838 sites/5,475 positives and gene IDs. Data1 is
+HEK293T and has 90,810 sites/
 6,593 positives, substantial data0 overlap, incomplete gene mapping and prior
 evaluation exposure. Data2 has 1,323 rows over repeated templates and seven
-fractional-label groups of unconfirmed experimental meaning. Do not silently
+fractional-label groups of unconfirmed detailed experimental meaning. The
+intermediate leaderboard slides identify data2 as synthetic sequences. Do not silently
 pool, relabel, or treat those rows as ordinary independent binary examples.
 
 ## Actual starting evidence
@@ -56,10 +58,11 @@ pipeline and required sample scope still need verification/completion.
 
 Sequence-conditioned effects, sparse motifs, coverage changes, unusual
 distributions, dataset overlap and repeated-template labels must influence
-the next protocol. The concrete [evaluation proposal v1](model_evaluation/EVALUATION_PROTOCOL.md)
-now recommends retaining the audited five gene groups, with inner stopping and
-fresh four-group refits, because of their overall support, training fraction
-and assessment coverage. It is not yet agreed or executed. Sparse contexts
+the protocol. Elgin accepted the [minimum shared rules](model_evaluation/SHARED_RULES.md)
+on 15 October 2026; Samuel's acknowledgement has not yet been reported. Use
+the exact audited five outer gene groups and common scores, with inner gene
+separation when tuning/stopping is used. Model design remains independent.
+No new candidate has been trained under this methodology. Sparse contexts
 still need honest diagnostics; a new split cannot create extra positive sites.
 Choose quality rules for technical reasons, not to hide poor predictions.
 See DATA_METHODOLOGY.md for decisions and planned comparisons.
