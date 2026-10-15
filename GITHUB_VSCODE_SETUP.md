@@ -4,7 +4,7 @@ Git saves versions of files locally. GitHub hosts those versions online. VS Code
 
 The clean prepared project is `Team_Project_export/LIFO_m6A_project`. Open this folder, not the whole DSA4262 module folder. The wider module folder contains unrelated coursework and private credential files.
 
-Local Git is initialised on branch `main`. A reviewed initial local commit is prepared during setup; check the final setup confirmation or Git history for its completion. GitHub publication is still pending. If Source Control is clean and the initial commit is present, begin Route A at step 6 rather than making a duplicate commit.
+Publication is complete: [elgintan/LIFO_m6A_project](https://github.com/elgintan/LIFO_m6A_project) is public, uses branch `main`, and is connected to the prepared local folder. Anonymous GitHub metadata and the published commit were checked on 15 October 2026. Elgin can keep using this folder; do not publish or clone a second copy merely to reconnect it. Start with **Give teammates access** below. The initial setup routes are retained for reference and for members setting up their own clone.
 
 ## Choose one route
 

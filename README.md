@@ -4,7 +4,7 @@ NUS DSA4262 team project. We develop two candidate predictors, compare them
 under one evidence-based protocol, and use the selected model to explore m6A
 patterns across the required SG-NEx direct-RNA datasets.
 
-**Current stage: repository setup and methodology design, 15 October 2026.**
+**Current stage: public repository and evaluation proposal v1, 15 October 2026.**
 No new model has been trained under this repository's proposed methodology.
 The saved October 7 neural model is a historical starting point. The explorer
 is a prototype: its modification scores are simulated.
@@ -12,8 +12,10 @@ is a prototype: its modification scores are simulated.
 ## Start here
 
 1. Read [project context](PROJECT_CONTEXT.md).
-2. Read the [EDA-informed methodology proposal](DATA_METHODOLOGY.md). The next
-   split and feature choices are not automatically inherited from the old run.
+2. Read the [EDA-informed methodology](DATA_METHODOLOGY.md) and concrete
+   [shared evaluation proposal v1](model_evaluation/EVALUATION_PROTOCOL.md).
+   The recommendation retains audited gene groups with an explicit reason;
+   feature/model choices remain flexible. Agreement and execution are pending.
 3. Open your folder below and follow its README.
 4. Use [contributing instructions](CONTRIBUTING.md) for simple handovers.
 
@@ -50,8 +52,9 @@ remain outside this clean repository.
 
 ## Next actions
 
-Review the composition audit and methodology options, agree a common protocol,
-then implement and train the two fresh candidates. Candidate comparison and
+Agree the concrete evaluation proposal, implement one checked shared evaluator
+and group-role export, then train the two fresh candidates. Samuel can use the
+[AI starter/context package](model_samuel/AI_START_HERE.md). Candidate comparison and
 the required simple-baseline/m6Anet checks precede selecting one pipeline for
 real SG-NEx predictions. Members 4/5 can prepare inventory, analysis and the
 interface in parallel.
@@ -62,5 +65,6 @@ teams does not determine the grade. The final report limit is five pages,
 excluding permitted front matter/references. The supplied handout deadline is
 28 October 2026, 23:59 Singapore time; check later announcements.
 
-For initial publication, follow [GitHub/VS Code setup](GITHUB_VSCODE_SETUP.md).
+The repository is public at [elgintan/LIFO_m6A_project](https://github.com/elgintan/LIFO_m6A_project).
+For collaborator setup, follow [GitHub/VS Code setup](GITHUB_VSCODE_SETUP.md).
 For evidence of AI assistance and corrections, see [AI use](AI_USE.md).

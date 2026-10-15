@@ -21,10 +21,12 @@ prompts/output use and verification when assembling the final report.
   exact unique coverage and documented counts. This is an actual detected/fixed
   assumption, not an invented reflection example.
 - Earlier guidance risked treating the five existing folds as a default. The
-  user requested genuinely EDA-driven choices. The draft methodology now
-  compares feasible designs, leaves the next ratio/fold count open, and maps
-  findings to decisions and controlled tests. The old assignments are retained
-  as historical evidence, not automatically adopted as the new protocol.
+  user requested genuinely EDA-driven choices. The methodology compared designs
+  and audited actual class/motif/coverage support. Evaluation proposal v1 now
+  recommends retaining the five groups for stated support/training-coverage
+  reasons, with inner stopping and fresh refits. Agreement and execution remain
+  pending. It also requires context/coverage diagnostics and EDA-motivated
+  comparisons, rather than treating the old folds as an automatic choice.
 - The visual prototype explicitly uses simulated modification scores.
   Inspection confirmed that these cannot become evidence of model performance
   or biological differences. Its full upstream data provenance remains pending.
@@ -32,6 +34,11 @@ prompts/output use and verification when assembling the final report.
   archived report generator. Only that public copy was made portable; original
   files and training-core hashes were preserved and the receipt discloses the
   change. Git attributes preserve exact received/archive bytes across platforms.
+
+On 15 October, AI helped draft the shared evaluation proposal and Samuel's
+starter context. Public repository visibility was independently checked using
+anonymous GitHub metadata. These are documentation/checking actions, not new
+training or evaluation results. Required shared scoring/role code remains pending.
 
 No AI should fill missing experiments or comparisons with expected results.
 Each contributor checks their section and Elgin reviews the integrated report.

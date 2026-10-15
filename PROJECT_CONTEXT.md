@@ -56,9 +56,11 @@ pipeline and required sample scope still need verification/completion.
 
 Sequence-conditioned effects, sparse motifs, coverage changes, unusual
 distributions, dataset overlap and repeated-template labels must influence
-the next protocol. Compare grouped cross-validation and fixed grouped
-train/validation/test allocations based on support and cost. Fold count and
-ratios remain undecided; preserve the old manifest as historical evidence.
+the next protocol. The concrete [evaluation proposal v1](model_evaluation/EVALUATION_PROTOCOL.md)
+now recommends retaining the audited five gene groups, with inner stopping and
+fresh four-group refits, because of their overall support, training fraction
+and assessment coverage. It is not yet agreed or executed. Sparse contexts
+still need honest diagnostics; a new split cannot create extra positive sites.
 Choose quality rules for technical reasons, not to hide poor predictions.
 See DATA_METHODOLOGY.md for decisions and planned comparisons.
 

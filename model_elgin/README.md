@@ -29,8 +29,9 @@ uses. These are hypotheses, not selected experiments or proven gains.
 Agree evaluation populations and preprocessing boundaries with Samuel before
 new training. Fresh-fit models inside each permitted partition, preserve
 checkpoints/configuration/commands/costs, and retain negative findings. The
-number of folds and any fixed holdout remain open until the data support and
-resource trade-offs have been reviewed.
+[concrete evaluation proposal v1](../model_evaluation/EVALUATION_PROTOCOL.md)
+recommends the audited five gene groups, rotating inner stopping and fresh
+four-group refits. It awaits agreement and implementation; no new fit has run.
 
 ## Handover
 

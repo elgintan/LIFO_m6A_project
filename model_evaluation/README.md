@@ -5,7 +5,10 @@ has won. Candidate-specific experiment history stays in its model folder;
 this folder will consolidate comparable evidence, selection rationale and
 the frozen selected model's evaluation.
 
-Before new training, agree `../DATA_METHODOLOGY.md`: target/eligible populations,
+Read [shared evaluation proposal v1](EVALUATION_PROTOCOL.md), which gives the
+concrete recommendation and rationale. It is not yet agreed or executed.
+
+Before new training, agree that proposal and `../DATA_METHODOLOGY.md`: target/eligible populations,
 actual gene-group assignments, tuning/early-stopping boundaries, input versions,
 metric definitions and final-assessment exposure. Member 1's context/coverage
 findings and the historical-split audit must inform those decisions.

@@ -8,7 +8,7 @@ Received and inspected locally: `Member1_Analysis_Package/Member1_Analysis`, sup
 
 All 43 manifest-listed files matched their supplied hashes. Selected small-table totals and signal-effect directions were independently checked; the raw signals were not reparsed for that review. The original five-gene-fold CSV is intact and matches the historical file. This does not decide the next split design.
 
-The received package has now been copied unchanged into `received/`; `../SOURCE_RECEIPT.json` records its hashes. It has not yet been publicly uploaded. The old handoff describes Samuel mainly as evaluator; the current plan is that **Elgin and Samuel each build a separate candidate model**.
+The received package has been copied unchanged into `received/`; `../SOURCE_RECEIPT.json` records its hashes. It is now included in the public project repository. The old handoff describes Samuel mainly as evaluator; the current plan is that **Elgin and Samuel each build a separate candidate model**. See the concrete [shared evaluation proposal](../model_evaluation/EVALUATION_PROTOCOL.md) for how these findings affect their common comparison.
 
 ## Findings both model builders should use
 
@@ -20,7 +20,7 @@ The received package has now been copied unchanged into `received/`; `../SOURCE_
 
 The existing Elgin network already receives sequence, individual reads, and all-read means/SD/quantiles. Its next changes must address a specific gap or test a component's contribution. Samuel's candidate should be reviewed against the same feature specification.
 
-Read [the proposed shared data methodology](../DATA_METHODOLOGY.md) before selecting features, cleaning data or making new partitions. The next fold count/ratio is undecided. The [historical composition audit](split_review/README.md) now describes context, class and coverage support; use it to help agree a shared design before exporting any new assignments.
+Read [the shared data methodology](../DATA_METHODOLOGY.md) and [concrete evaluation proposal v1](../model_evaluation/EVALUATION_PROTOCOL.md) before selecting features, cleaning data or making new partitions. The proposal recommends the audited five gene groups with inner stopping and fresh refits; agreement and execution are pending. The [historical composition audit](split_review/README.md) describes context, class and coverage support. Check the proposed inner populations and agree the design before exporting shared roles.
 
 ## Material to retain here
 

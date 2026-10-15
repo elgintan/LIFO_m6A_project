@@ -7,7 +7,10 @@ comparison evidence, not independently rerun benchmarks here.
 
 ## First work
 
-Read `../PROJECT_CONTEXT.md`, `../DATA_METHODOLOGY.md` and `../eda/README.md`.
+Start with the [AI starter/context package](AI_START_HERE.md),
+`../PROJECT_CONTEXT.md`, `../DATA_METHODOLOGY.md` and `../eda/README.md`.
+The concrete common recommendation is
+[evaluation proposal v1](../model_evaluation/EVALUATION_PROTOCOL.md).
 Inventory actual current features/code before proposing additions. Member 1's
 EDA suggests testing sequence/signal relationships, robust distribution
 summaries and coverage dependence. A motif-present feature is uninformative
@@ -19,7 +22,9 @@ features, training-fitted motif references and a with/without-coverage control.
 Use the same eligible evaluation sites, actual assignments and metric
 definitions as Elgin; the models may use different representations. Fit any
 learned preprocessing or label-dependent sampling on training only. No next
-split/ratio or training run is approved by this README.
+split/ratio or training run is approved by this README. Proposal v1 now
+recommends the audited five gene groups, inner stopping and fresh refits;
+agreement and implementation remain pending.
 
 ## Upload and report contribution
 

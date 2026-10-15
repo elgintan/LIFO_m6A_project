@@ -1,6 +1,6 @@
 # Data methodology for the two model candidates
 
-Status: proposed protocol, 15 October 2026. No new split, training run, cleaning rule or model result has been created under this protocol.
+Status: proposed protocol, 15 October 2026. No new split, training run, cleaning rule or model result has been created under this protocol. The concrete recommendation is now [shared evaluation proposal v1](model_evaluation/EVALUATION_PROTOCOL.md); it remains subject to team agreement and implementation.
 
 Elgin and Samuel will build separate candidates. Elgin currently intends to explore neural networks; Samuel may enhance LightGBM. These are starting directions, not restrictions. Both candidates must answer the same prediction question on the same eligible evaluation sites.
 
@@ -31,16 +31,16 @@ The main development question is how well a learned predictor handles eligible s
 
 Both candidate models need the same grouping rule and actual assignments. Gene grouping is justified because sites and transcript isoforms from one gene are related. Randomly separating rows can place closely related examples in both training and evaluation.
 
-The number of folds and train/validation/test ratio are **not selected yet**. They should depend on class/motif/coverage representation, available computation and the remaining time, rather than inheriting a five-fold setting automatically.
+The recommendation is now **reuse the audited five gene groups for development comparison**, with an inner group for stopping and a fresh four-group refit before scoring the held-out group. This is a proposal, not an executed or agreed change. Both owners retain freedom over their candidate's features, architecture and tuning within the common boundaries.
 
-Two practical options remain:
+The alternatives considered were:
 
 - **Grouped cross-validation:** train on some gene groups and validate on the remainder, rotating the held-out groups. This uses limited positives efficiently and shows variation between partitions, but costs more training. Compare models on identical rotations. Hyperparameter tuning and early stopping need separate gene groups inside each round's training portion, or a documented fixed setting decided before scoring that round. Scores used to select models are development results.
 - **One fixed gene-grouped training/validation/test allocation:** training learns the model, validation selects settings, and the reserved test is assessed after choices are frozen. This is simpler and cheaper, but one partition may contain too few positives for rare contexts and gives a less stable comparison. Retrospectively separating already explored data does not turn it into a blind independent test.
 
-The original five-gene-fold manifest and its checksum must be retained as historical evidence. It may be reused if its composition and cost suit the new question; it must not be selected merely because it already exists. Any proposed replacement should explain the benefit and keep the old results clearly separate.
+The recommendation retains five because every site obtains a held-out prediction, each assessed refit uses 80% of data0, and the audited assessment groups each contain roughly 24,400 sites and 1,100 positives. A single three-way split sacrifices comparison coverage; three folds use smaller assessed training populations. Neither can fix a motif with one positive in the entire dataset. The existing manifest is not being retained merely because it exists. A replacement would require a stated benefit and distinct historical reporting.
 
-A descriptive check of the existing assignments is now complete: [composition audit](eda/split_review/README.md), with gene/class totals, central motif and coverage counts. Overall positive prevalence is balanced, but 8 of 90 motif-by-fold validation groups lack both classes, 38 have fewer than 20 positives, and one training motif/fold has no positive example. These are subgroup-support limitations, not reasons to remove those sites. The audit generated no new assignments and selected no design. Compare feasible designs using this evidence, agree one shared protocol, and export one shared assignment file before either new candidate trains. Do not independently regenerate nominally identical splits.
+A descriptive check of the existing assignments is now complete: [composition audit](eda/split_review/README.md), with gene/class totals, central motif and coverage counts. Overall positive prevalence is balanced, but 8 of 90 motif-by-fold validation groups lack both classes, 38 have fewer than 20 positives, and one training motif/fold has no positive example. These are subgroup-support limitations, not reasons to remove those sites. The audit itself generated no new assignments or model result. The concrete proposal now specifies rotating inner roles, scoring, data1 exposure, subgroup reporting and the final refit. Agree it, check the inner populations and implement shared role/scoring files before either new candidate trains. Do not independently regenerate nominally identical splits.
 
 The assignment file should identify dataset/sample, transcript, numeric position, gene, partition/fold and exclusions where relevant. Record input versions, generation rule, seed, counts and checksum. Keep the shared protocol in this document and implementation in shared code; a separate team-wide administration system is unnecessary.
 
