@@ -1,0 +1,55 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.ssh/
+.aws/
+
+# Local environments and caches
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+**/cache/
+**/.cache/
+**/.mplconfig/
+**/checkpoints/
+**/node_modules/
+
+# Large original data; do not exclude the prototype's relative data/ directory
+/data/
+/data0/
+/data1/
+/data2/
+dataset*.json
+dataset*.json.gz
+*.fast5
+*.pod5
+*.blow5
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.fasta
+*.fasta.gz
+*.fa
+*.fa.gz
+*.bin
+
+# Intermediate outputs and duplicate archives
+/model_elgin/outputs/
+/model_samuel/outputs/
+*.tmp
+*.zip
+*.7z
+.DS_Store
+Thumbs.db
+/.vscode/

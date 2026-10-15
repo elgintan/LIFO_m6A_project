@@ -1,0 +1,9 @@
+# Consistent new text; preserve exact hashes of received/archived source copies.
+* text=auto eol=lf
+eda/received/** -text
+data_visualisation/prototype/** -text
+model_elgin/baseline_2026_10_07/** -text
+*.png binary
+*.jpg binary
+*.gz binary
+*.pt binary

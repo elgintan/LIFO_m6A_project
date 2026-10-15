@@ -1,0 +1,1492 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>SG-NEx m6A Explorer</title>
+<meta name="description" content="Explore predicted m6A sites, read coverage and replicate agreement across SG-NEx direct RNA sequencing runs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700&family=Chivo+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: an instrument panel. Masthead with a current trace, sticky tab bar,
+   one working column per view, filters in one row above what they scope. */
+:root {
+  --bg: #f2f5f6;
+  --surface: #fcfdfd;
+  --surface-2: #e9eef0;
+  --ink: #0e1a20;
+  --ink-2: #44545c;
+  --muted: #6c7c83;
+  --hairline: #dae1e4;
+  --axis: #bdc8cd;
+  --accent: #a8285c;
+  --accent-ink: #8c1f4c;
+  --accent-wash: rgba(168, 40, 92, 0.09);
+  --series-1: #2a78d6;
+  --deemph: #b3bec3;
+  --na-fill: #c9d3d8;
+  --none-dot: #9aa9b0;
+  --warn: #fab219;
+  --warn-wash: #fff3d6;
+  --warn-ink: #5a3b00;
+  --good: #0ca30c;
+  --good-wash: #e2f4e2;
+  --good-ink: #0b5e0b;
+  --seq-0: #b7d3f6; --seq-1: #86b6ef; --seq-2: #5598e7; --seq-3: #2a78d6;
+  --seq-4: #1c5cab; --seq-5: #104281; --seq-6: #0d366b;
+  --ord-0: #6da7ec; --ord-1: #2a78d6; --ord-2: #184f95;
+  --font-display: "Chivo", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "Chivo Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1013; --surface: #121a1e; --surface-2: #1a242a;
+    --ink: #ecf1f3; --ink-2: #b4c1c7; --muted: #82919a;
+    --hairline: #24313a; --axis: #3a4a53;
+    --accent: #e06e9b; --accent-ink: #f291b7; --accent-wash: rgba(224, 110, 155, 0.15);
+    --series-1: #3987e5; --deemph: #4a5a63; --na-fill: #3a4952; --none-dot: #5e6f78;
+    --warn-wash: #2f2408; --warn-ink: #fcd27a; --good-wash: #10280f; --good-ink: #8fdc8f;
+    --seq-0: #184f95; --seq-1: #256abf; --seq-2: #3987e5; --seq-3: #6da7ec;
+    --seq-4: #86b6ef; --seq-5: #9ec5f4; --seq-6: #cde2fb;
+    --ord-0: #256abf; --ord-1: #5598e7; --ord-2: #9ec5f4;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1013; --surface: #121a1e; --surface-2: #1a242a;
+  --ink: #ecf1f3; --ink-2: #b4c1c7; --muted: #82919a;
+  --hairline: #24313a; --axis: #3a4a53;
+  --accent: #e06e9b; --accent-ink: #f291b7; --accent-wash: rgba(224, 110, 155, 0.15);
+  --series-1: #3987e5; --deemph: #4a5a63; --na-fill: #3a4952; --none-dot: #5e6f78;
+  --warn-wash: #2f2408; --warn-ink: #fcd27a; --good-wash: #10280f; --good-ink: #8fdc8f;
+  --seq-0: #184f95; --seq-1: #256abf; --seq-2: #3987e5; --seq-3: #6da7ec;
+  --seq-4: #86b6ef; --seq-5: #9ec5f4; --seq-6: #cde2fb;
+  --ord-0: #256abf; --ord-1: #5598e7; --ord-2: #9ec5f4;
+  color-scheme: dark;
+}
+
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+.app { max-width: 1240px; margin-inline: auto; padding-inline: clamp(16px, 3.2vw, 36px); padding-block: 0 56px; }
+a { color: var(--accent-ink); text-underline-offset: 2px; }
+p { margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; margin: 0; }
+h2 { font-size: 21px; line-height: 1.25; }
+h3 { font-size: 17px; line-height: 1.3; }
+.mono { font-family: var(--font-mono); font-size: 0.88em; }
+.muted { color: var(--muted); }
+
+.masthead { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px 32px; align-items: end; padding-block: 0 18px; }
+#squiggle { grid-column: 1 / -1; display: block; width: 100%; height: 44px; margin-top: 10px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.08; letter-spacing: -0.012em; margin: 6px 0 8px; }
+h1 .m6a { color: var(--accent-ink); }
+.lede { color: var(--ink-2); max-width: 64ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; border: 1px solid var(--hairline); background: var(--surface); color: var(--ink-2); white-space: nowrap; }
+.chip svg { flex: none; }
+.chip.warn { background: var(--warn-wash); color: var(--warn-ink); border-color: transparent; }
+.chip.good { background: var(--good-wash); color: var(--good-ink); border-color: transparent; }
+.banner { display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px; border-radius: var(--radius); background: var(--warn-wash); color: var(--warn-ink); border: 1px solid color-mix(in srgb, var(--warn) 50%, transparent); font-size: 15px; }
+.banner svg { flex: none; margin-top: 2px; }
+.banner strong { font-weight: 700; }
+
+.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 6; background: var(--bg); display: flex; flex-wrap: wrap; gap: 0 2px; border-bottom: 1px solid var(--hairline); margin-top: 18px; }
+.tab { appearance: none; border: 0; background: none; font: 600 15px/1 var(--font-body); color: var(--ink-2); padding: 14px 14px 12px; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.view { display: grid; gap: 20px; padding-top: 22px; }
+.view-head { display: grid; gap: 6px; }
+.view-head p { color: var(--ink-2); max-width: 78ch; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: flex-end; }
+.field { display: grid; gap: 5px; min-width: 0; }
+.field > .label, .field > label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+select, input[type="search"] { font: 15px/1.2 var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--axis); border-radius: 6px; padding: 8px 10px; min-height: 38px; max-width: 100%; }
+select { padding-right: 28px; }
+.seg { display: inline-flex; border: 1px solid var(--axis); border-radius: 6px; overflow: hidden; background: var(--surface); }
+.seg input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.seg label { padding: 9px 12px; font-size: 14px; font-weight: 600; color: var(--ink-2); cursor: pointer; line-height: 1.2; }
+.seg label + input + label { border-left: 1px solid var(--axis); }
+.seg input:checked + label { background: var(--ink); color: var(--surface); }
+.seg input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: -3px; }
+.btn { font: 600 14px/1 var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--axis); border-radius: 6px; padding: 9px 12px; cursor: pointer; }
+.btn:hover { background: var(--surface-2); }
+.linkish { font: inherit; color: var(--accent-ink); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+
+.combo { position: relative; width: min(340px, 100%); }
+.combo input { width: 100%; }
+#searchResults { position: absolute; top: calc(100% + 4px); left: 0; width: min(440px, calc(100vw - 32px)); max-height: 340px; overflow-y: auto; background: var(--surface); border: 1px solid var(--hairline); border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16); z-index: 12; margin: 0; padding: 4px; list-style: none; }
+#searchResults li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 8px 10px; border-radius: 5px; cursor: pointer; }
+#searchResults li[aria-selected="true"] { background: var(--accent-wash); }
+#searchResults .r-name { font-weight: 700; overflow-wrap: anywhere; }
+#searchResults .r-meta { color: var(--muted); font-size: 13px; text-align: right; }
+#searchResults .r-sub { grid-column: 1 / -1; color: var(--ink-2); font-size: 13px; }
+#searchResults .empty { cursor: default; color: var(--ink-2); }
+.examples { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 14px; color: var(--ink-2); }
+.examples button { font: 600 13px/1 var(--font-mono); color: var(--ink); background: var(--surface); border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 10px; cursor: pointer; }
+.examples button:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+.panel { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 18px 20px 20px; min-width: 0; }
+.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: flex-start; }
+.panel-head > div { min-width: 0; }
+.sub { color: var(--ink-2); font-size: 14.5px; margin-top: 4px; max-width: 78ch; }
+.scroll-x { overflow-x: auto; overscroll-behavior-x: contain; }
+.chart { margin-top: 12px; min-width: 0; }
+.chart svg { display: block; }
+.chart svg text { font-family: var(--font-body); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; font-size: 13px; color: var(--ink-2); margin-top: 12px; }
+.legend .item { display: inline-flex; align-items: center; gap: 7px; }
+.ramp { width: 140px; height: 10px; border-radius: 2px; background: linear-gradient(90deg, var(--seq-0), var(--seq-1), var(--seq-2), var(--seq-3), var(--seq-4), var(--seq-5), var(--seq-6)); }
+.ramp-wrap { display: inline-grid; grid-template-columns: auto auto auto; gap: 2px 6px; align-items: center; font-variant-numeric: tabular-nums; }
+.tag-sim { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--warn-ink); background: var(--warn-wash); border-radius: 4px; padding: 2px 6px; }
+.note { font-size: 14px; color: var(--ink-2); border-left: 2px solid var(--hairline); padding-left: 12px; max-width: 82ch; margin-top: 12px; }
+.loading { opacity: 0.55; transition: opacity 0.15s; }
+
+.gene-head { display: grid; gap: 6px; }
+.gene-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.gene-title h2 { font-size: 26px; overflow-wrap: anywhere; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.fact { font-size: 13px; color: var(--ink-2); background: var(--surface-2); border-radius: 4px; padding: 3px 8px; }
+
+table.data { border-collapse: collapse; width: 100%; font-size: 14px; }
+table.data th, table.data td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--hairline); vertical-align: middle; }
+table.data thead th { font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+table.data .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.data tr.group th { background: var(--surface-2); font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--ink); text-transform: none; letter-spacing: 0; }
+table.data tr.group th span { font-family: var(--font-body); font-weight: 400; color: var(--ink-2); margin-left: 8px; }
+.inline-bar { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+.inline-bar i { display: block; height: 8px; border-radius: 0 3px 3px 0; background: var(--series-1); }
+table.cells td { font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 13px; }
+
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius); padding: 14px 16px; min-width: 0; }
+.tile .k { font-size: 13.5px; color: var(--ink-2); }
+.tile .v { font: 600 30px/1.1 var(--font-display); margin-top: 6px; }
+.tile .d { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 20px; }
+.smalls { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 16px 22px; margin-top: 14px; }
+.small h4 { font: 600 14px/1.3 var(--font-display); margin: 0; }
+.small p { font-size: 12.5px; color: var(--muted); }
+
+.prose { display: grid; gap: 12px; max-width: 80ch; align-content: start; }
+.prose ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; align-content: start; }
+.prose code, .prose pre { font-family: var(--font-mono); font-size: 13px; }
+.prose pre { background: var(--surface-2); border-radius: 6px; padding: 12px 14px; overflow-x: auto; margin: 0; line-height: 1.55; }
+dl.build { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 18px; font-size: 14px; margin: 0; }
+dl.build dt { color: var(--muted); }
+dl.build dd { margin: 0; overflow-wrap: anywhere; }
+.status-real { color: var(--good-ink); font-weight: 600; }
+.status-sim { color: var(--warn-ink); font-weight: 600; }
+footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairline); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+
+#tooltip { position: fixed; z-index: 30; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--hairline); border-radius: 6px; box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18); padding: 8px 11px; font-size: 13px; line-height: 1.4; max-width: 300px; }
+#tooltip .v { font-weight: 700; font-size: 15px; }
+#tooltip .s { color: var(--ink-2); }
+.fatal { padding: 16px; border-radius: var(--radius); background: var(--warn-wash); color: var(--warn-ink); }
+@media (max-width: 640px) {
+  .masthead { grid-template-columns: minmax(0, 1fr); }
+  .chips { justify-content: flex-start; }
+  .gene-title h2 { font-size: 22px; }
+  .tab { padding: 12px 10px 10px; font-size: 14.5px; }
+  .panel { padding: 16px 14px 18px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="app">
+  <header class="masthead">
+    <canvas id="squiggle" aria-hidden="true"></canvas>
+    <div>
+      <p class="eyebrow">DSA4262 Team LIFO · Task 2 prototype</p>
+      <h1>SG-NEx <span class="m6a">m6A</span> Explorer</h1>
+      <p class="lede">Look up a gene and see, run by run, how many reads cover each candidate m6A site and what score the model gives it. Data from the Singapore Nanopore Expression Project: <span id="mastCounts">23 direct RNA runs from 7 cell lines</span>.</p>
+    </div>
+    <div class="chips" id="statusChips"></div>
+  </header>
+
+  <div class="banner" id="simBanner" role="note" hidden>
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 1.5 17 15.5H1z" fill="var(--warn)"/><path d="M9 6.5v4.2" stroke="var(--warn-ink)" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="13" r="1.05" fill="var(--warn-ink)"/></svg>
+    <p><strong>Placeholder scores.</strong> Every m6A score on this page is simulated so the layout can be tested before the team's predictions exist. Runs, read counts and gene names are real SG-NEx data. Do not quote any score, comparison or agreement figure from this version.</p>
+  </div>
+
+  <nav class="tabs" role="tablist" aria-label="Views">
+    <button class="tab" role="tab" id="t-genes" aria-controls="v-genes" aria-selected="true">Gene explorer</button>
+    <button class="tab" role="tab" id="t-coverage" aria-controls="v-coverage" aria-selected="false" tabindex="-1">Coverage</button>
+    <button class="tab" role="tab" id="t-lines" aria-controls="v-lines" aria-selected="false" tabindex="-1">Cell lines</button>
+    <button class="tab" role="tab" id="t-about" aria-controls="v-about" aria-selected="false" tabindex="-1">About the data</button>
+  </nav>
+
+  <main>
+    <section class="view" id="v-genes" role="tabpanel" aria-labelledby="t-genes">
+      <div class="controls">
+        <div class="field">
+          <label for="geneSearch">Gene or transcript</label>
+          <div class="combo">
+            <input id="geneSearch" type="search" role="combobox" aria-expanded="false" aria-controls="searchResults" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="ACTB, ENSG… or ENST…">
+            <ul id="searchResults" role="listbox" aria-label="Matching genes" hidden></ul>
+          </div>
+        </div>
+        <div class="field">
+          <label for="txSelect">Transcript</label>
+          <select id="txSelect"></select>
+        </div>
+        <div class="field">
+          <span class="label" id="rowModeLabel">Rows</span>
+          <div class="seg" role="radiogroup" aria-labelledby="rowModeLabel">
+            <input type="radio" name="rowMode" id="rowRuns" value="runs" checked><label for="rowRuns">Each run</label>
+            <input type="radio" name="rowMode" id="rowLines" value="lines"><label for="rowLines">Cell lines</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="minReads">Show scores with at least</label>
+          <select id="minReads"><option value="20">20 reads</option><option value="50">50 reads</option><option value="100">100 reads</option></select>
+        </div>
+      </div>
+      <div class="examples" id="examples"></div>
+
+      <div id="geneView" class="view" style="padding-top:0">
+        <div class="panel gene-head" id="geneHead">
+          <div class="gene-title"><h2 id="geneName">Loading…</h2><span class="mono muted" id="geneId"></span><span class="fact" id="geneKind"></span></div>
+          <p class="muted" id="geneLoc"></p>
+          <p id="geneDesc"></p>
+          <div class="facts" id="geneFacts"></div>
+        </div>
+
+        <div class="panel" id="mapPanel">
+          <div class="panel-head">
+            <div>
+              <h3>Score at each candidate site</h3>
+              <p class="sub" id="mapSub">Columns are candidate DRACH sites in transcript order. The line on top shows where each site sits along the transcript. Rows are sequencing runs, grouped by cell line.</p>
+            </div>
+            <button class="btn" id="mapTableToggle" aria-pressed="false">Show as table</button>
+          </div>
+          <div class="legend" id="mapLegend"></div>
+          <div class="chart scroll-x" id="siteMap"></div>
+          <div class="scroll-x" id="siteTable" hidden></div>
+          <p class="note" id="mapNote"></p>
+        </div>
+
+        <div class="panel" id="detailPanel">
+          <div class="panel-head">
+            <div>
+              <h3 id="detailTitle">Site details</h3>
+              <p class="sub" id="detailSub">Select a column above to see every run's reads and score for that site.</p>
+            </div>
+          </div>
+          <div class="facts" id="detailFacts"></div>
+          <div class="chart" id="detailChart"></div>
+          <p class="note">A score is the model's confidence that the site is modified in that run. It is not the share of RNA molecules carrying m6A. A run with no reads at a site tells you nothing about modification there.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="v-coverage" role="tabpanel" aria-labelledby="t-coverage" hidden>
+      <div class="view-head">
+        <h2>How well each site is measured</h2>
+        <p>Everything on this tab is real SG-NEx data. A site can only be scored where enough reads cover it, so coverage decides which comparisons are possible at all.</p>
+      </div>
+      <div class="tiles" id="covTiles"></div>
+      <div class="controls">
+        <div class="field">
+          <label for="coverT">Count a site as measured with at least</label>
+          <select id="coverT"><option value="5">5 reads</option><option value="10">10 reads</option><option value="20" selected>20 reads</option><option value="50">50 reads</option></select>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Runs and replicates</h3>
+        <p class="sub">Each cell line has one or more biological replicates; some replicates were sequenced more than once (runs). Runs of one replicate are repeat measurements of the same sample.</p>
+        <div class="scroll-x chart"><table class="data" id="runTable"></table></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>Reads per site in each run</h3>
+            <p class="sub">Share of each run's candidate sites that fall into each read-count band. Most sites have only a handful of reads.</p>
+          </div>
+          <button class="btn" data-table-for="ladder" aria-pressed="false">Show as table</button>
+        </div>
+        <div class="chart scroll-x" id="ladder"></div>
+        <div class="scroll-x" id="ladderTable" hidden></div>
+      </div>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Cell lines measuring each site</h3>
+          <p class="sub" id="nLinesSub"></p>
+          <div class="chart" id="nLines"></div>
+        </div>
+        <div class="panel">
+          <h3>Most common combinations</h3>
+          <p class="sub">Which cell lines a site is measured in, for the 12 most frequent combinations.</p>
+          <div class="chart" id="upsetCov"></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>How similar the runs are</h3>
+            <p class="sub">Share of measured sites two runs have in common (Jaccard index). Deeper runs share more sites, so differences here are partly technical.</p>
+          </div>
+          <button class="btn" data-table-for="overlap" aria-pressed="false">Show as table</button>
+        </div>
+        <div class="legend" id="overlapLegend"></div>
+        <div class="chart scroll-x" id="overlap"></div>
+        <div class="scroll-x" id="overlapTable" hidden></div>
+      </div>
+      <div class="panel">
+        <h3>Transcripts outside the gene table</h3>
+        <p class="sub">Sites on spike-in controls and on transcripts missing from the primary-assembly annotation.</p>
+        <div class="scroll-x chart"><table class="data" id="kindTable"></table></div>
+      </div>
+    </section>
+
+    <section class="view" id="v-lines" role="tabpanel" aria-labelledby="t-lines" hidden>
+      <div class="view-head">
+        <h2>Comparing cell lines</h2>
+        <p>These views compare scores only across sites measured in every cell line, so that a missing site is never read as an unmodified one.</p>
+      </div>
+      <div class="banner" id="linesBanner" role="note" hidden>
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 1.5 17 15.5H1z" fill="var(--warn)"/><path d="M9 6.5v4.2" stroke="var(--warn-ink)" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="13" r="1.05" fill="var(--warn-ink)"/></svg>
+        <p><strong>Built from simulated scores.</strong> The site counts reflect real coverage, but the distributions, shared high scores and agreement values only show what these charts will look like with real predictions. Patterns here were put there by the simulation.</p>
+      </div>
+      <div class="controls">
+        <div class="field">
+          <label for="compareT">Use sites with at least</label>
+          <select id="compareT"><option value="20" selected>20 reads</option><option value="50">50 reads</option><option value="100">100 reads</option></select>
+        </div>
+      </div>
+      <div class="tiles" id="cmpTiles"></div>
+      <div class="panel">
+        <h3>Score distribution in each cell line</h3>
+        <p class="sub" id="histSub"></p>
+        <div class="smalls" id="hists"></div>
+      </div>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Where high scores are shared</h3>
+          <p class="sub" id="upsetHighSub"></p>
+          <div class="chart" id="upsetHigh"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Agreement between repeat measurements</h3>
+              <p class="sub">Correlation of scores between biological replicates, and between runs of one replicate, by how many reads both measurements have.</p>
+            </div>
+            <button class="btn" data-table-for="agree" aria-pressed="false">Show as table</button>
+          </div>
+          <div class="legend" id="agreeLegend"></div>
+          <div class="chart" id="agree"></div>
+          <div class="scroll-x" id="agreeTable" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="v-about" role="tabpanel" aria-labelledby="t-about" hidden>
+      <div class="view-head"><h2>About the data</h2></div>
+      <div class="panel prose">
+        <h3>What is real and what is simulated</h3>
+        <div class="scroll-x"><table class="data" id="realTable"></table></div>
+      </div>
+      <div class="grid-2">
+        <div class="panel prose">
+          <h3>How to read a score</h3>
+          <ul>
+            <li>A score is the model's confidence that a site is modified in one run. It is not the fraction of RNA molecules that carry m6A.</li>
+            <li>A site with no reads in a run is unmeasured. It is not evidence that the site is unmodified.</li>
+            <li>Runs of the same replicate are repeat sequencing of one sample. Only different replicates count as independent biological repeats.</li>
+            <li>All scores are predictions. None has been confirmed by an independent experiment in these cell lines.</li>
+            <li>The model learned from Hct116 labels. Scores in other cell lines assume the same signal patterns carry over.</li>
+          </ul>
+        </div>
+        <div class="panel prose">
+          <h3>Data issues found while building this page</h3>
+          <ul id="issueList"></ul>
+        </div>
+      </div>
+      <div class="panel prose">
+        <h3>Replacing the placeholder with real predictions</h3>
+        <p>Teammates send one folder: <code>manifest.csv</code>, <code>MODEL_INFO.md</code> and one <code>predictions/&lt;run_id&gt;.csv</code> per run with the columns <code>transcript_id,transcript_position,score</code>. Then:</p>
+<pre>python scripts/validate_task2_inputs.py --inputs task2_inputs --public public_data
+python scripts/build_site_data.py --public public_data --predictions task2_inputs --out site/data
+python scripts/package_site.py</pre>
+        <p>The validator checks every file against the public read counts for its run and stops on any mismatch. The page itself does not change; the warning banners disappear once the model version is no longer a placeholder.</p>
+      </div>
+      <div class="grid-2">
+        <div class="panel prose">
+          <h3>Build information</h3>
+          <dl class="build" id="buildInfo"></dl>
+        </div>
+        <div class="panel prose">
+          <h3>Sources</h3>
+          <ul>
+            <li>Chen Y. et al. A systematic benchmark of Nanopore long-read RNA sequencing for transcript-level analysis in human cell lines. <em>Nature Methods</em> 22, 801–812 (2025). <a href="https://doi.org/10.1038/s41592-025-02623-4" target="_blank" rel="noopener">doi:10.1038/s41592-025-02623-4</a></li>
+            <li>SG-NEx data on AWS Open Data: <span class="mono">s3://sg-nex-data/data/processed_data/m6Anet/</span> (<a href="https://github.com/GoekeLab/sg-nex-data" target="_blank" rel="noopener">access guide</a>)</li>
+            <li>Hendra C. et al. Detection of m6A from direct RNA sequencing using a multiple instance learning framework. <em>Nature Methods</em> 19, 1590–1598 (2022). <a href="https://doi.org/10.1038/s41592-022-01666-1" target="_blank" rel="noopener">doi:10.1038/s41592-022-01666-1</a></li>
+            <li>Gene names, biotypes and transcript lengths: Ensembl release 91 table supplied in the SG-NEx bucket.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Team LIFO · NUS DSA4262 · prototype</span>
+    <span id="footBuild"></span>
+  </footer>
+</div>
+<div id="tooltip" role="tooltip" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+(() => {
+"use strict";
+
+const fmt = d3.format(",");
+const fmtS = (n) => d3.format(".3~s")(n).replace("k", "K");
+const pct1 = d3.format(".1%");
+const pct0 = d3.format(".0%");
+const f2 = d3.format(".2f");
+const STEP_CELL = 16, GAP = 2, STEP = STEP_CELL + GAP;
+
+const state = {
+  ov: null, rows: [], byKey: new Map(), byLabel: new Map(), txIndex: null, buckets: new Map(),
+  gene: null, geneRow: null, txId: null, site: null,
+  rowMode: "runs", minReads: 20, mapTable: false, coverT: 20, compareT: 20,
+};
+const $ = (id) => document.getElementById(id);
+
+function h(tag, attrs, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === "class") n.className = v;
+    else if (k === "text") n.textContent = v;
+    else n.setAttribute(k, v === true ? "" : String(v));
+  }
+  for (const kid of kids) if (kid != null) n.append(kid);
+  return n;
+}
+
+/* ---------- theme ---------- */
+let P = null, paletteKey = "";
+function cssVar(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+function ensurePalette() {
+  const key = cssVar("--bg") + cssVar("--seq-0");
+  if (key !== paletteKey) { readPalette(); paletteKey = key; return true; }
+  return false;
+}
+function readPalette() {
+  P = {
+    ink: cssVar("--ink"), ink2: cssVar("--ink-2"), muted: cssVar("--muted"), hair: cssVar("--hairline"),
+    axis: cssVar("--axis"), surface: cssVar("--surface"), surface2: cssVar("--surface-2"),
+    accent: cssVar("--accent"), na: cssVar("--na-fill"), none: cssVar("--none-dot"),
+    series: cssVar("--series-1"), deemph: cssVar("--deemph"),
+    seq: d3.range(7).map((i) => cssVar(`--seq-${i}`)), ord: d3.range(3).map((i) => cssVar(`--ord-${i}`)),
+  };
+  P.score = d3.scaleLinear().domain(d3.range(7).map((i) => i / 6)).range(P.seq).interpolate(d3.interpolateLab).clamp(true);
+}
+function textOn(fill) { return d3.lab(fill).l > 60 ? "#0e1a20" : "#ffffff"; }
+
+/* ---------- tooltip ---------- */
+const tip = $("tooltip");
+function tipContent(value, ...rest) {
+  const out = [h("div", { class: "v", text: value })];
+  for (const r of rest) if (r) out.push(h("div", { class: "s", text: r }));
+  return out;
+}
+function showTipAt(x, y, parts) {
+  tip.replaceChildren(...parts);
+  tip.hidden = false;
+  const r = tip.getBoundingClientRect();
+  let left = x + 14, top = y + 14;
+  if (left + r.width > innerWidth - 8) left = x - r.width - 14;
+  if (top + r.height > innerHeight - 8) top = y - r.height - 14;
+  tip.style.left = `${Math.max(8, left)}px`;
+  tip.style.top = `${Math.max(8, top)}px`;
+}
+function showTipFor(node, parts) {
+  const r = node.getBoundingClientRect();
+  showTipAt(r.right, r.top, parts);
+}
+function hideTip() { tip.hidden = true; }
+
+/* ---------- data ---------- */
+async function getJSON(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Could not load ${path} (HTTP ${res.status}).`);
+  return res.json();
+}
+function bucket(b) {
+  if (!state.buckets.has(b)) state.buckets.set(b, getJSON(`data/genes/b${String(b).padStart(3, "0")}.json`));
+  return state.buckets.get(b);
+}
+const simulated = () => !!(state.ov && state.ov.build.simulated);
+const scoringMin = () => (state.ov.build.min_reads && state.ov.build.min_reads.length ? Math.min(...state.ov.build.min_reads) : state.ov.build.keep_min_reads);
+const lineNames = () => state.ov.lines.map((l) => l.name);
+
+/* ---------- masthead trace ---------- */
+function drawSquiggle() {
+  const c = $("squiggle");
+  const w = c.clientWidth, hgt = c.clientHeight;
+  if (!w) return;
+  const dpr = window.devicePixelRatio || 1;
+  c.width = Math.round(w * dpr); c.height = Math.round(hgt * dpr);
+  const ctx = c.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, w, hgt);
+  let seed = 42;
+  const rand = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+  const gauss = () => (rand() + rand() + rand() - 1.5) / 1.5;
+  const events = [];
+  let x = 0;
+  while (x < w) { const len = 6 + rand() * 22; events.push({ x0: x, x1: Math.min(w, x + len), level: 0.25 + rand() * 0.5 }); x += len; }
+  const mark = Math.floor(events.length * 0.62);
+  events[mark].level = 0.12; events[mark].mod = true;
+  const yOf = (lv) => 4 + (1 - lv) * (hgt - 8);
+  const draw = (ev, color, width) => {
+    ctx.beginPath(); ctx.strokeStyle = color; ctx.lineWidth = width; ctx.lineJoin = "round";
+    for (let px = ev.x0; px <= ev.x1; px += 1.5) {
+      const y = yOf(ev.level + gauss() * 0.035);
+      if (px === ev.x0) ctx.moveTo(px, y); else ctx.lineTo(px, y);
+    }
+    ctx.stroke();
+  };
+  events.forEach((ev, i) => {
+    draw(ev, P.axis, 1.2);
+    if (i > 0) { ctx.beginPath(); ctx.strokeStyle = P.axis; ctx.lineWidth = 1.2; ctx.moveTo(ev.x0, yOf(events[i - 1].level)); ctx.lineTo(ev.x0, yOf(ev.level)); ctx.stroke(); }
+  });
+  draw(events[mark], P.accent, 2);
+}
+
+/* ---------- tabs ---------- */
+const TABS = ["genes", "coverage", "lines", "about"];
+function showTab(name, focus) {
+  if (!TABS.includes(name)) name = "genes";
+  for (const t of TABS) {
+    const tab = $(`t-${t}`), view = $(`v-${t}`), on = t === name;
+    tab.setAttribute("aria-selected", on ? "true" : "false");
+    tab.tabIndex = on ? 0 : -1;
+    view.hidden = !on;
+  }
+  if (focus) $(`t-${name}`).focus();
+  setHash(name === "genes" ? geneHash() : name);
+  hideTip();
+  renderVisible();
+}
+function setupTabs() {
+  for (const t of TABS) $(`t-${t}`).addEventListener("click", () => showTab(t, false));
+  document.querySelector(".tabs").addEventListener("keydown", (e) => {
+    const cur = TABS.findIndex((t) => $(`t-${t}`).getAttribute("aria-selected") === "true");
+    let next = null;
+    if (e.key === "ArrowRight") next = (cur + 1) % TABS.length;
+    if (e.key === "ArrowLeft") next = (cur + TABS.length - 1) % TABS.length;
+    if (e.key === "Home") next = 0;
+    if (e.key === "End") next = TABS.length - 1;
+    if (next != null) { e.preventDefault(); showTab(TABS[next], true); }
+  });
+}
+function currentTab() { return TABS.find((t) => !$(`v-${t}`).hidden) || "genes"; }
+function geneHash() {
+  const L = state.geneRow && state.geneRow.label;
+  return L && /^[A-Za-z0-9._~-]+$/.test(L) ? `gene-${L}` : "genes";
+}
+function setHash(token) {
+  if (location.hash === `#${token}`) return;
+  try { history.replaceState(null, "", `#${token}`); } catch (e) { /* hash updates can be blocked in embedded views */ }
+}
+
+/* ---------- header, status and about ---------- */
+function applyBuild() {
+  const b = state.ov.build, sim = simulated();
+  const nRuns = state.ov.runs.length, nLines = state.ov.lines.length;
+  const nReps = d3.sum(state.ov.lines, (l) => l.n_reps);
+  $("mastCounts").textContent = `${nRuns} direct RNA runs (${nReps} biological replicates) from ${nLines} cell lines`;
+  const icon = (kind) => {
+    const s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    s.setAttribute("width", "12"); s.setAttribute("height", "12"); s.setAttribute("viewBox", "0 0 12 12"); s.setAttribute("aria-hidden", "true");
+    s.innerHTML = kind === "warn"
+      ? '<path d="M6 1 11.5 10.5H.5z" fill="var(--warn)"/><path d="M6 4.6v2.6" stroke="var(--warn-ink)" stroke-width="1.3" stroke-linecap="round"/><circle cx="6" cy="8.8" r=".7" fill="var(--warn-ink)"/>'
+      : '<circle cx="6" cy="6" r="5.5" fill="var(--good)"/><path d="m3.4 6.2 1.8 1.8 3.4-3.6" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
+    return s;
+  };
+  const chips = $("statusChips");
+  chips.replaceChildren(
+    h("span", { class: `chip ${sim ? "warn" : "good"}` }, icon(sim ? "warn" : "good"), sim ? "Scores: simulated placeholder" : `Scores: ${b.model_versions.join(", ")}`),
+    h("span", { class: "chip good" }, icon("good"), "Read counts: real SG-NEx data"),
+  );
+  $("simBanner").hidden = !sim;
+  $("linesBanner").hidden = !sim;
+  $("footBuild").textContent = `Data built ${b.generated_utc.slice(0, 10)} · pipeline ${b.pipeline_version} · scores: ${b.model_versions.join(", ")}`;
+}
+
+function renderAbout() {
+  const ov = state.ov, b = ov.build, sim = simulated();
+  const kinds = Object.fromEntries(ov.kinds.map((k) => [k.kind, k]));
+  const rt = $("realTable");
+  rt.replaceChildren();
+  rt.append(h("thead", {}, h("tr", {}, h("th", { text: "What" }), h("th", { text: "Status" }), h("th", { text: "Where it comes from" }))));
+  const tb = h("tbody");
+  const row = (what, real, from) => tb.append(h("tr", {}, h("td", { text: what }), h("td", { class: real ? "status-real" : "status-sim", text: real ? "Real" : "Simulated" }), h("td", { text: from })));
+  row("Runs, cell lines and replicates", true, "SG-NEx bucket: one folder per m6Anet-processed direct RNA run");
+  row("Reads per site", true, "data.readcount in each run folder");
+  row("Gene names, biotypes, transcript lengths", true, "Ensembl release 91 transcript table in the SG-NEx bucket");
+  row("m6A scores", !sim, sim ? "scripts/make_placeholder_predictions.py (hash-based placeholder)" : `Team predictions, model ${b.model_versions.join(", ")}`);
+  row("Cell-line comparisons and agreement", !sim, sim ? "Computed from the placeholder scores" : "Computed from the team predictions");
+  rt.append(tb);
+
+  const alt = kinds.alt_haplotype ? kinds.alt_haplotype.sites_ge20 : 0;
+  const spikes = ["spike_SIRV", "spike_ERCC", "spike_sequin"].reduce((s, k) => s + (kinds[k] ? kinds[k].sites_ge20 : 0), 0);
+  const maxReads = d3.max(ov.runs, (r) => r.max);
+  const suffix = Object.entries(b.version_suffix_removed || {});
+  const issues = [
+    "The transcript table's header has one name fewer than its rows have columns (it was written with R row names). The pipeline reads the extra column and checks that gene and transcript IDs line up before using it.",
+    suffix.length
+      ? `${suffix.map(([k]) => k.replace(/^SGNex_(.+)_directRNA_replicate(\d+)_run(\d+)$/, "$1 replicate $2, run $3")).join("; ")} labels transcripts with version numbers (for example ENST00000000233.9); the other runs do not. Its versions all match Ensembl 91 and its sites overlap the other MCF7 run as much as other replicate pairs do, so the pipeline removes the suffix. Without this, ${fmt(d3.sum(suffix, (d) => d[1]))} of its sites would never match another run.`
+      : null,
+    `${fmt(alt)} sites with at least 20 reads lie on transcripts that are not in the primary-assembly table, such as copies of RPL7A on patch scaffolds. They can be found by transcript ID only, and reads from one gene may be split between such copies.`,
+    `The runs contain synthetic spike-in RNAs (SIRV, ERCC and sequin controls; ${fmt(spikes)} sites with at least 20 reads). They should carry no m6A, so with real scores they show how often the model reports a modification where there is none.`,
+    `Read counts stop just below 1,000 per site (highest: ${fmt(maxReads)}), which suggests the preprocessing caps the reads kept per site.`,
+    "The SG-NEx bucket holds 56 direct RNA runs as raw reads, but only 23 have m6Anet-processed files. This page uses the 23; whether the course expects all 56 is still to be confirmed.",
+  ].filter(Boolean);
+  $("issueList").replaceChildren(...issues.map((t) => h("li", { text: t })));
+
+  const dl = $("buildInfo");
+  dl.replaceChildren();
+  const item = (k, v) => dl.append(h("dt", { text: k }), h("dd", { text: v }));
+  item("Data built", b.generated_utc.replace("T", " ").replace("+00:00", " UTC"));
+  item("Pipeline", `task2_viz ${b.pipeline_version}`);
+  item("Scores from", `${b.predictions_dir} (${b.model_versions.join(", ")})`);
+  item("Scoring rule", `sites with at least ${scoringMin()} reads in a run`);
+  item("Sites on this page", `${fmt(ov.totals.kept_sites)} sites with at least ${b.keep_min_reads} reads in at least one run`);
+  item("Public files checked", `${b.public_download_utc.replace("T", " ").replace("+00:00", " UTC")}, sizes match S3, SHA-256 recorded`);
+  item("Annotation", b.annotation);
+}
+
+/* ---------- gene search ---------- */
+function kindText(row) {
+  if (row.kind === "annotated") return (row.biotype || "gene").replace(/_/g, " ");
+  if (row.kind === "alt_haplotype") return "transcript outside the primary annotation";
+  return "synthetic spike-in";
+}
+function searchRows(q) {
+  q = q.trim().toUpperCase();
+  if (!q) return [];
+  const starts = [], idStarts = [], contains = [];
+  for (const r of state.rows) {
+    const L = r.labelU;
+    if (L.startsWith(q)) starts.push(r);
+    else if (r.gene_id && r.gene_id.startsWith(q)) idStarts.push(r);
+    else if (q.length >= 3 && L.includes(q)) contains.push(r);
+  }
+  starts.sort((a, b) => (a.labelU.length - b.labelU.length) || (b.n_sites - a.n_sites));
+  return [...starts, ...idStarts, ...contains].slice(0, 12).map((r) => ({ row: r }));
+}
+async function searchTranscripts(q) {
+  if (!state.txIndex) state.txIndex = await getJSON("data/tx_index.json");
+  q = q.trim().toUpperCase().replace(/\.\d+$/, "");
+  const out = [];
+  for (const [tid, ri] of state.txIndex) {
+    if (tid.toUpperCase().startsWith(q)) { out.push({ row: state.rows[ri], tx: tid }); if (out.length >= 12) break; }
+  }
+  return out;
+}
+async function lowCoverageMatches(q, exactOnly) {
+  if (!state.lowcov) {
+    try { state.lowcov = await getJSON("data/genes_lowcov.json"); } catch (e) { state.lowcov = { rows: [] }; }
+  }
+  const Q = q.trim().toUpperCase();
+  const exact = [], pre = [];
+  for (const r of state.lowcov.rows) {
+    const L = String(r[0]).toUpperCase();
+    if (L === Q || r[1] === Q) exact.push(r);
+    else if (!exactOnly && L.startsWith(Q)) pre.push(r);
+  }
+  pre.sort((a, b) => a[0].length - b[0].length);
+  return [...exact, ...pre].slice(0, 6);
+}
+let activeIdx = -1, lastResults = [];
+function renderResults(results, q, low = []) {
+  const ul = $("searchResults"), input = $("geneSearch");
+  ul.replaceChildren();
+  lastResults = results;
+  activeIdx = results.length ? 0 : -1;
+  if (!q.trim()) { ul.hidden = true; input.setAttribute("aria-expanded", "false"); return; }
+  const keep = state.ov.build.keep_min_reads, R = state.ov.runs.length;
+  for (const r of low) {
+    ul.append(h("li", { class: "empty", role: "option", "aria-disabled": "true" },
+      h("span", { class: "r-name", text: r[0] }),
+      h("span", { class: "r-meta", text: "too few reads" }),
+      h("span", { class: "r-sub", text: `Seen in ${r[4]} of ${R} runs, but no candidate site reaches ${keep} reads (highest: ${r[3]}), so it has no scores.` })));
+  }
+  if (!results.length && !low.length) {
+    ul.append(h("li", { class: "empty", role: "option", "aria-disabled": "true", text: `“${q.trim()}” was not found in any run.` }));
+  }
+  results.forEach((res, i) => {
+    const r = res.row, nL = state.ov.lines.length;
+    const li = h("li", { role: "option", id: `opt-${i}`, "data-idx": i, "aria-selected": i === 0 ? "true" : "false" },
+      h("span", { class: "r-name", text: res.tx ? res.tx : r.label }),
+      h("span", { class: "r-meta", text: `${fmt(r.n_sites)} sites · ${r.n_lines}/${nL} lines` }),
+      h("span", { class: "r-sub", text: res.tx ? `${r.label} · ${kindText(r)}` : `${r.gene_id ? r.gene_id + " · " : ""}${kindText(r)}` }));
+    li.addEventListener("mousedown", (e) => { e.preventDefault(); chooseResult(i); });
+    ul.append(li);
+  });
+  ul.hidden = false;
+  input.setAttribute("aria-expanded", "true");
+  input.setAttribute("aria-activedescendant", results.length ? "opt-0" : "");
+}
+function moveActive(d) {
+  if (!lastResults.length) return;
+  activeIdx = (activeIdx + d + lastResults.length) % lastResults.length;
+  $("searchResults").querySelectorAll("[data-idx]").forEach((li) => li.setAttribute("aria-selected", +li.dataset.idx === activeIdx ? "true" : "false"));
+  $(`opt-${activeIdx}`).scrollIntoView({ block: "nearest" });
+  $("geneSearch").setAttribute("aria-activedescendant", `opt-${activeIdx}`);
+}
+function closeResults() { $("searchResults").hidden = true; $("geneSearch").setAttribute("aria-expanded", "false"); }
+function chooseResult(i) {
+  const res = lastResults[i];
+  if (!res) return;
+  closeResults();
+  $("geneSearch").value = res.tx || res.row.label;
+  openGene(res.row.key, res.tx);
+}
+function setupGeneControls() {
+  const input = $("geneSearch");
+  let seq = 0;
+  input.addEventListener("input", async () => {
+    const q = input.value, my = ++seq;
+    const isTx = /^\s*ENST/i.test(q);
+    const results = isTx ? await searchTranscripts(q) : searchRows(q);
+    const Q = q.trim().toUpperCase();
+    let low = [];
+    if (!isTx && Q.length >= 2 && !results.some((r) => r.row.labelU === Q)) low = await lowCoverageMatches(q, results.length > 0);
+    if (my === seq) renderResults(results, q, low);
+  });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") { e.preventDefault(); moveActive(1); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); moveActive(-1); }
+    else if (e.key === "Enter") { e.preventDefault(); if (activeIdx >= 0) chooseResult(activeIdx); }
+    else if (e.key === "Escape") closeResults();
+  });
+  input.addEventListener("blur", () => setTimeout(closeResults, 120));
+  $("txSelect").addEventListener("change", (e) => { state.txId = e.target.value; state.site = null; renderGeneBody(); });
+  for (const r of document.querySelectorAll('input[name="rowMode"]')) r.addEventListener("change", (e) => { state.rowMode = e.target.value; renderGeneBody(); });
+  $("minReads").addEventListener("change", (e) => { state.minReads = +e.target.value; renderGeneBody(); });
+  $("mapTableToggle").addEventListener("click", (e) => {
+    state.mapTable = !state.mapTable;
+    e.currentTarget.setAttribute("aria-pressed", String(state.mapTable));
+    e.currentTarget.textContent = state.mapTable ? "Show as chart" : "Show as table";
+    $("siteMap").hidden = state.mapTable; $("siteTable").hidden = !state.mapTable;
+    renderGeneBody();
+  });
+  const ex = $("examples");
+  ex.replaceChildren(h("span", { text: "Try" }));
+  for (const g of state.ov.examples) {
+    const b = h("button", { type: "button", text: g });
+    b.addEventListener("click", () => { $("geneSearch").value = g; openGene(g); });
+    ex.append(b);
+  }
+  const sp = state.rows.find((r) => r.kind === "spike_SIRV");
+  if (sp) {
+    const b = h("button", { type: "button", text: "SIRV spike-ins" });
+    b.addEventListener("click", () => { $("geneSearch").value = sp.label; openGene(sp.key); });
+    ex.append(h("span", { class: "muted", text: "or a negative control:" }), b);
+  }
+}
+
+async function openGene(ref, txId) {
+  const row = state.byKey.get(ref) || state.byLabel.get(String(ref).toUpperCase());
+  if (!row) { geneMessage(`No site with at least ${state.ov.build.keep_min_reads} reads was found for “${ref}”.`); return; }
+  const view = $("geneView");
+  view.classList.add("loading");
+  try {
+    const data = await bucket(row.bucket);
+    const g = data[row.key];
+    if (!g) throw new Error(`${row.label} is listed but its data file has no entry for it.`);
+    state.gene = g; state.geneRow = row;
+    state.txId = txId && g.tx.some((t) => t.id === txId) ? txId : g.tx[0].id;
+    state.site = null;
+    renderGeneHead();
+    renderGeneBody();
+    if (currentTab() === "genes") setHash(geneHash());
+  } catch (err) {
+    geneMessage(err.message);
+  } finally {
+    view.classList.remove("loading");
+  }
+}
+function geneMessage(text) {
+  $("geneName").textContent = "Not found";
+  $("geneId").textContent = ""; $("geneKind").textContent = ""; $("geneLoc").textContent = "";
+  $("geneDesc").textContent = text; $("geneFacts").replaceChildren();
+}
+
+/* ---------- gene view ---------- */
+const currentTx = () => state.gene.tx.find((t) => t.id === state.txId) || state.gene.tx[0];
+function parseSites(tx) {
+  if (!tx._parsed) {
+    tx._parsed = tx.sites.map(([pos, rs, ss]) => ({
+      pos,
+      reads: rs.split(",").map((v) => (v === "" ? 0 : +v)),
+      scores: ss.split(",").map((v) => (v === "" ? null : +v / 100)),
+    }));
+  }
+  return tx._parsed;
+}
+function renderGeneHead() {
+  const g = state.gene, row = state.geneRow, nL = state.ov.lines.length;
+  $("geneName").textContent = g.label;
+  $("geneId").textContent = g.gene_id || "";
+  $("geneKind").textContent = kindText(row);
+  $("geneLoc").textContent = g.loc ? `Location ${g.loc}, GRCh38` : "";
+  $("geneDesc").textContent = g.desc || "";
+  $("geneFacts").replaceChildren(
+    h("span", { class: "fact", text: `${g.tx.length} transcript${g.tx.length > 1 ? "s" : ""} with data` }),
+    h("span", { class: "fact", text: `${fmt(row.n_sites)} candidate sites with ${state.ov.build.keep_min_reads}+ reads in at least one run` }),
+    h("span", { class: "fact", text: `measured in ${row.n_lines} of ${nL} cell lines` }),
+  );
+  const sel = $("txSelect");
+  sel.replaceChildren(...g.tx.map((t) => h("option", { value: t.id, text: `${t.id} · ${t.sites.length} sites · ${t.len_known ? fmt(t.len) + " nt" : "length unknown"}` })));
+  sel.value = state.txId;
+  sel.disabled = g.tx.length < 2;
+}
+
+function cellFor(reads, score) {
+  if (!reads) return { status: "none", reads: 0, score: null };
+  if (score == null) return { status: "unscored", reads, score: null };
+  if (reads < state.minReads) return { status: "below", reads, score };
+  return { status: "scored", reads, score };
+}
+function mapRows(sites) {
+  const runs = state.ov.runs;
+  if (state.rowMode === "runs") {
+    return runs.map((r, i) => ({
+      line: r.line, label: `rep${r.rep} · run${r.run}`, desc: `${r.line}, replicate ${r.rep}, run ${r.run}`,
+      cells: sites.map((s) => cellFor(s.reads[i], s.scores[i])),
+    }));
+  }
+  return state.ov.lines.map((L) => {
+    const idx = runs.map((r, i) => (r.line === L.name ? i : -1)).filter((i) => i >= 0);
+    return {
+      line: L.name, label: `${idx.length} run${idx.length > 1 ? "s" : ""}`, desc: `${L.name}, ${idx.length} run${idx.length > 1 ? "s" : ""} combined`,
+      cells: sites.map((s) => {
+        const reads = d3.sum(idx, (i) => s.reads[i]);
+        if (!reads) return { status: "none", reads: 0, score: null, n: 0, of: idx.length };
+        const pass = idx.filter((i) => s.scores[i] != null && s.reads[i] >= state.minReads);
+        if (!pass.length) {
+          const anyScore = idx.some((i) => s.scores[i] != null);
+          return { status: anyScore ? "below" : "unscored", reads, score: null, n: 0, of: idx.length };
+        }
+        return { status: "scored", reads, score: d3.mean(pass, (i) => s.scores[i]), n: pass.length, of: idx.length };
+      }),
+    };
+  });
+}
+function statusText(c, inLines) {
+  if (c.status === "scored") return `Score ${f2(c.score)}${simulated() ? " (simulated)" : ""}`;
+  if (c.status === "none") return inLines ? "No reads in any run" : "No reads in this run";
+  if (c.status === "below") return `Fewer than ${state.minReads} reads: score hidden`;
+  return `Not scored: fewer than ${scoringMin()} reads`;
+}
+function defaultSite(sites) {
+  let best = 0, bestKey = -1;
+  sites.forEach((s, i) => {
+    const scored = s.scores.filter((v, j) => v != null && s.reads[j] >= state.minReads);
+    const key = scored.length * 10 + (scored.length ? d3.max(scored) : 0);
+    if (key > bestKey) { bestKey = key; best = i; }
+  });
+  return best;
+}
+
+function renderGeneBody() {
+  if (!state.gene) return;
+  const tx = currentTx(), sites = parseSites(tx);
+  if (state.site == null || state.site >= sites.length) state.site = defaultSite(sites);
+  renderMapLegend();
+  const inLines = state.rowMode === "lines";
+  $("mapSub").textContent = `Columns are the ${sites.length} candidate DRACH sites on ${tx.id} that have at least ${state.ov.build.keep_min_reads} reads in some run, in transcript order. The line on top shows where each one sits along the transcript. Rows are ${inLines ? "cell lines, each combining its runs" : "sequencing runs, grouped by cell line"}.`;
+  $("mapNote").textContent = inLines
+    ? `A cell line's score is the mean over its runs with at least ${state.minReads} reads at that site; reads are summed over all its runs. This combining rule is a placeholder until the team agrees one.`
+    : `Grey squares are sites with reads but too few to score (fewer than ${state.minReads}). Dots mean no reads at all in that run.${tx.len_known ? "" : " This transcript is not in the annotation table, so its length is estimated from its last site."}`;
+  if (state.mapTable) renderSiteTable(tx, sites); else renderSiteMap(tx, sites);
+  renderDetail(tx, sites);
+}
+
+function renderMapLegend() {
+  const lg = $("mapLegend");
+  const sw = (svgInner) => { const s = document.createElementNS("http://www.w3.org/2000/svg", "svg"); s.setAttribute("width", "16"); s.setAttribute("height", "16"); s.setAttribute("aria-hidden", "true"); s.innerHTML = svgInner; return s; };
+  lg.replaceChildren(
+    h("span", { class: "item ramp-wrap" }, h("span", { text: "0" }), h("span", { class: "ramp" }), h("span", { text: "1" })),
+    h("span", { class: "item" }, "m6A score", simulated() ? h("span", { class: "tag-sim", text: "simulated" }) : null),
+    h("span", { class: "item" }, sw(`<rect x="4.5" y="4.5" width="7" height="7" rx="1.5" fill="${P.na}"/>`), "Too few reads to score"),
+    h("span", { class: "item" }, sw(`<circle cx="8" cy="8" r="1.8" fill="${P.none}"/>`), "No reads"),
+    h("span", { class: "item" }, sw(`<rect x="1.5" y="1.5" width="13" height="13" rx="2" fill="none" stroke="${P.accent}" stroke-width="2"/>`), "Selected site"),
+  );
+}
+
+function renderSiteMap(tx, sites) {
+  const host = $("siteMap");
+  host.replaceChildren();
+  const rows = mapRows(sites);
+  const inLines = state.rowMode === "lines";
+  const nS = sites.length;
+  const labelW = inLines ? 118 : 156;
+  const gridW = nS * STEP - GAP;
+  const avail = Math.max(300, host.clientWidth - 4);
+  const plotW = Math.max(gridW, avail - labelW - 8);
+  const trackY = 22, handleY = 78, handleH = 7, gridTop = handleY + handleH + 6;
+  const rowY = [];
+  let y = gridTop, prev = null;
+  rows.forEach((r) => { if (!inLines && prev && r.line !== prev) y += 8; rowY.push(y); y += STEP; prev = r.line; });
+  const gridBottom = y - GAP;
+  const every = nS <= 60 ? 1 : nS <= 140 ? 5 : 10;
+  const height = gridBottom + 50;
+  const width = labelW + plotW + 8;
+  const colX = (i) => labelW + i * STEP;
+  const x = d3.scaleLinear().domain([0, tx.len]).range([labelW + 4, labelW + plotW - 4]);
+  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("role", "group").attr("aria-label", `Scores at ${nS} sites on ${tx.id} across ${rows.length} ${inLines ? "cell lines" : "runs"}`);
+
+  // transcript drawn to scale
+  const g0 = svg.append("g");
+  g0.append("line").attr("x1", x(0)).attr("x2", x(tx.len)).attr("y1", trackY).attr("y2", trackY).attr("stroke", P.ink2).attr("stroke-width", 2).attr("stroke-linecap", "round");
+  g0.append("text").attr("x", x(0)).attr("y", trackY - 9).attr("fill", P.muted).attr("font-size", 11).text("5′  0");
+  g0.append("text").attr("x", x(tx.len)).attr("y", trackY - 9).attr("text-anchor", "end").attr("fill", P.muted).attr("font-size", 11)
+    .text(tx.len_known ? `${fmt(tx.len)} nt  3′` : `≈${fmt(tx.len)} nt  3′`);
+  const leads = g0.append("g");
+  sites.forEach((s, i) => {
+    const x1 = x(s.pos), x2 = colX(i) + STEP_CELL / 2, sel = i === state.site;
+    leads.append("line").attr("x1", x1).attr("x2", x1).attr("y1", trackY - 5).attr("y2", trackY + 5).attr("stroke", sel ? P.accent : P.ink2).attr("stroke-width", sel ? 2 : 1);
+    leads.append("path").attr("d", `M${x1},${trackY + 6} C${x1},${trackY + 30} ${x2},${handleY - 26} ${x2},${handleY - 3}`)
+      .attr("fill", "none").attr("stroke", sel ? P.accent : P.axis).attr("stroke-width", sel ? 1.5 : 1);
+  });
+
+  // row labels
+  const gl = svg.append("g").attr("font-size", 12);
+  rows.forEach((r, ri) => {
+    const cy = rowY[ri] + STEP_CELL / 2 + 4;
+    if (inLines || ri === 0 || rows[ri - 1].line !== r.line) {
+      gl.append("text").attr("x", 0).attr("y", cy).attr("fill", P.ink).attr("font-weight", 700).text(r.line);
+    }
+    gl.append("text").attr("x", labelW - 10).attr("y", cy).attr("text-anchor", "end").attr("fill", P.muted).attr("font-variant-numeric", "tabular-nums").text(r.label);
+  });
+
+  // cells
+  const gc = svg.append("g");
+  rows.forEach((r, ri) => {
+    r.cells.forEach((c, i) => {
+      const cx = colX(i), cy = rowY[ri];
+      if (c.status === "scored") gc.append("rect").attr("x", cx).attr("y", cy).attr("width", STEP_CELL).attr("height", STEP_CELL).attr("rx", 2).attr("fill", P.score(c.score));
+      else if (c.status === "none") gc.append("circle").attr("cx", cx + STEP_CELL / 2).attr("cy", cy + STEP_CELL / 2).attr("r", 1.6).attr("fill", P.none);
+      else gc.append("rect").attr("x", cx + 4.5).attr("y", cy + 4.5).attr("width", 7).attr("height", 7).attr("rx", 1.5).attr("fill", P.na);
+    });
+  });
+
+  // selected column
+  if (state.site != null && state.site < nS) {
+    svg.append("rect").attr("x", colX(state.site) - 2).attr("y", gridTop - 2).attr("width", STEP_CELL + 4).attr("height", gridBottom - gridTop + 4)
+      .attr("rx", 3).attr("fill", "none").attr("stroke", P.accent).attr("stroke-width", 2);
+  }
+
+  // position labels
+  const gp = svg.append("g").attr("font-size", 10.5).attr("font-family", "var(--font-mono)");
+  sites.forEach((s, i) => {
+    if (i % every !== 0 && i !== state.site) return;
+    gp.append("text").attr("transform", `translate(${colX(i) + STEP_CELL / 2 + 3.5},${gridBottom + 8}) rotate(-90)`).attr("text-anchor", "end")
+      .attr("fill", i === state.site ? P.accent : P.muted).attr("font-weight", i === state.site ? 700 : 400).text(fmt(s.pos));
+  });
+
+  // hover layer
+  const hover = svg.append("rect").attr("fill", "none").attr("stroke", P.ink).attr("stroke-width", 1.5).attr("rx", 2.5).attr("width", STEP_CELL + 2).attr("height", STEP_CELL + 2).attr("visibility", "hidden").attr("pointer-events", "none");
+  const hit = svg.append("rect").attr("x", labelW).attr("y", gridTop).attr("width", gridW).attr("height", gridBottom - gridTop).attr("fill", "transparent").style("cursor", "pointer");
+  const locate = (evt) => {
+    const [px, py] = d3.pointer(evt, svg.node());
+    const i = Math.floor((px - labelW) / STEP);
+    const ri = rowY.findIndex((ry) => py >= ry - GAP / 2 && py < ry + STEP - GAP / 2);
+    return i >= 0 && i < nS && ri >= 0 ? { i, ri } : null;
+  };
+  hit.on("pointermove", (evt) => {
+    const loc = locate(evt);
+    if (!loc) { hover.attr("visibility", "hidden"); hideTip(); return; }
+    const r = rows[loc.ri], c = r.cells[loc.i], s = sites[loc.i];
+    hover.attr("x", colX(loc.i) - 1).attr("y", rowY[loc.ri] - 1).attr("visibility", "visible");
+    const readsTxt = c.reads ? `${fmt(c.reads)} read${c.reads === 1 ? "" : "s"}${inLines ? " in total" : ""}${inLines && c.status === "scored" ? ` · mean of ${c.n} of ${c.of} runs` : ""}` : null;
+    showTipAt(evt.clientX, evt.clientY, tipContent(statusText(c, inLines), r.desc, `Site ${fmt(s.pos)} on ${tx.id}`, readsTxt));
+  }).on("pointerleave", () => { hover.attr("visibility", "hidden"); hideTip(); })
+    .on("click", (evt) => { const loc = locate(evt); if (loc) selectSite(loc.i); });
+
+  // keyboard-focusable column handles
+  const gh = svg.append("g");
+  sites.forEach((s, i) => {
+    const sel = i === state.site;
+    const handle = gh.append("rect").attr("x", colX(i)).attr("y", handleY).attr("width", STEP_CELL).attr("height", handleH).attr("rx", 2)
+      .attr("fill", sel ? P.accent : P.axis).attr("tabindex", 0).attr("role", "button").attr("data-col", i)
+      .attr("aria-label", `Site ${fmt(s.pos)}: show details`).attr("aria-pressed", sel ? "true" : "false").style("cursor", "pointer");
+    handle.on("click", () => selectSite(i))
+      .on("keydown", (evt) => {
+        if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); selectSite(i, true); }
+        if (evt.key === "ArrowRight" || evt.key === "ArrowLeft") {
+          evt.preventDefault();
+          const j = Math.max(0, Math.min(nS - 1, i + (evt.key === "ArrowRight" ? 1 : -1)));
+          const next = host.querySelector(`[data-col="${j}"]`); if (next) next.focus();
+        }
+      })
+      .on("focus", (evt) => {
+        const scored = s.scores.filter((v, j) => v != null && s.reads[j] >= state.minReads);
+        showTipFor(evt.currentTarget, tipContent(`Site ${fmt(s.pos)}`, `${scored.length} run${scored.length === 1 ? "" : "s"} scored`, scored.length ? `Median score ${f2(d3.median(scored))}${simulated() ? " (simulated)" : ""}` : null, "Press Enter for details"));
+      })
+      .on("blur", hideTip)
+      .on("pointerenter", (evt) => showTipAt(evt.clientX, evt.clientY, tipContent(`Site ${fmt(s.pos)}`, "Click for details")))
+      .on("pointerleave", hideTip);
+  });
+}
+
+function selectSite(i, refocus) {
+  state.site = i;
+  renderGeneBody();
+  if (refocus) { const n = $("siteMap").querySelector(`[data-col="${i}"]`); if (n) n.focus(); }
+}
+
+function renderSiteTable(tx, sites) {
+  const host = $("siteTable");
+  const rows = mapRows(sites);
+  const t = h("table", { class: "data cells" });
+  const cap = h("caption", { class: "muted", text: `Score (reads) for each site on ${tx.id}. “—” = too few reads to score, blank = no reads.` });
+  cap.style.textAlign = "left"; cap.style.padding = "0 0 8px";
+  t.append(cap);
+  const hr = h("tr", {}, h("th", { scope: "col", text: state.rowMode === "lines" ? "Cell line" : "Run" }));
+  sites.forEach((s) => hr.append(h("th", { scope: "col", class: "num", text: fmt(s.pos) })));
+  t.append(h("thead", {}, hr));
+  const tb = h("tbody");
+  rows.forEach((r) => {
+    const tr = h("tr", {}, h("th", { scope: "row", text: state.rowMode === "lines" ? r.line : `${r.line} ${r.label}` }));
+    r.cells.forEach((c) => tr.append(h("td", { class: "num", text: c.status === "scored" ? `${f2(c.score)} (${c.reads})` : c.status === "none" ? "" : `— (${c.reads})` })));
+    tb.append(tr);
+  });
+  t.append(tb);
+  host.replaceChildren(t);
+}
+
+function renderDetail(tx, sites) {
+  const s = sites[state.site];
+  const host = $("detailChart");
+  host.replaceChildren();
+  if (!s) return;
+  const runs = state.ov.runs;
+  const g = state.gene;
+  $("detailTitle").textContent = `Site ${fmt(s.pos)} on ${tx.id}`;
+  $("detailSub").textContent = `${g.label}${g.kind === "annotated" ? "" : ` (${kindText(state.geneRow)})`} · candidate DRACH site, transcript coordinate ${fmt(s.pos)}. Reads and score in each of the ${runs.length} runs.`;
+  const scoredIdx = runs.map((r, i) => i).filter((i) => s.scores[i] != null && s.reads[i] >= state.minReads);
+  const withReads = s.reads.filter((v) => v > 0).length;
+  const linesScored = new Set(scoredIdx.map((i) => runs[i].line)).size;
+  const med = scoredIdx.length ? d3.median(scoredIdx, (i) => s.scores[i]) : null;
+  $("detailFacts").replaceChildren(
+    h("span", { class: "fact", text: `Reads in ${withReads} of ${runs.length} runs` }),
+    h("span", { class: "fact", text: `Scored in ${scoredIdx.length} runs from ${linesScored} of ${state.ov.lines.length} cell lines` }),
+    med != null ? h("span", { class: "fact", text: `Median score ${f2(med)}${simulated() ? " (simulated)" : ""}` }) : null,
+  );
+
+  const width = Math.max(320, host.clientWidth);
+  const labelW = width < 520 ? 116 : 160;
+  const colW = (width - labelW - 16) / 2;
+  const rowH = 20, top = 46;
+  const rowY = [];
+  let y = top, prev = null;
+  runs.forEach((r) => { if (prev && r.line !== prev) y += 8; rowY.push(y); y += rowH; prev = r.line; });
+  const height = y + 8;
+  const xr = d3.scaleLog().domain([1, 1000]).range([0, colW - 60]).clamp(true);
+  const xs = d3.scaleLinear().domain([0, 1]).range([10, colW - 58]);
+  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("role", "img").attr("aria-label", `Reads and scores for site ${s.pos} in every run`);
+  const x0 = labelW, x1 = labelW + colW + 16;
+  svg.append("text").attr("x", x0).attr("y", 12).attr("fill", P.muted).attr("font-size", 11.5).attr("font-weight", 600).attr("letter-spacing", "0.05em").text("READS (LOG SCALE)");
+  svg.append("text").attr("x", x1).attr("y", 12).attr("fill", P.muted).attr("font-size", 11.5).attr("font-weight", 600).attr("letter-spacing", "0.05em").text(simulated() ? "SCORE (SIMULATED)" : "SCORE");
+  [1, 10, 100, 1000].forEach((t) => {
+    svg.append("line").attr("x1", x0 + xr(t)).attr("x2", x0 + xr(t)).attr("y1", top - 6).attr("y2", height - 6).attr("stroke", P.hair);
+    svg.append("text").attr("x", x0 + xr(t)).attr("y", top - 9).attr("text-anchor", "middle").attr("fill", P.muted).attr("font-size", 10.5).text(fmt(t));
+  });
+  [0, 0.5, 1].forEach((t) => {
+    svg.append("line").attr("x1", x1 + xs(t)).attr("x2", x1 + xs(t)).attr("y1", top - 6).attr("y2", height - 6).attr("stroke", P.hair);
+    svg.append("text").attr("x", x1 + xs(t)).attr("y", top - 9).attr("text-anchor", "middle").attr("fill", P.muted).attr("font-size", 10.5).text(t);
+  });
+  runs.forEach((r, i) => {
+    const cy = rowY[i] + rowH / 2;
+    if (i === 0 || runs[i - 1].line !== r.line) svg.append("text").attr("x", 0).attr("y", cy + 4).attr("fill", P.ink).attr("font-weight", 700).attr("font-size", 12).text(r.line);
+    svg.append("text").attr("x", labelW - 10).attr("y", cy + 4).attr("text-anchor", "end").attr("fill", P.muted).attr("font-size", 12).text(`rep${r.rep} · run${r.run}`);
+    const reads = s.reads[i], score = s.scores[i];
+    if (reads > 0) {
+      const w = Math.max(2, xr(reads));
+      svg.append("path").attr("d", barRight(x0, cy - 5, w, 10, 3)).attr("fill", reads >= state.minReads && score != null ? P.series : P.deemph);
+      svg.append("text").attr("x", x0 + w + 6).attr("y", cy + 4).attr("fill", P.ink2).attr("font-size", 12).attr("font-variant-numeric", "tabular-nums").text(fmt(reads));
+    } else {
+      svg.append("text").attr("x", x0).attr("y", cy + 4).attr("fill", P.muted).attr("font-size", 12).text("no reads");
+    }
+    svg.append("line").attr("x1", x1 + xs(0)).attr("x2", x1 + xs(1)).attr("y1", cy).attr("y2", cy).attr("stroke", P.hair);
+    if (score != null && reads >= state.minReads) {
+      svg.append("circle").attr("cx", x1 + xs(score)).attr("cy", cy).attr("r", 5.5).attr("fill", P.score(score)).attr("stroke", P.surface).attr("stroke-width", 2);
+      svg.append("text").attr("x", x1 + colW - 40).attr("y", cy + 4).attr("fill", P.ink).attr("font-size", 12).attr("font-variant-numeric", "tabular-nums").text(f2(score));
+    } else if (reads > 0) {
+      svg.append("text").attr("x", x1 + colW - 40).attr("y", cy + 4).attr("fill", P.muted).attr("font-size", 12).text("—");
+    }
+    svg.append("rect").attr("x", 0).attr("y", rowY[i]).attr("width", width).attr("height", rowH).attr("fill", "transparent")
+      .on("pointermove", (evt) => showTipAt(evt.clientX, evt.clientY, tipContent(
+        reads === 0 ? "No reads" : score != null && reads >= state.minReads ? `Score ${f2(score)}${simulated() ? " (simulated)" : ""}` : `${fmt(reads)} reads: too few to score`,
+        `${r.line}, replicate ${r.rep}, run ${r.run}`, reads ? `${fmt(reads)} read${reads === 1 ? "" : "s"}` : null)))
+      .on("pointerleave", hideTip);
+  });
+}
+function barRight(x, y, w, hgt, r) {
+  r = Math.min(r, w / 2, hgt / 2);
+  return `M${x},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + hgt - r}Q${x + w},${y + hgt} ${x + w - r},${y + hgt}H${x}Z`;
+}
+function barUp(x, y0, w, hgt, r) {
+  r = Math.min(r, w / 2, hgt);
+  return `M${x},${y0}V${y0 - hgt + r}Q${x},${y0 - hgt} ${x + r},${y0 - hgt}H${x + w - r}Q${x + w},${y0 - hgt} ${x + w},${y0 - hgt + r}V${y0}Z`;
+}
+
+/* ---------- coverage tab ---------- */
+function renderCoverage() {
+  const ov = state.ov, T = String(state.coverT);
+  const medians = ov.runs.map((r) => r.median);
+  $("covTiles").replaceChildren(
+    tile("Runs", fmt(ov.runs.length), `${d3.sum(ov.lines, (l) => l.n_reps)} biological replicates, ${ov.lines.length} cell lines`),
+    tile("Candidate sites with any reads", fmtS(ov.totals.union_sites["1"]), "DRACH sites seen in at least one run"),
+    tile(`Sites with ${T}+ reads in some run`, fmtS(ov.sharing.by_T[T].n_sites), `${pct1(ov.sharing.by_T[T].n_sites / ov.totals.union_sites["1"])} of all candidate sites`),
+    tile("Typical reads per site", `${d3.min(medians)}–${d3.max(medians)}`, "median within each run"),
+  );
+  renderRunTable();
+  renderLadder();
+  renderNLines();
+  upsetChart($("upsetCov"), ov.sharing.by_T[T].combos, ov.sharing.by_T[T].n_sites, { unit: "sites", emphasizeAll: true });
+  renderOverlap();
+  renderKinds();
+}
+function tile(k, v, d) { return h("div", { class: "tile" }, h("div", { class: "k", text: k }), h("div", { class: "v", text: v }), h("div", { class: "d", text: d })); }
+
+function renderRunTable() {
+  const ov = state.ov, T = String(state.coverT);
+  const t = $("runTable");
+  t.replaceChildren();
+  t.append(h("thead", {}, h("tr", {}, h("th", { text: "Run" }), h("th", { class: "num", text: "Sites in file" }),
+    h("th", { class: "num", text: `Sites with ${T}+ reads` }), h("th", { class: "num", text: "Median reads" }), h("th", { class: "num", text: "Transcripts" }))));
+  const max = d3.max(ov.runs, (r) => r.ge[T]);
+  const tb = h("tbody");
+  for (const L of ov.lines) {
+    tb.append(h("tr", { class: "group" }, h("th", { colspan: 5 }, L.name, h("span", { text: `${L.info} · ${L.n_reps} replicate${L.n_reps > 1 ? "s" : ""}, ${L.n_runs} run${L.n_runs > 1 ? "s" : ""}` }))));
+    for (const r of ov.runs.filter((x) => x.line === L.name)) {
+      const bar = h("i"); bar.style.width = `${Math.max(2, (r.ge[T] / max) * 120)}px`;
+      tb.append(h("tr", {}, h("td", { style: "white-space:nowrap", text: `rep ${r.rep} · run ${r.run}` }), h("td", { class: "num", text: fmt(r.n_sites) }),
+        h("td", { class: "num" }, h("span", { class: "inline-bar" }, h("span", { text: fmt(r.ge[T]) }), bar)),
+        h("td", { class: "num", text: fmt(r.median) }), h("td", { class: "num", text: fmt(r.n_tx) })));
+    }
+  }
+  t.append(tb);
+}
+
+function runShort(r) { return `${r.line} r${r.rep}.${r.run}`; }
+
+function renderLadder() {
+  const ov = state.ov, host = $("ladder");
+  host.replaceChildren();
+  const labels = ov.ladder_labels;
+  const width = Math.max(560, host.clientWidth);
+  const labelW = 150, top = 26, rowH = 22;
+  const cellW = (width - labelW) / labels.length;
+  const rowY = []; let y = top, prev = null;
+  ov.runs.forEach((r) => { if (prev && r.line !== prev) y += 6; rowY.push(y); y += rowH; prev = r.line; });
+  const height = y + 4;
+  const shares = ov.runs.map((r) => r.ladder.map((c) => c / r.n_sites));
+  const maxShare = d3.max(shares.flat());
+  const color = (v) => P.score(v / maxShare);
+  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("role", "img").attr("aria-label", "Share of sites in each read-count band, per run");
+  labels.forEach((lab, j) => svg.append("text").attr("x", labelW + j * cellW + cellW / 2).attr("y", 14).attr("text-anchor", "middle").attr("fill", P.muted).attr("font-size", 12).text(lab));
+  ov.runs.forEach((r, i) => {
+    if (i === 0 || ov.runs[i - 1].line !== r.line) svg.append("text").attr("x", 0).attr("y", rowY[i] + 15).attr("fill", P.ink).attr("font-weight", 700).attr("font-size", 12).text(r.line);
+    svg.append("text").attr("x", labelW - 10).attr("y", rowY[i] + 15).attr("text-anchor", "end").attr("fill", P.muted).attr("font-size", 12).text(`rep${r.rep} · run${r.run}`);
+    shares[i].forEach((v, j) => {
+      const fill = color(v);
+      const g = svg.append("g");
+      g.append("rect").attr("x", labelW + j * cellW + 1).attr("y", rowY[i]).attr("width", cellW - 2).attr("height", rowH - 2).attr("rx", 2).attr("fill", fill);
+      if (cellW >= 34) g.append("text").attr("x", labelW + j * cellW + cellW / 2).attr("y", rowY[i] + 14.5).attr("text-anchor", "middle").attr("font-size", 11).attr("fill", textOn(fill)).attr("font-variant-numeric", "tabular-nums").text(v >= 0.005 ? pct0(v) : "<1%");
+      g.on("pointermove", (evt) => showTipAt(evt.clientX, evt.clientY, tipContent(`${pct1(v)} of sites`, `${r.line}, replicate ${r.rep}, run ${r.run}`, `${labels[j]} reads: ${fmt(r.ladder[j])} sites`))).on("pointerleave", hideTip);
+    });
+  });
+  const tbl = h("table", { class: "data cells" });
+  tbl.append(h("thead", {}, h("tr", {}, h("th", { text: "Run" }), ...labels.map((l) => h("th", { class: "num", text: l })))));
+  const tb = h("tbody");
+  ov.runs.forEach((r) => tb.append(h("tr", {}, h("th", { scope: "row", text: runShort(r) }), ...r.ladder.map((c) => h("td", { class: "num", text: `${fmt(c)} (${pct1(c / r.n_sites)})` })))));
+  tbl.append(tb);
+  $("ladderTable").replaceChildren(tbl);
+}
+
+function renderNLines() {
+  const ov = state.ov, T = String(state.coverT), host = $("nLines");
+  host.replaceChildren();
+  const sh = ov.sharing.by_T[T], hist = sh.n_lines_hist.slice(1), total = sh.n_sites, L = ov.lines.length;
+  $("nLinesSub").textContent = `Of ${fmt(total)} sites with ${T}+ reads in some run, ${fmt(sh.all_lines)} (${pct1(sh.all_lines / total)}) are measured in all ${L} cell lines and ${fmt(hist[0])} (${pct1(hist[0] / total)}) in only one. Comparing cell lines is only fair on sites measured in all of them.`;
+  const width = Math.max(300, host.clientWidth), height = 220, left = 8, bottom = 34, top = 22;
+  const xb = d3.scaleBand().domain(d3.range(1, L + 1)).range([left, width - 8]).paddingInner(0.35).paddingOuter(0.1);
+  const yb = d3.scaleLinear().domain([0, d3.max(hist)]).range([height - bottom, top]);
+  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("role", "img").attr("aria-label", "Number of sites by how many cell lines measure them");
+  svg.append("line").attr("x1", left).attr("x2", width - 8).attr("y1", height - bottom).attr("y2", height - bottom).attr("stroke", P.axis);
+  const bw = Math.min(24, xb.bandwidth());
+  hist.forEach((v, i) => {
+    const k = i + 1, cx = xb(k) + xb.bandwidth() / 2;
+    const g = svg.append("g");
+    g.append("path").attr("d", barUp(cx - bw / 2, height - bottom, bw, Math.max(1, height - bottom - yb(v)), 4)).attr("fill", k === L ? P.series : P.deemph);
+    g.append("text").attr("x", cx).attr("y", yb(v) - 6).attr("text-anchor", "middle").attr("fill", P.ink2).attr("font-size", 11.5).attr("font-variant-numeric", "tabular-nums").text(fmtS(v));
+    g.append("text").attr("x", cx).attr("y", height - bottom + 16).attr("text-anchor", "middle").attr("fill", P.muted).attr("font-size", 12).text(k);
+    g.append("rect").attr("x", xb(k)).attr("y", top).attr("width", xb.bandwidth()).attr("height", height - bottom - top).attr("fill", "transparent")
+      .on("pointermove", (evt) => showTipAt(evt.clientX, evt.clientY, tipContent(`${fmt(v)} sites`, `measured in exactly ${k} cell line${k > 1 ? "s" : ""}`, pct1(v / total) + " of measured sites"))).on("pointerleave", hideTip);
+  });
+  svg.append("text").attr("x", width / 2).attr("y", height - 4).attr("text-anchor", "middle").attr("fill", P.muted).attr("font-size", 12).text("Number of cell lines measuring the site");
+}
+
+function upsetChart(host, combos, total, opts) {
+  host.replaceChildren();
+  combos = combos.slice(0, 12);
+  if (!combos.length) { host.append(h("p", { class: "muted", text: "No sites meet this threshold." })); return; }
+  const names = lineNames(), L = names.length;
+  const width = Math.max(300, host.clientWidth);
+  const dot = width < 420 ? 17 : 21, matW = dot * L, top = 74, rowH = 24, gapX = 14;
+  const barX = matW + gapX, barMax = Math.max(60, width - barX - 92);
+  const xs = d3.scaleLinear().domain([0, d3.max(combos, (c) => c.n)]).range([0, barMax]);
+  const height = top + combos.length * rowH + 6;
+  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("role", "img").attr("aria-label", "Most common combinations of cell lines");
+  names.forEach((n, j) => svg.append("text").attr("transform", `translate(${j * dot + dot / 2 + 4},${top - 8}) rotate(-50)`).attr("fill", P.ink2).attr("font-size", 11.5).text(n));
+  combos.forEach((c, i) => {
+    const cy = top + i * rowH + rowH / 2;
+    const inSet = names.map((n) => c.lines.includes(n));
+    const on = inSet.map((v, j) => (v ? j : -1)).filter((j) => j >= 0);
+    const all = c.lines.length === L;
+    const g = svg.append("g");
+    if (i % 2 === 0) g.append("rect").attr("x", 0).attr("y", cy - rowH / 2).attr("width", width).attr("height", rowH).attr("fill", P.surface2).attr("opacity", 0.5);
+    if (on.length > 1) g.append("line").attr("x1", on[0] * dot + dot / 2).attr("x2", on[on.length - 1] * dot + dot / 2).attr("y1", cy).attr("y2", cy).attr("stroke", P.ink).attr("stroke-width", 2);
+    inSet.forEach((v, j) => g.append("circle").attr("cx", j * dot + dot / 2).attr("cy", cy).attr("r", 4.5).attr("fill", v ? P.ink : P.hair));
+    const w = Math.max(2, xs(c.n));
+    g.append("path").attr("d", barRight(barX, cy - 6, w, 12, 3)).attr("fill", opts.emphasizeAll && all ? P.series : P.deemph);
+    g.append("text").attr("x", barX + w + 6).attr("y", cy + 4).attr("fill", P.ink2).attr("font-size", 11.5).attr("font-variant-numeric", "tabular-nums").text(`${fmtS(c.n)} · ${pct1(c.n / total)}`);
+    g.append("rect").attr("x", 0).attr("y", cy - rowH / 2).attr("width", width).attr("height", rowH).attr("fill", "transparent")
+      .on("pointermove", (evt) => showTipAt(evt.clientX, evt.clientY, tipContent(`${fmt(c.n)} ${opts.unit}`, all ? `all ${L} cell lines` : `only ${c.lines.join(", ")}`, `${pct1(c.n / total)} of ${fmt(total)}`))).on("pointerleave", hideTip);
+  });
+}
+
+function renderOverlap() {
+  const ov = state.ov, host = $("overlap");
+  host.replaceChildren();
+  const T = String(state.coverT), M = ov.overlap.by_T[T];
+  if (!M) { host.append(h("p", { class: "muted", text: "Not computed for this threshold." })); return; }
+  const runs = ov.runs, n = runs.length;
+  const labelW = 132;
+  const avail = Math.max(360, host.clientWidth);
+  const cell = Math.max(14, Math.min(26, Math.floor((avail - labelW - 8) / n)));
+  const top = 96, width = labelW + n * cell + 8, height = top + n * cell + 8;
+  const off = M.flatMap((row, i) => row.filter((v, j) => j !== i));
+  const lo = d3.min(off), hi = d3.max(off);
+  const color = d3.scaleLinear().domain(d3.range(7).map((k) => lo + (hi - lo) * k / 6)).range(P.seq).interpolate(d3.interpolateLab).clamp(true);
+  $("overlapLegend").replaceChildren(
+    h("span", { class: "item ramp-wrap" }, h("span", { text: pct0(lo) }), h("span", { class: "ramp" }), h("span", { text: pct0(hi) })),
+    h("span", { class: "item", text: "shared sites, lowest to highest pair" }),
+    h("span", { class: "item", text: "Grey diagonal: a run compared with itself" }));
+  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("role", "img").attr("aria-label", "Pairwise overlap of measured sites between runs");
+  runs.forEach((r, i) => {
+    svg.append("text").attr("x", labelW - 8).attr("y", top + i * cell + cell / 2 + 4).attr("text-anchor", "end").attr("fill", i === 0 || runs[i - 1].line !== r.line ? P.ink : P.muted).attr("font-size", 11).text(runShort(r));
+    svg.append("text").attr("transform", `translate(${labelW + i * cell + cell / 2 + 4},${top - 8}) rotate(-60)`).attr("fill", i === 0 || runs[i - 1].line !== r.line ? P.ink : P.muted).attr("font-size", 11).text(runShort(r));
+  });
+  for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) {
+    const v = M[i][j], fill = i === j ? P.surface2 : color(v);
+    svg.append("rect").attr("x", labelW + j * cell + 1).attr("y", top + i * cell + 1).attr("width", cell - 2).attr("height", cell - 2).attr("rx", 1.5).attr("fill", fill)
+      .on("pointermove", (evt) => showTipAt(evt.clientX, evt.clientY, tipContent(i === j ? "Same run" : `${pct1(v)} shared`, `${runShort(runs[i])} vs ${runShort(runs[j])}`, `sites with ${T}+ reads (Jaccard index)`))).on("pointerleave", hideTip);
+  }
+  let start = 0;
+  runs.forEach((r, i) => {
+    if (i === n - 1 || runs[i + 1].line !== r.line) {
+      const len = i - start + 1;
+      svg.append("rect").attr("x", labelW + start * cell).attr("y", top + start * cell).attr("width", len * cell).attr("height", len * cell).attr("fill", "none").attr("stroke", P.ink).attr("stroke-width", 1.2).attr("rx", 2);
+      start = i + 1;
+    }
+  });
+  const tbl = h("table", { class: "data cells" });
+  tbl.append(h("thead", {}, h("tr", {}, h("th", { text: "Run" }), ...runs.map((r) => h("th", { class: "num", text: runShort(r) })))));
+  const tb = h("tbody");
+  runs.forEach((r, i) => tb.append(h("tr", {}, h("th", { scope: "row", text: runShort(r) }), ...M[i].map((v) => h("td", { class: "num", text: v.toFixed(2) })))));
+  tbl.append(tb);
+  $("overlapTable").replaceChildren(tbl);
+}
+
+function renderKinds() {
+  const names = { annotated: "Genes in the annotation table", alt_haplotype: "Transcripts outside the primary annotation", spike_SIRV: "SIRV spike-in controls", spike_ERCC: "ERCC spike-in controls", spike_sequin: "Sequin spike-in controls", other: "Other" };
+  const t = $("kindTable");
+  t.replaceChildren(h("thead", {}, h("tr", {}, h("th", { text: "Kind of transcript" }), h("th", { class: "num", text: "Transcripts" }), h("th", { class: "num", text: "Sites with 20+ reads" }), h("th", { class: "num", text: "Runs containing them" }))));
+  const tb = h("tbody");
+  state.ov.kinds.forEach((k) => tb.append(h("tr", {}, h("td", { text: names[k.kind] || k.kind }), h("td", { class: "num", text: fmt(k.transcripts) }), h("td", { class: "num", text: fmt(k.sites_ge20) }), h("td", { class: "num", text: `${k.runs} of ${state.ov.runs.length}` }))));
+  t.append(tb);
+}
+
+/* ---------- cell-line tab ---------- */
+function renderLines() {
+  const ov = state.ov, T = String(state.compareT), c = ov.compare.by_T[T], L = ov.lines.length;
+  const sim = simulated();
+  $("cmpTiles").replaceChildren(
+    tile(`Sites scored in all ${L} lines`, fmt(c.common_sites), `each with ${T}+ reads in at least one run of every line`),
+    tile("High-score cut-off", ov.build.high_score.toFixed(1), "display only; not a calibrated threshold"),
+    tile("Sites high in no line", fmt(c.high_in_none), `${pct1(c.high_in_none / Math.max(1, c.common_sites))} of the shared sites${sim ? " (simulated)" : ""}`),
+  );
+  $("histSub").textContent = `Scores of the ${fmt(c.common_sites)} sites measured in every cell line. A cell line's score is the mean over its runs with ${T}+ reads. All panels share one scale.`;
+  const host = $("hists");
+  host.replaceChildren();
+  const ymax = d3.max(Object.values(c.lines), (v) => d3.max(v.hist) / Math.max(1, v.n));
+  for (const Ln of ov.lines) {
+    const v = c.lines[Ln.name];
+    const div = h("div", { class: "small" }, h("h4", { text: Ln.name }), h("p", { text: `median ${v.median == null ? "–" : f2(v.median)} · ${v.frac_high == null ? "–" : pct1(v.frac_high)} at ${ov.build.high_score}+` }));
+    host.append(div);
+    const width = Math.max(200, div.clientWidth || 230), height = 120, left = 4, bottom = 20, top = 8;
+    const xb = d3.scaleLinear().domain([0, 1]).range([left, width - 4]);
+    const yb = d3.scaleLinear().domain([0, ymax]).range([height - bottom, top]);
+    const svg = d3.select(div).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("role", "img").attr("aria-label", `Score distribution for ${Ln.name}`);
+    const bw = (width - left - 4) / v.hist.length;
+    v.hist.forEach((cnt, i) => {
+      const share = cnt / Math.max(1, v.n), x0 = xb(i / v.hist.length);
+      const hh = Math.max(cnt ? 1 : 0, height - bottom - yb(share));
+      svg.append("path").attr("d", barUp(x0 + 1, height - bottom, Math.max(1, bw - 2), hh, 2)).attr("fill", P.series)
+        .on("pointermove", (evt) => showTipAt(evt.clientX, evt.clientY, tipContent(`${pct1(share)} of sites`, `${Ln.name}: score ${(i / v.hist.length).toFixed(2)}–${((i + 1) / v.hist.length).toFixed(2)}`, `${fmt(cnt)} sites${sim ? " (simulated)" : ""}`))).on("pointerleave", hideTip);
+    });
+    svg.append("line").attr("x1", left).attr("x2", width - 4).attr("y1", height - bottom).attr("y2", height - bottom).attr("stroke", P.axis);
+    [0, 0.5, 1].forEach((t) => svg.append("text").attr("x", xb(t)).attr("y", height - 5).attr("text-anchor", t === 0 ? "start" : t === 1 ? "end" : "middle").attr("fill", P.muted).attr("font-size", 11).text(t));
+    if (v.median != null) {
+      svg.append("line").attr("x1", xb(v.median)).attr("x2", xb(v.median)).attr("y1", top).attr("y2", height - bottom).attr("stroke", P.ink).attr("stroke-width", 1);
+    }
+  }
+  $("upsetHighSub").textContent = `Among the ${fmt(c.common_sites)} shared sites, which cell lines give a score of ${ov.build.high_score} or more. ${fmt(c.high_in_none)} sites are high in none.`;
+  upsetChart($("upsetHigh"), c.high_combos, c.common_sites, { unit: "sites", emphasizeAll: true });
+  renderAgreement();
+}
+
+function renderAgreement() {
+  const ov = state.ov, host = $("agree");
+  host.replaceChildren();
+  const bins = ov.compare.agree_bins;
+  const lg = $("agreeLegend");
+  lg.replaceChildren(h("span", { class: "item", text: "Reads in both:" }), ...bins.map((b, i) => {
+    const s = document.createElementNS("http://www.w3.org/2000/svg", "svg"); s.setAttribute("width", "12"); s.setAttribute("height", "12"); s.setAttribute("aria-hidden", "true");
+    s.innerHTML = `<circle cx="6" cy="6" r="5" fill="${P.ord[i]}"/>`;
+    return h("span", { class: "item" }, s, b);
+  }), simulated() ? h("span", { class: "tag-sim", text: "simulated" }) : null);
+  const items = ov.compare.agreement.filter((a) => a.r != null);
+  const groups = d3.groups(items, (a) => a.line, (a) => a.kind);
+  const rowsOut = [];
+  groups.forEach(([line, kinds]) => kinds.forEach(([kind, arr]) => rowsOut.push({ line, kind, arr })));
+  const width = Math.max(300, host.clientWidth);
+  const labelW = width < 460 ? 150 : 200, rowH = 26, top = 24;
+  const rmin = Math.floor((d3.min(items, (a) => a.r) ?? 0.5) * 10) / 10;
+  const xs = d3.scaleLinear().domain([Math.min(rmin, 0.8), 1]).range([labelW, width - 16]);
+  const height = top + rowsOut.length * rowH + 10;
+  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("role", "img").attr("aria-label", "Correlation of scores between repeat measurements");
+  xs.ticks(5).forEach((t) => {
+    svg.append("line").attr("x1", xs(t)).attr("x2", xs(t)).attr("y1", top - 4).attr("y2", height - 6).attr("stroke", P.hair);
+    svg.append("text").attr("x", xs(t)).attr("y", top - 9).attr("text-anchor", "middle").attr("fill", P.muted).attr("font-size", 11).text(t.toFixed(2));
+  });
+  rowsOut.forEach((ro, i) => {
+    const cy = top + i * rowH + rowH / 2;
+    const first = i === 0 || rowsOut[i - 1].line !== ro.line;
+    if (first) svg.append("text").attr("x", 0).attr("y", cy + 4).attr("fill", P.ink).attr("font-weight", 700).attr("font-size", 12).text(ro.line);
+    svg.append("text").attr("x", labelW - 10).attr("y", cy + 4).attr("text-anchor", "end").attr("fill", P.muted).attr("font-size", 12).text(ro.kind === "between replicates" ? "replicates" : "runs, same replicate");
+    const pts = ro.arr.map((a) => ({ ...a, bi: bins.indexOf(a.bin) })).sort((a, b) => a.bi - b.bi);
+    if (pts.length > 1) svg.append("line").attr("x1", xs(d3.min(pts, (p) => p.r))).attr("x2", xs(d3.max(pts, (p) => p.r))).attr("y1", cy).attr("y2", cy).attr("stroke", P.axis).attr("stroke-width", 2);
+    pts.forEach((p) => svg.append("circle").attr("cx", xs(p.r)).attr("cy", cy).attr("r", 5.5).attr("fill", P.ord[p.bi]).attr("stroke", P.surface).attr("stroke-width", 2));
+    svg.append("rect").attr("x", 0).attr("y", cy - rowH / 2).attr("width", width).attr("height", rowH).attr("fill", "transparent")
+      .on("pointermove", (evt) => showTipAt(evt.clientX, evt.clientY, [
+        h("div", { class: "v", text: `${ro.line}: ${ro.kind}` }),
+        ...pts.map((p) => h("div", { class: "s", text: `${p.bin} reads: r = ${p.r.toFixed(2)} (${p.n_pairs} pair${p.n_pairs > 1 ? "s" : ""}, ${fmt(p.n_sites)} sites)` })),
+        h("div", { class: "s", text: ro.arr[0].pairs.join("; ") }),
+      ])).on("pointerleave", hideTip);
+  });
+  const tbl = h("table", { class: "data cells" });
+  tbl.append(h("thead", {}, h("tr", {}, h("th", { text: "Cell line" }), h("th", { text: "Comparison" }), ...bins.map((b) => h("th", { class: "num", text: `${b} reads` })))));
+  const tb = h("tbody");
+  rowsOut.forEach((ro) => tb.append(h("tr", {}, h("td", { text: ro.line }), h("td", { text: ro.kind }), ...bins.map((b) => { const a = ro.arr.find((x) => x.bin === b); return h("td", { class: "num", text: a ? `${a.r.toFixed(2)} (n=${fmt(a.n_sites)})` : "–" }); }))));
+  tbl.append(tb);
+  $("agreeTable").replaceChildren(tbl);
+}
+
+/* ---------- table toggles, resize, theme ---------- */
+function setupToggles() {
+  document.querySelectorAll("[data-table-for]").forEach((btn) => btn.addEventListener("click", () => {
+    const id = btn.getAttribute("data-table-for");
+    const on = btn.getAttribute("aria-pressed") !== "true";
+    btn.setAttribute("aria-pressed", String(on));
+    btn.textContent = on ? "Show as chart" : "Show as table";
+    $(id).hidden = on; $(`${id}Table`).hidden = !on;
+  }));
+  $("coverT").addEventListener("change", (e) => { state.coverT = +e.target.value; renderCoverage(); });
+  $("compareT").addEventListener("change", (e) => { state.compareT = +e.target.value; renderLines(); });
+}
+function renderVisible() {
+  if (!state.ov) return;
+  if (ensurePalette()) { drawSquiggle(); renderMapLegend(); }
+  const t = currentTab();
+  if (t === "genes") renderGeneBody();
+  if (t === "coverage") renderCoverage();
+  if (t === "lines") renderLines();
+}
+function rethemed() { paletteKey = ""; renderVisible(); if (!state.ov) { ensurePalette(); drawSquiggle(); } }
+
+function parseHash() {
+  const raw = decodeURIComponent((location.hash || "").slice(1));
+  if (raw.startsWith("gene-")) return { tab: "genes", gene: raw.slice(5) };
+  return { tab: TABS.includes(raw) ? raw : "genes", gene: null };
+}
+
+async function init() {
+  ensurePalette();
+  drawSquiggle();
+  try {
+    const [ov, index] = await Promise.all([getJSON("data/overview.json"), getJSON("data/genes_index.json")]);
+    state.ov = ov;
+    const f = index.fields;
+    state.rows = index.rows.map((row, i) => {
+      const o = Object.fromEntries(f.map((k, j) => [k, row[j]]));
+      o.i = i; o.labelU = String(o.label).toUpperCase();
+      return o;
+    });
+    for (const r of state.rows) {
+      state.byKey.set(r.key, r);
+      if (!state.byLabel.has(r.labelU) || r.kind === "annotated") state.byLabel.set(r.labelU, r);
+    }
+  } catch (err) {
+    document.querySelector("main").replaceChildren(h("div", { class: "fatal", text: `The data files could not be loaded. ${err.message} If you opened index.html directly from disk, serve the folder instead (for example: python -m http.server).` }));
+    return;
+  }
+  applyBuild();
+  setupTabs();
+  setupGeneControls();
+  setupToggles();
+  renderAbout();
+  const start = parseHash();
+  showTab(start.tab, false);
+  const first = start.gene || state.ov.examples[0];
+  $("geneSearch").value = first;
+  await openGene(first);
+  if (start.tab !== "genes") renderVisible();
+
+  let rt = null;
+  new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => { drawSquiggle(); renderVisible(); }, 120); }).observe(document.querySelector(".app"));
+  window.addEventListener("hashchange", () => {
+    const hsh = parseHash();
+    if (hsh.tab !== currentTab()) showTab(hsh.tab, false);
+    if (hsh.gene && (!state.geneRow || hsh.gene.toUpperCase() !== state.geneRow.labelU)) { $("geneSearch").value = hsh.gene; openGene(hsh.gene); }
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", rethemed);
+  new MutationObserver(rethemed).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+}
+
+init();
+})();
+</script>
+
+</body></html>

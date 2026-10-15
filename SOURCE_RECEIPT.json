@@ -1,0 +1,2170 @@
+{
+  "scope": "source copies with hashes; one declared portability edit in archived report generator; generated repository documentation has separate Git history",
+  "copy_date": "2026-10-15",
+  "member1_manifest_hashes_checked": 43,
+  "training_core_matches_original_search": true,
+  "baseline_model_sha256": "5f543342a8fde2ae25e44c364c342a55f1b7dc587cb4e88cfb00fa592fddc5f9",
+  "no_training_or_prediction_rerun": true,
+  "files": [
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/feature_specification.csv",
+      "path": "eda/received/feature_specification.csv",
+      "sha256": "4432de42fe81de99158a5371d222796c9927be931901bb2f5f1be4eaf72b56e2",
+      "source_sha256": "4432de42fe81de99158a5371d222796c9927be931901bb2f5f1be4eaf72b56e2",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 8364
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/figures/01_inventory.png",
+      "path": "eda/received/figures/01_inventory.png",
+      "sha256": "7cfbb82fbd3f17b9b12fa76c413c6bb1d4b3adf900692cebed63ad5a8ede759c",
+      "source_sha256": "7cfbb82fbd3f17b9b12fa76c413c6bb1d4b3adf900692cebed63ad5a8ede759c",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 111293
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/figures/02_motifs.png",
+      "path": "eda/received/figures/02_motifs.png",
+      "sha256": "f5bd473755c10c4c62be87096679c07a2f687852d08230d1a85cf6e7eb6aae38",
+      "source_sha256": "f5bd473755c10c4c62be87096679c07a2f687852d08230d1a85cf6e7eb6aae38",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 96784
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/figures/03_signal_by_motif.png",
+      "path": "eda/received/figures/03_signal_by_motif.png",
+      "sha256": "da4695f2f91b4b760edda0db3aa2ba7656a81772001f3ec5979d11a91544d8e9",
+      "source_sha256": "da4695f2f91b4b760edda0db3aa2ba7656a81772001f3ec5979d11a91544d8e9",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 180598
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/figures/04_coverage_labels.png",
+      "path": "eda/received/figures/04_coverage_labels.png",
+      "sha256": "5973269b24b0e6c15d8ef9d2ed7ffd52e4314f78a656d0db91a319a51b1f8f4a",
+      "source_sha256": "5973269b24b0e6c15d8ef9d2ed7ffd52e4314f78a656d0db91a319a51b1f8f4a",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 152748
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/figures/05_shared_sites.png",
+      "path": "eda/received/figures/05_shared_sites.png",
+      "sha256": "070b9d5b3f4f1a0ab42a95f4c0db55110a96316e4a01346cbd04e507f518585b",
+      "source_sha256": "070b9d5b3f4f1a0ab42a95f4c0db55110a96316e4a01346cbd04e507f518585b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 168296
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/figures/06_data2_groups.png",
+      "path": "eda/received/figures/06_data2_groups.png",
+      "sha256": "d6e51ed3f54ccce25a44b35597b85f55f81d13906fbb7d6b967008e0056d6992",
+      "source_sha256": "d6e51ed3f54ccce25a44b35597b85f55f81d13906fbb7d6b967008e0056d6992",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 155522
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/MEMBER1_CONTEXT_2026-10-13.md",
+      "path": "eda/received/MEMBER1_CONTEXT_2026-10-13.md",
+      "sha256": "62f0aed3dcb27695d1dba8d047547a06a073ca18ecdc450e60ec35d90961e2fc",
+      "source_sha256": "62f0aed3dcb27695d1dba8d047547a06a073ca18ecdc450e60ec35d90961e2fc",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 35187
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/Member1_Data_Exploration.html",
+      "path": "eda/received/Member1_Data_Exploration.html",
+      "sha256": "251b9de66dc01c3c4c73d6739059e5a272a2f4f5936f4128778b010dc304a11b",
+      "source_sha256": "251b9de66dc01c3c4c73d6739059e5a272a2f4f5936f4128778b010dc304a11b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 1200688
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/MEMBER2_ACTION_PLAN.md",
+      "path": "eda/received/MEMBER2_ACTION_PLAN.md",
+      "sha256": "9c684b575ba5c38a786062290bc364d7780f87ed1f54c2934386c280bdd36a76",
+      "source_sha256": "9c684b575ba5c38a786062290bc364d7780f87ed1f54c2934386c280bdd36a76",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 10828
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/MEMBER2_AI_HANDOFF.md",
+      "path": "eda/received/MEMBER2_AI_HANDOFF.md",
+      "sha256": "801e60f2a4c477e988d0daaeb86fe0eae79e3d9eb2d5483a2467e83f76d2b54c",
+      "source_sha256": "801e60f2a4c477e988d0daaeb86fe0eae79e3d9eb2d5483a2467e83f76d2b54c",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 19406
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/PACKAGE_MANIFEST.json",
+      "path": "eda/received/PACKAGE_MANIFEST.json",
+      "sha256": "38fe820d3e812d8d214dd7c83303344a64546ee48afadd8f9e3a70caecc94214",
+      "source_sha256": "38fe820d3e812d8d214dd7c83303344a64546ee48afadd8f9e3a70caecc94214",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 6805
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/README.md",
+      "path": "eda/received/README.md",
+      "sha256": "eb7e4154c381552233c6d9139d877226d7d71938e20e7661d3386aa7b8b9959b",
+      "source_sha256": "eb7e4154c381552233c6d9139d877226d7d71938e20e7661d3386aa7b8b9959b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 5555
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/requirements-used.txt",
+      "path": "eda/received/requirements-used.txt",
+      "sha256": "36900cb85e3fb09bc9bfe0eeadeb95443427f3a6ef105d1073a20793fba33312",
+      "source_sha256": "36900cb85e3fb09bc9bfe0eeadeb95443427f3a6ef105d1073a20793fba33312",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 91
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/scripts/analyse_sites.py",
+      "path": "eda/received/scripts/analyse_sites.py",
+      "sha256": "6fba96947b2e6b291020edbe5bd356dea884265dc17c74a9fd997186aa0bb9bd",
+      "source_sha256": "6fba96947b2e6b291020edbe5bd356dea884265dc17c74a9fd997186aa0bb9bd",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 12626
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/scripts/extract_sites.py",
+      "path": "eda/received/scripts/extract_sites.py",
+      "sha256": "c6bb96366d05029eb55df04092ae9f0b98cc610f408737686dfafa7faa0c169f",
+      "source_sha256": "c6bb96366d05029eb55df04092ae9f0b98cc610f408737686dfafa7faa0c169f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 4864
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/scripts/render_reading_copy.py",
+      "path": "eda/received/scripts/render_reading_copy.py",
+      "sha256": "37c6ec43366d7bc80e002f80015549e40ee551a1a258f47a0e0cb09184bd1704",
+      "source_sha256": "37c6ec43366d7bc80e002f80015549e40ee551a1a258f47a0e0cb09184bd1704",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 7461
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/shared_folds/create_shared_folds.py",
+      "path": "eda/received/shared_folds/create_shared_folds.py",
+      "sha256": "67a1f62681c3aec630ef6d13eff988b12e3cc96a1bb0e3319b827da3ab7edd11",
+      "source_sha256": "67a1f62681c3aec630ef6d13eff988b12e3cc96a1bb0e3319b827da3ab7edd11",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 14333
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/shared_folds/data0_fold_summary.csv",
+      "path": "eda/received/shared_folds/data0_fold_summary.csv",
+      "sha256": "79db40514091e0a37c9fef00b1768f02ffc8ec8206dd536bbf70cee12473cea1",
+      "source_sha256": "79db40514091e0a37c9fef00b1768f02ffc8ec8206dd536bbf70cee12473cea1",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 638
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/shared_folds/data0_folds.csv",
+      "path": "eda/received/shared_folds/data0_folds.csv",
+      "sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0",
+      "source_sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 4702028
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/shared_folds/data0_folds_metadata.json",
+      "path": "eda/received/shared_folds/data0_folds_metadata.json",
+      "sha256": "f25d13167776a73eff8a830b9826ad7490a621b9b54470978639f0d34b79ee5b",
+      "source_sha256": "f25d13167776a73eff8a830b9826ad7490a621b9b54470978639f0d34b79ee5b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 4035
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/shared_folds/fold_generation_requirements.txt",
+      "path": "eda/received/shared_folds/fold_generation_requirements.txt",
+      "sha256": "08221737f2bcbdb8e99984f10bf091e82d476e9d9854e4d1e3fd2c863ee919ee",
+      "source_sha256": "08221737f2bcbdb8e99984f10bf091e82d476e9d9854e4d1e3fd2c863ee919ee",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 168
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/shared_folds/README.md",
+      "path": "eda/received/shared_folds/README.md",
+      "sha256": "ded886f9ed20b8db26617c661dd4776cd3ed5713b128614ff8bb054e5745beff",
+      "source_sha256": "ded886f9ed20b8db26617c661dd4776cd3ed5713b128614ff8bb054e5745beff",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 6286
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/START_HERE.md",
+      "path": "eda/received/START_HERE.md",
+      "sha256": "0c429c21ef20875bed8e7316c05ce62c571f51c744d1a895b41e1e9897ecf3b9",
+      "source_sha256": "0c429c21ef20875bed8e7316c05ce62c571f51c744d1a895b41e1e9897ecf3b9",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 1024
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/coverage_label_counts.csv",
+      "path": "eda/received/tables/coverage_label_counts.csv",
+      "sha256": "26b9646c0b3323474b9bbcd740dd7d0582f42c0670f3a8a3962a6d9705ede609",
+      "source_sha256": "26b9646c0b3323474b9bbcd740dd7d0582f42c0670f3a8a3962a6d9705ede609",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 458
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/data0_site_summaries.csv.gz",
+      "path": "eda/received/tables/data0_site_summaries.csv.gz",
+      "sha256": "15d9ebc4ce159d5bf2b36b23e66c40a8ecce01ff8e7f416efb56eab95c378179",
+      "source_sha256": "15d9ebc4ce159d5bf2b36b23e66c40a8ecce01ff8e7f416efb56eab95c378179",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 23725514
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/data1_site_summaries.csv.gz",
+      "path": "eda/received/tables/data1_site_summaries.csv.gz",
+      "sha256": "651bc79058b835d23f65fb9e5ef67798317a7882c549267c1c9cc25af83b716d",
+      "source_sha256": "651bc79058b835d23f65fb9e5ef67798317a7882c549267c1c9cc25af83b716d",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 18352132
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/data2_label_summary.csv",
+      "path": "eda/received/tables/data2_label_summary.csv",
+      "sha256": "e6f62b92fda0d341f2213a6f5f960d9332b1a8d378c0bf68d3b054ad4018a70b",
+      "source_sha256": "e6f62b92fda0d341f2213a6f5f960d9332b1a8d378c0bf68d3b054ad4018a70b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 216
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/data2_matched_deltas.csv",
+      "path": "eda/received/tables/data2_matched_deltas.csv",
+      "sha256": "519a7d6e600dc8faa84cc19c4fb3b52d270fc1f33885f1af774220744cbc093a",
+      "source_sha256": "519a7d6e600dc8faa84cc19c4fb3b52d270fc1f33885f1af774220744cbc093a",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 1105
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/data2_site_summaries.csv.gz",
+      "path": "eda/received/tables/data2_site_summaries.csv.gz",
+      "sha256": "26a3e6b8887f88f39aec4a3aaf20cf48635c0138eb664926f2504727b229d825",
+      "source_sha256": "26a3e6b8887f88f39aec4a3aaf20cf48635c0138eb664926f2504727b229d825",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 278608
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/data2_structure.json",
+      "path": "eda/received/tables/data2_structure.json",
+      "sha256": "e19e34c97a07008ef9f8286ec2dfecb54b9f36e56b3a55580642a1422a606e73",
+      "source_sha256": "e19e34c97a07008ef9f8286ec2dfecb54b9f36e56b3a55580642a1422a606e73",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 775
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/data2_template_check.csv",
+      "path": "eda/received/tables/data2_template_check.csv",
+      "sha256": "488bd8913f845cde0b51e7919b1a43306320013642fe84c8b114ce85e0a9897f",
+      "source_sha256": "488bd8913f845cde0b51e7919b1a43306320013642fe84c8b114ce85e0a9897f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 2016
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/discordant_sites.csv",
+      "path": "eda/received/tables/discordant_sites.csv",
+      "sha256": "6b5a15e41b3dd007fd0eb55e98e0d32f32c30988b17656b7e4ab5b80d4b048da",
+      "source_sha256": "6b5a15e41b3dd007fd0eb55e98e0d32f32c30988b17656b7e4ab5b80d4b048da",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 259250
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/inventory.json",
+      "path": "eda/received/tables/inventory.json",
+      "sha256": "04d42c35d848cc51d6ba37a734d5785d0ddd0394fadfef9d34054161476f4fdc",
+      "source_sha256": "04d42c35d848cc51d6ba37a734d5785d0ddd0394fadfef9d34054161476f4fdc",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 5433
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/label_signal_summary.csv",
+      "path": "eda/received/tables/label_signal_summary.csv",
+      "sha256": "be58f2b18787070e5017a65ef602f018b2d959bb670a9489fcc02254f136639c",
+      "source_sha256": "be58f2b18787070e5017a65ef602f018b2d959bb670a9489fcc02254f136639c",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 4000
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/metadata_overlap.json",
+      "path": "eda/received/tables/metadata_overlap.json",
+      "sha256": "6c62776037705c3c96af291f9a1e30b1cfaa0d626a439b2edd157aeb57071ef7",
+      "source_sha256": "6c62776037705c3c96af291f9a1e30b1cfaa0d626a439b2edd157aeb57071ef7",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 317
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/motif_coverage_effects.csv",
+      "path": "eda/received/tables/motif_coverage_effects.csv",
+      "sha256": "636f82723e53344028670551710a9be37df6764e30692f592dff06d093d808f3",
+      "source_sha256": "636f82723e53344028670551710a9be37df6764e30692f592dff06d093d808f3",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 93684
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/motif_summary.csv",
+      "path": "eda/received/tables/motif_summary.csv",
+      "sha256": "d45304151b3c4fdc20bb4759f98551a44293c008940d292fca4dafc08a1167f8",
+      "source_sha256": "d45304151b3c4fdc20bb4759f98551a44293c008940d292fca4dafc08a1167f8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 1475
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/paired_label_counts.csv",
+      "path": "eda/received/tables/paired_label_counts.csv",
+      "sha256": "2093cea4994469ab2cdcb92873837fd5a76fb7a59c5ce693563c365fa67a6eb0",
+      "source_sha256": "2093cea4994469ab2cdcb92873837fd5a76fb7a59c5ce693563c365fa67a6eb0",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 37
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/runtime.json",
+      "path": "eda/received/tables/runtime.json",
+      "sha256": "b32c3de655522fcb59fa51e976e53891367c39e106f94cdf6e4170dd847cadc3",
+      "source_sha256": "b32c3de655522fcb59fa51e976e53891367c39e106f94cdf6e4170dd847cadc3",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 66
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/signal_overlap.json",
+      "path": "eda/received/tables/signal_overlap.json",
+      "sha256": "b20b9b5c4fdcc1c498f1a7fcc184b8c39915979d4dfcf6e25f5258564f0037d1",
+      "source_sha256": "b20b9b5c4fdcc1c498f1a7fcc184b8c39915979d4dfcf6e25f5258564f0037d1",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 215
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/source_manifest.json",
+      "path": "eda/received/tables/source_manifest.json",
+      "sha256": "b8803cc6f8e0b4205d7681396c29c60cf907cf01d1941e4f5234fadc732d0b17",
+      "source_sha256": "b8803cc6f8e0b4205d7681396c29c60cf907cf01d1941e4f5234fadc732d0b17",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 935
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/unusual_sites_review.csv",
+      "path": "eda/received/tables/unusual_sites_review.csv",
+      "sha256": "8fc3acce4611b50d6fd8d2859f32f6bbfc1056409a4080b4b39b7f244bf5f200",
+      "source_sha256": "8fc3acce4611b50d6fd8d2859f32f6bbfc1056409a4080b4b39b7f244bf5f200",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 19357
+    },
+    {
+      "component": "member1_original",
+      "source": "Other members work/Member1_Analysis_Package/Member1_Analysis/tables/within_motif_effects.csv",
+      "path": "eda/received/tables/within_motif_effects.csv",
+      "sha256": "486d4b5574462c8cc2689fc9b24cc353bb7793fe7d43f77ff61d575b9dc96384",
+      "source_sha256": "486d4b5574462c8cc2689fc9b24cc353bb7793fe7d43f77ff61d575b9dc96384",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 32515
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b000.json",
+      "path": "data_visualisation/prototype/data/genes/b000.json",
+      "sha256": "098abfa83646e93bce83471d6feec7ea3c8106b37317764c797daadeb56a0af3",
+      "source_sha256": "098abfa83646e93bce83471d6feec7ea3c8106b37317764c797daadeb56a0af3",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 356184
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b001.json",
+      "path": "data_visualisation/prototype/data/genes/b001.json",
+      "sha256": "4e7b583a8f08158fe75441424cc7f99c5f204dfc84661c3711d5eaba5774df64",
+      "source_sha256": "4e7b583a8f08158fe75441424cc7f99c5f204dfc84661c3711d5eaba5774df64",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 379608
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b002.json",
+      "path": "data_visualisation/prototype/data/genes/b002.json",
+      "sha256": "f864776babba85f8b31b0dd644e8d3cca31aaae36c2a0e0141549018d45fdbf2",
+      "source_sha256": "f864776babba85f8b31b0dd644e8d3cca31aaae36c2a0e0141549018d45fdbf2",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 383305
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b003.json",
+      "path": "data_visualisation/prototype/data/genes/b003.json",
+      "sha256": "5bfa2d2f6085c3e7c6234362344ee236ed0f4830b458f16e015d0119b7dc6d79",
+      "source_sha256": "5bfa2d2f6085c3e7c6234362344ee236ed0f4830b458f16e015d0119b7dc6d79",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 320718
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b004.json",
+      "path": "data_visualisation/prototype/data/genes/b004.json",
+      "sha256": "632d1122b13ecfab9dfab4960d1e702825917e85e36b6c5fb2a40d6b1864b9b3",
+      "source_sha256": "632d1122b13ecfab9dfab4960d1e702825917e85e36b6c5fb2a40d6b1864b9b3",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 298173
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b005.json",
+      "path": "data_visualisation/prototype/data/genes/b005.json",
+      "sha256": "ec7bacc4c983cccbf3004c03910cee3e051faf2dd8979b50aa2f3a744237da73",
+      "source_sha256": "ec7bacc4c983cccbf3004c03910cee3e051faf2dd8979b50aa2f3a744237da73",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 354163
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b006.json",
+      "path": "data_visualisation/prototype/data/genes/b006.json",
+      "sha256": "7ed08a77516b8b2140889ed37dce9afc09b5419ef87fa67568be2cbcf52cd6a8",
+      "source_sha256": "7ed08a77516b8b2140889ed37dce9afc09b5419ef87fa67568be2cbcf52cd6a8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 328315
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b007.json",
+      "path": "data_visualisation/prototype/data/genes/b007.json",
+      "sha256": "55f61d128d7e1f4191375a8010a5d8363862799ad7245e5bc7496b6f63b7195c",
+      "source_sha256": "55f61d128d7e1f4191375a8010a5d8363862799ad7245e5bc7496b6f63b7195c",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 312303
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b008.json",
+      "path": "data_visualisation/prototype/data/genes/b008.json",
+      "sha256": "dd76a6c5776d38764cdefdbca07667cea2e07d8088b3a37a4fb7643606511fa2",
+      "source_sha256": "dd76a6c5776d38764cdefdbca07667cea2e07d8088b3a37a4fb7643606511fa2",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 462142
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b009.json",
+      "path": "data_visualisation/prototype/data/genes/b009.json",
+      "sha256": "6ce93785da9b08fff578fa16b5393468071fc81c09bd2ca4f6b6aa11c413f0cd",
+      "source_sha256": "6ce93785da9b08fff578fa16b5393468071fc81c09bd2ca4f6b6aa11c413f0cd",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 404925
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b010.json",
+      "path": "data_visualisation/prototype/data/genes/b010.json",
+      "sha256": "caf6d6177ca017475077680df54d32c1d9452977b54fffb4fc4873b2f579accb",
+      "source_sha256": "caf6d6177ca017475077680df54d32c1d9452977b54fffb4fc4873b2f579accb",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 366830
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b011.json",
+      "path": "data_visualisation/prototype/data/genes/b011.json",
+      "sha256": "911ec5481146c18f372596a7f48e45a24638a5b06ac161e26f83df04d31bb48c",
+      "source_sha256": "911ec5481146c18f372596a7f48e45a24638a5b06ac161e26f83df04d31bb48c",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 382727
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b012.json",
+      "path": "data_visualisation/prototype/data/genes/b012.json",
+      "sha256": "7fea9723c81f2fa04e9e832e16f11c42a4153440eb8aed79c8c8fab02550c868",
+      "source_sha256": "7fea9723c81f2fa04e9e832e16f11c42a4153440eb8aed79c8c8fab02550c868",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 203265
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b013.json",
+      "path": "data_visualisation/prototype/data/genes/b013.json",
+      "sha256": "7ea1d7e9a4bbb5fe5b67454e22a98ab8db9279ac2965079370ee787562ad06f1",
+      "source_sha256": "7ea1d7e9a4bbb5fe5b67454e22a98ab8db9279ac2965079370ee787562ad06f1",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 451934
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b014.json",
+      "path": "data_visualisation/prototype/data/genes/b014.json",
+      "sha256": "7d9b137338db118483a4ae556d82178c0c088266f26eba3d06e716643f5b04e8",
+      "source_sha256": "7d9b137338db118483a4ae556d82178c0c088266f26eba3d06e716643f5b04e8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 444422
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b015.json",
+      "path": "data_visualisation/prototype/data/genes/b015.json",
+      "sha256": "4c0a95d6ac3b82af4b91b8629d7d245fa48c55829ef07f16c55e8a239569324c",
+      "source_sha256": "4c0a95d6ac3b82af4b91b8629d7d245fa48c55829ef07f16c55e8a239569324c",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 345446
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b016.json",
+      "path": "data_visualisation/prototype/data/genes/b016.json",
+      "sha256": "77f88cfa0cb6d10bb374f167762a06a42ffbeef7e3fc781c1e934c6e73c528e2",
+      "source_sha256": "77f88cfa0cb6d10bb374f167762a06a42ffbeef7e3fc781c1e934c6e73c528e2",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 367473
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b017.json",
+      "path": "data_visualisation/prototype/data/genes/b017.json",
+      "sha256": "b1b2e4e20c730d0b575a6f7d57e816be07bafcda09b9f0ee815c6078e36bcb17",
+      "source_sha256": "b1b2e4e20c730d0b575a6f7d57e816be07bafcda09b9f0ee815c6078e36bcb17",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 419105
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b018.json",
+      "path": "data_visualisation/prototype/data/genes/b018.json",
+      "sha256": "5a3db0c92d1ca6a8a3e8067ee3376f47dd82c56375e5e54ffdb7aa3cd4b71c48",
+      "source_sha256": "5a3db0c92d1ca6a8a3e8067ee3376f47dd82c56375e5e54ffdb7aa3cd4b71c48",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 434101
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b019.json",
+      "path": "data_visualisation/prototype/data/genes/b019.json",
+      "sha256": "50f16d1e2e5ac9e1afbf2e0be2da025b3c8314fdff9ae9a34cb53c8786e8e039",
+      "source_sha256": "50f16d1e2e5ac9e1afbf2e0be2da025b3c8314fdff9ae9a34cb53c8786e8e039",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 410687
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b020.json",
+      "path": "data_visualisation/prototype/data/genes/b020.json",
+      "sha256": "bc75680d57efa848227697cc5e8c1d266dfda47165d58d4b3d944353f4f28277",
+      "source_sha256": "bc75680d57efa848227697cc5e8c1d266dfda47165d58d4b3d944353f4f28277",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 374756
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b021.json",
+      "path": "data_visualisation/prototype/data/genes/b021.json",
+      "sha256": "deff01109a133675ee9618fb86b9fb086ba4dcdc4dec3f9d04fe34c3c0f3b629",
+      "source_sha256": "deff01109a133675ee9618fb86b9fb086ba4dcdc4dec3f9d04fe34c3c0f3b629",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 273149
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b022.json",
+      "path": "data_visualisation/prototype/data/genes/b022.json",
+      "sha256": "4b8a1c2502616d21987b148f5675bd479f071af528daada5b291920d0ff8b3c8",
+      "source_sha256": "4b8a1c2502616d21987b148f5675bd479f071af528daada5b291920d0ff8b3c8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 298830
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b023.json",
+      "path": "data_visualisation/prototype/data/genes/b023.json",
+      "sha256": "db2bf68b102f0b2866cfc8e2710ee82f2012f4e58d40c95756c6106e3505bfb1",
+      "source_sha256": "db2bf68b102f0b2866cfc8e2710ee82f2012f4e58d40c95756c6106e3505bfb1",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 442484
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b024.json",
+      "path": "data_visualisation/prototype/data/genes/b024.json",
+      "sha256": "58ee140db09afc052b6b2d9558ab9e0189034b182fc9e911ecab60d7024b6229",
+      "source_sha256": "58ee140db09afc052b6b2d9558ab9e0189034b182fc9e911ecab60d7024b6229",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 392313
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b025.json",
+      "path": "data_visualisation/prototype/data/genes/b025.json",
+      "sha256": "42b3a3c4fb40d77075f77ea5f1046f976728f91720f459398cbe88ad91da171f",
+      "source_sha256": "42b3a3c4fb40d77075f77ea5f1046f976728f91720f459398cbe88ad91da171f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 405533
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b026.json",
+      "path": "data_visualisation/prototype/data/genes/b026.json",
+      "sha256": "fed8ca1720175094a0125783ed4acc6bab2d63cf606937076363aec5a2946ab4",
+      "source_sha256": "fed8ca1720175094a0125783ed4acc6bab2d63cf606937076363aec5a2946ab4",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 269435
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b027.json",
+      "path": "data_visualisation/prototype/data/genes/b027.json",
+      "sha256": "6a367ac589a4caa839426c3c8a81c72bcda227a0ca4ae49cb776b8e0a96ace8b",
+      "source_sha256": "6a367ac589a4caa839426c3c8a81c72bcda227a0ca4ae49cb776b8e0a96ace8b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 415290
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b028.json",
+      "path": "data_visualisation/prototype/data/genes/b028.json",
+      "sha256": "003378c2c7855701b4755c56d297aeac09852ea144dba10129f624bff708eef8",
+      "source_sha256": "003378c2c7855701b4755c56d297aeac09852ea144dba10129f624bff708eef8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 329931
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b029.json",
+      "path": "data_visualisation/prototype/data/genes/b029.json",
+      "sha256": "734850120c8ed5ffae40d866a248030189f5d6b8ff47e6348b67024f52331f23",
+      "source_sha256": "734850120c8ed5ffae40d866a248030189f5d6b8ff47e6348b67024f52331f23",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 335402
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b030.json",
+      "path": "data_visualisation/prototype/data/genes/b030.json",
+      "sha256": "4d6dbfa0d10fee394bdf57dad5a8e0074ccd8d95c45f7740f878460dd5dd3863",
+      "source_sha256": "4d6dbfa0d10fee394bdf57dad5a8e0074ccd8d95c45f7740f878460dd5dd3863",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 388409
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b031.json",
+      "path": "data_visualisation/prototype/data/genes/b031.json",
+      "sha256": "234ce672052a2264dffe98370b8e74d722716a9ed47263cdb6070e6e0f960d44",
+      "source_sha256": "234ce672052a2264dffe98370b8e74d722716a9ed47263cdb6070e6e0f960d44",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 535745
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b032.json",
+      "path": "data_visualisation/prototype/data/genes/b032.json",
+      "sha256": "0ada013f66330d1837e7556403aec63dacb20d6141c391266a57255252da49b0",
+      "source_sha256": "0ada013f66330d1837e7556403aec63dacb20d6141c391266a57255252da49b0",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 472861
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b033.json",
+      "path": "data_visualisation/prototype/data/genes/b033.json",
+      "sha256": "965b4963cd3e9b3f8b78d481024bf46817ac5dacdcc89fdedcb65232e132351c",
+      "source_sha256": "965b4963cd3e9b3f8b78d481024bf46817ac5dacdcc89fdedcb65232e132351c",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 432386
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b034.json",
+      "path": "data_visualisation/prototype/data/genes/b034.json",
+      "sha256": "6614302174213577edb09de5794d20bc61a01ce741563b06a02c3027c9ebdb22",
+      "source_sha256": "6614302174213577edb09de5794d20bc61a01ce741563b06a02c3027c9ebdb22",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 323310
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b035.json",
+      "path": "data_visualisation/prototype/data/genes/b035.json",
+      "sha256": "01988366114e09840e2832df582589abe1a080265a4f72ece9c62a28d6fc885e",
+      "source_sha256": "01988366114e09840e2832df582589abe1a080265a4f72ece9c62a28d6fc885e",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 279449
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b036.json",
+      "path": "data_visualisation/prototype/data/genes/b036.json",
+      "sha256": "221af860cb04cb27cff38f83a802c4bfc56b664b2e1f912f501f5f5a3706617f",
+      "source_sha256": "221af860cb04cb27cff38f83a802c4bfc56b664b2e1f912f501f5f5a3706617f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 309793
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b037.json",
+      "path": "data_visualisation/prototype/data/genes/b037.json",
+      "sha256": "b7ee9a5c565a2a542f5872e57733fb634d3a7f5b41b77b9801cd3831cca5dda8",
+      "source_sha256": "b7ee9a5c565a2a542f5872e57733fb634d3a7f5b41b77b9801cd3831cca5dda8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 318566
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b038.json",
+      "path": "data_visualisation/prototype/data/genes/b038.json",
+      "sha256": "c154ba9afd609f7d47bc055a88b58621a0565dbf44c95563471f4677ccd57034",
+      "source_sha256": "c154ba9afd609f7d47bc055a88b58621a0565dbf44c95563471f4677ccd57034",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 332756
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b039.json",
+      "path": "data_visualisation/prototype/data/genes/b039.json",
+      "sha256": "812a28811b2b69ab29249392937ab74c00259777af96165d67161cf4a70551a5",
+      "source_sha256": "812a28811b2b69ab29249392937ab74c00259777af96165d67161cf4a70551a5",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 390834
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b040.json",
+      "path": "data_visualisation/prototype/data/genes/b040.json",
+      "sha256": "fb589a91c74966dbeb3758a007b2973c06a1cabfeb0dab970188c1cc7ff60ef7",
+      "source_sha256": "fb589a91c74966dbeb3758a007b2973c06a1cabfeb0dab970188c1cc7ff60ef7",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 331307
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b041.json",
+      "path": "data_visualisation/prototype/data/genes/b041.json",
+      "sha256": "f26564d0ef9c4329762b86cf06a24b9b95b40e79d13dde95f7eaff73e4e36a4d",
+      "source_sha256": "f26564d0ef9c4329762b86cf06a24b9b95b40e79d13dde95f7eaff73e4e36a4d",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 264626
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b042.json",
+      "path": "data_visualisation/prototype/data/genes/b042.json",
+      "sha256": "070acbc7737d9371d70cae243ed180cf56760e271778771943b36b92554b8519",
+      "source_sha256": "070acbc7737d9371d70cae243ed180cf56760e271778771943b36b92554b8519",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 442295
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b043.json",
+      "path": "data_visualisation/prototype/data/genes/b043.json",
+      "sha256": "8ab37d60cd77cfd381072e12d6fea936d14311bfd4326cd497f466683a9b36b1",
+      "source_sha256": "8ab37d60cd77cfd381072e12d6fea936d14311bfd4326cd497f466683a9b36b1",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 349920
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b044.json",
+      "path": "data_visualisation/prototype/data/genes/b044.json",
+      "sha256": "51f9f00a5cbd061a396a6d94844115ecfe0438b8aa4738cfbd3ba3168fe6c34f",
+      "source_sha256": "51f9f00a5cbd061a396a6d94844115ecfe0438b8aa4738cfbd3ba3168fe6c34f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 322538
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b045.json",
+      "path": "data_visualisation/prototype/data/genes/b045.json",
+      "sha256": "580b461bbc05d244f369734c5b658476d9b3c3105bae4d663bcd40c3ee5d85b6",
+      "source_sha256": "580b461bbc05d244f369734c5b658476d9b3c3105bae4d663bcd40c3ee5d85b6",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 273884
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b046.json",
+      "path": "data_visualisation/prototype/data/genes/b046.json",
+      "sha256": "1b458aa122220bff6fa41c78db9c2790b0906ff12f9c68e0476846b455ac8381",
+      "source_sha256": "1b458aa122220bff6fa41c78db9c2790b0906ff12f9c68e0476846b455ac8381",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 349703
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b047.json",
+      "path": "data_visualisation/prototype/data/genes/b047.json",
+      "sha256": "6353e9087ac78c333d530c5138969de48db7263e75c80347777832bb1fcf9ab5",
+      "source_sha256": "6353e9087ac78c333d530c5138969de48db7263e75c80347777832bb1fcf9ab5",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 369555
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b048.json",
+      "path": "data_visualisation/prototype/data/genes/b048.json",
+      "sha256": "5fee5cf7d8b57ab93188ccd08af98ceaf48dad97cd1987f632dffaac4ff14262",
+      "source_sha256": "5fee5cf7d8b57ab93188ccd08af98ceaf48dad97cd1987f632dffaac4ff14262",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 312265
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b049.json",
+      "path": "data_visualisation/prototype/data/genes/b049.json",
+      "sha256": "7990ccddb7ce5236f93667b07f19dc2ed756a074fed183129034a32bfc073f05",
+      "source_sha256": "7990ccddb7ce5236f93667b07f19dc2ed756a074fed183129034a32bfc073f05",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 304368
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b050.json",
+      "path": "data_visualisation/prototype/data/genes/b050.json",
+      "sha256": "75254aee419a0df73aceec1606c07004c32aafe31ac9e7a76d7266a2392a654d",
+      "source_sha256": "75254aee419a0df73aceec1606c07004c32aafe31ac9e7a76d7266a2392a654d",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 429090
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b051.json",
+      "path": "data_visualisation/prototype/data/genes/b051.json",
+      "sha256": "99d49fa4b19c22235c1cf698a41bd5b61026c50845ab89b7ddf26b5b3f50bc74",
+      "source_sha256": "99d49fa4b19c22235c1cf698a41bd5b61026c50845ab89b7ddf26b5b3f50bc74",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 307522
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b052.json",
+      "path": "data_visualisation/prototype/data/genes/b052.json",
+      "sha256": "943fdc468da002e93b4f0d4883d2413707a9f02e147af0762ae7b7e4fbaac5f5",
+      "source_sha256": "943fdc468da002e93b4f0d4883d2413707a9f02e147af0762ae7b7e4fbaac5f5",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 430206
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b053.json",
+      "path": "data_visualisation/prototype/data/genes/b053.json",
+      "sha256": "8417edf9968be8a8814fa50b04f8bbd58243aaea1495af0249510245ccb5954a",
+      "source_sha256": "8417edf9968be8a8814fa50b04f8bbd58243aaea1495af0249510245ccb5954a",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 335265
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b054.json",
+      "path": "data_visualisation/prototype/data/genes/b054.json",
+      "sha256": "bf286124e577a6a889019b978776571f6c0336b6a3faf5bfc5e1f97ced4f5d05",
+      "source_sha256": "bf286124e577a6a889019b978776571f6c0336b6a3faf5bfc5e1f97ced4f5d05",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 329870
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b055.json",
+      "path": "data_visualisation/prototype/data/genes/b055.json",
+      "sha256": "c8b3d7aba53d2cbe0510c20b24a0c4fa30879f8474891e3193498a01b8babb31",
+      "source_sha256": "c8b3d7aba53d2cbe0510c20b24a0c4fa30879f8474891e3193498a01b8babb31",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 345866
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b056.json",
+      "path": "data_visualisation/prototype/data/genes/b056.json",
+      "sha256": "0093281b3bd653551b027559d15aed72ebc69cba7ee56ef671d3cfc097cab995",
+      "source_sha256": "0093281b3bd653551b027559d15aed72ebc69cba7ee56ef671d3cfc097cab995",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 419415
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b057.json",
+      "path": "data_visualisation/prototype/data/genes/b057.json",
+      "sha256": "566cc51bcfa7277ca76b232be6f8b07b96b4b18b4fd0946143355647d83f3565",
+      "source_sha256": "566cc51bcfa7277ca76b232be6f8b07b96b4b18b4fd0946143355647d83f3565",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 382047
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b058.json",
+      "path": "data_visualisation/prototype/data/genes/b058.json",
+      "sha256": "81e2310194d06a99284c39b4c4a879eae1b9ea1eb94c7dc7a08399848d90dce6",
+      "source_sha256": "81e2310194d06a99284c39b4c4a879eae1b9ea1eb94c7dc7a08399848d90dce6",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 343884
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b059.json",
+      "path": "data_visualisation/prototype/data/genes/b059.json",
+      "sha256": "c039dbd66ce87989f20ad81187d6b63d755f727eb59bf49fd63810d01c8771b2",
+      "source_sha256": "c039dbd66ce87989f20ad81187d6b63d755f727eb59bf49fd63810d01c8771b2",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 423599
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b060.json",
+      "path": "data_visualisation/prototype/data/genes/b060.json",
+      "sha256": "6ff9f1d1d613e4a5713bc11dd340a3efbfd20c30385becc3f06dad6c97890561",
+      "source_sha256": "6ff9f1d1d613e4a5713bc11dd340a3efbfd20c30385becc3f06dad6c97890561",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 385146
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b061.json",
+      "path": "data_visualisation/prototype/data/genes/b061.json",
+      "sha256": "cd5555eda75427b5f03403f3be97b5d287c74c9761f7b6bdaff71a4e3684b387",
+      "source_sha256": "cd5555eda75427b5f03403f3be97b5d287c74c9761f7b6bdaff71a4e3684b387",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 285050
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b062.json",
+      "path": "data_visualisation/prototype/data/genes/b062.json",
+      "sha256": "a1179d798c52bcc8aa5a2cfe7a19929a4866e836efa2d3b4b5d810fe7f8396da",
+      "source_sha256": "a1179d798c52bcc8aa5a2cfe7a19929a4866e836efa2d3b4b5d810fe7f8396da",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 387856
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b063.json",
+      "path": "data_visualisation/prototype/data/genes/b063.json",
+      "sha256": "13cad9b358e238e7459ac8ca58e3433008c53e0ab3ca5f80cd4f486308a8112f",
+      "source_sha256": "13cad9b358e238e7459ac8ca58e3433008c53e0ab3ca5f80cd4f486308a8112f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 359723
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b064.json",
+      "path": "data_visualisation/prototype/data/genes/b064.json",
+      "sha256": "cdfe878833e3b013020bb6b29661bead6ed386b06aef81ba8ad6803f9e48c933",
+      "source_sha256": "cdfe878833e3b013020bb6b29661bead6ed386b06aef81ba8ad6803f9e48c933",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 331750
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b065.json",
+      "path": "data_visualisation/prototype/data/genes/b065.json",
+      "sha256": "dc7a507b8187a268af0ca449f5caa8864eea20c2bb037cf3c7ebec2077ea45cd",
+      "source_sha256": "dc7a507b8187a268af0ca449f5caa8864eea20c2bb037cf3c7ebec2077ea45cd",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 501720
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b066.json",
+      "path": "data_visualisation/prototype/data/genes/b066.json",
+      "sha256": "137f1ef0a6123852810b40f56ad3441763dc833f5a311f0c873ca29c7152f981",
+      "source_sha256": "137f1ef0a6123852810b40f56ad3441763dc833f5a311f0c873ca29c7152f981",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 416063
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b067.json",
+      "path": "data_visualisation/prototype/data/genes/b067.json",
+      "sha256": "ac460a4c75f293681f86aa8d6fadde1fb50d0fb9c66877ba161678b95b0b6f5e",
+      "source_sha256": "ac460a4c75f293681f86aa8d6fadde1fb50d0fb9c66877ba161678b95b0b6f5e",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 302225
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b068.json",
+      "path": "data_visualisation/prototype/data/genes/b068.json",
+      "sha256": "21cada3b02680b6136bc6e3e21585edeaccfef0e2368cd55c9d188f4ea51bbff",
+      "source_sha256": "21cada3b02680b6136bc6e3e21585edeaccfef0e2368cd55c9d188f4ea51bbff",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 423533
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b069.json",
+      "path": "data_visualisation/prototype/data/genes/b069.json",
+      "sha256": "c92051c9c8e4ea08629fc1931b80b5212cb4e7f729695b93913a6fb3e0c976a3",
+      "source_sha256": "c92051c9c8e4ea08629fc1931b80b5212cb4e7f729695b93913a6fb3e0c976a3",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 434418
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b070.json",
+      "path": "data_visualisation/prototype/data/genes/b070.json",
+      "sha256": "0148cdee1d3b99591018e0447b2f23029b0f2d721fbc188bd2465f2499185271",
+      "source_sha256": "0148cdee1d3b99591018e0447b2f23029b0f2d721fbc188bd2465f2499185271",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 474479
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b071.json",
+      "path": "data_visualisation/prototype/data/genes/b071.json",
+      "sha256": "8b14275d4223a2486982f5611612c013d390800e712c97bfe1d6d35d362c88d5",
+      "source_sha256": "8b14275d4223a2486982f5611612c013d390800e712c97bfe1d6d35d362c88d5",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 401354
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b072.json",
+      "path": "data_visualisation/prototype/data/genes/b072.json",
+      "sha256": "cc7d35bd6454d917ed2035b6dfebb9eb239ef993de0e53bf4562c3322f0da639",
+      "source_sha256": "cc7d35bd6454d917ed2035b6dfebb9eb239ef993de0e53bf4562c3322f0da639",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 420271
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b073.json",
+      "path": "data_visualisation/prototype/data/genes/b073.json",
+      "sha256": "ae77359682234279a282f5334e6a5f7e6d8241bc6f5d929b3093f01a700ccf4e",
+      "source_sha256": "ae77359682234279a282f5334e6a5f7e6d8241bc6f5d929b3093f01a700ccf4e",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 420009
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b074.json",
+      "path": "data_visualisation/prototype/data/genes/b074.json",
+      "sha256": "694507d5346dab3a89c32c08378c5ca944acb7b8aa40833fa7a13d036229a542",
+      "source_sha256": "694507d5346dab3a89c32c08378c5ca944acb7b8aa40833fa7a13d036229a542",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 386575
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b075.json",
+      "path": "data_visualisation/prototype/data/genes/b075.json",
+      "sha256": "2c15aa5656f7e2894fc7f259120c6d9e115e1ab851d66fd74d7590e65c12fc79",
+      "source_sha256": "2c15aa5656f7e2894fc7f259120c6d9e115e1ab851d66fd74d7590e65c12fc79",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 387937
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b076.json",
+      "path": "data_visualisation/prototype/data/genes/b076.json",
+      "sha256": "e1b0b6e7bbee0c7ee24429011d9fa5f9f0841816fa07884f33d6c353749479e7",
+      "source_sha256": "e1b0b6e7bbee0c7ee24429011d9fa5f9f0841816fa07884f33d6c353749479e7",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 435795
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b077.json",
+      "path": "data_visualisation/prototype/data/genes/b077.json",
+      "sha256": "d9a40edfe863ae48b25b04a78f71c3756997d227bb41e4a89cac1e5cd5d6b45b",
+      "source_sha256": "d9a40edfe863ae48b25b04a78f71c3756997d227bb41e4a89cac1e5cd5d6b45b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 470137
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b078.json",
+      "path": "data_visualisation/prototype/data/genes/b078.json",
+      "sha256": "5299d18fa55f9ec18d7801153aae337bfac626a51ae1b7d137ef68b611e2a362",
+      "source_sha256": "5299d18fa55f9ec18d7801153aae337bfac626a51ae1b7d137ef68b611e2a362",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 362756
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b079.json",
+      "path": "data_visualisation/prototype/data/genes/b079.json",
+      "sha256": "58597c5a7b5ec0a6926ac5e5cd894a71b0a6307c22139d81aeaa8a3208598862",
+      "source_sha256": "58597c5a7b5ec0a6926ac5e5cd894a71b0a6307c22139d81aeaa8a3208598862",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 344409
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b080.json",
+      "path": "data_visualisation/prototype/data/genes/b080.json",
+      "sha256": "6260e6e43c41c790c4abf14cbfb9d174f4532f6e5d670a5568c009cc54a72919",
+      "source_sha256": "6260e6e43c41c790c4abf14cbfb9d174f4532f6e5d670a5568c009cc54a72919",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 305780
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b081.json",
+      "path": "data_visualisation/prototype/data/genes/b081.json",
+      "sha256": "937ab03673ab236c63781195e4db069496bfdbea7cfdde858e0b9e6e9b3c7d15",
+      "source_sha256": "937ab03673ab236c63781195e4db069496bfdbea7cfdde858e0b9e6e9b3c7d15",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 418975
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b082.json",
+      "path": "data_visualisation/prototype/data/genes/b082.json",
+      "sha256": "5e860905f5b6a2c3d5ae0581372f87f95162545bee6765a96eb9a0582813ac41",
+      "source_sha256": "5e860905f5b6a2c3d5ae0581372f87f95162545bee6765a96eb9a0582813ac41",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 410849
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b083.json",
+      "path": "data_visualisation/prototype/data/genes/b083.json",
+      "sha256": "e581aabbb8fd8c1d38f3b5d13572597313f07a2acc27824dea904bdceaf1eef8",
+      "source_sha256": "e581aabbb8fd8c1d38f3b5d13572597313f07a2acc27824dea904bdceaf1eef8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 491116
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b084.json",
+      "path": "data_visualisation/prototype/data/genes/b084.json",
+      "sha256": "a5ebd0df6df10249efc149fb34c03a2bb8cd0b62f96453b9d7bffa634364aef1",
+      "source_sha256": "a5ebd0df6df10249efc149fb34c03a2bb8cd0b62f96453b9d7bffa634364aef1",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 347741
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b085.json",
+      "path": "data_visualisation/prototype/data/genes/b085.json",
+      "sha256": "8fe8b0e8016a6d0b707daea0efcc1f3c1e6308ddaa71bef4295265a24bf1d54b",
+      "source_sha256": "8fe8b0e8016a6d0b707daea0efcc1f3c1e6308ddaa71bef4295265a24bf1d54b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 281327
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b086.json",
+      "path": "data_visualisation/prototype/data/genes/b086.json",
+      "sha256": "83d67eb483322734fd5da91afdb1f2ad2376b7eafe8e6a797fccd75f230ac3da",
+      "source_sha256": "83d67eb483322734fd5da91afdb1f2ad2376b7eafe8e6a797fccd75f230ac3da",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 474599
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b087.json",
+      "path": "data_visualisation/prototype/data/genes/b087.json",
+      "sha256": "04db4eeaa14efbfb89cbc3ea92afa5e492d41b1be3b58383e7417bc2cdc9e3c1",
+      "source_sha256": "04db4eeaa14efbfb89cbc3ea92afa5e492d41b1be3b58383e7417bc2cdc9e3c1",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 386272
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b088.json",
+      "path": "data_visualisation/prototype/data/genes/b088.json",
+      "sha256": "7b5a440849880103a9cfa4f47b5b85c993aba868e6f4299cde954fa529bfa73f",
+      "source_sha256": "7b5a440849880103a9cfa4f47b5b85c993aba868e6f4299cde954fa529bfa73f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 319554
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b089.json",
+      "path": "data_visualisation/prototype/data/genes/b089.json",
+      "sha256": "a76a9f0ee625e1eb412e94e832b7c92179d6e9c5a22e2a7d65c109e0459a4078",
+      "source_sha256": "a76a9f0ee625e1eb412e94e832b7c92179d6e9c5a22e2a7d65c109e0459a4078",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 446478
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b090.json",
+      "path": "data_visualisation/prototype/data/genes/b090.json",
+      "sha256": "5f4f707e258b1bc0c4f30c3b935c49c963b754c9cd3aa339083d44ff39a0f1bd",
+      "source_sha256": "5f4f707e258b1bc0c4f30c3b935c49c963b754c9cd3aa339083d44ff39a0f1bd",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 317224
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b091.json",
+      "path": "data_visualisation/prototype/data/genes/b091.json",
+      "sha256": "ecbb90083e27ac10afb21c38d667c038f3c1c24d82754589544bfdf70e12e7e3",
+      "source_sha256": "ecbb90083e27ac10afb21c38d667c038f3c1c24d82754589544bfdf70e12e7e3",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 351924
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b092.json",
+      "path": "data_visualisation/prototype/data/genes/b092.json",
+      "sha256": "6aa3b7f30ba6f50be67c6471650adc00ce5676f1344274d982590c9298b58580",
+      "source_sha256": "6aa3b7f30ba6f50be67c6471650adc00ce5676f1344274d982590c9298b58580",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 322271
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b093.json",
+      "path": "data_visualisation/prototype/data/genes/b093.json",
+      "sha256": "cd03f43353d3278130df67db8eefea938df1968c11e9fc7747c5debc266bf901",
+      "source_sha256": "cd03f43353d3278130df67db8eefea938df1968c11e9fc7747c5debc266bf901",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 272284
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b094.json",
+      "path": "data_visualisation/prototype/data/genes/b094.json",
+      "sha256": "d8ef9fb1e503d386c44673b42afaa6aae256962e940214700f724f0469ed8207",
+      "source_sha256": "d8ef9fb1e503d386c44673b42afaa6aae256962e940214700f724f0469ed8207",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 430154
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b095.json",
+      "path": "data_visualisation/prototype/data/genes/b095.json",
+      "sha256": "023153494ea08685a9941dd20846cdba584af2f032dd62d8d4d2bac2a875307a",
+      "source_sha256": "023153494ea08685a9941dd20846cdba584af2f032dd62d8d4d2bac2a875307a",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 651837
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b096.json",
+      "path": "data_visualisation/prototype/data/genes/b096.json",
+      "sha256": "4d5c261f9a3cc733042637b8d25badb346fb1d30a3f84ad0665bedf595703f1d",
+      "source_sha256": "4d5c261f9a3cc733042637b8d25badb346fb1d30a3f84ad0665bedf595703f1d",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 370890
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b097.json",
+      "path": "data_visualisation/prototype/data/genes/b097.json",
+      "sha256": "93c4dd57a100534d55162c2ba48b9eecaadda337d4c81ab48f6f802661feb441",
+      "source_sha256": "93c4dd57a100534d55162c2ba48b9eecaadda337d4c81ab48f6f802661feb441",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 413698
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b098.json",
+      "path": "data_visualisation/prototype/data/genes/b098.json",
+      "sha256": "b545903074970e293ebeb01a385e15b31a3eef104fff501fe75a7ade84586374",
+      "source_sha256": "b545903074970e293ebeb01a385e15b31a3eef104fff501fe75a7ade84586374",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 463408
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b099.json",
+      "path": "data_visualisation/prototype/data/genes/b099.json",
+      "sha256": "8cb480e2f8a9a79c7e3e9d7e7092aea306cd4370c61ab8fd245e75fd4aa33970",
+      "source_sha256": "8cb480e2f8a9a79c7e3e9d7e7092aea306cd4370c61ab8fd245e75fd4aa33970",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 410034
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b100.json",
+      "path": "data_visualisation/prototype/data/genes/b100.json",
+      "sha256": "15fb5534824eba2386a4ccfc1a11504de20cf94c5a63d76bacb2066e60614724",
+      "source_sha256": "15fb5534824eba2386a4ccfc1a11504de20cf94c5a63d76bacb2066e60614724",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 343160
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b101.json",
+      "path": "data_visualisation/prototype/data/genes/b101.json",
+      "sha256": "1609c91cb7d37700fd5c75182f027a9f0db96006d6b9dc987be023994c822724",
+      "source_sha256": "1609c91cb7d37700fd5c75182f027a9f0db96006d6b9dc987be023994c822724",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 380537
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b102.json",
+      "path": "data_visualisation/prototype/data/genes/b102.json",
+      "sha256": "4471d4f99ca44a6ba9756052f73a102f109865a20d2304bc684310b6591c3e50",
+      "source_sha256": "4471d4f99ca44a6ba9756052f73a102f109865a20d2304bc684310b6591c3e50",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 309241
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b103.json",
+      "path": "data_visualisation/prototype/data/genes/b103.json",
+      "sha256": "30bd721fe43af850466a256c3a26d52a19060980372b3b4e401c3d18cab8c2df",
+      "source_sha256": "30bd721fe43af850466a256c3a26d52a19060980372b3b4e401c3d18cab8c2df",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 356495
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b104.json",
+      "path": "data_visualisation/prototype/data/genes/b104.json",
+      "sha256": "9a6deadd25494f47b440871af41fc7567f68b03717c80f616fe83acf1d1fe1ca",
+      "source_sha256": "9a6deadd25494f47b440871af41fc7567f68b03717c80f616fe83acf1d1fe1ca",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 320044
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b105.json",
+      "path": "data_visualisation/prototype/data/genes/b105.json",
+      "sha256": "b87af7a95c5d5dc5c42133215a9908776eba61f4a096f89bea9f48496b0032bf",
+      "source_sha256": "b87af7a95c5d5dc5c42133215a9908776eba61f4a096f89bea9f48496b0032bf",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 454654
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b106.json",
+      "path": "data_visualisation/prototype/data/genes/b106.json",
+      "sha256": "c8f47b0c9f4f56a2ac1566a61854a7646d8756c35a2cb3237e15a06854f05470",
+      "source_sha256": "c8f47b0c9f4f56a2ac1566a61854a7646d8756c35a2cb3237e15a06854f05470",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 277481
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b107.json",
+      "path": "data_visualisation/prototype/data/genes/b107.json",
+      "sha256": "4990a52c20aee3b0b104c92f22edd03be7707e6e43463287d53d2a381332d27f",
+      "source_sha256": "4990a52c20aee3b0b104c92f22edd03be7707e6e43463287d53d2a381332d27f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 356682
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b108.json",
+      "path": "data_visualisation/prototype/data/genes/b108.json",
+      "sha256": "841298fa61261f61c090fc90545726383d8adce2be435939887759825079371d",
+      "source_sha256": "841298fa61261f61c090fc90545726383d8adce2be435939887759825079371d",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 425160
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b109.json",
+      "path": "data_visualisation/prototype/data/genes/b109.json",
+      "sha256": "813cac69d96a29ec43ba5e9f61a122beb5d960763b2d4055bd83a8346ed556dd",
+      "source_sha256": "813cac69d96a29ec43ba5e9f61a122beb5d960763b2d4055bd83a8346ed556dd",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 393359
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b110.json",
+      "path": "data_visualisation/prototype/data/genes/b110.json",
+      "sha256": "094e829b7f4c904087b5806c8829e7096a2e68fee0402721467d97c5fc00f49a",
+      "source_sha256": "094e829b7f4c904087b5806c8829e7096a2e68fee0402721467d97c5fc00f49a",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 363986
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b111.json",
+      "path": "data_visualisation/prototype/data/genes/b111.json",
+      "sha256": "88cd7ba1a84dec0769db36a03d8f23620e106acfaa64727aa938b1283de15f95",
+      "source_sha256": "88cd7ba1a84dec0769db36a03d8f23620e106acfaa64727aa938b1283de15f95",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 356241
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b112.json",
+      "path": "data_visualisation/prototype/data/genes/b112.json",
+      "sha256": "a7fa7893bcc9f116c3a49085a61eeb26b666a6323218b833bd0148b7322bb0be",
+      "source_sha256": "a7fa7893bcc9f116c3a49085a61eeb26b666a6323218b833bd0148b7322bb0be",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 387971
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b113.json",
+      "path": "data_visualisation/prototype/data/genes/b113.json",
+      "sha256": "c1375af2a36b260b24a44949ab88fb467bb142ccc6c7c923669644caea5694f2",
+      "source_sha256": "c1375af2a36b260b24a44949ab88fb467bb142ccc6c7c923669644caea5694f2",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 348694
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b114.json",
+      "path": "data_visualisation/prototype/data/genes/b114.json",
+      "sha256": "ab6fbdfd3e94dde4ed810c6beed33295682114092c0665c30fa34f50a1f8c8a1",
+      "source_sha256": "ab6fbdfd3e94dde4ed810c6beed33295682114092c0665c30fa34f50a1f8c8a1",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 322663
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b115.json",
+      "path": "data_visualisation/prototype/data/genes/b115.json",
+      "sha256": "f1a0040326b83a1cb097f50c4d42f4d89d04dd38dbc6e6eb4ecb2738634e04d5",
+      "source_sha256": "f1a0040326b83a1cb097f50c4d42f4d89d04dd38dbc6e6eb4ecb2738634e04d5",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 458656
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b116.json",
+      "path": "data_visualisation/prototype/data/genes/b116.json",
+      "sha256": "acc4cf28870a05b071b9b3d4ded1e524ab7304852d042955d04c475e51c8ba33",
+      "source_sha256": "acc4cf28870a05b071b9b3d4ded1e524ab7304852d042955d04c475e51c8ba33",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 344707
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b117.json",
+      "path": "data_visualisation/prototype/data/genes/b117.json",
+      "sha256": "509573d8671bd39bb8697ecf9fec68f9a2d814bcbf195d97c1f4de08361c3e7d",
+      "source_sha256": "509573d8671bd39bb8697ecf9fec68f9a2d814bcbf195d97c1f4de08361c3e7d",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 375215
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b118.json",
+      "path": "data_visualisation/prototype/data/genes/b118.json",
+      "sha256": "f37f91a9f1f66c2554055a8cb4d8f7dbf3624ad5d2b666939160df43e5bb871b",
+      "source_sha256": "f37f91a9f1f66c2554055a8cb4d8f7dbf3624ad5d2b666939160df43e5bb871b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 319921
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b119.json",
+      "path": "data_visualisation/prototype/data/genes/b119.json",
+      "sha256": "c63cbb2650871b6cb1459aecf8c754b750db23f81d4e68c20cccc03e530b3c08",
+      "source_sha256": "c63cbb2650871b6cb1459aecf8c754b750db23f81d4e68c20cccc03e530b3c08",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 378996
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b120.json",
+      "path": "data_visualisation/prototype/data/genes/b120.json",
+      "sha256": "2c89b8c27bf338ede88eac02bd84b2303f3fa95f6a8de0944fe8eef8f37c9b04",
+      "source_sha256": "2c89b8c27bf338ede88eac02bd84b2303f3fa95f6a8de0944fe8eef8f37c9b04",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 303543
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b121.json",
+      "path": "data_visualisation/prototype/data/genes/b121.json",
+      "sha256": "4030bb7f9355dd33520fea4c7f862a88b36bd3e31f50352cedd0217c6c82f232",
+      "source_sha256": "4030bb7f9355dd33520fea4c7f862a88b36bd3e31f50352cedd0217c6c82f232",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 382981
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b122.json",
+      "path": "data_visualisation/prototype/data/genes/b122.json",
+      "sha256": "7952687b60f949c874f2b6968b6aede04d1483d1a7559eb4051a7074167edbbb",
+      "source_sha256": "7952687b60f949c874f2b6968b6aede04d1483d1a7559eb4051a7074167edbbb",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 530994
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b123.json",
+      "path": "data_visualisation/prototype/data/genes/b123.json",
+      "sha256": "bf74346f15a4a12a504102c078371edc8e6c7fba24d20e11c9dac13431d80199",
+      "source_sha256": "bf74346f15a4a12a504102c078371edc8e6c7fba24d20e11c9dac13431d80199",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 287763
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b124.json",
+      "path": "data_visualisation/prototype/data/genes/b124.json",
+      "sha256": "785c1f2c3ae5b347dd621c157ab8f7006acaf09c8002d9bc65eba311db7c7430",
+      "source_sha256": "785c1f2c3ae5b347dd621c157ab8f7006acaf09c8002d9bc65eba311db7c7430",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 405507
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b125.json",
+      "path": "data_visualisation/prototype/data/genes/b125.json",
+      "sha256": "ae4d7d0007e645b3166ab2c04b8e9a41a8cd60576a9c6589e33418528d05747d",
+      "source_sha256": "ae4d7d0007e645b3166ab2c04b8e9a41a8cd60576a9c6589e33418528d05747d",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 346577
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b126.json",
+      "path": "data_visualisation/prototype/data/genes/b126.json",
+      "sha256": "b45f14908f7966a749dd77e51d5dbfd3d711ff52da98d126b99c2043606b1993",
+      "source_sha256": "b45f14908f7966a749dd77e51d5dbfd3d711ff52da98d126b99c2043606b1993",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 343373
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes/b127.json",
+      "path": "data_visualisation/prototype/data/genes/b127.json",
+      "sha256": "35e4f672b3dae01f832eacaa1ed98bfa3b2526785c18d95e60408b6be1572746",
+      "source_sha256": "35e4f672b3dae01f832eacaa1ed98bfa3b2526785c18d95e60408b6be1572746",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 444119
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes_index.json",
+      "path": "data_visualisation/prototype/data/genes_index.json",
+      "sha256": "07340b7748de0f0b6e1fd2dbf38a468e35bda1a81d59264da8350d5d722916a8",
+      "source_sha256": "07340b7748de0f0b6e1fd2dbf38a468e35bda1a81d59264da8350d5d722916a8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 789979
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/genes_lowcov.json",
+      "path": "data_visualisation/prototype/data/genes_lowcov.json",
+      "sha256": "f3657cbfe476053dc114fb9eb6f15eab21567601d0b4e60ae3b74f0ee0ea7b3e",
+      "source_sha256": "f3657cbfe476053dc114fb9eb6f15eab21567601d0b4e60ae3b74f0ee0ea7b3e",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 687437
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/overview.json",
+      "path": "data_visualisation/prototype/data/overview.json",
+      "sha256": "ea1e8b3ddb9b74f53e77525be94dd7a27cb005451f33656bad0074b059bfd569",
+      "source_sha256": "ea1e8b3ddb9b74f53e77525be94dd7a27cb005451f33656bad0074b059bfd569",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 35731
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/data/tx_index.json",
+      "path": "data_visualisation/prototype/data/tx_index.json",
+      "sha256": "1173f791ed9c3e4688431b7ec72bc14e36e0abd21f8690fc14271a0385e4ad4b",
+      "source_sha256": "1173f791ed9c3e4688431b7ec72bc14e36e0abd21f8690fc14271a0385e4ad4b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 386427
+    },
+    {
+      "component": "member5_original_prototype",
+      "source": "Other members work/[Data Visualisation] SG-NEx m6A Explorer/index.html",
+      "path": "data_visualisation/prototype/index.html",
+      "sha256": "4f4ff913cf906490b82b76659e4b254c8eabc6b5f6f0b32f7c47faf14d3da3ba",
+      "source_sha256": "4f4ff913cf906490b82b76659e4b254c8eabc6b5f6f0b32f7c47faf14d3da3ba",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 92477
+    },
+    {
+      "component": "member5_screenshot",
+      "source": "Other members work/visualisation draft pic.jpg",
+      "path": "data_visualisation/prototype_preview.jpg",
+      "sha256": "82107e9dc10bb94de7ab78ee5e62576aa8b3040ca52ec3a6fb7b50c7b6ac7925",
+      "source_sha256": "82107e9dc10bb94de7ab78ee5e62576aa8b3040ca52ec3a6fb7b50c7b6ac7925",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 161644
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/common.py",
+      "path": "model_elgin/baseline_2026_10_07/code/common.py",
+      "sha256": "6a26cab89aea3155db924244bae1b69080c2f5037fb1ba00dc231d8487d30eaa",
+      "source_sha256": "6a26cab89aea3155db924244bae1b69080c2f5037fb1ba00dc231d8487d30eaa",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 2927
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/cv_worker.py",
+      "path": "model_elgin/baseline_2026_10_07/code/cv_worker.py",
+      "sha256": "a541abcf054b8539f4596372fe4d45bab02b35569f3b6caf44fccaa8c65f9d0c",
+      "source_sha256": "a541abcf054b8539f4596372fe4d45bab02b35569f3b6caf44fccaa8c65f9d0c",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 3341
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/data.py",
+      "path": "model_elgin/baseline_2026_10_07/code/data.py",
+      "sha256": "91f8a13e3ecb6cf5461c2f33a640f523e7884362c8545e4125f9f5c4b14ebf70",
+      "source_sha256": "91f8a13e3ecb6cf5461c2f33a640f523e7884362c8545e4125f9f5c4b14ebf70",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 16859
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/evaluate.py",
+      "path": "model_elgin/baseline_2026_10_07/code/evaluate.py",
+      "sha256": "5797878023811c3ad769dfdbd378d1bca2abe7cfaa9f92b06a72511f5f895049",
+      "source_sha256": "5797878023811c3ad769dfdbd378d1bca2abe7cfaa9f92b06a72511f5f895049",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 6300
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/finish_pipeline.py",
+      "path": "model_elgin/baseline_2026_10_07/code/finish_pipeline.py",
+      "sha256": "05f7b66b61691fb08503f52b14fd899c8dc2d29e2bc9e75cf61f5b07db571033",
+      "source_sha256": "05f7b66b61691fb08503f52b14fd899c8dc2d29e2bc9e75cf61f5b07db571033",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 5059
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/model.py",
+      "path": "model_elgin/baseline_2026_10_07/code/model.py",
+      "sha256": "545abaf3a0863244ddd30caefe99e73a5e7f72088cc81e02f1773d36a29cf1ad",
+      "source_sha256": "545abaf3a0863244ddd30caefe99e73a5e7f72088cc81e02f1773d36a29cf1ad",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 3603
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/plot_diagnostics.py",
+      "path": "model_elgin/baseline_2026_10_07/code/plot_diagnostics.py",
+      "sha256": "db9d0b2f9a6f1a3b5c42eb5be01b064eaaf1a519bf37efc4bbc78fda6c11b795",
+      "source_sha256": "db9d0b2f9a6f1a3b5c42eb5be01b064eaaf1a519bf37efc4bbc78fda6c11b795",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 16272
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/predict.py",
+      "path": "model_elgin/baseline_2026_10_07/code/predict.py",
+      "sha256": "ecbdf74620421166df873de9eb8f79644aaa5500e9ef48b821920f776234c662",
+      "source_sha256": "ecbdf74620421166df873de9eb8f79644aaa5500e9ef48b821920f776234c662",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 4646
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/prepare.py",
+      "path": "model_elgin/baseline_2026_10_07/code/prepare.py",
+      "sha256": "4d3e77c499fd620e7ab20db97115e7b400cf4e1aa13fb9760cee1975b9463167",
+      "source_sha256": "4d3e77c499fd620e7ab20db97115e7b400cf4e1aa13fb9760cee1975b9463167",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 806
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/report.py",
+      "path": "model_elgin/baseline_2026_10_07/code/report.py",
+      "sha256": "30c5c5f9088f86a572b689d9de8fb15fdb3cd910902923ccb60c2513bcfd6d7d",
+      "source_sha256": "b3fe443464e6e03433d72c05e1c64f639f6e4cfeb52ed6eec579aa4c37a9899e",
+      "byte_identical": false,
+      "public_copy_change": "Personal generated-command directory replaced with portable placeholder",
+      "bytes": 57289
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/status.py",
+      "path": "model_elgin/baseline_2026_10_07/code/status.py",
+      "sha256": "f6a8582a5471c3875728ed22798fcbb1e9d6187d6ac0e2147bfa44c31526c9fd",
+      "source_sha256": "f6a8582a5471c3875728ed22798fcbb1e9d6187d6ac0e2147bfa44c31526c9fd",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 2348
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/train.py",
+      "path": "model_elgin/baseline_2026_10_07/code/train.py",
+      "sha256": "93e709481d517863f26d0d90e97bf8dbf92366476d4ef4aaa952e6167a2347cb",
+      "source_sha256": "93e709481d517863f26d0d90e97bf8dbf92366476d4ef4aaa952e6167a2347cb",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 18176
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/verify.py",
+      "path": "model_elgin/baseline_2026_10_07/code/verify.py",
+      "sha256": "67db57f11ea76004468041da6f6fd97bd14643983ab8f7cf2f73fdeb02f5bac7",
+      "source_sha256": "67db57f11ea76004468041da6f6fd97bd14643983ab8f7cf2f73fdeb02f5bac7",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 13914
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/requirements.lock.txt",
+      "path": "model_elgin/baseline_2026_10_07/code/requirements.lock.txt",
+      "sha256": "43210d9c9d654d52e18372b6420a2a5b23eaa205b810d4d51f1a05792b8e9646",
+      "source_sha256": "43210d9c9d654d52e18372b6420a2a5b23eaa205b810d4d51f1a05792b8e9646",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 534
+    },
+    {
+      "component": "elgin_baseline_source",
+      "source": "advanced_model/feature_schema.json",
+      "path": "model_elgin/baseline_2026_10_07/code/feature_schema.json",
+      "sha256": "02dc915587d8a82c045008700994623bbe409b706f8997e7be0037a5c004f597",
+      "source_sha256": "02dc915587d8a82c045008700994623bbe409b706f8997e7be0037a5c004f597",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 3773
+    },
+    {
+      "component": "elgin_baseline_model",
+      "source": "advanced_model/runs/final_model.pt",
+      "path": "model_elgin/baseline_2026_10_07/artifact/final_model.pt",
+      "sha256": "5f543342a8fde2ae25e44c364c342a55f1b7dc587cb4e88cfb00fa592fddc5f9",
+      "source_sha256": "5f543342a8fde2ae25e44c364c342a55f1b7dc587cb4e88cfb00fa592fddc5f9",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 97234
+    },
+    {
+      "component": "elgin_baseline_example",
+      "source": "advanced_model/examples/input_10_sites.json",
+      "path": "model_elgin/baseline_2026_10_07/examples/input_10_sites.json",
+      "sha256": "c8e400bf677d228bf8683c5bb61c0cfb105e3a3f7b5b9235c06efdaf015a334e",
+      "source_sha256": "c8e400bf677d228bf8683c5bb61c0cfb105e3a3f7b5b9235c06efdaf015a334e",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 106615
+    },
+    {
+      "component": "elgin_baseline_example",
+      "source": "advanced_model/examples/predictions.csv",
+      "path": "model_elgin/baseline_2026_10_07/examples/predictions.csv",
+      "sha256": "7f01045324af0308f0db3ad51592c78f83986a288608c8f7dbf600a8913c9586",
+      "source_sha256": "7f01045324af0308f0db3ad51592c78f83986a288608c8f7dbf600a8913c9586",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 465
+    },
+    {
+      "component": "elgin_baseline_predictions",
+      "source": "advanced_model/predictions/LIFO_dataset0.csv",
+      "path": "model_elgin/baseline_2026_10_07/predictions/LIFO_dataset0.csv",
+      "sha256": "081b501cf2e11ee627808df08621fce678ecd42662cf36886b290d69ed1e36c8",
+      "source_sha256": "081b501cf2e11ee627808df08621fce678ecd42662cf36886b290d69ed1e36c8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 5232249
+    },
+    {
+      "component": "elgin_baseline_predictions",
+      "source": "advanced_model/predictions/LIFO_dataset1.csv",
+      "path": "model_elgin/baseline_2026_10_07/predictions/LIFO_dataset1.csv",
+      "sha256": "7ae7c8ba66abc0fa27cf119403346a07000f75fa1eea16f18f0148931e3abaac",
+      "source_sha256": "7ae7c8ba66abc0fa27cf119403346a07000f75fa1eea16f18f0148931e3abaac",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 3889242
+    },
+    {
+      "component": "elgin_baseline_predictions",
+      "source": "advanced_model/predictions/LIFO_dataset2.csv",
+      "path": "model_elgin/baseline_2026_10_07/predictions/LIFO_dataset2.csv",
+      "sha256": "219fa3caa48f6465a21727820406e09c3a630f5210f97d3232586bce0d1a0bd2",
+      "source_sha256": "219fa3caa48f6465a21727820406e09c3a630f5210f97d3232586bce0d1a0bd2",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 45071
+    },
+    {
+      "component": "elgin_baseline_evidence",
+      "source": "advanced_model/runs/attention_weighted/cv_metrics.json",
+      "path": "model_elgin/baseline_2026_10_07/metrics/data0_development.json",
+      "sha256": "f9587a68d5b4968bbe230303623fb219af4077aaaf4eb630210141a396dba59b",
+      "source_sha256": "f9587a68d5b4968bbe230303623fb219af4077aaaf4eb630210141a396dba59b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 5855
+    },
+    {
+      "component": "elgin_baseline_evidence",
+      "source": "advanced_model/evaluations/data1_frozen_selection/metrics.json",
+      "path": "model_elgin/baseline_2026_10_07/metrics/data1_frozen.json",
+      "sha256": "9f969e558068e19fa90b7fc2d032f009cdd058d534019481143f4dfd9496fa2f",
+      "source_sha256": "9f969e558068e19fa90b7fc2d032f009cdd058d534019481143f4dfd9496fa2f",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 1003
+    },
+    {
+      "component": "elgin_baseline_evidence",
+      "source": "advanced_model/evaluations/data0_in_sample/metrics.json",
+      "path": "model_elgin/baseline_2026_10_07/metrics/data0_in_sample.json",
+      "sha256": "2d730908e5fb245dbb939e69606f9bfb64a6771d5cb04fe4f6c98f94aaf018a4",
+      "source_sha256": "2d730908e5fb245dbb939e69606f9bfb64a6771d5cb04fe4f6c98f94aaf018a4",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 1000
+    },
+    {
+      "component": "elgin_baseline_evidence",
+      "source": "advanced_model/runs/final_fit/history.json",
+      "path": "model_elgin/baseline_2026_10_07/training_history.json",
+      "sha256": "83f9c1f61286d5d7bf27bc557fbc08e312b695e1b5cbb3a5bc0d42607e4aa0a4",
+      "source_sha256": "83f9c1f61286d5d7bf27bc557fbc08e312b695e1b5cbb3a5bc0d42607e4aa0a4",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 1936
+    },
+    {
+      "component": "elgin_baseline_evidence",
+      "source": "advanced_model/runs/final_fit/training.log",
+      "path": "model_elgin/baseline_2026_10_07/training.log",
+      "sha256": "de1a98282ea3e9546cd3bdc71a6ff53ffc80449cfa4d2637c9d70ef18de25faf",
+      "source_sha256": "de1a98282ea3e9546cd3bdc71a6ff53ffc80449cfa4d2637c9d70ef18de25faf",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 1494
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data0_in_sample/confusion_matrix.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data0_in_sample/confusion_matrix.png",
+      "sha256": "655eb11ba5596cbf34ce05dae237d299066432afd4d86bda0da9e1dc2d98f36b",
+      "source_sha256": "655eb11ba5596cbf34ce05dae237d299066432afd4d86bda0da9e1dc2d98f36b",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 24550
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data0_in_sample/pr_curve.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data0_in_sample/pr_curve.png",
+      "sha256": "259491c429c5e639fdc54e0b4f36c49ab7fc8c8cbddbc6fc4663d0b18a63fd47",
+      "source_sha256": "259491c429c5e639fdc54e0b4f36c49ab7fc8c8cbddbc6fc4663d0b18a63fd47",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 41523
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data0_in_sample/reliability.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data0_in_sample/reliability.png",
+      "sha256": "c701e18460d52ce90d465759f663fb82216ac5391396f4ea78973df30a5bc2c6",
+      "source_sha256": "c701e18460d52ce90d465759f663fb82216ac5391396f4ea78973df30a5bc2c6",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 42653
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data0_in_sample/roc_curve.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data0_in_sample/roc_curve.png",
+      "sha256": "b3f9a0eeb4e1c65e96f2ad5a252a2995f71cb9ae0a494a9babd268d9fd4589c5",
+      "source_sha256": "b3f9a0eeb4e1c65e96f2ad5a252a2995f71cb9ae0a494a9babd268d9fd4589c5",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 48430
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data0_oof_development/confusion_matrix.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data0_oof_development/confusion_matrix.png",
+      "sha256": "7323a670c03c2e1928e7c6887829315038d9c4197f888e36f912a3baec0941ad",
+      "source_sha256": "7323a670c03c2e1928e7c6887829315038d9c4197f888e36f912a3baec0941ad",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 24568
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data0_oof_development/pr_curve.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data0_oof_development/pr_curve.png",
+      "sha256": "a533842d873ec1808a5ac3ec2bb3393c2e7a35d527288ddcabaa0c11f1982ef6",
+      "source_sha256": "a533842d873ec1808a5ac3ec2bb3393c2e7a35d527288ddcabaa0c11f1982ef6",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 41548
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data0_oof_development/reliability.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data0_oof_development/reliability.png",
+      "sha256": "5695f1129eb1ca29ad6ccff8767d394f167919def3eb72401c725154cec0b8a5",
+      "source_sha256": "5695f1129eb1ca29ad6ccff8767d394f167919def3eb72401c725154cec0b8a5",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 42734
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data0_oof_development/roc_curve.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data0_oof_development/roc_curve.png",
+      "sha256": "bda47a4c082720cd7b77305bcb4e8d7354d68cbc486221ccd87cfe34fcc208f8",
+      "source_sha256": "bda47a4c082720cd7b77305bcb4e8d7354d68cbc486221ccd87cfe34fcc208f8",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 49769
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data1_frozen_selection/confusion_matrix.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data1_frozen_selection/confusion_matrix.png",
+      "sha256": "12411751079a7eb31d1e3256a33cbb81eab851d07a43814ee6ac5b579836d4b9",
+      "source_sha256": "12411751079a7eb31d1e3256a33cbb81eab851d07a43814ee6ac5b579836d4b9",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 23953
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data1_frozen_selection/pr_curve.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data1_frozen_selection/pr_curve.png",
+      "sha256": "789f8873f4b68f5416135b843e6e12d02add45d4bcc6dbb1fa2baeef62802964",
+      "source_sha256": "789f8873f4b68f5416135b843e6e12d02add45d4bcc6dbb1fa2baeef62802964",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 40404
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data1_frozen_selection/reliability.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data1_frozen_selection/reliability.png",
+      "sha256": "5ab095d1b42eff73218e03d13c354c1661209b2b939e0ab378190324eb06a4d9",
+      "source_sha256": "5ab095d1b42eff73218e03d13c354c1661209b2b939e0ab378190324eb06a4d9",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 41254
+    },
+    {
+      "component": "elgin_baseline_figures",
+      "source": "advanced_model/evaluations/data1_frozen_selection/roc_curve.png",
+      "path": "model_elgin/baseline_2026_10_07/figures/data1_frozen_selection/roc_curve.png",
+      "sha256": "c7d3c4e7b481ce06fd0ee54d566f20bd697ddaad3b9c4dbd4b95b8d0339ce10a",
+      "source_sha256": "c7d3c4e7b481ce06fd0ee54d566f20bd697ddaad3b9c4dbd4b95b8d0339ce10a",
+      "byte_identical": true,
+      "public_copy_change": null,
+      "bytes": 51023
+    }
+  ]
+}

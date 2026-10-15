@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "scope": "descriptive audit of historical assignments; no new split, filtering, training or prediction",
+  "fold_sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0",
+  "summary_sha256": "15d9ebc4ce159d5bf2b36b23e66c40a8ecce01ff8e7f416efb56eab95c378179",
+  "sites": 121838,
+  "genes": 3852,
+  "motifs": 18,
+  "folds": [
+    {
+      "fold": 0,
+      "genes": 775,
+      "sites": 24358,
+      "negative": 23268,
+      "positive": 1090,
+      "positive_fraction": 0.044749158387388126
+    },
+    {
+      "fold": 1,
+      "genes": 770,
+      "sites": 24371,
+      "negative": 23274,
+      "positive": 1097,
+      "positive_fraction": 0.04501251487423577
+    },
+    {
+      "fold": 2,
+      "genes": 768,
+      "sites": 24387,
+      "negative": 23282,
+      "positive": 1105,
+      "positive_fraction": 0.045311026366506746
+    },
+    {
+      "fold": 3,
+      "genes": 772,
+      "sites": 24378,
+      "negative": 23278,
+      "positive": 1100,
+      "positive_fraction": 0.04512265157108869
+    },
+    {
+      "fold": 4,
+      "genes": 767,
+      "sites": 24344,
+      "negative": 23261,
+      "positive": 1083,
+      "positive_fraction": 0.04448734801183043
+    }
+  ],
+  "gene_overlap": false,
+  "motif_fold_groups": 90,
+  "motif_fold_groups_without_both_validation_classes": 8,
+  "motif_fold_groups_with_zero_training_positive": 1,
+  "motif_fold_groups_with_fewer_than_20_validation_positives": 38,
+  "note": "20 is a descriptive display-support reference, not an exclusion rule. Findings inform protocol choice; no design is approved by this audit."
+}

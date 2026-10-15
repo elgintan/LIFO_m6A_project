@@ -1,0 +1,12 @@
+{
+  "shared_sites": 67320,
+  "label_disagreements": 3872,
+  "transcripts_data1": 4451,
+  "shared_transcripts": 3432,
+  "data1_mapped_gene_sites": 75673,
+  "data1_unmapped_gene_sites": 15137,
+  "data1_mapped_genes": 2508,
+  "data1_unmapped_transcripts": 1019,
+  "data0_only_sites": 54518,
+  "data1_only_sites": 23490
+}

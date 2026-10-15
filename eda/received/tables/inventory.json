@@ -1,0 +1,232 @@
+[
+  {
+    "dataset": "data0",
+    "n_sites": 121838,
+    "n_reads": 11027106,
+    "n_transcripts": 5333,
+    "n_genes": 3852,
+    "n_7mers": 288,
+    "n_5mers": 18,
+    "label_counts": {
+      "0": 116363,
+      "1": 5475
+    },
+    "coverage_quantiles": {
+      "0.0": 20.0,
+      "0.25": 32.0,
+      "0.5": 47.0,
+      "0.75": 84.0,
+      "0.9": 175.0,
+      "0.95": 304.0,
+      "0.99": 869.0,
+      "1.0": 991.0
+    },
+    "json_metadata_join": {
+      "both": 121838,
+      "left_only": 0,
+      "right_only": 0
+    },
+    "nonfinite_measurements": 0,
+    "non_DRACH_sites": 0,
+    "metadata_readcount_mismatches": null,
+    "feature_min": {
+      "minus1_dwell": 0.00166,
+      "minus1_event_sd": 0.094,
+      "minus1_current": 73.2,
+      "centre_dwell": 0.00166,
+      "centre_event_sd": 0.044,
+      "centre_current": 75.4,
+      "plus1_dwell": 0.00166,
+      "plus1_event_sd": 0.136,
+      "plus1_current": 61.0
+    },
+    "feature_max": {
+      "minus1_dwell": 0.12,
+      "minus1_event_sd": 206.0,
+      "minus1_current": 153.0,
+      "centre_dwell": 0.138,
+      "centre_event_sd": 206.0,
+      "centre_current": 156.0,
+      "plus1_dwell": 0.103,
+      "plus1_event_sd": 184.0,
+      "plus1_current": 143.0
+    },
+    "feature_zero_counts": {
+      "minus1_dwell": 0,
+      "minus1_event_sd": 0,
+      "minus1_current": 0,
+      "centre_dwell": 0,
+      "centre_event_sd": 0,
+      "centre_current": 0,
+      "plus1_dwell": 0,
+      "plus1_event_sd": 0,
+      "plus1_current": 0
+    },
+    "feature_negative_counts": {
+      "minus1_dwell": 0,
+      "minus1_event_sd": 0,
+      "minus1_current": 0,
+      "centre_dwell": 0,
+      "centre_event_sd": 0,
+      "centre_current": 0,
+      "plus1_dwell": 0,
+      "plus1_event_sd": 0,
+      "plus1_current": 0
+    }
+  },
+  {
+    "dataset": "data1",
+    "n_sites": 90810,
+    "n_reads": 7907952,
+    "n_transcripts": 4451,
+    "n_genes": null,
+    "n_7mers": 288,
+    "n_5mers": 18,
+    "label_counts": {
+      "0": 84217,
+      "1": 6593
+    },
+    "coverage_quantiles": {
+      "0.0": 20.0,
+      "0.25": 27.0,
+      "0.5": 40.0,
+      "0.75": 77.0,
+      "0.9": 167.0,
+      "0.95": 312.0,
+      "0.99": 893.0,
+      "1.0": 994.0
+    },
+    "json_metadata_join": {
+      "both": 90810,
+      "left_only": 0,
+      "right_only": 0
+    },
+    "nonfinite_measurements": 0,
+    "non_DRACH_sites": 0,
+    "metadata_readcount_mismatches": 0,
+    "feature_min": {
+      "minus1_dwell": 0.00166,
+      "minus1_event_sd": 0.113,
+      "minus1_current": 73.0,
+      "centre_dwell": 0.00166,
+      "centre_event_sd": 0.165,
+      "centre_current": 76.1,
+      "plus1_dwell": 0.00166,
+      "plus1_event_sd": 0.125,
+      "plus1_current": 61.6
+    },
+    "feature_max": {
+      "minus1_dwell": 0.115,
+      "minus1_event_sd": 225.0,
+      "minus1_current": 150.0,
+      "centre_dwell": 0.114,
+      "centre_event_sd": 194.0,
+      "centre_current": 150.0,
+      "plus1_dwell": 0.11,
+      "plus1_event_sd": 193.0,
+      "plus1_current": 137.0
+    },
+    "feature_zero_counts": {
+      "minus1_dwell": 0,
+      "minus1_event_sd": 0,
+      "minus1_current": 0,
+      "centre_dwell": 0,
+      "centre_event_sd": 0,
+      "centre_current": 0,
+      "plus1_dwell": 0,
+      "plus1_event_sd": 0,
+      "plus1_current": 0
+    },
+    "feature_negative_counts": {
+      "minus1_dwell": 0,
+      "minus1_event_sd": 0,
+      "minus1_current": 0,
+      "centre_dwell": 0,
+      "centre_event_sd": 0,
+      "centre_current": 0,
+      "plus1_dwell": 0,
+      "plus1_event_sd": 0,
+      "plus1_current": 0
+    }
+  },
+  {
+    "dataset": "data2",
+    "n_sites": 1323,
+    "n_reads": 1171940,
+    "n_transcripts": 7,
+    "n_genes": null,
+    "n_7mers": 139,
+    "n_5mers": 18,
+    "label_counts": {
+      "0.0": 189,
+      "0.25": 189,
+      "0.5": 189,
+      "0.7": 189,
+      "0.75": 189,
+      "0.95": 189,
+      "1.0": 189
+    },
+    "coverage_quantiles": {
+      "0.0": 26.0,
+      "0.25": 440.0,
+      "0.5": 814.0,
+      "0.75": 1269.5,
+      "0.9": 1688.3999999999999,
+      "0.95": 1868.0,
+      "0.99": 2395.12,
+      "1.0": 3438.0
+    },
+    "json_metadata_join": {
+      "both": 1323,
+      "left_only": 0,
+      "right_only": 0
+    },
+    "nonfinite_measurements": 0,
+    "non_DRACH_sites": 0,
+    "metadata_readcount_mismatches": 0,
+    "feature_min": {
+      "minus1_dwell": 0.00166,
+      "minus1_event_sd": 0.2,
+      "minus1_current": 72.8,
+      "centre_dwell": 0.00166,
+      "centre_event_sd": 0.231,
+      "centre_current": 72.4,
+      "plus1_dwell": 0.00166,
+      "plus1_event_sd": 0.235,
+      "plus1_current": 57.4
+    },
+    "feature_max": {
+      "minus1_dwell": 0.104,
+      "minus1_event_sd": 135.0,
+      "minus1_current": 146.0,
+      "centre_dwell": 0.0976,
+      "centre_event_sd": 101.0,
+      "centre_current": 145.0,
+      "plus1_dwell": 0.0817,
+      "plus1_event_sd": 159.0,
+      "plus1_current": 120.0
+    },
+    "feature_zero_counts": {
+      "minus1_dwell": 0,
+      "minus1_event_sd": 0,
+      "minus1_current": 0,
+      "centre_dwell": 0,
+      "centre_event_sd": 0,
+      "centre_current": 0,
+      "plus1_dwell": 0,
+      "plus1_event_sd": 0,
+      "plus1_current": 0
+    },
+    "feature_negative_counts": {
+      "minus1_dwell": 0,
+      "minus1_event_sd": 0,
+      "minus1_current": 0,
+      "centre_dwell": 0,
+      "centre_event_sd": 0,
+      "centre_current": 0,
+      "plus1_dwell": 0,
+      "plus1_event_sd": 0,
+      "plus1_current": 0
+    }
+  }
+]

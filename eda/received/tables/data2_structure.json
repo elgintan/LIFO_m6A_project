@@ -1,0 +1,43 @@
+{
+  "n_positions": 189,
+  "all_positions_seven_rows": true,
+  "positions_with_same_7mer_at_all_labels": 189,
+  "unique_7mers": 139,
+  "label_groups": [
+    {
+      "transcript_id": "tx_id_0",
+      "label": 1.0,
+      "n_sites": 189
+    },
+    {
+      "transcript_id": "tx_id_1",
+      "label": 0.95,
+      "n_sites": 189
+    },
+    {
+      "transcript_id": "tx_id_2",
+      "label": 0.75,
+      "n_sites": 189
+    },
+    {
+      "transcript_id": "tx_id_3",
+      "label": 0.7,
+      "n_sites": 189
+    },
+    {
+      "transcript_id": "tx_id_4",
+      "label": 0.5,
+      "n_sites": 189
+    },
+    {
+      "transcript_id": "tx_id_5",
+      "label": 0.25,
+      "n_sites": 189
+    },
+    {
+      "transcript_id": "tx_id_6",
+      "label": 0.0,
+      "n_sites": 189
+    }
+  ]
+}

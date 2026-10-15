@@ -1,0 +1,43 @@
+feature_name,status,zero_based_read_column,definition,fitting_scope,role
+minus1_dwell_mean,completed EDA column,0,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_dwell_median,completed EDA column,0,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_dwell_iqr,completed EDA column,0,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_dwell_read_sd,completed EDA column,0,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_event_sd_mean,completed EDA column,1,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_event_sd_median,completed EDA column,1,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_event_sd_iqr,completed EDA column,1,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_event_sd_read_sd,completed EDA column,1,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_current_mean,completed EDA column,2,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_current_median,completed EDA column,2,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_current_iqr,completed EDA column,2,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+minus1_current_read_sd,completed EDA column,2,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_dwell_mean,completed EDA column,3,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_dwell_median,completed EDA column,3,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_dwell_iqr,completed EDA column,3,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_dwell_read_sd,completed EDA column,3,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_event_sd_mean,completed EDA column,4,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_event_sd_median,completed EDA column,4,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_event_sd_iqr,completed EDA column,4,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_event_sd_read_sd,completed EDA column,4,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_current_mean,completed EDA column,5,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_current_median,completed EDA column,5,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_current_iqr,completed EDA column,5,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+centre_current_read_sd,completed EDA column,5,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_dwell_mean,completed EDA column,6,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_dwell_median,completed EDA column,6,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_dwell_iqr,completed EDA column,6,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_dwell_read_sd,completed EDA column,6,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_event_sd_mean,completed EDA column,7,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_event_sd_median,completed EDA column,7,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_event_sd_iqr,completed EDA column,7,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_event_sd_read_sd,completed EDA column,7,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_current_mean,completed EDA column,8,"arithmetic mean of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_current_median,completed EDA column,8,"median; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_current_iqr,completed EDA column,8,"Q75 minus Q25; linear quantile interpolation of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+plus1_current_read_sd,completed EDA column,8,"population standard deviation; ddof=0 of X[:,column] across all reads",per-site calculation; any later learned scaling uses training only,candidate numeric feature
+coverage,completed EDA column,all,number of read rows,per-site,candidate numeric feature; assess inclusion
+motif,completed EDA column,,sequence[1:6],training-fitted encoding and unknown-category handling,candidate categorical feature
+sequence,completed EDA column,,complete seven-base sequence,training-fitted encoding and unknown-category handling,candidate categorical feature
+log_coverage,proposed; not computed,,ln(1 + coverage),fixed transform; learned scaling training only,candidate numeric feature
+log_centre_dwell_median,proposed; not computed,3,"ln(median(X[:,3]))",positive finite inputs; learned scaling training only,candidate numeric feature
+centre_current_motif_residual,proposed; not computed,5,centre_current_median minus training-site median of this feature for the same motif,fit per training partition; predefine sparse/unknown fallback,candidate numeric feature

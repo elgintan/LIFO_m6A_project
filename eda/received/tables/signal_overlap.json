@@ -1,0 +1,8 @@
+{
+  "shared_sites": 67320,
+  "same_sequence": 67320,
+  "same_ordered_signal_matrix": 0,
+  "discordant_labels": 3872,
+  "spearman_coverage": 0.61661109156164,
+  "spearman_centre_current_medians": 0.9947253528846711
+}

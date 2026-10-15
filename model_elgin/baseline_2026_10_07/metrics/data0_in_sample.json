@@ -1,0 +1,31 @@
+{
+  "stage": "data0_in_sample",
+  "n_sites": 121838,
+  "n_positives": 5475,
+  "positive_fraction": 0.044936719250151844,
+  "roc_auc": 0.9496161472658168,
+  "pr_auc_trapezoid": 0.5568154215914626,
+  "average_precision": 0.5569110202576341,
+  "selection_score": 0.7532157844286397,
+  "threshold": 0.5,
+  "tn": 112698,
+  "fp": 3665,
+  "fn": 1903,
+  "tp": 3572,
+  "precision": 0.4935746856432223,
+  "recall": 0.6524200913242009,
+  "f1": 0.5619886721208307,
+  "specificity": 0.9685037340047954,
+  "brier": 0.0323831906110586,
+  "log_loss": 0.11283187898094138,
+  "status": "complete",
+  "resources": {
+    "wall_seconds": 3.2092543999897316,
+    "cpu_seconds": 3.171875,
+    "sampled_peak_process_tree_rss_mib": 198.91796875,
+    "sampling_interval_seconds": 0.2,
+    "sampling_errors": 0
+  },
+  "predictions_sha256": "081b501cf2e11ee627808df08621fce678ecd42662cf36886b290d69ed1e36c8",
+  "labels_sha256": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "source": "data0/data.info.labelled",
+    "size_bytes": 4702026,
+    "sha256": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978"
+  },
+  {
+    "source": "data0/dataset0.json.gz",
+    "size_bytes": 179603692,
+    "sha256": "622410b2918692b75a880b753f1a621e8d892d6dbc13c1f430babc5543a0584e"
+  },
+  {
+    "source": "data1/data.info",
+    "size_bytes": 4099438,
+    "sha256": "05c8441c4d60a6228f79d219bb7240921699495f23052b378cdda432417acaf3"
+  },
+  {
+    "source": "data1/dataset1.json.gz",
+    "size_bytes": 128212463,
+    "sha256": "5e88520aa2ea8b83dee626d290934dd81672a92e5b04ecb7dbd828b65659a6ef"
+  },
+  {
+    "source": "data2/data.info",
+    "size_bytes": 51583,
+    "sha256": "e33fc70755a5045ddc2c143b69760849261ee616888d2e2369e2a94b89bebd71"
+  },
+  {
+    "source": "data2/dataset2.json.gz",
+    "size_bytes": 18454118,
+    "sha256": "8bb7b21a2936efc6b26b1f18513748f0dcd47dfd932d03c4ac8c084ab9f8a288"
+  }
+]
