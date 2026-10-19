@@ -46,6 +46,8 @@ dataset*.json.gz
 
 # Intermediate outputs and duplicate archives
 /model_elgin/outputs/
+/model_elgin/reference_check_*/*
+!/model_elgin/reference_check_*/README.md
 /model_samuel/outputs/
 *.tmp
 *.zip

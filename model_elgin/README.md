@@ -4,6 +4,15 @@ Owner: Elgin, model lead and final report integrator. Neural networks are the
 provisional direction, including alternatives to the original architecture.
 Samuel develops a separate candidate in `model_samuel`.
 
+**Start with [Elgin's first-step guide](FIRST_STEPS.md).** On 19 October, the
+saved historical OOF predictions were verified and rescored using the shared
+evaluator: [reference check](reference_check_2026_10_19/README.md).
+The [working trainer/predictor](context_reference_v1/README.md) now implements
+context-relative features and the exact shared gene groups. Thirty software
+tests and a small real data0 check in both modes passed; see
+[observed evidence](context_reference_v1/IMPLEMENTATION_CHECK.md).
+Full candidate comparison and any improvement conclusion remain pending.
+
 ## Available starting point
 
 `baseline_2026_10_07/` preserves actual earlier source, weights, metrics,
@@ -32,7 +41,8 @@ inside each permitted partition, preserve
 checkpoints/configuration/commands/costs, and retain negative findings. The
 [detailed methodology](../model_evaluation/EVALUATION_PROTOCOL.md) explains
 the exact five outer gene groups and optional rotating inner default. Common
-scoring code is included; no new candidate fit has run.
+scoring code is included. Only small software-check fits have run in the new
+pipeline; its full five-fold comparison has not run.
 
 ## Handover
 
