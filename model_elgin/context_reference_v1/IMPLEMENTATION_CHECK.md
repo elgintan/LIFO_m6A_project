@@ -1,5 +1,10 @@
 # Implementation check — 19 October 2026
 
+This records the earlier implementation-stage checks. The full five-fold
+comparison and saved-score diagnostics subsequently completed; see
+[the current model status](../README.md). Statements below about pending full
+training describe the time of this implementation check.
+
 These are assistant-executed software and small-run checks on Windows CPU.
 They do **not** establish an improved model or a winner. Full data0 five-fold
 comparison and new frozen data1 evaluation have not been run.

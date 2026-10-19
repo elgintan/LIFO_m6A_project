@@ -11,7 +11,21 @@ The [working trainer/predictor](context_reference_v1/README.md) now implements
 context-relative features and the exact shared gene groups. Thirty software
 tests and a small real data0 check in both modes passed; see
 [observed evidence](context_reference_v1/IMPLEMENTATION_CHECK.md).
-Full candidate comparison and any improvement conclusion remain pending.
+The full matched data0 five-fold comparison completed on 19 October:
+original features mean ROC/PR/S = **0.931123/0.504160/0.717642**;
+added context features = **0.926982/0.490787/0.708885**. This particular
+change reduced the primary score; retain the original-feature version as the
+stronger of these two measured pipelines. This is development evidence from
+one seed, not universal or statistically established superiority.
+
+Saved-score diagnostics then examined motif, coverage and training-fitted
+unusual-signal groups. Both very low and very high coverage warrant further
+investigation; an unusual statistical flag alone does not justify excluding a
+site. All 121,838 sites were retained. No new training or data1 inference was
+performed in those diagnostics. Reproducible analysis tools are in `tools/`;
+the full CSVs, plots, checksums and reports remain in local ignored `outputs/`.
+Read-depth stability/intervention tests, a new final refit, frozen data1
+diagnostics and real SG-NEx predictions remain pending.
 
 ## Available starting point
 
@@ -36,13 +50,15 @@ stability. Signal-only/sequence-only controls can reveal what a combined model
 uses. These are hypotheses, not selected experiments or proven gains.
 
 Use the [minimum shared rules](../model_evaluation/SHARED_RULES.md), accepted
-by Elgin; Samuel's acknowledgement has not yet been reported. Fresh-fit models
+by Elgin; Samuel has now submitted a candidate PR using the exact same folds,
+whose saved data0 metrics reproduce with the common scorer. The PR is still
+under review. Fresh-fit models
 inside each permitted partition, preserve
 checkpoints/configuration/commands/costs, and retain negative findings. The
 [detailed methodology](../model_evaluation/EVALUATION_PROTOCOL.md) explains
 the exact five outer gene groups and optional rotating inner default. Common
-scoring code is included. Only small software-check fits have run in the new
-pipeline; its full five-fold comparison has not run.
+scoring code is included, and the complete matched five-fold comparison above
+has run. Separate saved-prediction diagnostics do not retrain those models.
 
 ## Handover
 

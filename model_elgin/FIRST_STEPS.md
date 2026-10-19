@@ -126,14 +126,17 @@ completed biological analysis is not a prerequisite for this modelling work.
   shared gene groups, training-only references/fallback, matched control and
   candidate, checkpoint recovery and prediction-stage checks.
 - [Thirty tests and small data0 fits](context_reference_v1/IMPLEMENTATION_CHECK.md)
-  passed. Full five-fold comparisons, a new final model, real SG-NEx predictions
-  and any claimed performance increase remain pending.
+  passed. The subsequent full five-fold comparison measured lower S with the
+  added features (0.708885) than with original features (0.717642). Current
+  results and saved-score diagnostics are summarised in [the model status](README.md).
+  A new final model and real SG-NEx predictions remain pending.
 
 ## Research questions to retain for the report
 
 These are questions to investigate, not findings. The historical reference
-has been checked; the new implementation has small software-check fits only.
-Full feature comparisons and robustness experiments remain unrun.
+has been checked. The first full feature comparison and saved-score subgroup
+diagnostics are complete; the added features did not improve mean score.
+Read-subsampling and robustness-intervention experiments remain unrun.
 
 1. **Context-relative features:** do training-only, sequence-relative signal
    features improve held-out-gene development performance beyond the existing

@@ -9,11 +9,14 @@ October 7 model and its historical results.
 The code and focused correctness tests are implemented. **30 tests and a small
 real data0 smoke run in both modes passed**; see the
 [observed implementation check](IMPLEMENTATION_CHECK.md), including a recovered
-Windows file-write interruption. Complete five-fold comparisons, a nominated
-final model and new performance conclusions remain pending. Commands for those
-later stages below are instructions, not completed results.
-No score or gain is supplied in advance. Current background and research
-questions are in [FIRST_STEPS.md](../FIRST_STEPS.md).
+Windows file-write interruption. The full matched five-fold comparison is now
+complete: original-feature mean S **0.7176418289**, context-feature mean S
+**0.7088845390**. The added features did not improve this experiment. See
+[current results and limitations](../README.md); full local evidence remains in
+`model_elgin/outputs/context_reference_v1/comparison/` and `diagnostics/`.
+No new final model, data1 evaluation or real SG-NEx prediction is completed.
+Commands for those later stages below are instructions, not completed results.
+Background and research questions are in [FIRST_STEPS.md](../FIRST_STEPS.md).
 
 ## 1. What changes, and what stays matched
 
