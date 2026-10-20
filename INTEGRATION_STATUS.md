@@ -63,6 +63,13 @@ pooled metrics, and his ten-site example has zero numeric score difference.
 These are software/rescoring checks, not full retraining, a full explorer
 rebuild, a clean Ubuntu run or new biological evidence.
 
+The subsequent [read-depth diagnostic](model_elgin/read_depth_stability_results/README.md)
+is also complete: 24,533 fixed >=100-read sites, 130 conditions and 637,858
+scores from the original saved held-out-gene models. All-read inference had
+the highest matched-cohort mean S; reducing reads did not fix the high-coverage
+weakness. Retain all-read inference. This changes neither the full-data0 CV
+scores above nor model weights/selection, and supplies no new data1 evidence.
+
 ## Recommendations for the remaining scientific choices
 
 These are recommended analysis choices, not completed experiments or a new

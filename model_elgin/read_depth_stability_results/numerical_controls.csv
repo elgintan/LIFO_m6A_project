@@ -1,0 +1,3 @@
+comparison,n_sites,mean_absolute_delta,max_absolute_delta,threshold_flips
+all-cache_vs_saved_oof,24533,1.2629030707969463e-10,1.1920928955078125e-07,0
+all-recomputed_vs_all-cache,24533,1.3081713923085283e-08,1.9371509552001953e-06,0

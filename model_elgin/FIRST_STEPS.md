@@ -136,7 +136,9 @@ completed biological analysis is not a prerequisite for this modelling work.
 These are questions to investigate, not findings. The historical reference
 has been checked. The first full feature comparison and saved-score subgroup
 diagnostics are complete; the added features did not improve mean score.
-Read-subsampling and robustness-intervention experiments remain unrun.
+The read-subsampling diagnostic has now completed; all-read inference performed
+best on the matched cohort. See [actual results](read_depth_stability_results/README.md).
+Raw unusual-case review and any newly trained robustness intervention remain pending.
 
 1. **Context-relative features:** do training-only, sequence-relative signal
    features improve held-out-gene development performance beyond the existing

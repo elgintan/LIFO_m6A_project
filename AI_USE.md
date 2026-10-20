@@ -75,3 +75,26 @@ The final human report must still supply the actual AI-use table requested by
 the handout, including prompts/output use, verification and corrections. These
 working records are evidence for that disclosure, not the student's personal
 reflection or a replacement for human review.
+
+## Read-depth investigation — 20 October 2026
+
+Elgin authorised a data0-only diagnostic before another model change. AI
+implemented standalone sampling/inference and reporting code outside frozen
+production modules. The plan specified matched sites, depths20/32/50/100,
+three key-seeded nested draws, both-input and read-branch-only arms, and two
+numerical controls before outcomes. Saved fold/model/source/normalisation
+boundaries were checked; no fitting, calibration or data1 access occurred.
+
+An initial synthetic recovery test correctly rejected inconsistent toy gene
+metadata, exposing an overly long Windows atomic-write name in its error
+recording. The toy fixture and temporary-name construction were fixed before
+real full-cohort execution. Sixteen checks then passed; a500-site trial and
+report preceded the completed24,533-site/130-condition run. Independent
+receipt arithmetic reproduced all main reporter metric means, output hashes
+were checked and three figures were visually reviewed. Tiny rounding and
+single-class trial metrics were disclosed rather than treated as improvements.
+
+The actual result supports all-read inference; reducing reads did not improve
+the tested pipeline. Full predictions/logs/checkpoints remain local; only code,
+aggregate metrics, a concise report and figures are shared. The result does
+not demonstrate a new full-CV improvement or establish biological mechanisms.

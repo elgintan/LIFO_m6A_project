@@ -1,0 +1,21 @@
+{
+  "dataset": "data0",
+  "status": "complete",
+  "n_sites": 24533,
+  "n_positive": 1204,
+  "n_genes": 1002,
+  "n_conditions": 130,
+  "n_score_rows": 637858,
+  "source_analysis_manifest_sha256": "0c9cf252f9f9a5c49bdba66be4421860c1bc09d8d837d6dcf5e70deb7e984ce1",
+  "inference_tool_sha256_normalized": "95607a1cbca99563a0b504a22acd5ba1d223f6470bafe5e50184695e986898b2",
+  "reporter_sha256": "9554810ae934ea9d901f7596dfff011cec616ee181276d4c2a8dd0de5a2316a0",
+  "public_artifacts_sha256": {
+    "depth_metrics.csv": "3284b8d279210458df52250c942e3516a03589c29c2fd4c13c90dcde459bbd75",
+    "metrics_by_depth.png": "9a235735d87b7c8fde543ec751f852ed0b127b79f38c74251511bb0780fb542f",
+    "numerical_controls.csv": "c8e62e630b190439167f4b6e2ead6175d933d5c9b09ed2b6365b34049c3e70fa",
+    "paired_fold_score_changes.png": "7f6412f9468eeaf14067fa3f2ae5e7dbaf8ad86aaa13e283454ed689adb0b114",
+    "README.md": "4750dd0004d7d01d27d0d08c0876a097ecfa3a34245afafa3fbdd6aec62496c6",
+    "score_movement.png": "d430215e5e05d894a6b531cba489ef054ff40eed95191f8f1f424d34ebda5e53"
+  },
+  "no_training_or_data1": true
+}

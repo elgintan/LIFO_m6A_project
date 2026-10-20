@@ -18,6 +18,9 @@ archival and is not biological evidence.
    independent. Data1 is already exposed and is a transfer diagnostic.
 3. For a runnable saved candidate, follow [Samuel's example](model_samuel/README.md).
    For the completed neural CV experiment, follow [Elgin's guide](model_elgin/context_reference_v1/README.md).
+   The [completed read-depth investigation](model_elgin/read_depth_stability_results/README.md)
+   supports retaining all-read prediction; it is a matched-cohort diagnostic,
+   not a newly trained model or replacement full-CV score.
 4. Continue [SG-NEx analysis](sgnex_analysis/README.md) and the
    [current explorer pipeline](data_visualisation/README.md) after selected-model
    predictions are available. Their supplied scripts are now integrated.
