@@ -70,6 +70,17 @@ the highest matched-cohort mean S; reducing reads did not fix the high-coverage
 weakness. Retain all-read inference. This changes neither the full-data0 CV
 scores above nor model weights/selection, and supplies no new data1 evidence.
 
+The following [signal-case review](model_elgin/signal_case_review_results/README.md)
+is complete: all36 received data0 unusual entries checked, 293 high-depth
+FNs at the existing 0.5 reporting cutoff, 182 eligible same-fold/different-gene
+FN/TP pairs (38 exact7; 81 reused TP comparators), plus eight raw-read panels.
+All four illustrated high-depth TP matches needed central5 fallback, which
+leaves flank differences. Unusual cases include both false alarms and correct
+negative calls. No data1 signal/label file, fitting, inference, deletion or
+cutoff selection occurred. Next proposed neural experiment: cap128 training
+versus the saved cap32 original-feature control, with all-read inference and
+the same full-data0 scoring. It is not implemented or claimed to improve yet.
+
 ## Recommendations for the remaining scientific choices
 
 These are recommended analysis choices, not completed experiments or a new

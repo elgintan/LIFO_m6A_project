@@ -98,3 +98,25 @@ The actual result supports all-read inference; reducing reads did not improve
 the tested pipeline. Full predictions/logs/checkpoints remain local; only code,
 aggregate metrics, a concise report and figures are shared. The result does
 not demonstrate a new full-CV improvement or establish biological mechanisms.
+
+## Signal-case review — 20 October 2026
+
+AI implemented a standalone data0-only descriptive review using verified saved
+OOF predictions and raw cached reads. Selection and matching rules were
+written before outcomes: top positive-count motifs, median-score FNs,
+same-fold/different-gene sequence and coverage matches, and Member1 examples.
+The received multi-dataset EDA table was filtered to data0; no data1 signal or
+label file, fitting, inference, threshold tuning or relabelling was used.
+
+A read-only second-agent review identified round-trip score parsing, missing-
+match schemas and stale completion status on interruption as issues to fix.
+Ten synthetic checks then passed. An initial decimal-tie fixture incorrectly
+assumed .1/.3 had equal binary floating-point distances; exact-representable
+.125/.375 corrected that fixture, with its failed log preserved. Actual
+data0 tables and eight case panels plus the aggregate figure were checked.
+Limited exact-context support and comparator reuse are disclosed. No causal
+biology, independent significance or performance improvement is claimed.
+
+Human authors should choose the strongest few figures for the final five-page
+report and verify interpretations. A larger training bag cap is a proposed
+single-mechanism experiment, not completed training or a guaranteed gain.

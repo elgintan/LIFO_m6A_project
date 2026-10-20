@@ -30,6 +30,14 @@ Using all reads performed best; primary matched-cohort S was 0.732322 with
 all reads versus 0.678788 with 20. These subset scores do not replace the
 full-data0 score above. Retain all-read inference; see the
 [actual results, plots and limits](read_depth_stability_results/README.md).
+The subsequent [raw-signal case review](signal_case_review_results/README.md)
+is complete: 293 of 461 high-depth positive labels fell below the unvalidated
+0.5 reporting cutoff. There were 182 eligible FN/TP matches (only 38 exact7)
+and all 36 Member1 data0 unusual-site entries were checked. Eight case panels
+show signal overlap, context-match limitations and both missed positives and
+false alarms. This descriptive evidence changes no weights or full-CV scores.
+The next neural hypothesis is a larger training read cap (32 -> 128), with
+all-read inference and other settings fixed; it has not been trained.
 A new final refit, frozen data1 diagnostics and real SG-NEx predictions remain pending.
 
 ## Available starting point

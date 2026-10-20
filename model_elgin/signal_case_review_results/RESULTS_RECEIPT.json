@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "source_local_directory": "model_elgin/outputs/error_case_review_v1",
+  "full_manifest_sha256": "a04d9589cc851717a739f44fc14491ed2fcead752b09807aede7c5a2c87236bc",
+  "source_sha256": {
+    "review_signal_cases.py": "207f4ad9f0866a0f971dce1fa64afa55a4a0eb6aad26d6a6a7dc8daa66d3d7f2",
+    "SIGNAL_CASE_REVIEW.md": "9324f702702e2c7c9e66d4eabef0a0ff6d4102b891f5ce544aa3463db70ab934"
+  },
+  "published_sha256": {
+    "README.md": "1b4943a505bea154f6084e2f01b1c662120a87b1760f182b5a4d37de4140d7df",
+    "run_manifest.json": "a04d9589cc851717a739f44fc14491ed2fcead752b09807aede7c5a2c87236bc",
+    "motif_error_counts.csv": "63acf73692a95c1eddc6edc02374b36f9cacc6812de176aa63bdc52f8312ad1d",
+    "paired_feature_differences.csv": "503e0f5057a908af60adab99626c75d1821e0453470a15dde1c1994ffefd973e",
+    "high_depth_AGACT.png": "d05a2b891c6a026a1a861319534924489cf574adb14f6e9755664af3734cd8e1",
+    "high_depth_GAACT.png": "2fc8811be3f2d4a026d558ea25c923df1d947af43f0e0615b37f920203a0b325",
+    "high_depth_GGACT.png": "ba3f7ba73f11cdf31f15b8e08e6f9ea15d8cb2374d887415b06ee6d134bb1ef8",
+    "high_depth_positive_errors.png": "f4fd1bce4229b5ad80065e3ce4fab6abb1ea06982fb702873e95e728fa3d3d64",
+    "high_depth_TGACT.png": "72a62475e4743158aaf05be24b629759ea01e6db321b507e16439e04c9e04bd1",
+    "unusual_centre_current_iqr.png": "a1f7617c995774e9c555a261aa2a12ccb7245abba7f562ecaa0a37ec197528a4",
+    "unusual_centre_dwell_iqr.png": "a93340cb9ec6cafe701cf1ba17cf0ae359ee974391dbf28cbe5457f978db7702",
+    "unusual_handoff_GAACA.png": "1a486b6af9bccbec6a3b044fc5e6ead49ffb3a2182a5cfd03d06c0d79f337c1a",
+    "unusual_handoff_TGACT.png": "b31b27fbea3b815021ad8591234aae538ab04e7f88eb3572bb36c32951b083bf"
+  },
+  "source_mapping": {
+    "README.md": "report.md",
+    "run_manifest.json": "run_manifest.json",
+    "motif_error_counts.csv": "motif_error_counts.csv",
+    "paired_feature_differences.csv": "paired_feature_differences.csv",
+    "high_depth_AGACT.png": "high_depth_AGACT.png",
+    "high_depth_GAACT.png": "high_depth_GAACT.png",
+    "high_depth_GGACT.png": "high_depth_GGACT.png",
+    "high_depth_positive_errors.png": "high_depth_positive_errors.png",
+    "high_depth_TGACT.png": "high_depth_TGACT.png",
+    "unusual_centre_current_iqr.png": "unusual_centre_current_iqr.png",
+    "unusual_centre_dwell_iqr.png": "unusual_centre_dwell_iqr.png",
+    "unusual_handoff_GAACA.png": "unusual_handoff_GAACA.png",
+    "unusual_handoff_TGACT.png": "unusual_handoff_TGACT.png"
+  },
+  "retained_locally": "Full per-site/pair/read-summary CSVs, execution logs, timing, failed and successful check logs.",
+  "validation": "10 synthetic checks; independent output hash, all182 pair boundary, raw-summary arithmetic and selected-case audits; visual QA of figures.",
+  "notes": "README is a byte-identical copy of report.md. Original manifest references local evidence files absent from public compact results. No fitting or inference."
+}

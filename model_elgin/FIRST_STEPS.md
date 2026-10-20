@@ -138,7 +138,11 @@ has been checked. The first full feature comparison and saved-score subgroup
 diagnostics are complete; the added features did not improve mean score.
 The read-subsampling diagnostic has now completed; all-read inference performed
 best on the matched cohort. See [actual results](read_depth_stability_results/README.md).
-Raw unusual-case review and any newly trained robustness intervention remain pending.
+The [raw-signal case review](signal_case_review_results/README.md) also completed:
+36 Member1 data0 entries, matched high-depth errors and eight read-level panels.
+Any newly trained robustness intervention remains pending. A proposed next
+single change is training with up to 128 reads per bag rather than 32; this is
+a testable hypothesis, not an observed improvement.
 
 1. **Context-relative features:** do training-only, sequence-relative signal
    features improve held-out-gene development performance beyond the existing
