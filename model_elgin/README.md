@@ -37,7 +37,9 @@ and all 36 Member1 data0 unusual-site entries were checked. Eight case panels
 show signal overlap, context-match limitations and both missed positives and
 false alarms. This descriptive evidence changes no weights or full-CV scores.
 The next neural hypothesis is a larger training read cap (32 -> 128), with
-all-read inference and other settings fixed; it has not been trained.
+all-read inference and other settings fixed. Its full five-fold run started
+on20October after successful checks and timing trials; no complete candidate
+result is available yet. See the [dated execution status](READ_CAP_STATUS.md).
 A new final refit, frozen data1 diagnostics and real SG-NEx predictions remain pending.
 
 ## Available starting point

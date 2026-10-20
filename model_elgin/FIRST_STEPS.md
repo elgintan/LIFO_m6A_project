@@ -140,9 +140,9 @@ The read-subsampling diagnostic has now completed; all-read inference performed
 best on the matched cohort. See [actual results](read_depth_stability_results/README.md).
 The [raw-signal case review](signal_case_review_results/README.md) also completed:
 36 Member1 data0 entries, matched high-depth errors and eight read-level panels.
-Any newly trained robustness intervention remains pending. A proposed next
-single change is training with up to 128 reads per bag rather than 32; this is
-a testable hypothesis, not an observed improvement.
+The full five-fold [cap128 experiment is now running](READ_CAP_STATUS.md),
+after successful software/smoke/timing checks. It changes training reads per
+bag from32 to128; this remains a testable hypothesis, not an observed gain.
 
 1. **Context-relative features:** do training-only, sequence-relative signal
    features improve held-out-gene development performance beyond the existing

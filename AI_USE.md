@@ -120,3 +120,22 @@ biology, independent significance or performance improvement is claimed.
 Human authors should choose the strongest few figures for the final five-page
 report and verify interpretations. A larger training bag cap is a proposed
 single-mechanism experiment, not completed training or a guaranteed gain.
+
+## Larger training-read experiment — 20 October 2026
+
+The user authorised cap32->128 after the diagnostic review. AI added a
+standalone wrapper calling the unchanged frozen trainer, plus an immutable
+experiment design and a saved-evidence reporter. The wrapper records its own
+and the plan's hashes inside fitting signatures and refuses duplicate writers.
+Read-only review checked that only the cap changes and that smoke/timing
+artifacts cannot become full-CV starting weights. Six real synthetic fitting/
+recovery checks and14 reporting checks passed, followed by actual small data0
+fits and full-sized one-epoch timing trials. A default temporary-folder
+permission failure in the integrator's report-test run was fixed with local
+temporary/cache directories; the failed log is retained and training continued.
+
+Full cap128 five-fold training started around17:08SGT. Its comparison, and any
+performance improvement, remain pending. No data1 tuning or final all-data0
+fit is part of this experiment. Logs, RNG/optimiser checkpoints, exact commands
+and measured resources are retained. The earlier statement that the hypothesis
+had not been trained describes the state before this newly authorised run.
