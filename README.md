@@ -24,7 +24,8 @@ archival and is not biological evidence.
    The [completed signal-case review](model_elgin/signal_case_review_results/README.md)
    connects Member1's unusual sites and matched high-coverage errors to raw
    read plots. The [new cap128 training experiment](model_elgin/READ_CAP_STATUS.md)
-   is now running; its completed comparison remains pending.
+   is paused at the user's request, with verified checkpoints and logs;
+   its completed comparison remains pending.
 4. Continue [SG-NEx analysis](sgnex_analysis/README.md) and the
    [current explorer pipeline](data_visualisation/README.md) after selected-model
    predictions are available. Their supplied scripts are now integrated.

@@ -1,6 +1,17 @@
 # Training read-cap experiment: execution status
 
+**Latest: paused by the user on20October2026.** Training and the waiting
+report helper have stopped. Folds0/1 are complete; fold2 inner checkpoint
+epoch3 was successfully deserialised with optimiser/RNG state, finite weights
+and matching history. Resume continues at epoch4. All original files remain;
+a117-file ZIP backup was verified member-by-member. Local pause receipts and
+`outputs/read_cap_v1/PAUSED.md` record the backup and exact resume command.
+No automatic restart/report is active. Resume only on explicit user request,
+and write a new timestamped console log to preserve the original log.
+Wrapper, immutable plan, core sources and environment remain unchanged.
+
 **20 October 2026, 17:10 SGT snapshot: full five-fold cap128 training is running.**
+The running snapshot below is historical and superseded by the pause above.
 This is a dated status record, not a live progress indicator. No completed
 candidate score or improvement is available at this snapshot.
 

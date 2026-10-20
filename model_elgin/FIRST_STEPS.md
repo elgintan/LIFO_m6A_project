@@ -140,8 +140,8 @@ The read-subsampling diagnostic has now completed; all-read inference performed
 best on the matched cohort. See [actual results](read_depth_stability_results/README.md).
 The [raw-signal case review](signal_case_review_results/README.md) also completed:
 36 Member1 data0 entries, matched high-depth errors and eight read-level panels.
-The full five-fold [cap128 experiment is now running](READ_CAP_STATUS.md),
-after successful software/smoke/timing checks. It changes training reads per
+The full five-fold [cap128 experiment is paused by the user](READ_CAP_STATUS.md),
+with two folds complete and fold2 inner epoch3 saved/verified. It changes training reads per
 bag from32 to128; this remains a testable hypothesis, not an observed gain.
 
 1. **Context-relative features:** do training-only, sequence-relative signal

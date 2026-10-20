@@ -155,3 +155,14 @@ the common data0 scorer:121838 exact keys and all five historical fold metrics
 agree. This audited saved results rather than replaying historical training.
 Missing historical fold artifacts/source fingerprints and baseline pipeline
 integration are disclosed. No m6Anet installation, scoring or download occurred.
+
+The user subsequently requested an immediate pause. Training and waiting
+helper sessions were interrupted; both returned exit1. Five retained last
+checkpoints loaded successfully with finite weights, optimiser/RNG states and
+matching histories; completed-fold hashes and all frozen source hashes agree.
+Two folds are complete and third-fold inner epoch3 is saved. Original artifacts
+remain in place; a117-file ZIP was verified against per-file hashes. Stale
+running statuses were marked paused and lock files preserved under renamed
+pause filenames. Two backup-receipt bookkeeping mistakes were fixed without
+changing model files; failed logs and both ZIP attempts were retained. No
+training, inference or automatic report was restarted during preservation.
