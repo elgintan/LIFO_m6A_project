@@ -1,0 +1,168 @@
+{
+  "dataset": "data0",
+  "evaluation_kind": "data0_gene_grouped_oof_development",
+  "pooled": {
+    "n_sites": 121838,
+    "n_positives": 5475,
+    "positive_fraction": 0.044936719250151844,
+    "roc_auc": 0.9214644316672866,
+    "pr_auc_trapezoid": 0.4941575974591058,
+    "average_precision": 0.4943492403361213,
+    "selection_score": 0.7078110145631962,
+    "threshold": 0.5,
+    "tn": 115153,
+    "fp": 1210,
+    "fn": 3534,
+    "tp": 1941,
+    "precision": 0.6159949222469058,
+    "recall": 0.3545205479452055,
+    "f1": 0.45003477857639695,
+    "specificity": 0.9896015056332339,
+    "accuracy": 0.9610630509364895
+  },
+  "per_fold": [
+    {
+      "fold_id": 0,
+      "n_sites": 24358,
+      "n_positives": 1090,
+      "positive_fraction": 0.044749158387388126,
+      "roc_auc": 0.9127827642168714,
+      "pr_auc_trapezoid": 0.4926058145817669,
+      "average_precision": 0.49336188586241136,
+      "selection_score": 0.7026942893993191,
+      "threshold": 0.5,
+      "tn": 23043,
+      "fp": 225,
+      "fn": 726,
+      "tp": 364,
+      "precision": 0.6179966044142614,
+      "recall": 0.3339449541284404,
+      "f1": 0.433591423466349,
+      "specificity": 0.9903300670448685,
+      "accuracy": 0.9609573856638476
+    },
+    {
+      "fold_id": 1,
+      "n_sites": 24371,
+      "n_positives": 1097,
+      "positive_fraction": 0.04501251487423577,
+      "roc_auc": 0.9204714647876445,
+      "pr_auc_trapezoid": 0.4793418267758518,
+      "average_precision": 0.479930568478601,
+      "selection_score": 0.6999066457817482,
+      "threshold": 0.5,
+      "tn": 23021,
+      "fp": 253,
+      "fn": 689,
+      "tp": 408,
+      "precision": 0.6172465960665658,
+      "recall": 0.37192342752962626,
+      "f1": 0.4641638225255973,
+      "specificity": 0.9891295007304288,
+      "accuracy": 0.961347503180009
+    },
+    {
+      "fold_id": 2,
+      "n_sites": 24387,
+      "n_positives": 1105,
+      "positive_fraction": 0.045311026366506746,
+      "roc_auc": 0.9228426520244992,
+      "pr_auc_trapezoid": 0.5119340693395092,
+      "average_precision": 0.5123472597193134,
+      "selection_score": 0.7173883606820042,
+      "threshold": 0.5,
+      "tn": 23010,
+      "fp": 272,
+      "fn": 685,
+      "tp": 420,
+      "precision": 0.6069364161849711,
+      "recall": 0.38009049773755654,
+      "f1": 0.4674457429048414,
+      "specificity": 0.9883171548836011,
+      "accuracy": 0.9607577807848444
+    },
+    {
+      "fold_id": 3,
+      "n_sites": 24378,
+      "n_positives": 1100,
+      "positive_fraction": 0.04512265157108869,
+      "roc_auc": 0.9275248967030907,
+      "pr_auc_trapezoid": 0.5070472683865958,
+      "average_precision": 0.5075854505764595,
+      "selection_score": 0.7172860825448433,
+      "threshold": 0.5,
+      "tn": 23081,
+      "fp": 197,
+      "fn": 729,
+      "tp": 371,
+      "precision": 0.653169014084507,
+      "recall": 0.3372727272727273,
+      "f1": 0.4448441247002398,
+      "specificity": 0.9915370736317553,
+      "accuracy": 0.9620149314956108
+    },
+    {
+      "fold_id": 4,
+      "n_sites": 24344,
+      "n_positives": 1083,
+      "positive_fraction": 0.04448734801183043,
+      "roc_auc": 0.9240045010128947,
+      "pr_auc_trapezoid": 0.48452823475758006,
+      "average_precision": 0.4849971694411097,
+      "selection_score": 0.7042663678852373,
+      "threshold": 0.5,
+      "tn": 22998,
+      "fp": 263,
+      "fn": 705,
+      "tp": 378,
+      "precision": 0.5897035881435257,
+      "recall": 0.3490304709141274,
+      "f1": 0.4385150812064965,
+      "specificity": 0.9886935213447401,
+      "accuracy": 0.9602366086099244
+    }
+  ],
+  "mean_fold": {
+    "roc_auc": 0.921525255749,
+    "pr_auc_trapezoid": 0.4950914427682608,
+    "average_precision": 0.49564446681557894,
+    "selection_score": 0.7083083492586304
+  },
+  "sample_sd_fold_ddof1": {
+    "roc_auc": 0.005509526186134786,
+    "pr_auc_trapezoid": 0.01407503064740275,
+    "average_precision": 0.014027402664924082,
+    "selection_score": 0.008388834919808798
+  },
+  "primary_score": 0.7083083492586304,
+  "primary_score_definition": "Unweighted mean of five fold (ROC AUC + trapezoidal PR AUC) / 2",
+  "data0_labels_canonical_sha256": "153f4658b82e4f6d95c449723d238b63153cd0102c826a3c61e3a652749b1a87",
+  "schema_version": "1.0",
+  "scorer_sha256": "43217301e0c9f9aeac821175763c096a171ec699fe342c04099f0d09a42e7727",
+  "created_utc": "2026-10-18T10:03:21.592473+00:00",
+  "inputs": {
+    "labels": {
+      "filename": "data.info.labelled",
+      "sha256": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978"
+    },
+    "predictions": {
+      "filename": "data0_oof.csv",
+      "sha256": "4795af07623072917b278eee87ddb705346c91b4b95e8747f3d6f396d90fcd52"
+    },
+    "folds": {
+      "filename": "data0_folds.csv",
+      "sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0"
+    }
+  },
+  "label_column": "label",
+  "versions": {
+    "python": "3.12.15",
+    "numpy": "2.5.3",
+    "scikit_learn": "1.9.1"
+  },
+  "limitations": [
+    "File validation cannot prove training excluded assessment genes; retain fit logs and code.",
+    "data0 CV used for model selection is development evidence, not an untouched test.",
+    "data1 was previously examined and is not an untouched final test."
+  ]
+}

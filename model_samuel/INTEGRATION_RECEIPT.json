@@ -1,0 +1,137 @@
+{
+  "source": "Samuel PR1, merged 45bdec79d41fb329226a2a3c81bd52b5dfa2ba3a",
+  "archive_sha256": "f76b846e41d49c8ac9ff48283c55e003539eb4aec2da5eb291363bd2ee83b54f",
+  "archive_entries": [
+    {
+      "path": "model_samuel/requirements.txt",
+      "bytes": 116,
+      "source_sha256": "86596ffe676444aeb9d62d1350fafceb52fe3c1873699c22c8ffe62f57fa106f"
+    },
+    {
+      "path": "model_samuel/requirements-predict.txt",
+      "bytes": 43,
+      "source_sha256": "2977c3dedf848092b4a178724d6bc6e93ac77b97c0735f7bbd70f1fde56859fe"
+    },
+    {
+      "path": "model_samuel/README.md",
+      "bytes": 7250,
+      "source_sha256": "0dd08a0d890b5111efe27943d172fb47da3b41094aad0890ac57c2571f4ce77a"
+    },
+    {
+      "path": "model_samuel/code/score_local.py",
+      "bytes": 3250,
+      "source_sha256": "ea29b6166fbb5f11700a08bb58957df66d5c3a9e5a5ed20c12f44ceb1c26e341"
+    },
+    {
+      "path": "model_samuel/code/diagnostics.py",
+      "bytes": 2737,
+      "source_sha256": "3ffa6474d726f0661a87fe4630abe6427621e86227c06cd69cce6a8cf78a6f1c"
+    },
+    {
+      "path": "model_samuel/code/predict.py",
+      "bytes": 1681,
+      "source_sha256": "86a11b96339b7098156dbf72e212561912c6f98b2018e07548d30b3936d99816"
+    },
+    {
+      "path": "model_samuel/code/features.py",
+      "bytes": 4492,
+      "source_sha256": "4468c9a0c4e97619ba1768432a77469729ffb56887744d65fdc515937eb75071"
+    },
+    {
+      "path": "model_samuel/code/train.py",
+      "bytes": 6109,
+      "source_sha256": "979e03380b44775cdf802e6bb766c18a0abc0d3e48a9df45396aa4bc771a068d"
+    },
+    {
+      "path": "model_samuel/results/data2_summary.csv",
+      "bytes": 354,
+      "source_sha256": "d3155363c25799e74b7923dd6e52726e7924dfe90dcb7b754cb62fb4d90d6948"
+    },
+    {
+      "path": "model_samuel/results/data1_local.json",
+      "bytes": 409,
+      "source_sha256": "de35b5b3a577d637beb26de58e4932a8ddc17a3b168b47d7ad9940bfe07d0e3a"
+    },
+    {
+      "path": "model_samuel/results/data1_metrics.json",
+      "bytes": 1647,
+      "source_sha256": "e3ed94a478ea21869f1500fe2fe20d837eb7a49247f618dd4dfa814eb9e04fea"
+    },
+    {
+      "path": "model_samuel/results/data0_cv_metrics.json",
+      "bytes": 5245,
+      "source_sha256": "56373f86d9d728066d2a49d27d64e56ace8741ca68cb86076d5b6efce2e50481"
+    },
+    {
+      "path": "model_samuel/results/data0_cv_local.json",
+      "bytes": 2558,
+      "source_sha256": "00017a7e8625a3f099933456324a03a222c8bcf95e764ff9770c825bd35c9bb7"
+    },
+    {
+      "path": "model_samuel/results/subgroups.csv",
+      "bytes": 3003,
+      "source_sha256": "7b2ea88ca99f88fa81645a5794685278d7d7390721dec8a59337f2a5d2002654"
+    },
+    {
+      "path": "model_samuel/results/seed_check/seed2026/cv_log.json",
+      "bytes": 1274,
+      "source_sha256": "aff94ef672d0b5212708be18dfb798dde34131d561fb817e36da53585af6776e"
+    },
+    {
+      "path": "model_samuel/results/seed_check/seed2026/data0_cv_metrics.json",
+      "bytes": 5236,
+      "source_sha256": "0775c529034516e28f58ff653fac1cd5d7a0ddaac4a32288b6a8cdb50d41126b"
+    },
+    {
+      "path": "model_samuel/results/seed_check/seed7/cv_log.json",
+      "bytes": 1268,
+      "source_sha256": "20c659e4258e3cec63a9d160f69c1f815110225169275fcfa17d9c5d537ebbdf"
+    },
+    {
+      "path": "model_samuel/results/seed_check/seed7/data0_cv_metrics.json",
+      "bytes": 5236,
+      "source_sha256": "576ccd75f815bdc499bc446aaa0a946d16387f7a6e4670da6f37ee800566d3d8"
+    },
+    {
+      "path": "model_samuel/examples/predictions.csv",
+      "bytes": 455,
+      "source_sha256": "2f9e27bb2ce5ab6d16a4021e7c7bca58993d81108f55821fc90da7aa021cc02b"
+    },
+    {
+      "path": "model_samuel/examples/input_10_sites.json",
+      "bytes": 21874,
+      "source_sha256": "f868c3cc9c7f421258d4fb14c811fe16dd352cc0c83a9b8ce745f3b031d3535b"
+    },
+    {
+      "path": "model_samuel/artifact/model.txt",
+      "bytes": 5351150,
+      "source_sha256": "ba268645ed3fa6c19f59f6a83ed85c794c7b19975d4e474551d211ef78406bb1"
+    },
+    {
+      "path": "model_samuel/artifact/model_card.json",
+      "bytes": 3737,
+      "source_sha256": "97fa7ff6dde84c61b94e752ee4c2035a798567b4be0d4f711d3fb4e8f9cdf468"
+    },
+    {
+      "path": "model_samuel/artifact/kmer_baseline.csv",
+      "bytes": 380955,
+      "source_sha256": "ae1e45448a1eb6ca0863e0764b74a529b24b7586a6497883392667f3cf3c93cc"
+    },
+    {
+      "path": "model_samuel/outputs/data0_oof.csv",
+      "bytes": 5372964,
+      "source_sha256": "78ac518c56d16d3a0e97abe749e0950a1d9a8bbe6ad170b4290500b6b1ba9c7b"
+    },
+    {
+      "path": "model_samuel/outputs/data1_predictions.csv",
+      "bytes": 3805496,
+      "source_sha256": "1a398d005694a573e44505e5a208086bffb4a5c6b457d6c3ccc2477cd4c26fb6"
+    },
+    {
+      "path": "model_samuel/outputs/data2_predictions.csv",
+      "bytes": 43870,
+      "source_sha256": "98246e6731443acca84c54408237c96bc85f1b5ca03542e327fecbd2be8eca8d"
+    }
+  ],
+  "note": "Source hashes before integration edits; outputs retained locally. No training replay."
+}

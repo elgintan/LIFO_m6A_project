@@ -1,0 +1,64 @@
+{
+  "access_date_utc": "2026-10-15",
+  "access_date_singapore": "2026-10-16",
+  "repository": "LIFO_m6A_project (team account omitted; use the repository supplied by the team)",
+  "repository_commit": "799ef01462f29d1d43b3fb7a0b6a47cc51edd981",
+  "downloads": [
+    {
+      "filename": "samples.tsv",
+      "url": "https://raw.githubusercontent.com/GoekeLab/sg-nex-data/master/docs/samples.tsv",
+      "sha256": "387bfea24f2b4df60f14b8fc20eb9f8170f62ac0050f380185723cb23daa6234",
+      "bytes": 173277
+    },
+    {
+      "filename": "samples_with_RNAmod_data.tsv",
+      "url": "https://raw.githubusercontent.com/GoekeLab/sg-nex-data/master/docs/samples_with_RNAmod_data.tsv",
+      "sha256": "78ea873862c8eede43e5be54f1f7be47676c927cfa2750b69466b60589a476b3",
+      "bytes": 10186
+    },
+    {
+      "filename": "s3_m6anet_prefixes.xml",
+      "url": "https://sg-nex-data.s3.ap-southeast-1.amazonaws.com/?list-type=2&prefix=data%2Fprocessed_data%2Fm6Anet%2F&delimiter=%2F",
+      "sha256": "618bd99852226bc99837b63c9220133e03d29417e6cb3f38e396609a2f5fbf6c",
+      "bytes": 2917
+    },
+    {
+      "filename": "s3_m6anet_objects.xml",
+      "url": "https://sg-nex-data.s3.ap-southeast-1.amazonaws.com/?list-type=2&prefix=data%2Fprocessed_data%2Fm6Anet%2F",
+      "sha256": "792737464e2e6199aa298adaedff32c76d7ca7b9ee999e096067f96140c73fc0",
+      "bytes": 30594
+    }
+  ],
+  "attachments": [
+    {
+      "filename": "05_NUS_Genomics_TeamProject_2026.pdf",
+      "sha256": "dd06d0093b9a94a56b11e1ecdf5aa8b077a8481e53e27613bf2f837e064d6953",
+      "bytes": 10523749
+    },
+    {
+      "filename": "Student_evaluation_guideline.html",
+      "sha256": "b93a90d6a4b2f2aaddac5ae765f9d1304e5ca330c099606acde0e19e5995ea8f",
+      "bytes": 9530
+    },
+    {
+      "filename": "TEAM_AI_HANDOFF_2026-10-12.md",
+      "sha256": "b309bdd13635598164e77e0c8e60cec2acc4b4d25a289415478331f7604890df",
+      "bytes": 14658
+    },
+    {
+      "filename": "SG-NEx m6A Explorer.zip",
+      "sha256": "33b60c75b38d34ac6a0c19c31e4675a1a5515a7e44b8db00175ac1a28bb25221",
+      "bytes": 49958103
+    },
+    {
+      "filename": "handout_project2_RNAModifications(1).html",
+      "sha256": "1023b557e76afb9e8a52bc542283c332ad0054edca76879c3c19d0fea2f34430",
+      "bytes": 32775
+    },
+    {
+      "filename": "Member1_Analysis_Package.zip",
+      "sha256": "302b8677bd01f2c46bdac0648e747b9825f686409dfa0ac30f9da6ae667051fe",
+      "bytes": 44559217
+    }
+  ]
+}

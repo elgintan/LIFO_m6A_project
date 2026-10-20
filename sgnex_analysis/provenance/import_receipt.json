@@ -1,0 +1,341 @@
+{
+  "utc": "2026-10-20T01:09:17.937994+00:00",
+  "source_package": "Member4_Handover_extra details/Member4_Analysis",
+  "source_package_manifest_sha256": "c9d474275bd33b6248643570bd2e2a201e7533e78e0c8d95ad67627ab80fa6e2",
+  "received_entries_verified": 89,
+  "working_scope": "23 processed runs, seven cell lines, 17 replicate-number groups",
+  "no_training_download_or_full_inference": true,
+  "files": [
+    {
+      "repository_path": "findings.md",
+      "bytes": 2679,
+      "sha256": "b5cb84d687407ae3554cde73aa468517e8dfb5822f10708fdaf9b8d9976d6a6d",
+      "origin": "integration-authored documentation/helper/test or archived prior repository README"
+    },
+    {
+      "repository_path": "INTEGRATION.md",
+      "bytes": 4937,
+      "sha256": "ff4f6ea6e14a65e184d6281f82abeb79f776f9c4de3d5a938848efca495067ea",
+      "origin": "integration-authored documentation/helper/test or archived prior repository README"
+    },
+    {
+      "repository_path": "manifest.csv",
+      "bytes": 6725,
+      "sha256": "a5a6ca6c7d69af9fd4b5933b2f6f0d0b9f481373d98155b34fa54bf9bdf24e0f",
+      "received_path": "manifest.csv",
+      "received_sha256": "e6dc6f23a3899539d48ce8719f3fd4d076f6e2223cd20d577d8fb920113d0a66",
+      "unchanged_from_received": false
+    },
+    {
+      "repository_path": "metadata/member3_source_receipt.json",
+      "bytes": 7758,
+      "sha256": "93ac5cc3e7e8a1f4e606553baa3c7589d0d64bd8ae0a243f28517196b20b446e",
+      "received_path": "metadata/member3_source_receipt.json",
+      "received_sha256": "93ac5cc3e7e8a1f4e606553baa3c7589d0d64bd8ae0a243f28517196b20b446e",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "metadata/s3_m6anet_objects.xml",
+      "bytes": 30594,
+      "sha256": "792737464e2e6199aa298adaedff32c76d7ca7b9ee999e096067f96140c73fc0",
+      "received_path": "metadata/s3_m6anet_objects.xml",
+      "received_sha256": "792737464e2e6199aa298adaedff32c76d7ca7b9ee999e096067f96140c73fc0",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "metadata/s3_m6anet_prefixes.xml",
+      "bytes": 2917,
+      "sha256": "618bd99852226bc99837b63c9220133e03d29417e6cb3f38e396609a2f5fbf6c",
+      "received_path": "metadata/s3_m6anet_prefixes.xml",
+      "received_sha256": "618bd99852226bc99837b63c9220133e03d29417e6cb3f38e396609a2f5fbf6c",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "metadata/s3_object_inventory.csv",
+      "bytes": 16823,
+      "sha256": "0a29c855ef378b0dae5fb311f4d6ef55eceb47885646234a6d17436ef7dd0893",
+      "received_path": "metadata/s3_object_inventory.csv",
+      "received_sha256": "0a29c855ef378b0dae5fb311f4d6ef55eceb47885646234a6d17436ef7dd0893",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "metadata/sample_manifest.csv",
+      "bytes": 62328,
+      "sha256": "c06ea04a7a3252592b9bc265f1fd10ac4b4cc3d622c681ec68fe047236696a1d",
+      "received_path": "metadata/sample_manifest.csv",
+      "received_sha256": "c06ea04a7a3252592b9bc265f1fd10ac4b4cc3d622c681ec68fe047236696a1d",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "metadata/source_receipt.json",
+      "bytes": 2435,
+      "sha256": "4a91837e8042514b0e2b2b2fffee80936b52ed5d77f167b30faa715a2fa5b0e6",
+      "received_path": "metadata/source_receipt.json",
+      "received_sha256": "4a91837e8042514b0e2b2b2fffee80936b52ed5d77f167b30faa715a2fa5b0e6",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "MODEL_INFO.md",
+      "bytes": 4528,
+      "sha256": "ba3bfe766f1018df4ca979831636cd1ff40afa9e06e8ae594e81d3fa2fde6be0",
+      "received_path": "MODEL_INFO.md",
+      "received_sha256": "8c634778391a07b5985045cbc8c693c966580db3c419c3160ba7c0d67bcd41a4",
+      "unchanged_from_received": false
+    },
+    {
+      "repository_path": "MODEL_INFO_template.md",
+      "bytes": 286,
+      "sha256": "ef9f655987d9f8321f73c77bc345139fd20d97d923f2d44cccb5b532b737da6c",
+      "received_path": "MODEL_INFO_template.md",
+      "received_sha256": "ef9f655987d9f8321f73c77bc345139fd20d97d923f2d44cccb5b532b737da6c",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "provenance/member4_20261019/AI_use_member4.md",
+      "bytes": 5628,
+      "sha256": "a7e5d0ea9dfe062d81d3a59924fbef5cbd54fa8ed028c68def2dce91beb0a6f3",
+      "received_path": "AI_use_member4.md",
+      "received_sha256": "a7e5d0ea9dfe062d81d3a59924fbef5cbd54fa8ed028c68def2dce91beb0a6f3",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "provenance/member4_20261019/analysis_plan.md",
+      "bytes": 11771,
+      "sha256": "83bd8b8d5cedf38e5c88b0961a334767d52b6e0ced6d40ef83c02cdc77496804",
+      "received_path": "analysis_plan.md",
+      "received_sha256": "83bd8b8d5cedf38e5c88b0961a334767d52b6e0ced6d40ef83c02cdc77496804",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "provenance/member4_20261019/docs/MEMBER3_REVIEW.md",
+      "bytes": 7753,
+      "sha256": "93eaa2356493c6b629d4d18a8bc3dc2f157906e5a4672fd1f0de9017575ef26c",
+      "received_path": "docs/MEMBER3_REVIEW.md",
+      "received_sha256": "93eaa2356493c6b629d4d18a8bc3dc2f157906e5a4672fd1f0de9017575ef26c",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "provenance/member4_20261019/findings.md",
+      "bytes": 4474,
+      "sha256": "7ff35c3ef62153b9d5714f5445cc67dac7faf6eeadfdec025871b6bf76bc7c46",
+      "received_path": "findings.md",
+      "received_sha256": "7ff35c3ef62153b9d5714f5445cc67dac7faf6eeadfdec025871b6bf76bc7c46",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "provenance/member4_20261019/HANDOFF.md",
+      "bytes": 32434,
+      "sha256": "fac09c5c5ce6d09ff15717374fa9b284fd6675271f57253048ad4413a092bc5a",
+      "received_path": "HANDOFF.md",
+      "received_sha256": "fac09c5c5ce6d09ff15717374fa9b284fd6675271f57253048ad4413a092bc5a",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "provenance/member4_20261019/PACKAGE_MANIFEST.json",
+      "bytes": 15189,
+      "sha256": "c9d474275bd33b6248643570bd2e2a201e7533e78e0c8d95ad67627ab80fa6e2",
+      "received_path": "PACKAGE_MANIFEST.json",
+      "received_sha256": "c9d474275bd33b6248643570bd2e2a201e7533e78e0c8d95ad67627ab80fa6e2",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "provenance/member4_20261019/repository_README_before_integration.md",
+      "bytes": 4223,
+      "sha256": "f30ca74ce1276fc6a2a2a0e30f790c9668f8d7fc062ab3ab00bd262e64e6c48c",
+      "origin": "integration-authored documentation/helper/test or archived prior repository README"
+    },
+    {
+      "repository_path": "provenance/member4_20261019/VALIDATION.md",
+      "bytes": 7594,
+      "sha256": "4461e9c46d93afd760db82bb184123be5dd9f8befd2d16329631fdce1182fd5c",
+      "received_path": "VALIDATION.md",
+      "received_sha256": "4461e9c46d93afd760db82bb184123be5dd9f8befd2d16329631fdce1182fd5c",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "README.md",
+      "bytes": 11253,
+      "sha256": "3ac24fa273e165bad3e0cb4c2f06f1be6661dea21861ae4f4d13b8dd96c03171",
+      "origin": "integration-authored documentation/helper/test or archived prior repository README"
+    },
+    {
+      "repository_path": "REFERENCE_STATUS.md",
+      "bytes": 3054,
+      "sha256": "b60ad7f133be7d25a22f72ad63c2401ecb191e9c12b4104cb42b9ee9ec50f4cb",
+      "origin": "integration-authored documentation/helper/test or archived prior repository README"
+    },
+    {
+      "repository_path": "requirements.txt",
+      "bytes": 60,
+      "sha256": "22ef5de64af427256f5ead98e9ffe90f6d1b16673e1bbe5731fa50ba24629bd6",
+      "received_path": "requirements.txt",
+      "received_sha256": "22ef5de64af427256f5ead98e9ffe90f6d1b16673e1bbe5731fa50ba24629bd6",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "scripts/audit_coverage.py",
+      "bytes": 10943,
+      "sha256": "c343d5f787fcc241556a44d2f78d8d48753b4622a356df02093271795cb602a6",
+      "received_path": "scripts/audit_coverage.py",
+      "received_sha256": "c343d5f787fcc241556a44d2f78d8d48753b4622a356df02093271795cb602a6",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "scripts/check_member3_metrics.py",
+      "bytes": 3164,
+      "sha256": "b2a2d5c9bd8920bfdbb12ecc8b0f13fd68f01948ad49c0294cf607fc6012c290",
+      "received_path": "scripts/check_member3_metrics.py",
+      "received_sha256": "3386d14332ca2214603b6113a99444bc84e2d99fea746d9285eeb537db842f4c",
+      "unchanged_from_received": false
+    },
+    {
+      "repository_path": "scripts/check_reference_context.py",
+      "bytes": 2532,
+      "sha256": "d00356b77c97755e32e656b4060ee62f6ca3c8867f57ce8dc1c92a9901d8be2c",
+      "received_path": "scripts/check_reference_context.py",
+      "received_sha256": "d00356b77c97755e32e656b4060ee62f6ca3c8867f57ce8dc1c92a9901d8be2c",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "scripts/compare_predictions.py",
+      "bytes": 16448,
+      "sha256": "60f14c249b73cdbc3e6bc93a78b9de6840a66b32497e62f30cc698131c7d3148",
+      "received_path": "scripts/compare_predictions.py",
+      "received_sha256": "60f14c249b73cdbc3e6bc93a78b9de6840a66b32497e62f30cc698131c7d3148",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "scripts/download_signal_inputs.py",
+      "bytes": 3852,
+      "sha256": "8690a485bf2a52cd0420d5837736e9a740e0871cd8f49105bd8fa0dece2d62cb",
+      "received_path": "scripts/download_signal_inputs.py",
+      "received_sha256": "8690a485bf2a52cd0420d5837736e9a740e0871cd8f49105bd8fa0dece2d62cb",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "scripts/predict_member3_run.py",
+      "bytes": 6480,
+      "sha256": "b719cfcc6f77bd8160972cb0a2ade0d3d5b6a4bf5754cc86edbfc19ce3d8fbed",
+      "received_path": "scripts/predict_member3_run.py",
+      "received_sha256": "db3b91a2a5b221a6f4584593c62f557c1728b70a3cb4d87fb447693c151fe32e",
+      "unchanged_from_received": false
+    },
+    {
+      "repository_path": "scripts/refresh_inventory.py",
+      "bytes": 1903,
+      "sha256": "6e4c9ee478d91f21740d009c8f786eac14a808745e5ae612cbd4b34ea40e70c2",
+      "received_path": "scripts/refresh_inventory.py",
+      "received_sha256": "6e4c9ee478d91f21740d009c8f786eac14a808745e5ae612cbd4b34ea40e70c2",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "scripts/restore_received_data.py",
+      "bytes": 5032,
+      "sha256": "706fcbc9dd95dd0b8889e79df7dabed89baa21d9bd1cb6dae05c3322b322d345",
+      "origin": "integration-authored documentation/helper/test or archived prior repository README"
+    },
+    {
+      "repository_path": "scripts/verify_public_readcounts.py",
+      "bytes": 6484,
+      "sha256": "ea62c5b1c499cad1d6e0e3604a58bd23237122970c88a3de0801db3f2a5f60b4",
+      "received_path": "scripts/verify_public_readcounts.py",
+      "received_sha256": "ea62c5b1c499cad1d6e0e3604a58bd23237122970c88a3de0801db3f2a5f60b4",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "tests/test_analysis.py",
+      "bytes": 5974,
+      "sha256": "5b52cb76d9d1eb14968d87a1daf1d192ef310a053d68e6ef62b8ec76b3c67256",
+      "received_path": "tests/test_analysis.py",
+      "received_sha256": "5b52cb76d9d1eb14968d87a1daf1d192ef310a053d68e6ef62b8ec76b3c67256",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "tests/test_member3_prediction.py",
+      "bytes": 3024,
+      "sha256": "cc610877ef46d97d072771504bcdee8e70b896ed81125346ce30eed98fdf3cac",
+      "received_path": "tests/test_member3_prediction.py",
+      "received_sha256": "90c19eaedaf2babd782ff20aa29d9ef1f5afcf20bf69af82388301cb84681a40",
+      "unchanged_from_received": false
+    },
+    {
+      "repository_path": "tests/test_reference.py",
+      "bytes": 1314,
+      "sha256": "a87317831e1d6359f34d787003ddf52c6438bada27ef59908398fda9abe11769",
+      "received_path": "tests/test_reference.py",
+      "received_sha256": "a87317831e1d6359f34d787003ddf52c6438bada27ef59908398fda9abe11769",
+      "unchanged_from_received": true
+    },
+    {
+      "repository_path": "tests/test_restore_received_data.py",
+      "bytes": 2991,
+      "sha256": "9bfe146947bef032282848e717ff17b8501461719d7ed116bd5dab3b8af934d6",
+      "origin": "integration-authored documentation/helper/test or archived prior repository README"
+    }
+  ],
+  "received_paths_not_imported_directly": [
+    "Member4_Analysis.html",
+    "Member4_Analysis.ipynb",
+    "README.md",
+    "docs/ANALYSIS_DETAILS.md",
+    "docs/README_ALIGNMENT.md",
+    "docs/TEAM_README_REQUIREMENTS.md",
+    "docs/background_findings.md",
+    "figures/common_population_sensitivity.png",
+    "figures/coverage_and_replicate_support.png",
+    "figures/coverage_and_replicate_support.svg",
+    "member3_candidate/README.md",
+    "member3_candidate/artifact/kmer_baseline.csv",
+    "member3_candidate/artifact/model.txt",
+    "member3_candidate/artifact/model_card.json",
+    "member3_candidate/code/diagnostics.py",
+    "member3_candidate/code/features.py",
+    "member3_candidate/code/predict.py",
+    "member3_candidate/code/score_local.py",
+    "member3_candidate/code/train.py",
+    "member3_candidate/examples/input_10_sites.json",
+    "member3_candidate/examples/predictions.csv",
+    "member3_candidate/outputs/data0_oof.csv",
+    "member3_candidate/outputs/data1_predictions.csv",
+    "member3_candidate/outputs/data2_predictions.csv",
+    "member3_candidate/requirements-predict.txt",
+    "member3_candidate/requirements.txt",
+    "member3_candidate/results/data0_cv_local.json",
+    "member3_candidate/results/data0_cv_metrics.json",
+    "member3_candidate/results/data1_local.json",
+    "member3_candidate/results/data1_metrics.json",
+    "member3_candidate/results/data2_summary.csv",
+    "member3_candidate/results/seed_check/seed2026/cv_log.json",
+    "member3_candidate/results/seed_check/seed2026/data0_cv_metrics.json",
+    "member3_candidate/results/seed_check/seed7/cv_log.json",
+    "member3_candidate/results/seed_check/seed7/data0_cv_metrics.json",
+    "member3_candidate/results/subgroups.csv",
+    "metadata/all_directRNA_scope.csv",
+    "metadata/reference_versions_for_review.csv",
+    "metadata/samples.tsv",
+    "metadata/samples_with_RNAmod_data.tsv",
+    "metadata/transcript_aliases_checked.csv",
+    "predictions/README.md",
+    "results/cell_line_inventory.csv",
+    "results/coverage_audit.json",
+    "results/coverage_matrix_ge20_union.csv.gz",
+    "results/handover_analysis_tests.log",
+    "results/handover_candidate_tests.log",
+    "results/handover_package_checks.json",
+    "results/member3_example_check.json",
+    "results/member3_metrics_check.json",
+    "results/member3_metrics_reproduced.json",
+    "results/notebook_check.log",
+    "results/notebook_check_2026_10_19.log",
+    "results/public_readcount_status.json",
+    "results/public_readcount_verification.csv",
+    "results/readcount_verification_run.log",
+    "results/readme_member3_tests.log",
+    "results/reference_tests.log",
+    "results/replicate_coverage_support.csv",
+    "results/site_annotations.csv.gz",
+    "results/software_tests.log",
+    "scripts/render_report.py"
+  ],
+  "omission_policy": "Large data/logs/figures/guides retained in ignored outputs; nested candidate not duplicated; source receipt inventory preserved unchanged."
+}

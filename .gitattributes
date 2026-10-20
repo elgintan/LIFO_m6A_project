@@ -3,6 +3,15 @@
 eda/received/** -text
 data_visualisation/prototype/** -text
 model_elgin/baseline_2026_10_07/** -text
+# Handoff receipts identify exact bytes, including original line endings.
+model_samuel/artifact/** -text whitespace=cr-at-eol
+model_samuel/results/** -text whitespace=cr-at-eol
+model_samuel/examples/** -text whitespace=cr-at-eol
+model_samuel/docs/RECEIVED_README.md -text whitespace=cr-at-eol
+sgnex_analysis/** -text whitespace=cr-at-eol
+data_visualisation/task2_viz/** -text whitespace=cr-at-eol
+# Empty trailing fields are meaningful in the unchanged official TSV snapshot.
+data_visualisation/task2_viz/team_inputs/member4_2026-10-19/samples.tsv whitespace=-blank-at-eol,cr-at-eol
 *.png binary
 *.jpg binary
 *.gz binary

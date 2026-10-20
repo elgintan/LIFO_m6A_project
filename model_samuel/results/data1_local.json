@@ -1,0 +1,15 @@
+{
+  "scorer": "local_mirror",
+  "dataset": "data1",
+  "pooled": {
+    "n_sites": 90810,
+    "n_positives": 6593,
+    "roc_auc": 0.8217642710359293,
+    "pr_auc_trapezoid": 0.3828788018432001,
+    "average_precision": 0.3830708269890862,
+    "selection_score": 0.6023215364395647,
+    "precision_at_0.5": 0.5791311093871218,
+    "recall_at_0.5": 0.22645229789170332
+  },
+  "primary_score": 0.6023215364395647
+}

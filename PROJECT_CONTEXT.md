@@ -2,12 +2,12 @@
 
 ## Direction and ownership
 
-Elgin and Samuel independently develop one candidate each. Neural networks
-and enhanced LightGBM are provisional directions. Elgin integrates the final
-report. Member 1 supplies EDA directly to Elgin; Member 4 owns SG-NEx analysis;
-Member 5 owns visualisation. Candidate evaluation is a shared responsibility,
-with Elgin coordinating consolidation. Everyone contributes to writing,
-model development and implementation.
+Elgin and Samuel developed independent neural and enhanced LightGBM candidates.
+As of 20 October, Elgin continues prediction, analysis, visualisation and report
+integration on one laptop using the received Member 1/4/5 packages. Members
+can review their contributions without coordinating separate running pipelines.
+The working SG-NEx scope is the 23 available processed runs, chosen by Elgin.
+See INTEGRATION_STATUS.md for current evidence, recommendations and gaps.
 
 The handout defines requirements; scientific questions define our direction.
 Course references inform ideas and checks rather than prescribe a model or
@@ -50,19 +50,22 @@ fresh partition evaluations must not warm-start from those weights.
 Member 1's received numerical EDA is completed; her follow-up protocols are
 proposals. Her files include historical role instructions that predate the
 two-independent-model plan; this document states the current arrangement.
-The explorer has metadata for 23 runs/17 biological replicates/seven cell
-lines, but every modification score is explicitly simulated. Its source
-pipeline and required sample scope still need verification/completion.
+The older explorer in data_visualisation/prototype is a historical simulated
+demonstration. The newly supplied pipeline in data_visualisation/task2_viz
+has a coverage-only delivered site and actual build/validation scripts. No
+selected-model whole-run Task 2 predictions have been supplied. Metadata
+groups cover 23 runs/seven lines/17 replicate groups; independent biological
+preparation of those groups remains to be confirmed.
 
 ## How EDA affects this project
 
 Sequence-conditioned effects, sparse motifs, coverage changes, unusual
 distributions, dataset overlap and repeated-template labels must influence
 the protocol. Elgin accepted the [minimum shared rules](model_evaluation/SHARED_RULES.md)
-on 15 October 2026; Samuel's acknowledgement has not yet been reported. Use
+on 15 October 2026; Samuel subsequently supplied a candidate using them. Use
 the exact audited five outer gene groups and common scores, with inner gene
 separation when tuning/stopping is used. Model design remains independent.
-No new candidate has been trained under this methodology. Sparse contexts
+Both candidates now have completed data0 validation evidence. Sparse contexts
 still need honest diagnostics; a new split cannot create extra positive sites.
 Choose quality rules for technical reasons, not to hide poor predictions.
 See DATA_METHODOLOGY.md for decisions and planned comparisons.

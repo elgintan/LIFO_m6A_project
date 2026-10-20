@@ -1,73 +1,63 @@
 # LIFO: m6A prediction and SG-NEx exploration
 
-NUS DSA4262 team project. We develop two candidate predictors, compare them
-under one evidence-based protocol, and use the selected model to explore m6A
-patterns across the required SG-NEx direct-RNA datasets.
+NUS DSA4262 team project: understand nanopore event data, compare two trained
+candidate pipelines using shared gene-grouped validation, and apply one
+selected model to investigate predicted m6A patterns across cell lines.
 
-**Current stage: methodology accepted by Elgin, 15 October 2026.**
-Samuel's acknowledgement has not yet been reported. No new model has been
-trained under this methodology.
-The saved October 7 neural model is a historical starting point. The explorer
-is a prototype: its modification scores are simulated.
+**20 October 2026:** Elgin is consolidating the received work on one laptop.
+Both candidates have real data0 validation evidence; final model selection,
+validated calling cutoff and real whole-run Task 2 predictions remain pending.
+The current explorer is **coverage-only**. The older simulated prototype is
+archival and is not biological evidence.
 
 ## Start here
 
-1. Read [project context](PROJECT_CONTEXT.md).
-2. Read the [minimum shared evaluation rules](model_evaluation/SHARED_RULES.md).
-   Use the existing exact gene assignments and common scoring code. Features,
-   architecture and tuning remain independent. The [detailed methodology](model_evaluation/EVALUATION_PROTOCOL.md)
-   and [EDA rationale](DATA_METHODOLOGY.md) provide background.
-3. Open your folder below and follow its README.
-4. Use [contributing instructions](CONTRIBUTING.md) for simple handovers.
+1. Read [current evidence, decisions and remaining gaps](INTEGRATION_STATUS.md).
+2. Follow the [minimum shared evaluation rules](model_evaluation/SHARED_RULES.md).
+   Keep the exact five data0 gene folds and common scorer; model designs remain
+   independent. Data1 is already exposed and is a transfer diagnostic.
+3. For a runnable saved candidate, follow [Samuel's example](model_samuel/README.md).
+   For the completed neural CV experiment, follow [Elgin's guide](model_elgin/context_reference_v1/README.md).
+4. Continue [SG-NEx analysis](sgnex_analysis/README.md) and the
+   [current explorer pipeline](data_visualisation/README.md) after selected-model
+   predictions are available. Their supplied scripts are now integrated.
 
-| Folder | Owner and purpose |
+| Folder | Contribution |
 |---|---|
-| [eda](eda/README.md) | Member 1's received findings; Elgin curates her direct handoff |
-| [model_elgin](model_elgin/README.md) | Elgin's independent candidate; neural-network direction is provisional |
-| [model_samuel](model_samuel/README.md) | Samuel's independent candidate; enhanced LightGBM is provisional |
-| [model_evaluation](model_evaluation/README.md) | Shared candidate comparison, selection and final evaluation |
-| [sgnex_analysis](sgnex_analysis/README.md) | Member 4's sample inventory, comparisons and interpretation |
-| [data_visualisation](data_visualisation/README.md) | Member 5's interface and real-data integration |
+| [eda](eda/README.md) | Member 1's findings, source code and exact shared folds |
+| [model_elgin](model_elgin/README.md) | Neural candidates, completed matched CV and data0 diagnostics |
+| [model_samuel](model_samuel/README.md) | Unpacked sequence-relative LightGBM, saved model and verification |
+| [model_evaluation](model_evaluation/README.md) | Common scorer, shared rules and final comparison |
+| [sgnex_analysis](sgnex_analysis/README.md) | Member 4's 23-run inventory, coverage and comparison pipeline |
+| [data_visualisation](data_visualisation/README.md) | Member 5's validation/build pipeline and coverage-only explorer |
 
-Member 1's work must influence features/context, quality decisions and how
-evaluation populations are constructed. Every important change should connect
-an EDA observation to a decision, a controlled comparison and report evidence.
-Retaining an existing choice also needs a reason. Keep difficult valid examples
-and distinguish technical quality from cases that are merely hard to predict.
+## Scientific story and report
 
-## What is available
+Member 1's EDA -> tested model decisions -> shared candidate comparison -> one
+frozen model and calling rule -> real SG-NEx predictions -> replicate-aware
+comparisons -> interactive exploration and supported conclusions.
 
-- Received EDA, code, six figures, derived tables and historical folds in
-  `eda/received/`; originals were copied unchanged.
-- An actual archived neural model, source, small prediction example, metrics,
-  history and three prediction CSVs in `model_elgin/baseline_2026_10_07/`.
-- The supplied explorer in `data_visualisation/prototype/`. Its scores are
-  simulated and cannot support scientific conclusions.
-- A new descriptive [historical-split composition audit](eda/split_review/README.md).
-- A [source receipt](SOURCE_RECEIPT.json) identifying unchanged copies and one
-  disclosed portable-path edit in the archived report generator.
+EDA must affect decisions and checks, including cases where a proposed feature
+does not improve performance. Keep valid difficult sites; distinguish measured
+signals, predictions and biological interpretation. Our scores concern m6A
+candidate sites, not other modifications or measured modified-molecule fractions.
 
-Raw data, environments, large caches and intermediate checkpoints are excluded
-from Git. See [data access](DATA_ACCESS.md). Original full local run records
-remain outside this clean repository.
+Working Task 2 scope is the **23 available processed runs** in the canonical
+`sgnex_analysis/manifest.csv`. Missing observations are not unmodified sites.
+See [project context](PROJECT_CONTEXT.md) and [data access](DATA_ACCESS.md).
 
-## Next actions
+Report and interactive visualisation carry 50 percentage points; model
+performance carries 5 and leaderboard rank does not determine the grade. The
+formal report limit is five pages with the handout's permitted exclusions.
+Required simple-baseline/m6Anet comparisons, clean Ubuntu reproduction and
+final report/real-result explorer are still unfinished. The supplied deadline
+is 28 October 2026, 23:59 Singapore time; check later course announcements.
 
-Samuel acknowledges the shared rules, verifies his local data against the
-existing fold manifest, then each owner develops a fresh candidate. Use the
-common scorer for five-fold data0 results, freeze/refit on all data0 and
-evaluate on already-exposed data1. Samuel can use the
-[AI starter/context package](model_samuel/AI_START_HERE.md). Candidate comparison and
-the required simple-baseline/m6Anet checks precede selecting one pipeline for
-real SG-NEx predictions. Members 4/5 can prepare inventory, analysis and the
-interface in parallel.
-
-The course report plus interactive visualisation carries 50 percentage points;
-model performance carries 5, assessed with ROC/PR AUC. Ranking against other
-teams does not determine the grade. The final report limit is five pages,
-excluding permitted front matter/references. The supplied handout deadline is
-28 October 2026, 23:59 Singapore time; check later announcements.
-
-The repository is public at [elgintan/LIFO_m6A_project](https://github.com/elgintan/LIFO_m6A_project).
-For collaborator setup, follow [GitHub/VS Code setup](GITHUB_VSCODE_SETUP.md).
-For evidence of AI assistance and corrections, see [AI use](AI_USE.md).
+Large signals, prediction tables, caches, environments and training checkpoints
+stay outside ordinary Git uploads. They remain local or are regenerated through
+documented commands. A fresh clone must obtain the documented inputs before
+rebuilding the full explorer; it is not shipped as a completed real-score site.
+The preserved [source receipt](SOURCE_RECEIPT.json) describes the original
+repository setup; each newly integrated handoff records its own provenance.
+See [AI assistance](AI_USE.md), [contributing](CONTRIBUTING.md) and
+[GitHub/VS Code setup](GITHUB_VSCODE_SETUP.md).

@@ -1,0 +1,174 @@
+{
+  "model": "LightGBM on 7-mer-relative read-distribution summaries + 7 bases",
+  "features": [
+    "dwell_m1_mean",
+    "sd_m1_mean",
+    "mean_m1_mean",
+    "dwell_0_mean",
+    "sd_0_mean",
+    "mean_0_mean",
+    "dwell_p1_mean",
+    "sd_p1_mean",
+    "mean_p1_mean",
+    "dwell_m1_std",
+    "sd_m1_std",
+    "mean_m1_std",
+    "dwell_0_std",
+    "sd_0_std",
+    "mean_0_std",
+    "dwell_p1_std",
+    "sd_p1_std",
+    "mean_p1_std",
+    "dwell_m1_q10",
+    "dwell_m1_q25",
+    "dwell_m1_q50",
+    "dwell_m1_q75",
+    "dwell_m1_q90",
+    "sd_m1_q10",
+    "sd_m1_q25",
+    "sd_m1_q50",
+    "sd_m1_q75",
+    "sd_m1_q90",
+    "mean_m1_q10",
+    "mean_m1_q25",
+    "mean_m1_q50",
+    "mean_m1_q75",
+    "mean_m1_q90",
+    "dwell_0_q10",
+    "dwell_0_q25",
+    "dwell_0_q50",
+    "dwell_0_q75",
+    "dwell_0_q90",
+    "sd_0_q10",
+    "sd_0_q25",
+    "sd_0_q50",
+    "sd_0_q75",
+    "sd_0_q90",
+    "mean_0_q10",
+    "mean_0_q25",
+    "mean_0_q50",
+    "mean_0_q75",
+    "mean_0_q90",
+    "dwell_p1_q10",
+    "dwell_p1_q25",
+    "dwell_p1_q50",
+    "dwell_p1_q75",
+    "dwell_p1_q90",
+    "sd_p1_q10",
+    "sd_p1_q25",
+    "sd_p1_q50",
+    "sd_p1_q75",
+    "sd_p1_q90",
+    "mean_p1_q10",
+    "mean_p1_q25",
+    "mean_p1_q50",
+    "mean_p1_q75",
+    "mean_p1_q90",
+    "base0",
+    "base1",
+    "base2",
+    "base3",
+    "base4",
+    "base5",
+    "base6"
+  ],
+  "kmer_baseline_min_sites": 50,
+  "params": {
+    "n_estimators": 1500,
+    "learning_rate": 0.02,
+    "num_leaves": 31,
+    "min_child_samples": 50,
+    "reg_lambda": 5.0,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "deterministic": true,
+    "force_row_wise": true,
+    "verbose": -1
+  },
+  "seed": 42,
+  "threads": 4,
+  "model_sha256": "ba268645ed3fa6c19f59f6a83ed85c794c7b19975d4e474551d211ef78406bb1",
+  "kmer_baseline_sha256": "ae1e45448a1eb6ca0863e0764b74a529b24b7586a6497883392667f3cf3c93cc",
+  "frozen_utc": "2026-10-18T07:34:35Z",
+  "inputs_sha256": {
+    "data0": "622410b2918692b75a880b753f1a621e8d892d6dbc13c1f430babc5543a0584e",
+    "labels": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978",
+    "folds": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0"
+  },
+  "versions": {
+    "python": "3.11.16",
+    "lightgbm": "4.7.0",
+    "sklearn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "os": "macOS-26.5-arm64-arm-64bit"
+  },
+  "log": [
+    {
+      "stage": "read_data0",
+      "seconds": 21.4,
+      "sites": 121838
+    },
+    {
+      "stage": "cv_fold_0",
+      "seconds": 13.8,
+      "train_sites": 97480,
+      "assessed_sites": 24358,
+      "reference_levels": {
+        "7mer": 24299,
+        "5mer": 59
+      },
+      "peak_ram_mib": 846.6
+    },
+    {
+      "stage": "cv_fold_1",
+      "seconds": 13.8,
+      "train_sites": 97467,
+      "assessed_sites": 24371,
+      "reference_levels": {
+        "7mer": 24271,
+        "5mer": 100
+      },
+      "peak_ram_mib": 861.1
+    },
+    {
+      "stage": "cv_fold_2",
+      "seconds": 13.6,
+      "train_sites": 97451,
+      "assessed_sites": 24387,
+      "reference_levels": {
+        "7mer": 24316,
+        "5mer": 71
+      },
+      "peak_ram_mib": 861.1
+    },
+    {
+      "stage": "cv_fold_3",
+      "seconds": 13.9,
+      "train_sites": 97460,
+      "assessed_sites": 24378,
+      "reference_levels": {
+        "7mer": 24301,
+        "5mer": 77
+      },
+      "peak_ram_mib": 889.8
+    },
+    {
+      "stage": "cv_fold_4",
+      "seconds": 13.7,
+      "train_sites": 97494,
+      "assessed_sites": 24344,
+      "reference_levels": {
+        "7mer": 24280,
+        "5mer": 64
+      },
+      "peak_ram_mib": 952.6
+    },
+    {
+      "stage": "final_fit_all_data0",
+      "seconds": 15.1,
+      "peak_ram_mib": 952.6
+    }
+  ]
+}

@@ -6,8 +6,8 @@ this folder will consolidate comparable evidence, selection rationale and
 the frozen selected model's evaluation.
 
 Start with [minimum shared rules](SHARED_RULES.md): Elgin accepted the
-methodology on 15 October 2026; Samuel's acknowledgement has not yet been
-reported. Exact outer assignments already exist, so no resplitting is needed.
+methodology on 15 October 2026; Samuel subsequently supplied a candidate using
+these rules. Exact outer assignments already exist, so no resplitting is needed.
 The common [scorer](evaluate.py), [dependencies](requirements.txt) and
 [optional default inner roles](cv_rounds.csv) are included. The
 [detailed methodology](EVALUATION_PROTOCOL.md) gives rationale and EDA/report
@@ -15,7 +15,12 @@ suggestions. Architecture, features and tuning remain independent.
 
 Verify local inputs against the manifest before new fitting. Keep assessment
 genes outside all learned fitting and use the same evaluation population.
-No new model has been trained or selected under these rules yet.
+Elgin's full matched neural CV and Samuel's received CV are complete; the
+shared scorer independently reproduces Samuel's provided data0 scores.
+No final model has been selected. Current comparisons and outstanding work
+are in [integration status](../INTEGRATION_STATUS.md). New all-data0 fitting
+for Elgin's nominated 19 October pipeline and real SG-NEx predictions are
+still pending. Historical 7 October evidence remains distinct.
 
 Software verification on 15 October: 14 scorer tests passed, and the existing
 fold verifier passed against the real 121,838-site data0 labels with 3,852

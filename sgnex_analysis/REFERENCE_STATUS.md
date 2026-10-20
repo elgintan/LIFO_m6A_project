@@ -1,0 +1,27 @@
+# Input and reference evidence
+
+Scope remains the selected 23 processed runs; the broader inventory is not another completion gate.
+
+| Item | Evidence available | Pending / limits |
+|---|---|---|
+| Runs/signals | Exact public links and saved sizes for 23 runs; original count source hashes | Actual signal content hashes, parsing/count agreement and feature-preprocessing compatibility |
+| Coverage | Saved original read-count verification; retained matrix independently recounted locally | Not validation of signal-event offsets or alignments |
+| Reference | Upstream-reported GRCh38/Ensembl91; inherited transcript versions/lengths | Exact FASTA/GTF filenames/hashes, complete composition and per-input provenance |
+| MCF7 replicate3 run1 aliases | Explicit 46,297-row map: 13,589 inherited annotated-version matches; 32,708 coverage-only/unverified | Independent FASTA identity; no blanket suffix stripping or application to other runs |
+| Literal position | Original integer key retained | Zero/one-based origin, candidate-A/event meaning and seven-base window offset |
+| Reference utility | Synthetic exact-offset success/wrong-offset refusal | No genuine SG-NEx context check or exon/GTF genomic conversion |
+| Primary annotation | Inherited annotated-human category; other classes separate | Independent reconstruction, CDS/UTR/genomic validation |
+| Replicates | 17 cell-line-plus-replicate-number metadata groups | Independent laboratory preparation provenance |
+| Orthogonal assays | Matched-data flags/citations | Actual compatible labels, sample/coordinate identity, overlap/absence/coverage rules |
+
+Keep original prediction identifiers and positions. Apply only explicit per-run aliases inside analysis. A successful count join is not evidence for the chemical nucleotide coordinate. Establish offsets from preprocessing documentation, not by choosing the offset with the most matches.
+
+Once the exact reference and documented offset are known, export a plain CSV from genuine metadata with `transcript_id,transcript_position,sequence_7mer` and optional documented `reference_transcript_id`. From the repository root:
+
+```powershell
+& $py -B sgnex_analysis/scripts/check_reference_context.py --sites sgnex_analysis/outputs/reference_check_sites.csv --fasta $exactTranscriptFasta --window-start-offset $documentedOffset --out sgnex_analysis/outputs/reference_context_check.csv
+```
+
+The variables must hold established values. The utility adds the offset to the literal position to obtain the zero-based seven-base window start and checks context/central A. A known one-based central-A position would imply -4; a known zero-based central-A position -3. Neither is established for these inputs. Retain hashes, sampling/run scope and failures. A sampled success does not validate genomic exon mapping.
+
+Until resolved, avoid region/genomic or chemical-fraction claims. Later same-site scores can support explicitly qualified descriptive predicted-pattern comparisons; software declarations alone do not establish missing provenance or biology.

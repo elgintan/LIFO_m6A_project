@@ -1,0 +1,182 @@
+{
+ "inputs": "team_inputs/member4_2026-10-19",
+ "counts": {
+  "PASS": 3,
+  "WARN": 1,
+  "FAIL": 24
+ },
+ "model_versions": [
+  "PENDING_TEAM_SELECTION"
+ ],
+ "runs": [],
+ "items": [
+  {
+   "level": "PASS",
+   "scope": "manifest",
+   "check": "has the nine team columns",
+   "detail": ""
+  },
+  {
+   "level": "PASS",
+   "scope": "manifest",
+   "check": "each run listed once",
+   "detail": ""
+  },
+  {
+   "level": "PASS",
+   "scope": "manifest",
+   "check": "run columns match run names",
+   "detail": ""
+  },
+  {
+   "level": "FAIL",
+   "scope": "manifest",
+   "check": "model_version names a selected model",
+   "detail": "still 'PENDING_TEAM_SELECTION'"
+  },
+  {
+   "level": "WARN",
+   "scope": "manifest",
+   "check": "MODEL_INFO.md complete",
+   "detail": "still lists PENDING fields"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_Hct116_directRNA_replicate3_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_Hct116_directRNA_replicate3_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_Hct116_directRNA_replicate3_run4",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_Hct116_directRNA_replicate3_run4.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_Hct116_directRNA_replicate4_run3",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_Hct116_directRNA_replicate4_run3.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_A549_directRNA_replicate5_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_A549_directRNA_replicate5_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_A549_directRNA_replicate6_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_A549_directRNA_replicate6_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_H9_directRNA_replicate2_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_H9_directRNA_replicate2_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_H9_directRNA_replicate2_run2",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_H9_directRNA_replicate2_run2.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_H9_directRNA_replicate3_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_H9_directRNA_replicate3_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_H9_directRNA_replicate3_run2",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_H9_directRNA_replicate3_run2.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_H9_directRNA_replicate4_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_H9_directRNA_replicate4_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_H9_directRNA_replicate4_run2",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_H9_directRNA_replicate4_run2.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_HEYA8_directRNA_replicate1_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_HEYA8_directRNA_replicate1_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_HEYA8_directRNA_replicate1_run2",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_HEYA8_directRNA_replicate1_run2.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_HEYA8_directRNA_replicate2_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_HEYA8_directRNA_replicate2_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_HEYA8_directRNA_replicate2_run2",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_HEYA8_directRNA_replicate2_run2.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_HEYA8_directRNA_replicate3_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_HEYA8_directRNA_replicate3_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_HepG2_directRNA_replicate5_run2",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_HepG2_directRNA_replicate5_run2.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_HepG2_directRNA_replicate6_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_HepG2_directRNA_replicate6_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_K562_directRNA_replicate4_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_K562_directRNA_replicate4_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_K562_directRNA_replicate5_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_K562_directRNA_replicate5_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_K562_directRNA_replicate6_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_K562_directRNA_replicate6_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_MCF7_directRNA_replicate3_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_MCF7_directRNA_replicate3_run1.csv"
+  },
+  {
+   "level": "FAIL",
+   "scope": "SGNex_MCF7_directRNA_replicate4_run1",
+   "check": "prediction_file exists",
+   "detail": "not found: predictions/SGNex_MCF7_directRNA_replicate4_run1.csv"
+  }
+ ]
+}

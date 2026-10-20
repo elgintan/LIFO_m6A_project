@@ -4,6 +4,12 @@ This repository collects the team's code, checked findings and report contributi
 
 ## Who puts what where?
 
+**20 October update:** Elgin now continues all integrated code on one laptop
+from the delivered packages. The attribution below records contributions;
+Members 4/5 do not need to run parallel pipelines or wait for further handovers.
+They can review findings when actual selected-model predictions exist. See
+[integration status](INTEGRATION_STATUS.md) for the 23-run scope and remaining work.
+
 - **Member 1 -> Elgin:** Send the EDA/context package directly to Elgin. Member 1 does not need to upload to GitHub. Elgin reviews and organises the shareable material in `eda/`, retaining its attribution.
 - **Elgin -> `model_elgin/`:** Develop one candidate, currently exploring neural networks. Retain methods, code, actual results and model records.
 - **Samuel -> `model_samuel/`:** Develop a separate candidate, currently considering LightGBM improvements. Retain the same kinds of evidence.
@@ -15,7 +21,7 @@ For a completed contribution, provide a short findings/methods draft, the code t
 
 ## Before new training
 
-Elgin and Samuel use the [minimum shared rules](model_evaluation/SHARED_RULES.md), accepted by Elgin on 15 October; Samuel's acknowledgement has not yet been reported. Reuse the exact existing outer assignments and common scorer. No new split is needed. Model family, features, tuning and stopping settings remain independent inside the common fitting boundaries. Member 1's findings guide useful experiments and report interpretation.
+Elgin and Samuel use the [minimum shared rules](model_evaluation/SHARED_RULES.md), accepted by Elgin on 15 October and used by Samuel's submitted candidate. Reuse the exact existing outer assignments and common scorer. No new split is needed. Model family, features, tuning and stopping settings remain independent inside the common fitting boundaries. Member 1's findings guide useful experiments and report interpretation.
 
 Treat findings as hypotheses to test. Do not relabel or discard unusual sites simply because a model disagrees. Fit learned preprocessing using the appropriate training partition. Record previous evaluation exposure honestly: data1 has already been inspected and cannot become an untouched test by renaming it.
 

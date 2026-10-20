@@ -1,8 +1,9 @@
 # Shared candidate evaluation: methodology v1
 
-**Status: accepted by Elgin on 15 October 2026; Samuel's acknowledgement has
-not yet been reported.** No new candidate has been trained or selected under
-this methodology. The [minimum shared rules](SHARED_RULES.md) define what must
+**Status: accepted by Elgin on 15 October 2026; updated 20 October.** Both
+candidates now have data0 validation evidence, and Samuel's contribution is
+integrated. No final model has been selected. The [current integration status](../INTEGRATION_STATUS.md)
+distinguishes completed work from remaining checks. The [minimum shared rules](SHARED_RULES.md) define what must
 match; this longer document explains the rationale and recommended checks.
 Model design and tuning remain independent. Existing outer assignments are
 unchanged; [cv_rounds.csv](cv_rounds.csv) supplies optional inner roles.

@@ -1,0 +1,17 @@
+{
+ "replicate_support": {
+  "source": "team_inputs/member4_2026-10-19/replicate_coverage_support.csv",
+  "values_compared": 144,
+  "mismatches": [],
+  "all_match": true
+ },
+ "aliases": {
+  "pipeline_rows": 46297,
+  "member4_rows": 46297,
+  "rows_in_both": 46297,
+  "same_joined_id": 46297,
+  "member4_verified": 13589,
+  "pipeline_version_matches": 43704,
+  "member4_verified_but_pipeline_not": 0
+ }
+}

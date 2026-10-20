@@ -46,3 +46,32 @@ performance results. No new training or inference has run in this update.
 
 No AI should fill missing experiments or comparisons with expected results.
 Each contributor checks their section and Elgin reviews the integrated report.
+
+## Consolidation — 20 October 2026
+
+Elgin authorised one-laptop continuation, unpacking Samuel's merged ZIP,
+integrating the new Member 4/5 code and updating the public repository. Elgin
+selected the 23 available processed runs as the working Task 2 scope. Earlier
+status text and simulated-score prototype descriptions are historical; current
+progress is recorded in INTEGRATION_STATUS.md and each integration receipt.
+
+AI helped inspect source, preserve original package hashes, integrate code and
+portable paths, and run small software checks. Samuel's saved model reproduced
+the ten-site example with exact numerical scores; the common evaluator exactly
+reproduced his provided data1 metrics. No complete model training, full SG-NEx
+inference, full explorer rebuild or new biological analysis ran in this update.
+Member 4/5 checks and their limits are recorded in their integration notes;
+passing temporary synthetic fixtures is not validation of biological claims.
+
+Actual issues detected during consolidation included a Unix-only memory import
+in the received trainer, prediction output paths that could overwrite inputs
+or artifacts, destructive/reassuring empty-directory behaviours in visualisation
+packaging/comparison code, and missing numeric-key/constant-correlation guards.
+Narrow fixes and regression checks are disclosed; saved model weights and
+preprocessing tables remain unchanged. Missing inputs, reference assumptions,
+unselected model/cutoff and unrun full computations remain explicitly pending.
+
+The final human report must still supply the actual AI-use table requested by
+the handout, including prompts/output use, verification and corrections. These
+working records are evidence for that disclosure, not the student's personal
+reflection or a replacement for human review.

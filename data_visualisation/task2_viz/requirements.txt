@@ -1,0 +1,5 @@
+# Pipeline (build_site_data.py, validate_task2_inputs.py, make_placeholder_predictions.py).
+# fetch_public_data.py and package_site.py need only the Python 3.12 standard library.
+# Versions used on 13 Oct 2026 (macOS arm64, conda env dsa4262-lr).
+numpy==2.5.3
+pandas==3.0.6

@@ -1,58 +1,118 @@
-# SG-NEx analysis — Member 4
+# SG-NEx analysis: 23 processed runs
 
-## Purpose and current status
+This folder integrates Member 4's code and scientific handover. The agreed population is **23 m6Anet-processed direct-RNA runs, seven cell lines and 17 replicate-number groups**. The broader 56-row inventory is background; expanding to it is not required for the current task. Conclusions must describe the processed subset.
 
-Use the selected, frozen model to investigate predicted m6A patterns across the required SG-NEx direct-RNA samples. The scientific questions, sample scope and analysis rules should follow the handout and the available evidence.
+**Completed:** sample/coverage work and its report contribution; received package integrity checked on the receiving laptop. **Pending:** final model selection, full signal downloads, input/reference checks, genuine per-run predictions, real-score comparisons and biological interpretation. This integration creates none of those full-run results.
 
-The received visualisation prototype describes 23 runs, 17 biological replicates and seven cell lines. Its sample metadata, coverage and annotation are declared to come from real public sources; their upstream derivation still needs reproducing. **All supplied modification scores are simulated.** They cannot support cell-line findings or model-performance claims. No new biological analysis or real Task 2 prediction was performed during this repository setup.
+Read [findings.md](findings.md), [REFERENCE_STATUS.md](REFERENCE_STATUS.md) and [INTEGRATION.md](INTEGRATION.md). Original source evidence is preserved in [the received handover](provenance/member4_20261019/HANDOFF.md); its original package-relative commands differ from the integrated commands below. Older Explorer modification scores were simulated and are excluded from the coverage analysis.
 
-Elgin and Samuel will develop independent candidates using one agreed evaluation methodology. Their neural-network and LightGBM directions are provisional. Final Task 2 comparisons should use the same selected model version across samples.
+## Files and storage
 
-## First checks
+- `scripts/`, `tests/`, `requirements.txt`: analysis/verification code and small checks.
+- `metadata/sample_manifest.csv`: the exact 23 runs, group mapping, public signal links and saved object sizes. Signal JSONs total **33,365,823,342 bytes** (33.37 GB); they are not bundled.
+- `manifest.csv`, `MODEL_INFO.md`: prediction handoff. Final model/reference fields remain pending. Coverage and future prediction paths use ignored `outputs/`.
+- `outputs/received_member4_20261019/`: local received coverage, annotations, aliases, figures, guides and logs. These are retained on the laptop, not public site-level data uploads.
+- `outputs/predictions/`: future three-column per-run CSVs and receipts.
+- `provenance/member4_20261019/`: unchanged original handover, scientific/report/AI-use evidence and source inventory. This inventory describes the received package, including deliberately unpublished files.
 
-- Confirm which samples the handout requires and distinguish cell line, biological replicate and sequencing run.
-- Obtain public-source/download records, read-count files, annotation processing and the visualisation's missing build/validation scripts.
-- Verify reference versions and transcript identifiers before joining datasets. The prototype reports removing transcript-version suffixes in one MCF7 run; review the supporting evidence rather than stripping versions indiscriminately.
-- Agree eligible-site coverage, replicate aggregation and missing-data handling before interpreting comparisons.
+The optional Member 3 adapter uses the canonical sibling `model_samuel/`. Its model, examples and development outputs are not duplicated here. An explicit `--candidate-dir` can identify another received local snapshot.
 
-## Draft prediction handoff — agree before implementation
+## 1. Setup and small checks
 
-Use one folder containing:
+Run every command below from the **repository root**, the folder containing `model_elgin`, `model_samuel` and `sgnex_analysis`. A virtual environment is a folder containing an isolated Python installation and libraries.
 
-```text
-manifest.csv
-MODEL_INFO.md
-predictions/
-    <run_id>.csv
+On the current laptop use the existing analysis-capable environment:
+
+```powershell
+$py = "../advanced_model/.venv/Scripts/python.exe"
+& $py -B -m unittest discover -s sgnex_analysis/tests -v
 ```
 
-Each prediction file retains these exact columns:
+The analysis/reference/restoration checks use small temporary synthetic fixtures. The optional Member 3 test uses its ten-site installation example only if its files and LightGBM are available; otherwise it reports a skip. Passing tests verifies software behaviour, not biological accuracy or genuine reference compatibility.
+
+The current laptop also has the canonical Member 3 prediction environment. Run that adapter check separately in it:
+
+```powershell
+& "model_samuel/.venv/Scripts/python.exe" -B -m unittest discover -s sgnex_analysis/tests -p test_member3_prediction.py -v
+```
+
+This separately passed the ten-site score-parity, minimum-finite-read eligibility and duplicate-refusal checks. It is not whole-run SG-NEx inference.
+
+In the current restricted runner, system temporary/cache folders were not writable. The successful retry used workspace-local folders before the same test command:
+
+```powershell
+New-Item -ItemType Directory -Force sgnex_analysis/outputs/checks/tmp,sgnex_analysis/outputs/checks/.mplconfig | Out-Null
+$taskTemp = (Resolve-Path sgnex_analysis/outputs/checks/tmp).Path
+$env:TEMP = $taskTemp
+$env:TMP = $taskTemp
+$env:TMPDIR = $taskTemp
+$env:MPLCONFIGDIR = (Resolve-Path sgnex_analysis/outputs/checks/.mplconfig).Path
+& $py -B -m unittest discover -s sgnex_analysis/tests -v
+```
+
+For a new Windows analysis environment instead:
+
+```powershell
+py -3.12 -m venv sgnex_analysis/.venv
+& "sgnex_analysis/.venv/Scripts/python.exe" -m pip install -r sgnex_analysis/requirements.txt
+```
+
+Then set `$py` to `sgnex_analysis/.venv/Scripts/python.exe`. On Ubuntu use `python3.12 -m venv sgnex_analysis/.venv` and `sgnex_analysis/.venv/bin/python -m pip install -r sgnex_analysis/requirements.txt`. A clean Ubuntu installation was not verified in this integration. Keep the received analysis pins separate from Member 3's prediction environment.
+
+## 2. Restore the received local coverage evidence
+
+The public folder keeps code and small source manifests. Supply the original extracted `Member4_Analysis` package to restore large tables locally. On the current workspace:
+
+```powershell
+& $py -B sgnex_analysis/scripts/restore_received_data.py --source "../Other members work/Member4_Handover_extra details/Member4_Analysis"
+```
+
+On another computer replace `--source` with its extraction folder. The helper checks received sizes/SHA256, copies metadata/results/figures and the two reading guides into `sgnex_analysis/outputs/received_member4_20261019/`, and records a local receipt. SHA256 is a content fingerprint for detecting changed files. Repeating the command reuses identical evidence and refuses differing existing files. It performs no download, prediction or scientific reconstruction, and excludes the nested candidate.
+
+Expected files include `results/coverage_matrix_ge20_union.csv.gz`, `results/site_annotations.csv.gz` and `metadata/transcript_aliases_checked.csv` beneath that local destination. Its HTML/notebook describe the received coverage work; the notebook's real-analysis cell remains disabled. Original logs retain historical preparation paths, not required paths on this laptop.
+
+## 3. Genuine signals and model predictions: pending
+
+After model nomination and planning input checks, obtain one run first:
+
+```powershell
+$signals = "sgnex_analysis/outputs/signals"
+& $py -B sgnex_analysis/scripts/download_signal_inputs.py --dest $signals --run-id SGNex_Hct116_directRNA_replicate3_run4
+```
+
+The standard-library helper uses the saved 23-run public HTTPS manifest; no AWS credentials are needed. It writes `<run_id>/data.json` and download receipts. Size matching is not independent upstream content authentication. Interrupted `.partial` downloads restart; byte-range resume is not implemented. After inspecting the first real input, `--all` selects the same 23 runs. **No full signal download was executed by this integration.** Matching nine-value array shape alone does not prove preprocessing/reference compatibility.
+
+Use one selected saved checkpoint and its unchanged trained preprocessing across all runs. The interface is exactly:
 
 ```csv
 transcript_id,transcript_position,score
 ```
 
-Use unique transcript-position keys, documented position coordinates, finite scores between 0 and 1, and full numerical precision. The three-column format can stay common to both candidates and the final pipeline.
+Preserve original IDs/positions, unique keys, finite scores in `[0,1]` and full precision. Keep metadata/receipts separately. If a model emits all sites, retain that original export and create a separate Task 2 export using >=20 run-specific source reads. Investigate unmatched keys and finite-read failures rather than silently removing them.
 
-Proposed `manifest.csv` fields, pending agreement with Members 2, 3 and 5:
+This optional command is specific to the received Member 3 candidate, **not final selection or an adapter for another checkpoint**. Use its documented prediction environment and canonical files:
 
-```text
-run_id,cell_line,biological_replicate,sequencing_run,prediction_file,coverage_file,min_reads,reference_version,model_version
+```powershell
+$member3py = "model_samuel/.venv/Scripts/python.exe"
+& $member3py -B sgnex_analysis/scripts/predict_member3_run.py --candidate-dir model_samuel --input "$signals/SGNex_Hct116_directRNA_replicate3_run4/data.json" --run-id SGNex_Hct116_directRNA_replicate3_run4 --output sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.csv --min-reads 20 --batch-sites 512 --threads 4
 ```
 
-`coverage_file` identifies the matching public-source read-count file or a documented derived file. Join it by run, transcript and position; do not infer coverage from the score or from another sample. Use portable paths/public source identifiers, not private download links or credentials. A source manifest should retain download/source information and checksums.
+The current laptop already has this environment, prepared during canonical candidate integration. A fresh clone still needs the candidate's documented prediction setup. The adapter uses saved references without per-line refitting and audits raw/finite read counts. Malformed, duplicate or no-finite-read sites abort a run. Existing outputs are refused; failed partial inference does not resume automatically. Successful CSV, metadata and receipt files retain candidate status independently of any later team selection. Full-run runtime/RAM are unmeasured. For another selected model use its own predictor; no universal model/export adapter is supplied here.
 
-`MODEL_INFO.md` should identify the saved model and its checksum, input/preprocessing versions, training/evaluation context, prediction command, coverage rule and limitations. Final outputs should identify one selected model consistently. Dataset0/1/2 development CSVs are separate from these run-level outputs.
+## 4. Compare real predictions after prerequisites are complete
 
-## Interpretation checks
+Complete MODEL_INFO.md and pending manifest model/reference values using one compatible version across all 23 rows. Retain model/input hashes, preprocessing, coordinates and failed-site evidence. The current manifest deliberately cannot pass production validation. A real-input declaration does not establish biological validity.
 
-- Compare adequately covered, observed sites; a missing site is not an unmodified site.
-- Preserve individual runs, but use biological replicates as biological repeats. Document how repeated runs of one replicate are combined so they do not receive unintended extra weight.
-- Check whether differences could reflect coverage, RNA abundance, reference mismatches or technical/batch effects.
-- State the comparison population. All-cell-line common sites and pairwise common sites answer different questions.
-- Describe scores as predictions. They do not establish individual-read labels, modification stoichiometry or other chemical modification types.
-- Keep full-precision results for analysis; the visualisation's packed display scores are not the analysis source.
+```powershell
+& $py -B sgnex_analysis/scripts/compare_predictions.py --manifest sgnex_analysis/manifest.csv --model-info sgnex_analysis/MODEL_INFO.md --coverage-matrix sgnex_analysis/outputs/received_member4_20261019/results/coverage_matrix_ge20_union.csv.gz --annotations sgnex_analysis/outputs/received_member4_20261019/results/site_annotations.csv.gz --aliases sgnex_analysis/outputs/received_member4_20261019/metadata/transcript_aliases_checked.csv --confirm-real-predictions --out sgnex_analysis/outputs/real_analysis_v1
+```
 
-## Member handover
+Use a fresh output directory, including after failure: the received CLI creates it before validation. Missing expected predictions cause failure. `--allow-missing-predictions` is for a documented incomplete exploratory population; missing scores never become zero.
 
-Upload a short `findings.md` with the question, methods, observed results, interpretation and limitations; sample metadata; supporting tables/figures; and the code plus exact commands used. Identify the model and input versions. Mark unfinished work clearly and retain conflicting evidence. The report coordinator will integrate this section with model evaluation and visualisation; no separate findings sheet is required.
+Defaults are coverage **20/50/100**, >=**2** groups per line, score displays **0.5/0.7/0.9**, and candidate differences with `|delta| >=0.2`, separated group score ranges and geometric-mean coverage ratio <=**2**. Average eligible runs within group, then equally weight groups. A stricter run adds `--require-all-replicates` with another output directory. These are descriptive choices, not calibrated chemical calls, significance tests or false discovery control.
+
+Future outputs include group/line means, separate pairwise/all-line common populations, all 21 pair tables, missingness, depth/threshold sensitivity, agreement, coverage diagnostics, a receipt and a paired-score plot. None of those real-score outputs exists from this integration. The bundled annotation has no motif column; motif summaries require a verified context join. Genomic mapping, expression adjustment, subsampling, formal differential testing, pathway analysis and Explorer display export are not implemented by this command.
+
+Describe replicated **predicted patterns**, retaining conflicting examples. Scores are not individual-read labels, modified-molecule fractions, other modification types or causal cell-line effects. Common-site selection, sequence preference, chemistry/batch, abundance and isoforms limit interpretation. Replicate-number labels do not independently prove separate laboratory preparations.
+
+The laptop can continue without more Member 4 code. Final selection, real signals/reference evidence, genuine predictions, analysis and display integration still require work within the fixed 23-run scope.

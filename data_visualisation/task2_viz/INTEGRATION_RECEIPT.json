@@ -1,0 +1,78 @@
+{
+  "integration_date": "2026-10-20",
+  "original_checksum_entries_verified": 159,
+  "checksum_mismatches": 0,
+  "changes": [
+    {
+      "path": ".gitignore",
+      "original_sha256": "d59f45e21cfb5555a2fe37f008629b4a1d874a38d74f4c9a890702181406a6b7",
+      "integrated_sha256": "369fc2151c164bafa9c739628ce9ebec407ab9f184d4f97002c9ad26aa58514e"
+    },
+    {
+      "path": "README.md",
+      "original_sha256": "a61c2702aa62761ce90612c2c75ee41eba15955970d218cb0f8449d930d0c45f",
+      "integrated_sha256": "70e41ef90331da9653e66aa69e10eda8bcadc08ded37de6fb35b6e5aa320aac4"
+    },
+    {
+      "path": "docs/data_contract.md",
+      "original_sha256": "15f9c4c63c517a60d3c355b6044d2b1981a64e9e1d85838fefd0ba93bdcbbe01",
+      "integrated_sha256": "5f1ab70e0a3dd13c23b1879c5451c9b34a68cc1a67fe9a92ca3b8137a6a119d6"
+    },
+    {
+      "path": "scripts/build_site_data.py",
+      "original_sha256": "41b98ade054a8d5dd17106fdd20edcca54e1f0f03c4b4f3f3ae7e9a8bd077192",
+      "integrated_sha256": "e2589c858fe1fb2ff64246e07ac1a3e9b3cf05dbe5e9c83faf3c7c1d25841440"
+    },
+    {
+      "path": "scripts/fetch_public_data.py",
+      "original_sha256": "491fe669ce3b018d820cd47ebc2cba4ff6bc5c19574dffec9353e27b9078d0ac",
+      "integrated_sha256": "f63782b6f15999aa253c1bd9fe5b3b7251fea3f26b83c9c71077e16974eafed1"
+    },
+    {
+      "path": "scripts/package_site.py",
+      "original_sha256": "ecf686fd610e00874991a747c6de15de558a4d3067184d896e2834cbb1b0eb91",
+      "integrated_sha256": "95c92bef2dee6b5ee4b57e82fb4ff80d4c49b10b8d2d7e5cbb9a07572b583128"
+    },
+    {
+      "path": "scripts/task2lib.py",
+      "original_sha256": "4aed583afda023450c4f12942b58d1e3390589a7e14e7d2988f1bb83cbc92581",
+      "integrated_sha256": "91f3d3e39ef44e286a81785e5ae93b3293d0bb70696e22db1e0b94288c41a355"
+    },
+    {
+      "path": "scripts/validate_task2_inputs.py",
+      "original_sha256": "d61e5df91993050edb7bbfbcbbdbe76295885dc710c4328b1f44ba0cee0fae1b",
+      "integrated_sha256": "35674c31b73e865dff9dc5a35105aed0ec87961235c04563bb8ff753823af515"
+    },
+    {
+      "path": "scripts/verify_rebuild.py",
+      "original_sha256": "eee1411bb7520371dfb7038e285cb0ff6e50c1c4c7d4bea03902864de66b7814",
+      "integrated_sha256": "695659cdfef78ed8887b5b38cf0344a9070a02ba1a3b0be7079b3488d92eadfd"
+    },
+    {
+      "path": "site/app.html",
+      "original_sha256": "7796b3bbe3fa6697cc81c3daaeed1e087bc5f93687988c89bed8884ce16c9466",
+      "integrated_sha256": "c26d755b28e446c183a4ccc756bf3a313b0b2a10fd769ec980385dd399e3aadc"
+    },
+    {
+      "path": "site/index.html",
+      "original_sha256": "cb942778d35a72e97d171b11c20e3152ca7316ec37218574fcbbd0c81be2e183",
+      "integrated_sha256": "79a8599023731e8be55158c5d6697f0dd8e1141a7f56e677e118bd84a6b6836c"
+    }
+  ],
+  "checks": {
+    "synthetic_regression_tests": 18,
+    "exit_code": 0,
+    "log_relative": "../outputs/integration_tests_2026-10-20.txt"
+  },
+  "not_run": [
+    "downloads",
+    "full_data_build",
+    "training",
+    "real_inference",
+    "browser",
+    "hosting"
+  ],
+  "mode": "coverage_only",
+  "final_build_requires_complete_delivery": true,
+  "download_scope": "Pinned versioned 23-run set; additional live run folders excluded"
+}

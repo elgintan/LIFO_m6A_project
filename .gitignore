@@ -49,6 +49,15 @@ dataset*.json.gz
 /model_elgin/reference_check_*/*
 !/model_elgin/reference_check_*/README.md
 /model_samuel/outputs/
+/sgnex_analysis/outputs/
+/data_visualisation/outputs/
+/data_visualisation/task2_viz/site/data/
+/data_visualisation/task2_viz/public_data/readcount/
+/data_visualisation/task2_viz/public_data/annotation/
+/data_visualisation/task2_viz/task2_inputs/
+/data_visualisation/task2_viz/delivered_*/
+/data_visualisation/task2_viz/team_inputs/member4_2026-10-19/transcript_aliases_checked.csv
+/data_visualisation/task2_viz/reports/transcript_aliases.csv
 *.tmp
 *.zip
 *.7z

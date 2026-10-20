@@ -1,0 +1,84 @@
+{
+  "scorer": "local_mirror",
+  "dataset": "data0",
+  "pooled": {
+    "n_sites": 121838,
+    "n_positives": 5475,
+    "roc_auc": 0.9217906365048721,
+    "pr_auc_trapezoid": 0.49807675032014864,
+    "average_precision": 0.4982710419817766,
+    "selection_score": 0.7099336934125104,
+    "precision_at_0.5": 0.6274572993876893,
+    "recall_at_0.5": 0.3556164383561644
+  },
+  "per_fold": [
+    {
+      "fold_id": 0,
+      "n_sites": 24358,
+      "n_positives": 1090,
+      "roc_auc": 0.9129998202043047,
+      "pr_auc_trapezoid": 0.49340429907201017,
+      "average_precision": 0.4941822619420125,
+      "selection_score": 0.7032020596381574,
+      "precision_at_0.5": 0.6241258741258742,
+      "recall_at_0.5": 0.3275229357798165
+    },
+    {
+      "fold_id": 1,
+      "n_sites": 24371,
+      "n_positives": 1097,
+      "roc_auc": 0.9205178779000655,
+      "pr_auc_trapezoid": 0.4789640731569888,
+      "average_precision": 0.47964992997209743,
+      "selection_score": 0.6997409755285271,
+      "precision_at_0.5": 0.6316614420062696,
+      "recall_at_0.5": 0.3673655423883318
+    },
+    {
+      "fold_id": 2,
+      "n_sites": 24387,
+      "n_positives": 1105,
+      "roc_auc": 0.9229144453933108,
+      "pr_auc_trapezoid": 0.519199565387035,
+      "average_precision": 0.5195509327671916,
+      "selection_score": 0.7210570053901729,
+      "precision_at_0.5": 0.6170839469808542,
+      "recall_at_0.5": 0.37918552036199094
+    },
+    {
+      "fold_id": 3,
+      "n_sites": 24378,
+      "n_positives": 1100,
+      "roc_auc": 0.9291995954041665,
+      "pr_auc_trapezoid": 0.5156295772060528,
+      "average_precision": 0.5161713448339588,
+      "selection_score": 0.7224145863051097,
+      "precision_at_0.5": 0.6608695652173913,
+      "recall_at_0.5": 0.34545454545454546
+    },
+    {
+      "fold_id": 4,
+      "n_sites": 24344,
+      "n_positives": 1083,
+      "roc_auc": 0.9238519902397869,
+      "pr_auc_trapezoid": 0.48778374251300644,
+      "average_precision": 0.48827515676894845,
+      "selection_score": 0.7058178663763967,
+      "precision_at_0.5": 0.6071987480438185,
+      "recall_at_0.5": 0.358264081255771
+    }
+  ],
+  "mean_fold": {
+    "roc_auc": 0.9218967458283268,
+    "pr_auc_trapezoid": 0.49899625146701865,
+    "average_precision": 0.4995659252568417,
+    "selection_score": 0.7104464986476727
+  },
+  "sample_sd_fold": {
+    "roc_auc": 0.005900145493193915,
+    "pr_auc_trapezoid": 0.017628952570758572,
+    "average_precision": 0.01752321771562974,
+    "selection_score": 0.010539595984056791
+  },
+  "primary_score": 0.7104464986476727
+}

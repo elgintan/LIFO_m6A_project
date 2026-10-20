@@ -1,10 +1,10 @@
 # Minimum shared rules for Elgin and Samuel
 
-**Accepted by Elgin on 15 October 2026. Status updated 19 October:** Elgin's
-matched neural comparison has completed all five folds. Samuel has submitted
-a candidate PR using the exact shared folds, and its saved data0 metrics
-reproduce with this scorer; the PR remains under review. The comparison
-contract below is unchanged.
+**Accepted by Elgin on 15 October 2026. Status updated 20 October:** Elgin's
+matched neural comparison has completed all five folds. Samuel's candidate PR
+was merged, its source is unpacked, and its saved data0 metrics reproduce with
+this scorer. Final selection and Task 2 predictions remain pending. The
+comparison contract below is unchanged; integration is not model selection.
 
 ## What must match
 

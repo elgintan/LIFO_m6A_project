@@ -1,0 +1,15 @@
+# Large public downloads: recreate with scripts/fetch_public_data.py
+public_data/readcount/
+public_data/annotation/
+# Incoming prediction hand-offs and local working copies
+task2_inputs/
+delivered_data/
+delivered_reports/
+.venv/
+__pycache__/
+.DS_Store
+# Generated real-data views and large received alias tables stay local.
+site/data/
+reports/transcript_aliases.csv
+team_inputs/member4_2026-10-19/transcript_aliases_checked.csv
+tests/.tmp/
