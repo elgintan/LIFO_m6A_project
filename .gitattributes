@@ -8,6 +8,7 @@ model_elgin/signal_case_review_results/** -text whitespace=cr-at-eol
 model_elgin/tools/review_signal_cases.py -text whitespace=cr-at-eol
 model_elgin/tools/train_read_cap.py -text whitespace=cr-at-eol
 model_elgin/tools/report_read_cap.py -text whitespace=cr-at-eol
+model_evaluation/simple_baseline_reference_2026_10_20/** -text whitespace=cr-at-eol
 model_elgin/tools/report_read_depth_stability.py -text whitespace=cr-at-eol
 # Handoff receipts identify exact bytes, including original line endings.
 model_samuel/artifact/** -text whitespace=cr-at-eol

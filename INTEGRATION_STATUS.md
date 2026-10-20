@@ -85,6 +85,13 @@ result exists yet. See [execution status](model_elgin/READ_CAP_STATUS.md).
 
 ## Recommendations for the remaining scientific choices
 
+The existing [logistic-regression reference](model_evaluation/simple_baseline_reference_2026_10_20/README.md)
+has now been rescored with the common evaluator: basicA mean S0.4759013017,
+selectedB0.4765922612. Exact data0 keys/genes/folds and all historical ranking
+metrics agree. This is a saved-score audit, not independent fitting replay;
+original per-fold models/source fingerprints are missing. Final reproduction
+integration and the separate required m6Anet benchmark remain pending.
+
 These are recommended analysis choices, not completed experiments or a new
 requirement that Samuel use the same features or architecture.
 

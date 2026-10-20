@@ -139,3 +139,17 @@ performance improvement, remain pending. No data1 tuning or final all-data0
 fit is part of this experiment. Logs, RNG/optimiser checkpoints, exact commands
 and measured resources are retained. The earlier statement that the hypothesis
 had not been trained describes the state before this newly authorised run.
+
+The local post-training report helper initially assumed an absent PID meant
+training had stopped. The original execution session and newer checkpoint
+timestamps showed that Windows tool invocations expose isolated process
+lists. The helper was corrected to use completion status and file progress;
+the failed attempt is retained. The immutable training wrapper was left
+unchanged, and its PID-based duplicate guard is explicitly limited to a shared
+process namespace. Confirm actual cessation before resuming a training job.
+
+AI also independently verified existing logistic-regression OOF scores using
+the common data0 scorer:121838 exact keys and all five historical fold metrics
+agree. This audited saved results rather than replaying historical training.
+Missing historical fold artifacts/source fingerprints and baseline pipeline
+integration are disclosed. No m6Anet installation, scoring or download occurred.
