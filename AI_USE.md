@@ -143,8 +143,10 @@ had not been trained describes the state before this newly authorised run.
 The local post-training report helper initially assumed an absent PID meant
 training had stopped. The original execution session and newer checkpoint
 timestamps showed that Windows tool invocations expose isolated process
-lists. The helper was corrected to use completion status and file progress;
-the failed attempt is retained. The immutable training wrapper was left
+lists. A later timestamp timeout also stopped the helper while training
+subsequently advanced. It now waits for authoritative completion/failure
+status without inferring failure from PID visibility or inactivity; both
+failed attempts are retained. The immutable training wrapper was left
 unchanged, and its PID-based duplicate guard is explicitly limited to a shared
 process namespace. Confirm actual cessation before resuming a training job.
 

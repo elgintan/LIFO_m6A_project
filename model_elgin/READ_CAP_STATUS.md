@@ -82,9 +82,11 @@ Later continuation: an ignored local `checks/after_cv.py` helper is waiting
 for this existing run and will execute the report command after full success.
 It starts no trainer. Its first attempt incorrectly treated a PID hidden by
 the Windows tool boundary as dead; the still-updating original session
-disproved that assumption. The corrected helper follows status/checkpoint
-progress and fails rather than claiming completion if progress becomes stale.
-Its attempt logs/status remain local. No model source or weights were changed.
+disproved that assumption. A subsequent timestamp-based timeout also stopped
+the helper while the original training later advanced. The final helper waits
+for authoritative full completion/failure status; it starts no training and
+does not infer failure from PID visibility or elapsed inactivity. Its attempt
+logs/status remain local. No model source or weights were changed.
 Do not also start a second report while this helper is reporting. The
 [simple-baseline saved-score audit](../model_evaluation/simple_baseline_reference_2026_10_20/README.md)
 is now complete; full baseline reproduction integration and m6Anet remain pending.
