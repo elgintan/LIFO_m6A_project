@@ -1,0 +1,7 @@
+{
+  "rule": "median_five_training_side_cutoffs",
+  "cutoff": 0.5103094577789307,
+  "status": "proposal_for_future_all_data0_fit_not_deployed",
+  "directly_evaluated_as_single_global_cutoff": false,
+  "calibrated_probability": false
+}

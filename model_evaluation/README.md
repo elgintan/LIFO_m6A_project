@@ -23,6 +23,12 @@ favours cap128 under the primary data0 criterion: S0.718715 versus cap32
 the [review](../model_elgin/SHORTFALL_REVIEW_2026_10_21.md) documents those tradeoffs
 and a proposed training-side threshold assessment. No cutoff or calibrated
 probability was fitted in that saved-score analysis.
+The later [training-side cutoff study](../model_elgin/THRESHOLD_REVIEW_2026_10_21.md)
+selected maximum-F1 cutoffs on each round's inner genes and assessed only its
+excluded outer genes. Pooled F1 changed0.535041->0.534624; mean-fold F1 was
+nearly unchanged. The0.510309 median is an unevaluated final-model proposal,
+not the cutoff used for those pooled results. Keep0.5 as the working rule;
+this is a development choice, not a biological threshold/calibration claim.
 No final model has been selected. Current comparisons and outstanding work
 are in [integration status](../INTEGRATION_STATUS.md). New all-data0 fitting
 for Elgin's eventual nominated pipeline and real SG-NEx predictions are

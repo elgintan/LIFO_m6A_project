@@ -46,7 +46,9 @@ The [completed shortfall/candidate comparison](read_cap_shortfalls_results/READM
 shows modest high-depth ranking gains, unchanged high-depth recall at0.5 and
 better raw-score reliability for Samuel. Cap128 leads the agreed data0 score;
 the [next-step review](SHORTFALL_REVIEW_2026_10_21.md) recommends threshold
-validation before another training change. A loss-weight3-versus1 ablation
+validation before another training change. That [threshold study is now complete](THRESHOLD_REVIEW_2026_10_21.md):
+pooled F1 declined slightly and mean-fold F1 barely changed, with worse high-depth
+recall. Retain0.5 as the working reporting cutoff. A loss-weight3-versus1 ablation
 is proposed, not trained or shown to improve performance.
 A new final refit, frozen data1 diagnostics and real SG-NEx predictions remain pending.
 

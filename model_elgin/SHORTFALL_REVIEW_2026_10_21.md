@@ -1,7 +1,9 @@
 # Model shortfalls and recommended next step
 
-21 October 2026. The analysis is completed; the next threshold experiment and
-any further neural training described here are proposals, not completed work.
+21 October 2026. The analysis is completed. This review records the proposed
+next steps before execution. The later [threshold study](THRESHOLD_REVIEW_2026_10_21.md)
+is now complete and found no convincing F1 gain; retain0.5 as the working
+reporting rule. Further neural training described here remains unperformed.
 See the [reproducible diagnostic results](read_cap_shortfalls_results/README.md).
 
 The cap128 neural pipeline is the leading candidate under our agreed data0

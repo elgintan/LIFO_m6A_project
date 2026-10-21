@@ -217,3 +217,25 @@ mean-fold score. The recommended training-side threshold study and a possible
 isolated positive-loss-weight3-to1 experiment are explicitly pending. Neither
 is recorded as an improvement already achieved. Public results contain
 aggregate tables/plots and receipts; site predictions/checkpoints stay local.
+
+## 21 October 2026: completed training-side threshold study
+
+The user authorised proceeding. The assistant fixed the design before inner
+inference, then implemented exact grouped-score maximum-F1 selection with
+higher-cutoff ties. Fourteen synthetic tests passed on the integrator's run
+in0.136s, including160 independent exact brute-force cases. Each trusted inner
+best checkpoint was verified against saved sources, normalisation, split and
+selected epoch; its all-read predictions reproduced the selected history.
+Cutoffs used only the appropriate inner labels and were applied to matching
+excluded-outer refit scores. No weights, training recipe, OOF scores or data1
+inputs changed; there was no new neural training or calibration fitting.
+
+The command exited0 in41.862s, with27.480s measured post-preflight work and
+71.031s process CPU. The policy reduced false positives by204 and true
+positives by78; pooled F1 declined slightly while mean-fold F1 barely rose.
+The assistant retained both summaries and the worse high-depth result.
+The five-cutoff median0.510309 is explicitly an unevaluated final-model
+proposal; it was not presented as the global cutoff behind the outer results.
+The working reporting rule remains0.5. Inner prediction CSVs, full selection
+curves, checkpoint receipts and logs remain local; only aggregate results,
+figures, source/design and compact hash provenance are published.

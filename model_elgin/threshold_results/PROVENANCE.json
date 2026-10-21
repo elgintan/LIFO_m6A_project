@@ -1,0 +1,23 @@
+{
+  "scope": "Completed data0 training-side cutoff selection and excluded-outer decision assessment",
+  "no_site_predictions_or_weights": true,
+  "excluded_local_outputs": [
+    "inner_selection_curves.csv"
+  ],
+  "source_directory": "model_elgin/outputs/threshold_v1",
+  "source_manifest_sha256": "2ce852a3fd1a525d75a2b0114502d5a1680416b9c41bc41b84530b82f398f328",
+  "final_median_status": "proposal_only_not_a_single_global_cutoff_validation",
+  "output_sha256": {
+    "selected_cutoffs.csv": "983e100de95f0f43318fd8b54113cc591490398a5b63c6eb03a918f9af068d6c",
+    "outer_metrics.csv": "f5c49f00c3b90aa48a43f3247c63d7c6a8d8574274e2567e4b930aae2552a7c5",
+    "pooled_metrics.csv": "9ab87be8c0e61a30e82e09a9e587e0902fda52a6d7ee1ce8e6d11d675911538f",
+    "fold_summary.csv": "64de1e3fb1ca1411714979bb1f51f9b501714aa409cedef24fb2cd14aaba2eaf",
+    "coverage_decisions.csv": "f48d4217ef836dbd07f1bef4b2b0cd82329d04a76330116ae13a7bd34414639d",
+    "cutoffs_and_outer_f1.png": "c206a6ffe1a5df9400f5e67aff64ff544e73e8a6f75eecb21121d514f35191cb",
+    "inner_selection_outer_tradeoff.png": "b50ac0f55332210795dcdf79713171b9e1b5b266b85f3eedfa778467606c9ac5",
+    "README.md": "8edffd2a07dd26ddbd000e0f5b94bcf5ce92decb349b5e4d6fec3663b6af187a",
+    "final_cutoff_proposal.json": "19f372aaa52a760ab55ef22afc9258cc1d6ff148a357c6ada76b92cb837f009b",
+    "analysis_manifest.json": "2ce852a3fd1a525d75a2b0114502d5a1680416b9c41bc41b84530b82f398f328",
+    "analysis_status.json": "3f592dc6bcbacc12fe0f4e26756753dbc3a4f2138f599e1093b6ec1490dce687"
+  }
+}

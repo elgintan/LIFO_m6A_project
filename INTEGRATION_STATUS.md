@@ -97,6 +97,14 @@ precision/specificity and better descriptive raw-score reliability at 0.5,
 while cap128 has higher mean ROC, PR and S. No cutoff was tuned or calibrator
 fitted. See the [review and bounded next-step recommendation](model_elgin/SHORTFALL_REVIEW_2026_10_21.md).
 
+The later [training-side threshold study](model_elgin/THRESHOLD_REVIEW_2026_10_21.md)
+is complete. Inner-selected cutoffs were assessed on matching excluded outer
+groups. Precision improved0.473929->0.482096, recall declined0.614247->0.600000,
+and pooled F1 declined0.535041->0.534624; mean-fold F1 barely changed. The
+200+read group also lost recall. Retain0.5 as the working reporting cutoff;
+the0.510309 median remains an unevaluated deployment proposal. No calibrated
+probability, new neural fit or changed ranking score is claimed.
+
 ## Recommendations for the remaining scientific choices
 
 The existing [logistic-regression reference](model_evaluation/simple_baseline_reference_2026_10_20/README.md)
@@ -113,12 +121,11 @@ requirement that Samuel use the same features or architecture.
    baseline comparisons, then nominate using shared data0 evidence. Keep
    data1 out of winner selection; disclose any subsequent use that changes it.
 2. **Calling threshold:** continue exporting full-precision continuous scores.
-   A fixed 0.5 is currently only a reporting cutoff. Select an operating cutoff
-   on data0 training/inner-validation genes. Start with maximum F1 as a balanced
-   precision/recall operating goal, show the full trade-off curve,
-   and freeze the rule before application. A practical cutoff selected on
-   already-tuned OOF scores is development evidence; an unbiased threshold
-   assessment needs fitting inside each outer-training boundary. Check
+   The completed maximum-F1 study selected cutoffs on data0 inner genes and
+   assessed them inside the declared outer boundaries. It did not justify
+   replacing0.5 with the learned policy. Keep0.5 as the working reporting rule,
+   preserve the alternative and show sensitivity before application. This is
+   development evidence, not a biological threshold or universal optimum. Check
    reliability before interpreting scores as numerical probabilities. Do not
    choose the cutoff from data1 or SG-NEx score distributions.
 3. **Task 2 primary comparison:** annotated-human common sites with at least
