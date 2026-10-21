@@ -166,3 +166,22 @@ running statuses were marked paused and lock files preserved under renamed
 pause filenames. Two backup-receipt bookkeeping mistakes were fixed without
 changing model files; failed logs and both ZIP attempts were retained. No
 training, inference or automatic report was restarted during preservation.
+
+## 21 October 2026: authorised checkpoint resume
+
+The user's explicit "continue" authorised resuming the paused experiment.
+The assistant checked saved source/input/settings/environment signatures,
+checkpoint hashes, finite weights, optimiser/RNG states and histories before
+launch. Two completed folds were reused; the new console log confirms third-fold
+inner training continued at epoch4. Frozen core sources, wrapper and experiment
+plan were not edited. New timestamped logs preserve the original console log.
+The same PowerShell job runs the saved-evidence reporter only after successful
+training; the older separate waiting helper remains stopped.
+
+The original interrupted fold2 inner exit receipt had not been flushed. Its
+actual epoch3 checkpoint resource snapshot was recovered in a separate record,
+explicitly marked as a lower bound omitting unmeasured work after that epoch.
+The reporter now preserves this provenance and counts that snapshot once,
+separately from resumed invocation measurements, without adding cumulative
+checkpoint totals again. All15 report tests passed on the integrator's rerun
+in15.648s. Full five-fold metrics and scientific review are still pending.

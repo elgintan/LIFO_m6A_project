@@ -1,17 +1,32 @@
 # Training read-cap experiment: execution status
 
-**Latest: paused by the user on20October2026.** Training and the waiting
-report helper have stopped. Folds0/1 are complete; fold2 inner checkpoint
-epoch3 was successfully deserialised with optimiser/RNG state, finite weights
-and matching history. Resume continues at epoch4. All original files remain;
-a117-file ZIP backup was verified member-by-member. Local pause receipts and
-`outputs/read_cap_v1/PAUSED.md` record the backup and exact resume command.
-No automatic restart/report is active. Resume only on explicit user request,
-and write a new timestamped console log to preserve the original log.
-Wrapper, immutable plan, core sources and environment remain unchanged.
+**Latest: resumed at the user's request on 21 October 2026, 09:11 SGT.**
+Training is running. Completed outer folds0/1 were reused and fold2 inner
+training continued at epoch4, as confirmed by the new console log. This is
+a dated snapshot, not a live progress indicator; no full candidate score or
+improvement is available yet. The remaining-time estimate at resume was
+60–90 minutes, conditional on early stopping and laptop speed.
+
+Before launch, source/settings/environment signatures and all five retained
+last-checkpoint hashes matched the pause receipts. Weights, optimiser/RNG
+states, embedded best weights and histories passed recovery checks. Wrapper,
+immutable plan and core training sources remain unchanged. Original logs and
+the verified117-file pause ZIP remain preserved; new timestamped logs are
+used for the resumed invocation.
+
+The same local PowerShell job runs the comparison reporter only if training
+finishes successfully. There is no separate waiting helper to restart.
+`checks/resume_pipeline_status.json` records this job's phase and exit codes.
+The older `checks/after_cv.py` helper remains stopped. No second trainer or
+reporter should be launched while this job is active.
+
+**Historical pause, 20 October:** both original sessions stopped at the user's
+request with folds0/1 complete and fold2 inner epoch3 saved. The verified ZIP,
+pause receipts and `outputs/read_cap_v1/PAUSED.md` preserve that recovery point;
+their paused status is superseded by the explicit resume above.
 
 **20 October 2026, 17:10 SGT snapshot: full five-fold cap128 training is running.**
-The running snapshot below is historical and superseded by the pause above.
+The running snapshot below is historical; the latest resume is recorded above.
 This is a dated status record, not a live progress indicator. No completed
 candidate score or improvement is available at this snapshot.
 
@@ -35,6 +50,13 @@ threshold selection is part of this run.
   A prior local attempt failed because the sandbox's default temporary folder
   was unwritable; workspace-local TMP/TEMP/TMPDIR/MPLCONFIGDIR fixed the test
   environment. Training was unaffected. Both logs are retained.
+- After the pause, fifteen report-contract tests passed in15.648s on the
+  integrator's21October run. They also verify that a recovered resource
+  snapshot is disclosed as a lower bound and counted once, alongside the
+  separate resumed invocation. Fold2 inner epoch3 retained88.1514156 wall
+  seconds and329.921875 process CPU seconds. Its original exit receipt was
+  not flushed; unmeasured work after that checkpoint and before interruption
+  is omitted. No exact total for the lost work is claimed.
 - Actual whole-gene smoke:3328 data0 sites, fold0, two inner and two refit
   epochs. CLI27.3477181s, exit0; analysis timer13.0849585s, process CPU22.4375s,
   sampled process-tree peak558.574MiB. This is software evidence, not CV quality.
@@ -75,7 +97,8 @@ in another invocation does not prove the worker stopped. Confirm the original
 execution session has ended before resuming; never start a second copy merely
 because another tool's process list cannot see the first.
 
-After all five folds complete, run:
+The resumed job is already queued to run the following after all five folds
+complete. For a later manual replay after that job has ended, use:
 
 ```powershell
 ../advanced_model/.venv/Scripts/python.exe -B model_elgin/tools/report_read_cap.py
@@ -86,18 +109,17 @@ The reporter refuses partial evidence and writes the actual comparison under
 full site predictions, checkpoints and logs remain local. Record negative or
 inconclusive results as carefully as gains. Required baseline/m6Anet checks,
 final model/calling-rule selection and real23-run SG-NEx analysis remain
-separate work. The saved logistic-regression reference is being audited so
-we can reuse valid evidence instead of assuming a missing baseline.
+separate work. The saved logistic-regression reference audit is complete;
+its limits are disclosed in the linked results below.
 
-Later continuation: an ignored local `checks/after_cv.py` helper is waiting
-for this existing run and will execute the report command after full success.
-It starts no trainer. Its first attempt incorrectly treated a PID hidden by
+Historical continuation: an ignored local `checks/after_cv.py` helper waited
+for the20October run. It was stopped with training and is not active after
+the21October resume. Its first attempt incorrectly treated a PID hidden by
 the Windows tool boundary as dead; the still-updating original session
 disproved that assumption. A subsequent timestamp-based timeout also stopped
-the helper while the original training later advanced. The final helper waits
-for authoritative full completion/failure status; it starts no training and
-does not infer failure from PID visibility or elapsed inactivity. Its attempt
-logs/status remain local. No model source or weights were changed.
-Do not also start a second report while this helper is reporting. The
-[simple-baseline saved-score audit](../model_evaluation/simple_baseline_reference_2026_10_20/README.md)
+the helper while the original training later advanced. The final helper waited
+for authoritative full completion/failure status; it started no training and
+did not infer failure from PID visibility or elapsed inactivity. Its attempt
+logs/status remain local. No model source or weights were changed by those
+helper corrections. The [simple-baseline saved-score audit](../model_evaluation/simple_baseline_reference_2026_10_20/README.md)
 is now complete; full baseline reproduction integration and m6Anet remain pending.

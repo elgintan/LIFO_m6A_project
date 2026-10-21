@@ -1,5 +1,6 @@
 """Synthetic saved-evidence contract tests; no real training, labels or inference."""
 from copy import deepcopy
+import csv
 import importlib.util
 import json
 from pathlib import Path
@@ -262,6 +263,49 @@ class SavedEvidenceChecks(unittest.TestCase):
         for rel, digest in manifest["output_sha256"].items():
             self.assertEqual(REPORT.sha256(output / rel), digest)
         self.assertIn("Cap32 has the higher", (output / "comparison.md").read_text())
+
+    def test_recovered_pause_snapshot_is_lower_bound_and_counted_once(self):
+        # The normal fold2/inner invocation stands for the later resumed work.
+        # Add its earlier interrupted attempt's retained checkpoint snapshot;
+        # complete.json contains deliberately huge cumulative values to detect
+        # accidental addition of those snapshots a second time.
+        path = self.new_root / "none/fold2/inner/invocation_recovered_pause.json"
+        receipt = dict(status="interrupted_or_failed", record_kind=REPORT.RECOVERED_RESOURCE_KIND,
+                       checkpoint_sha256="d93d4ecbf7b868b917a0df48c73bd443121932262bd8556df701036e08c21a25",
+                       checkpoint_epoch=3, resource_snapshot_index=0,
+                       original_exit_receipt_absent=True, excludes_unfinished_work=True,
+                       resources=dict(wall_seconds=88.15141560000484, cpu_seconds=329.921875,
+                                      sampled_peak_process_tree_rss_mib=958.30078125,
+                                      sampling_interval_seconds=.2, sampling_errors=0))
+        REPORT.write_json(path, receipt)
+        output = Path(self.temp.name) / "recovered_comparison"
+        with mock.patch.object(REPORT, "current_source_evidence", return_value={}):
+            result = REPORT.main(["--baseline-cv", str(self.base_root), "--candidate-cv", str(self.new_root), "--output-dir", str(output)])
+        self.assertEqual(result, 0)
+        manifest = json.loads((output / "comparison_manifest.json").read_text())
+        accounting = manifest["fitting_resource_accounting"]
+        self.assertTrue(accounting["recorded_fitting_totals_include_lower_bounds"])
+        self.assertEqual(accounting["recovered_snapshot_count"], 1)
+        self.assertEqual(accounting["recovered_checkpoint_snapshots"][0]["checkpoint_sha256"], receipt["checkpoint_sha256"])
+        with (output / "resources.csv").open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+        recovered = [row for row in rows if row["record_kind"] == REPORT.RECOVERED_RESOURCE_KIND]
+        self.assertEqual(len(recovered), 1)
+        self.assertEqual(recovered[0]["checkpoint_epoch"], "3")
+        self.assertEqual(recovered[0]["original_exit_receipt_absent"], "True")
+        resumed_and_snapshot = [row for row in rows if row["model"] == "cap128" and row["fold_id"] == "2" and row["fit_stage"] == "inner"]
+        self.assertEqual(len(resumed_and_snapshot), 2)
+        self.assertAlmostEqual(sum(float(row["wall_seconds"]) for row in resumed_and_snapshot), 98.15141560000484)
+        self.assertAlmostEqual(sum(float(row["wall_seconds"]) for row in rows), 298.15141560000484)
+        report = (output / "comparison.md").read_text()
+        self.assertIn("contain lower bounds", report)
+        self.assertIn("Unmeasured work after epoch 3 and before the pause is omitted", report)
+        # A copied receipt with a different filename must not double-count the
+        # same checkpoint/snapshot identity merely because both files hash OK.
+        REPORT.write_json(path.with_name("invocation_duplicate_recovery.json"), receipt)
+        data = self.load()
+        with self.assertRaisesRegex(ValueError, "Duplicate recovered"):
+            REPORT.attach_resource_provenance(data, self.roots, self.evidence)
 
 
 if __name__ == "__main__":

@@ -37,6 +37,7 @@ PROVENANCE = {"training_entrypoint_sha256": WRAPPER_KEY,
 # no Torch import or model deserialisation is needed to reproduce the digest.
 TRAINING_VERSIONS = dict(python="3.12.14", torch="2.14.1+cpu", numpy="2.5.3",
                          pandas="3.0.6", sklearn="1.9.1")
+RECOVERED_RESOURCE_KIND = "recovered_checkpoint_snapshot_lower_bound"
 SPEC = importlib.util.spec_from_file_location("saved_cv_summary", Path(__file__).with_name("summarize_context_cv.py"))
 SAVED = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(SAVED)
@@ -202,6 +203,55 @@ def validate_training_signatures(data, roots, evidence):
                         f"Saved fit signature differs from exact recipe/environment: {name}/fold{fold}/{stage}")
 
 
+def attach_resource_provenance(data, roots, evidence):
+    """Retain recovery disclosures dropped by the legacy saved-results loader.
+
+    This reads JSON metadata only. A recovered checkpoint fingerprint identifies
+    the preserved source of a snapshot; no checkpoint is deserialised here.
+    """
+    for name in NAMES:
+        snapshots = set()
+        for row in data[name]["resources"]:
+            relative = row["invocation"]
+            before = evidence[name].get(relative)
+            require(before is not None, "Resource invocation was not validated by the saved-results loader")
+            raw = SAVED.read_json(roots[name] / relative, evidence[name], roots[name])
+            require(evidence[name][relative] == before, "Resource invocation changed after validation")
+            require(raw["status"] == row["status"] and SAVED.resource_record(raw["resources"]) ==
+                    {key: row[key] for key in SAVED.resource_record(raw["resources"])},
+                    "Resource numbers/status changed after validation")
+            kind = raw.get("record_kind", "measured_invocation")
+            require(kind in ("measured_invocation", RECOVERED_RESOURCE_KIND), "Unknown resource record kind")
+            row.update(record_kind=kind, checkpoint_sha256="", checkpoint_epoch="", resource_snapshot_index="",
+                       original_exit_receipt_absent=False, excludes_unfinished_work=False)
+            if kind == RECOVERED_RESOURCE_KIND:
+                digest = raw["checkpoint_sha256"]
+                require(isinstance(digest, str) and len(digest) == 64 and
+                        all(char in "0123456789abcdef" for char in digest), "Invalid recovered checkpoint SHA256")
+                SAVED.integer(raw["checkpoint_epoch"], "recovered checkpoint epoch", minimum=1)
+                SAVED.integer(raw["resource_snapshot_index"], "recovered resource snapshot index")
+                require(raw["status"] == "interrupted_or_failed" and
+                        raw["original_exit_receipt_absent"] is True and raw["excludes_unfinished_work"] is True,
+                        "Recovered snapshot must disclose an absent exit receipt and omitted unfinished work")
+                identity = (row["fold_id"], row["fit_stage"], digest, raw["resource_snapshot_index"])
+                require(identity not in snapshots, "Duplicate recovered checkpoint resource snapshot")
+                snapshots.add(identity)
+                row.update({key: raw[key] for key in ("checkpoint_sha256", "checkpoint_epoch", "resource_snapshot_index",
+                            "original_exit_receipt_absent", "excludes_unfinished_work")})
+
+
+def resource_accounting(rows):
+    recovered = [dict(row) for row in rows if row.get("record_kind") == RECOVERED_RESOURCE_KIND]
+    return dict(recovered_snapshot_count=len(recovered),
+                recorded_fitting_totals_include_lower_bounds=bool(recovered),
+                recovered_checkpoint_snapshots=recovered,
+                disclosure=("Recorded fitting totals include recovered checkpoint snapshot lower bounds. "
+                            "Unmeasured work after the identified checkpoint epochs and before interruption is omitted. "
+                            "Each recovered snapshot and each resumed invocation is counted once; "
+                            "complete.json cumulative snapshots are not added again."
+                            if recovered else "No recovered checkpoint lower-bound snapshots were found; totals include the retained per-fit invocation records only."))
+
+
 def calculate_tables(data):
     metrics = []
     for name in NAMES:
@@ -323,11 +373,16 @@ def report_text(data, tables, command):
               f"Both recipes preserve width {recipe['config']['width']}, dropout {recipe['config']['dropout']}, learning rate {recipe['config']['lr']}, weight decay {recipe['config']['weight_decay']}, positive loss weight {recipe['config']['pos_weight']}, seed {recipe['seed']}, batch size {recipe['batch_size']}, {recipe['threads']} CPU threads, maximum {recipe['max_epochs']} inner epochs and patience {recipe['patience']}.", "",
               "The same immutable five gene groups are used in both runs. For assessment fold f, inner validation is (f+1)%5: fit the other three groups, select the duration on the inner group, start fresh weights and refit the four non-assessment groups for that duration, then assess f. Fitted normalisation and references stay inside the fitting boundary. Selected durations may differ because each candidate follows the same inner-selection rule. Existing original-control fits are reused as matched evidence; the reporter does not retrain them.", "",
               "Every saved fitting signature was reconstructed using the exact original recipe and the same declared training library versions: `" + json.dumps(TRAINING_VERSIONS, sort_keys=True) + "`. This checks retained metadata against its digest without loading weights; it does not independently replay training.", "",
-              "## Measured computation", "", "| Training cap | Completed fits | Recorded invocations | Interrupted/failed attempts | Summed fitting wall seconds | Summed process CPU seconds | Largest sampled process-tree RSS MiB |", "|---|---:|---:|---:|---:|---:|---:|"]
+              "## Measured computation", "", "| Training cap | Completed fits | Resource records | Interrupted/failed records | Recovered lower-bound snapshots | Recorded fitting wall seconds | Recorded process CPU seconds | Largest sampled process-tree RSS MiB |", "|---|---:|---:|---:|---:|---:|---:|---:|"]
     for name in NAMES:
         rows = [row for row in tables["resources"] if row["model"] == name]
-        lines.append(f"| {name} | 10 | {len(rows)} | {sum(row['status'] != 'complete' for row in rows)} | {sum(row['wall_seconds'] for row in rows):.3f} | {sum(row['cpu_seconds'] for row in rows):.3f} | {max(row['sampled_peak_process_tree_rss_mib'] for row in rows):.3f} |")
-    lines += ["", "Each per-fit invocation is counted once, including recorded interrupted attempts. Cumulative checkpoint/complete.json resource snapshots are not added again. Wall sums measure retained fitting work, rather than end-to-end elapsed time; imports, startup, cache hashing, outer predictions and orchestration outside fit timers are excluded. Memory is the largest sampled process-tree RSS, not an additive or exact operating-system peak. Missing unrecorded failures cannot be reconstructed. Sampling intervals/errors are retained in resources.csv; reporter resources are separate in the manifest.", "",
+        lines.append(f"| {name} | 10 | {len(rows)} | {sum(row['status'] != 'complete' for row in rows)} | {sum(row.get('record_kind') == RECOVERED_RESOURCE_KIND for row in rows)} | {sum(row['wall_seconds'] for row in rows):.3f} | {sum(row['cpu_seconds'] for row in rows):.3f} | {max(row['sampled_peak_process_tree_rss_mib'] for row in rows):.3f} |")
+    accounting = resource_accounting(tables["resources"])
+    if accounting["recovered_snapshot_count"]:
+        lines += ["", "**These recorded fitting totals contain lower bounds.** " + accounting["disclosure"], ""]
+        for row in accounting["recovered_checkpoint_snapshots"]:
+            lines.append(f"- {row['model']}, outer fold {row['fold_id']} {row['fit_stage']}: recovered the snapshot through checkpoint epoch {row['checkpoint_epoch']} (snapshot index {row['resource_snapshot_index']}; checkpoint SHA256 `{row['checkpoint_sha256']}`). Its original exit receipt is absent. The retained snapshot contributes {row['wall_seconds']:.9f} wall seconds and {row['cpu_seconds']:.9f} process CPU seconds once. Unmeasured work after epoch {row['checkpoint_epoch']} and before the pause is omitted; subsequent resumed invocation records are included separately.")
+    lines += ["", "Each per-fit invocation is counted once, including recorded interrupted attempts. A recovered checkpoint snapshot replaces an absent original exit receipt as a disclosed lower bound; it is not a second measurement of a resumed invocation. Cumulative checkpoint/complete.json resource snapshots are not added again. Wall sums measure retained fitting work, rather than end-to-end elapsed time; imports, startup, cache hashing, outer predictions and orchestration outside fit timers are excluded. Memory is the largest retained sampled process-tree RSS, not an additive or exact operating-system peak; any unmeasured peak during omitted work is unknown. Missing unrecorded failures cannot be reconstructed. Sampling intervals/errors, record kinds and checkpoint provenance are retained in resources.csv; reporter resources and the recovery disclosure are separate in the manifest.", "",
               "## Limits and remaining work", "",
               "- Five fold differences share overlapping training data. Their sample SD is descriptive, not a confidence interval or five independent biological experiments. One training seed does not establish seed stability or statistical significance.",
               "- Repeated data0 development and a previously selected architecture limit generalisation claims. Saved hashes and audits corroborate provenance; this reporter is not an independent replay of training or label-based re-evaluation.",
@@ -362,6 +417,7 @@ def main(argv=None):
             data = {name: SAVED.load_mode(roots[name], "none", evidence[name]) for name in NAMES}
             validate_pairs(data, roots, evidence)
             validate_training_signatures(data, roots, evidence)
+            attach_resource_provenance(data, roots, evidence)
             source_evidence = current_source_evidence(data["cap128"]["recipe"])
             tables = calculate_tables(data)
             require(all(sha256(roots[name] / rel) == digest for name in NAMES for rel, digest in evidence[name].items()),
@@ -390,6 +446,7 @@ def main(argv=None):
                         reads_labels=False, reads_data1=False, loads_model_weights=False, performs_fitting_or_inference=False,
                         invocation=invocation, reporter_resources=monitor.record,
                         paired_delta_summary=tables["paired_summary"], input_sha256=evidence,
+                        fitting_resource_accounting=resource_accounting(tables["resources"]),
                         current_training_source_evidence=source_evidence,
                         output_sha256={path.name: sha256(path) for path in written},
                         reporter_sha256=tool_hash, saved_verifier_sha256=verifier_hash,

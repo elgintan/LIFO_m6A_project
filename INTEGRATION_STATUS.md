@@ -79,9 +79,10 @@ leaves flank differences. Unusual cases include both false alarms and correct
 negative calls. No data1 signal/label file, fitting, inference, deletion or
 cutoff selection occurred. Next proposed neural experiment: cap128 training
 versus the saved cap32 original-feature control, with all-read inference and
-the same full-data0 scoring. That experiment is implemented and paused by
-the user after two complete folds and third-fold inner epoch3. Verified
-checkpoints, logs and a backup are preserved; no complete candidate performance
+the same full-data0 scoring. That experiment resumed at the user's request on
+21October after recovery checks: two complete folds were reused and third-fold
+inner training continued at epoch4. Checkpoints, old/new logs and the pause
+backup are preserved; no complete candidate performance
 result exists yet. See [execution status](model_elgin/READ_CAP_STATUS.md).
 
 ## Recommendations for the remaining scientific choices

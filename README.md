@@ -4,7 +4,7 @@ NUS DSA4262 team project: understand nanopore event data, compare two trained
 candidate pipelines using shared gene-grouped validation, and apply one
 selected model to investigate predicted m6A patterns across cell lines.
 
-**20 October 2026:** Elgin is consolidating the received work on one laptop.
+**21 October 2026:** Elgin is consolidating the received work on one laptop.
 Both candidates have real data0 validation evidence; final model selection,
 validated calling cutoff and real whole-run Task 2 predictions remain pending.
 The current explorer is **coverage-only**. The older simulated prototype is
@@ -24,7 +24,8 @@ archival and is not biological evidence.
    The [completed signal-case review](model_elgin/signal_case_review_results/README.md)
    connects Member1's unusual sites and matched high-coverage errors to raw
    read plots. The [new cap128 training experiment](model_elgin/READ_CAP_STATUS.md)
-   is paused at the user's request, with verified checkpoints and logs;
+   resumed at the user's request on 21 October, reusing two complete folds
+   and continuing the third from its saved checkpoint. Training is running;
    its completed comparison remains pending.
 4. Continue [SG-NEx analysis](sgnex_analysis/README.md) and the
    [current explorer pipeline](data_visualisation/README.md) after selected-model
