@@ -140,10 +140,10 @@ The read-subsampling diagnostic has now completed; all-read inference performed
 best on the matched cohort. See [actual results](read_depth_stability_results/README.md).
 The [raw-signal case review](signal_case_review_results/README.md) also completed:
 36 Member1 data0 entries, matched high-depth errors and eight read-level panels.
-The full five-fold [cap128 experiment resumed on21October](READ_CAP_STATUS.md),
-reusing two complete folds and continuing fold2 inner training at epoch4.
-The full result remains pending. It changes training reads per
-bag from32 to128; this remains a testable hypothesis, not an observed gain.
+The full five-fold [cap128 experiment completed on 21 October](read_cap_results/README.md),
+after reusing two complete folds and continuing from a verified checkpoint.
+Changing training reads per bag from32 to128 raised mean-fold S from0.717642
+to0.718715, a small development gain; fixed0.5-cutoff metrics were slightly worse.
 
 1. **Context-relative features:** do training-only, sequence-relative signal
    features improve held-out-gene development performance beyond the existing

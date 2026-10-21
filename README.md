@@ -23,10 +23,10 @@ archival and is not biological evidence.
    not a newly trained model or replacement full-CV score.
    The [completed signal-case review](model_elgin/signal_case_review_results/README.md)
    connects Member1's unusual sites and matched high-coverage errors to raw
-   read plots. The [new cap128 training experiment](model_elgin/READ_CAP_STATUS.md)
-   resumed at the user's request on 21 October, reusing two complete folds
-   and continuing the third from its saved checkpoint. Training is running;
-   its completed comparison remains pending.
+   read plots. The [cap128 training experiment](model_elgin/read_cap_results/README.md)
+   completed on 21 October: mean-fold S rose from 0.717642 to 0.718715,
+   with a positive change in all five folds. This is a small development
+   gain; fixed 0.5-cutoff classification metrics were slightly worse.
 4. Continue [SG-NEx analysis](sgnex_analysis/README.md) and the
    [current explorer pipeline](data_visualisation/README.md) after selected-model
    predictions are available. Their supplied scripts are now integrated.

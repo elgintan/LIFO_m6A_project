@@ -1,0 +1,18 @@
+{
+  "scope": "Saved full-population data0 cap32 versus cap128 gene-grouped CV development comparison only",
+  "source_manifest_sha256": "11fe0a4c3fa4c6d1f297a0701088c3dff54061119d9afb556f93c6e916b01c0b",
+  "source_status_sha256": "9c08985c8de394bac575cce2bdc81e033a71e182a16eec8ee2d147bfc5375b27",
+  "source_directory": "model_elgin/outputs/read_cap_v1/comparison",
+  "note": "Exact aggregate report/table/plot copies; no site-level data or weights. Full input receipts remain local.",
+  "training_command": "../advanced_model/.venv/Scripts/python.exe -B -u model_elgin/tools/train_read_cap.py --phase cv",
+  "report_command": "../advanced_model/.venv/Scripts/python.exe -B model_elgin/tools/report_read_cap.py",
+  "output_sha256": {
+    "README.md": "89931239a458a1eab2236e6197c0dcf1d04288d7448f111b42f94678f7e4ad1f",
+    "metrics.csv": "a73a3928d4bb2603c0c0a5bd27d2f8182a3b75777524c845db33cb2fca7eea11",
+    "paired_delta_summary.csv": "35294e5c25c0e8c8506f2f70d80f9b0faa5bdc26b4d4f9f865ef5f33b4c5e946",
+    "paired_fold_deltas.csv": "a7d67664ce718c992158013700f3e8516a2bec87d0e4257f1a8733c30f8d3b8e",
+    "resources.csv": "e879c434735f48645b6f74f4b322a69d2744206005d892cedc2faf31a67e2cc6",
+    "paired_fold_scores.png": "b007d66088efb86131090941f4f3069bfd3713fc054f8cf826665ea95d5bdd4e",
+    "mean_ranking_metrics.png": "03c31e3cb769d465ccc8d0ddcdf8e343b3e2e2db291d4e203a3e619cbb910c43"
+  }
+}

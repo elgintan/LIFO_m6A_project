@@ -1,7 +1,24 @@
 # Training read-cap experiment: execution status
 
-**Latest: resumed at the user's request on 21 October 2026, 09:11 SGT.**
-Training is running. Completed outer folds0/1 were reused and fold2 inner
+**Latest: completed on 21 October 2026, 10:03 SGT.** Training and the queued
+report both exited 0. Full shared five-fold data0 assessment covers 121,838 sites
+and 5,475 positive labels. Cap128 mean ROC/PR/S is 0.931828/0.505601/0.718715,
+versus cap32's 0.931123/0.504160/0.717642. The mean S change is +0.0010727781
+and positive in all five folds. This small measured development gain does
+not establish statistical significance or universal superiority. At the
+unvalidated 0.5 reporting cutoff, pooled precision/recall/F1/accuracy were
+slightly worse. See the [checked tables, plots and limitations](read_cap_results/README.md).
+
+The resumed training command took 3,142.673 seconds (52 minutes 23 seconds), plus
+9.238 seconds for the report. These are resumed-job elapsed times, excluding
+the previous day's completed work and the overnight pause. Reported total
+retained cap128 fitting work is 5,940.261 seconds and contains a disclosed
+recovered lower-bound snapshot; it omits unmeasured pre-pause unfinished work.
+No final all-data0 fit, new data1 evaluation or SG-NEx inference occurred.
+All checkpoints, logs and the original pause backup remain retained.
+
+**Historical resume: 21 October 2026, 09:11 SGT.**
+Training was running at this snapshot. Completed outer folds0/1 were reused and fold2 inner
 training continued at epoch4, as confirmed by the new console log. This is
 a dated snapshot, not a live progress indicator; no full candidate score or
 improvement is available yet. The remaining-time estimate at resume was
@@ -14,11 +31,11 @@ immutable plan and core training sources remain unchanged. Original logs and
 the verified117-file pause ZIP remain preserved; new timestamped logs are
 used for the resumed invocation.
 
-The same local PowerShell job runs the comparison reporter only if training
-finishes successfully. There is no separate waiting helper to restart.
-`checks/resume_pipeline_status.json` records this job's phase and exit codes.
+The same local PowerShell job ran the comparison reporter after training
+finished successfully. There is no active waiting helper or trainer.
+`checks/resume_pipeline_status.json` records completion and both exit codes.
 The older `checks/after_cv.py` helper remains stopped. No second trainer or
-reporter should be launched while this job is active.
+reporter was launched while this job was active.
 
 **Historical pause, 20 October:** both original sessions stopped at the user's
 request with folds0/1 complete and fold2 inner epoch3 saved. The verified ZIP,

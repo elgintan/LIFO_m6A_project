@@ -79,11 +79,13 @@ leaves flank differences. Unusual cases include both false alarms and correct
 negative calls. No data1 signal/label file, fitting, inference, deletion or
 cutoff selection occurred. Next proposed neural experiment: cap128 training
 versus the saved cap32 original-feature control, with all-read inference and
-the same full-data0 scoring. That experiment resumed at the user's request on
-21October after recovery checks: two complete folds were reused and third-fold
-inner training continued at epoch4. Checkpoints, old/new logs and the pause
-backup are preserved; no complete candidate performance
-result exists yet. See [execution status](model_elgin/READ_CAP_STATUS.md).
+the same full-data0 scoring. That experiment completed on 21 October after a
+verified checkpoint resume. Cap128 mean ROC/PR/S is0.931828/0.505601/0.718715;
+mean S improved by0.00107278, positive in all five folds. Fixed0.5-cutoff
+precision, recall and F1 were slightly worse. Checkpoints, logs and the pause
+backup are preserved. See [checked results](model_elgin/read_cap_results/README.md)
+and [execution history](model_elgin/READ_CAP_STATUS.md). This supplies no new
+data1 result, validated threshold, final all-data0 fit or SG-NEx predictions.
 
 ## Recommendations for the remaining scientific choices
 

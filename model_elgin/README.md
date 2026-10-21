@@ -37,11 +37,11 @@ and all 36 Member1 data0 unusual-site entries were checked. Eight case panels
 show signal overlap, context-match limitations and both missed positives and
 false alarms. This descriptive evidence changes no weights or full-CV scores.
 The next neural hypothesis is a larger training read cap (32 -> 128), with
-all-read inference and other settings fixed. Its full five-fold run started
-on20October after successful checks and timing trials; no complete candidate
-result is available yet. After a user-requested pause, training resumed on
-21October: two complete folds were reused and third-fold inner training
-continued from epoch4. See [execution status](READ_CAP_STATUS.md).
+all-read inference and other settings fixed. Its full five-fold run completed
+on 21 October after a verified checkpoint resume. Mean ROC/PR/S is now
+**0.931828/0.505601/0.718715**: a small S gain of 0.00107278, positive in all
+five folds. Fixed 0.5-cutoff classification metrics were slightly worse.
+See [checked comparison](read_cap_results/README.md) and [execution history](READ_CAP_STATUS.md).
 A new final refit, frozen data1 diagnostics and real SG-NEx predictions remain pending.
 
 ## Available starting point

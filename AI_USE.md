@@ -185,3 +185,13 @@ The reporter now preserves this provenance and counts that snapshot once,
 separately from resumed invocation measurements, without adding cumulative
 checkpoint totals again. All15 report tests passed on the integrator's rerun
 in15.648s. Full five-fold metrics and scientific review are still pending.
+
+The resumed training subsequently finished at 10:03 SGT with exit0; the queued
+report also exited0. All121,838data0 sites and five folds are included. Cap128
+mean S is0.7187146070 versus cap32's0.7176418289, with all five paired S
+changes positive. Precision, recall, F1 and accuracy at the unvalidated0.5
+reporting cutoff were slightly worse. The assistant checked report/plot hashes
+and viewed both figures; aggregate report, tables, resource limits and plots
+are retained in `model_elgin/read_cap_results/`. No additional fit or inference
+was launched to check completion, and no final superiority or data1/SG-NEx
+result is inferred from these data0 development results.
