@@ -27,6 +27,10 @@ archival and is not biological evidence.
    completed on 21 October: mean-fold S rose from 0.717642 to 0.718715,
    with a positive change in all five folds. This is a small development
    gain; fixed 0.5-cutoff classification metrics were slightly worse.
+   The [completed subgroup/Samuel comparison](model_elgin/read_cap_shortfalls_results/README.md)
+   supports cap128 as the leading data0 candidate, with remaining high-depth
+   misses and differing score reliability. The [recommended next step](model_elgin/SHORTFALL_REVIEW_2026_10_21.md)
+   is training-side cutoff validation; no new cutoff or loss-weight fit exists yet.
 4. Continue [SG-NEx analysis](sgnex_analysis/README.md) and the
    [current explorer pipeline](data_visualisation/README.md) after selected-model
    predictions are available. Their supplied scripts are now integrated.

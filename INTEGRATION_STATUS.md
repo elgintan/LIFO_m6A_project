@@ -1,4 +1,4 @@
-# Integration and remaining work — 20 October 2026
+# Integration and remaining work — 21 October 2026
 
 Elgin now coordinates prediction, analysis, visualisation and report assembly
 on one laptop. Members can review the integrated work without maintaining
@@ -25,13 +25,14 @@ embedded prompts and old role instructions do not override this plan.
 
 | Candidate / experiment | data0 mean-fold ROC | trapezoidal PR | mean S |
 |---|---:|---:|---:|
+| Elgin, cap128 original-feature neural pipeline, 21 October | 0.931828177 | 0.505601037 | 0.718714607 |
 | Elgin, matched original-feature neural control, 19 October | 0.931123400 | 0.504160258 | 0.717641829 |
 | Elgin, added context-relative features, 19 October | 0.926981747 | 0.490787331 | 0.708884539 |
 | Samuel, sequence-relative LightGBM | 0.921896746 | 0.498996251 | 0.710446499 |
 
 S is the mean of ROC AUC and trapezoidal PR AUC, averaged over the same five
 folds. These are development comparisons of complete pipelines. Elgin's
-control has the higher point estimate; no significance or universal model
+cap128 pipeline has the highest point estimate; no significance or universal model
 superiority is established. The failed context improvement remains report
 evidence connecting Member 1's EDA to a tested modelling decision.
 
@@ -86,6 +87,15 @@ precision, recall and F1 were slightly worse. Checkpoints, logs and the pause
 backup are preserved. See [checked results](model_elgin/read_cap_results/README.md)
 and [execution history](model_elgin/READ_CAP_STATUS.md). This supplies no new
 data1 result, validated threshold, final all-data0 fit or SG-NEx predictions.
+
+The [subsequent saved-score diagnostic](model_elgin/read_cap_shortfalls_results/README.md)
+also completed on 21 October, rescoring all three candidates on identical sites.
+For 200+ reads, pooled S increased from 0.692223 to 0.695188, but both neural
+versions still detect 168/461 positives at 0.5. The broader unusual-flag cohort
+improved in ranking; Member 1's small named cohort did not. Samuel has higher
+precision/specificity and better descriptive raw-score reliability at 0.5,
+while cap128 has higher mean ROC, PR and S. No cutoff was tuned or calibrator
+fitted. See the [review and bounded next-step recommendation](model_elgin/SHORTFALL_REVIEW_2026_10_21.md).
 
 ## Recommendations for the remaining scientific choices
 

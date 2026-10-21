@@ -17,9 +17,15 @@ Verify local inputs against the manifest before new fitting. Keep assessment
 genes outside all learned fitting and use the same evaluation population.
 Elgin's full matched neural CV and Samuel's received CV are complete; the
 shared scorer independently reproduces Samuel's provided data0 scores.
+The [21 October shared comparison](../model_elgin/read_cap_shortfalls_results/README.md)
+favours cap128 under the primary data0 criterion: S0.718715 versus cap32
+0.717642 and Samuel0.710446. Samuel performs better on some secondary metrics;
+the [review](../model_elgin/SHORTFALL_REVIEW_2026_10_21.md) documents those tradeoffs
+and a proposed training-side threshold assessment. No cutoff or calibrated
+probability was fitted in that saved-score analysis.
 No final model has been selected. Current comparisons and outstanding work
 are in [integration status](../INTEGRATION_STATUS.md). New all-data0 fitting
-for Elgin's nominated 19 October pipeline and real SG-NEx predictions are
+for Elgin's eventual nominated pipeline and real SG-NEx predictions are
 still pending. Historical 7 October evidence remains distinct.
 
 Software verification on 15 October: 14 scorer tests passed, and the existing

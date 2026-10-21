@@ -1,0 +1,20 @@
+{
+  "scope": "Saved full-data0 shortfalls/candidate comparison; descriptive only",
+  "no_site_predictions_or_weights": true,
+  "source_directory": "model_elgin/outputs/read_cap_v1/shortfalls",
+  "source_manifest_sha256": "ef88944f6c23867a20823c596df328946dbb330ffd1e1585c2276dc99f55717e",
+  "command": "../advanced_model/.venv/Scripts/python.exe -B model_elgin/tools/analyse_read_cap_shortfalls.py",
+  "output_sha256": {
+    "subgroup_metrics.csv": "0a976ef5e73cdeb69a1b10bd728f3da5df7c4d3d489d1045c01052edabfaa0b8",
+    "paired_subgroup_changes.csv": "51777f24f2ee8d146bf504474020d4a39d71c39bc8d4d6da33fc649efe98582f",
+    "error_overlap.csv": "11c9e608ec435448d141708d2b5aa0f6883d6fbf86c6ad1ca70f44a130b44dea",
+    "reliability_bins.csv": "97138c379385753e1e39bf30be746b65c96258f26f95dbb7d7ea25ed1667d5e7",
+    "reliability_summary.csv": "c519d2ba3a51c3b8a9f0bff2a38d03c4cde09862497d7017a73099d4a32d1d49",
+    "coverage_paired_changes.png": "fc9f93fca87be8b5f5dab6123438659d75019cb9bdd16c13d63e7ced8dafb155",
+    "central5_paired_changes.png": "597985f75d6ee684129aa655fafb1c137d74555f75edcde34fd2632be1161cac",
+    "score_reliability.png": "5fa16232ee426bbd2d727cbc0ff4ad997d1489e8813e7f5efe3100e239fd87a2",
+    "README.md": "bbf41fe1d2a7dbd7001d36380ae38bcda198fcc37ba22f07542eac5968d07656",
+    "analysis_manifest.json": "ef88944f6c23867a20823c596df328946dbb330ffd1e1585c2276dc99f55717e",
+    "analysis_status.json": "708e860fa4301ac119327ffd5409e071f9dc4444ac657eda72279e52447857da"
+  }
+}

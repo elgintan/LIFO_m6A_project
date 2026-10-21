@@ -42,6 +42,12 @@ on 21 October after a verified checkpoint resume. Mean ROC/PR/S is now
 **0.931828/0.505601/0.718715**: a small S gain of 0.00107278, positive in all
 five folds. Fixed 0.5-cutoff classification metrics were slightly worse.
 See [checked comparison](read_cap_results/README.md) and [execution history](READ_CAP_STATUS.md).
+The [completed shortfall/candidate comparison](read_cap_shortfalls_results/README.md)
+shows modest high-depth ranking gains, unchanged high-depth recall at0.5 and
+better raw-score reliability for Samuel. Cap128 leads the agreed data0 score;
+the [next-step review](SHORTFALL_REVIEW_2026_10_21.md) recommends threshold
+validation before another training change. A loss-weight3-versus1 ablation
+is proposed, not trained or shown to improve performance.
 A new final refit, frozen data1 diagnostics and real SG-NEx predictions remain pending.
 
 ## Available starting point

@@ -195,3 +195,25 @@ and viewed both figures; aggregate report, tables, resource limits and plots
 are retained in `model_elgin/read_cap_results/`. No additional fit or inference
 was launched to check completion, and no final superiority or data1/SG-NEx
 result is inferred from these data0 development results.
+
+The user then requested the shortfall investigation and recommendations for
+further changes. A new saved-score tool rescored all three candidates and
+existing motif, coverage and training-defined unusual-signal groups using
+data0 only. It fits no model, calibrator or threshold and runs no inference.
+Fourteen synthetic contract tests passed on the integrator's rerun in5.002s.
+The tests exposed two guard/display issues before final publication: a stale
+input flag column could shadow the checked flag table, and undefined plot
+values could appear as zero. Both were fixed and covered by regression tests.
+The initial source/results ZIP and failed test log remain local; the final
+analysis was rerun, with unchanged scientific scores, in45.477s measured work
+(51.927s command elapsed). No training code or weights changed.
+
+The assistant and a read-only reviewer checked input/source/output hashes,
+independently recomputed target subgroup metrics/error overlaps, and viewed
+all three diagnostic figures. Cap128 has modest high-depth/unusual-group
+ranking gains without improved high-depth recall at0.5. Samuel has stronger
+precision and descriptive score reliability, while cap128 leads the shared
+mean-fold score. The recommended training-side threshold study and a possible
+isolated positive-loss-weight3-to1 experiment are explicitly pending. Neither
+is recorded as an improvement already achieved. Public results contain
+aggregate tables/plots and receipts; site predictions/checkpoints stay local.
