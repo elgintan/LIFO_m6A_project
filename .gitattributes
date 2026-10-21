@@ -14,6 +14,9 @@ model_elgin/THRESHOLD_EXPERIMENT.md -text whitespace=cr-at-eol
 model_elgin/tools/review_signal_cases.py -text whitespace=cr-at-eol
 model_elgin/tools/train_read_cap.py -text whitespace=cr-at-eol
 model_elgin/tools/report_read_cap.py -text whitespace=cr-at-eol
+model_elgin/tools/train_loss_weight.py -text whitespace=cr-at-eol
+model_elgin/tools/report_loss_weight.py -text whitespace=cr-at-eol
+model_elgin/LOSS_WEIGHT_EXPERIMENT.md -text whitespace=cr-at-eol
 model_evaluation/simple_baseline_reference_2026_10_20/** -text whitespace=cr-at-eol
 model_elgin/tools/report_read_depth_stability.py -text whitespace=cr-at-eol
 # Handoff receipts identify exact bytes, including original line endings.

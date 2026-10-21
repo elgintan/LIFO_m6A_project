@@ -32,7 +32,10 @@ archival and is not biological evidence.
    misses and differing score reliability. The [recommended next step](model_elgin/SHORTFALL_REVIEW_2026_10_21.md)
    was training-side cutoff validation. The [completed threshold study](model_elgin/THRESHOLD_REVIEW_2026_10_21.md)
    found no convincing F1 gain; 0.5 remains the working reporting cutoff.
-   No loss-weight experiment or probability calibrator has been fitted.
+   The authorised [loss-weight comparison](model_elgin/LOSS_WEIGHT_EXPERIMENT.md)
+   is now being executed; see [actual execution status](model_elgin/LOSS_WEIGHT_STATUS.md).
+   It changes only positive loss weight3 to1. No full candidate score,
+   improvement or fitted probability calibrator is available yet.
 4. Continue [SG-NEx analysis](sgnex_analysis/README.md) and the
    [current explorer pipeline](data_visualisation/README.md) after selected-model
    predictions are available. Their supplied scripts are now integrated.

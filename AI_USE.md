@@ -239,3 +239,29 @@ proposal; it was not presented as the global cutoff behind the outer results.
 The working reporting rule remains0.5. Inner prediction CSVs, full selection
 curves, checkpoint receipts and logs remain local; only aggregate results,
 figures, source/design and compact hash provenance are published.
+
+## 21 October 2026: authorised positive-loss-weight comparison underway
+
+The user authorised proceeding with one bounded cap128 experiment, changing
+positive loss weight3 to1 while preserving architecture, features, all sites,
+the exact five data0 gene folds and fresh inner-selection/refit procedure.
+The assistant wrote a separately fingerprinted wrapper/design and reporter,
+without editing the frozen original core, then ran actual local checks.
+Nine training tests passed in9.088s and12report tests in21.143s. Tests verify
+exact weight3 delegation, interrupted weight1 recovery, source/split guards,
+incomplete-evidence refusal and preservation of negative outcomes.
+
+Earlier integrator test attempts failed on Windows file permissions: one
+atomic replacement and one restricted sandbox temporary directory. Those logs
+remain local. A fresh workspace temporary directory passed the full suite;
+no assertions or frozen model code were changed to make the checks pass.
+The real-data software check used100whole genes/3,328sites and exited0 in
+31.432s. Separate fresh full-size one-epoch timing fits exited0 in97.214s.
+These limited fits are software/timing evidence and are never CV warm starts.
+
+Full five-fold training launched at15:44SGT, with original per-epoch checkpoint,
+optimizer/RNG and resource logging. One local job queues the reporter only
+after full success and pins its source hash. No full candidate result is
+available at this snapshot. No data1/data2/SG-NEx access, calibration, new
+cutoff selection or final all-data0 fitting is included. Final nomination and
+required benchmark/application/report work remain pending.

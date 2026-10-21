@@ -105,6 +105,16 @@ and pooled F1 declined0.535041->0.534624; mean-fold F1 barely changed. The
 the0.510309 median remains an unevaluated deployment proposal. No calibrated
 probability, new neural fit or changed ranking score is claimed.
 
+The user subsequently authorised one final bounded neural experiment:
+[positive loss weight3 versus1](model_elgin/LOSS_WEIGHT_EXPERIMENT.md), keeping
+cap128, architecture/features, all data0 sites and exact shared folds fixed.
+Implementation, recovery/report checks, a small real-data check and full-size
+timing passed. Fresh five-fold training launched at15:44SGT on21October in
+separate directories, with checkpoint/log saving and a queued comparison. See the
+[current execution status](model_elgin/LOSS_WEIGHT_STATUS.md). No new full
+candidate result or improvement is available yet. Required benchmarks and
+final-model/application/report work take priority after this comparison.
+
 ## Recommendations for the remaining scientific choices
 
 The existing [logistic-regression reference](model_evaluation/simple_baseline_reference_2026_10_20/README.md)

@@ -48,8 +48,11 @@ better raw-score reliability for Samuel. Cap128 leads the agreed data0 score;
 the [next-step review](SHORTFALL_REVIEW_2026_10_21.md) recommends threshold
 validation before another training change. That [threshold study is now complete](THRESHOLD_REVIEW_2026_10_21.md):
 pooled F1 declined slightly and mean-fold F1 barely changed, with worse high-depth
-recall. Retain0.5 as the working reporting cutoff. A loss-weight3-versus1 ablation
-is proposed, not trained or shown to improve performance.
+recall. Retain0.5 as the working reporting cutoff. The authorised
+[loss-weight3-versus1 ablation](LOSS_WEIGHT_EXPERIMENT.md) is now being executed,
+with the unchanged cap128 network and exact gene folds. Follow the
+[execution status](LOSS_WEIGHT_STATUS.md); no full candidate result or
+performance improvement is available yet.
 A new final refit, frozen data1 diagnostics and real SG-NEx predictions remain pending.
 
 ## Available starting point

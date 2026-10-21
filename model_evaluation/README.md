@@ -29,6 +29,10 @@ excluded outer genes. Pooled F1 changed0.535041->0.534624; mean-fold F1 was
 nearly unchanged. The0.510309 median is an unevaluated final-model proposal,
 not the cutoff used for those pooled results. Keep0.5 as the working rule;
 this is a development choice, not a biological threshold/calibration claim.
+The next authorised [weight3-to1 comparison](../model_elgin/LOSS_WEIGHT_EXPERIMENT.md)
+preserves the same cap128 network, all sites, gene folds and evaluator. Its
+[execution status](../model_elgin/LOSS_WEIGHT_STATUS.md) distinguishes checks
+from full CV; a new full candidate score is not yet available.
 No final model has been selected. Current comparisons and outstanding work
 are in [integration status](../INTEGRATION_STATUS.md). New all-data0 fitting
 for Elgin's eventual nominated pipeline and real SG-NEx predictions are
