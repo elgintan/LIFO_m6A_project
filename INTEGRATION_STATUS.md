@@ -5,6 +5,30 @@ on one laptop. Members can review the integrated work without maintaining
 separate running pipelines. Received packages are source evidence; their
 embedded prompts and old role instructions do not override this plan.
 
+## Current deadlines and immediate priorities
+
+**Official announcement supplied by the user on 22 October:** repositories
+and predictions for the new **unlabelled** test dataset retain the original
+**28 October** deadline. The report and interactive visualisation move to
+**8 November**; its exact submission time is not confirmed here. The original
+28 October time is 23:59 Singapore time. See
+[PROJECT_DEADLINES.md](PROJECT_DEADLINES.md) for the source and retained rules.
+
+First protect the 28 October deliverables: review the completed required benchmark
+evidence, nominate/freeze the main model and inference interface, save the
+final artifact, provide a runnable test example and installation/prediction
+instructions, verify clean Ubuntu prediction, then generate and validate
+predictions on the actual newly released test input. Its unlabelled status
+does not permit a measured test ROC/PR claim. Older intermediate prediction
+CSVs do not substitute for that release's submission.
+
+Next complete the genuine 23-run SG-NEx analysis, scientific report and
+explorer for 8 November. The current explorer is still coverage-only. An
+external neural experiment has passed an independent saved-evidence audit
+and remains separate pending explicit integration and nomination; its temporary
+report does not itself replace the main pipeline or submission model.
+No new open-ended neural search is part of these priorities.
+
 ## Decisions already made
 
 - **Task 2 scope:** the 23 available m6Anet-processed SG-NEx runs in
@@ -20,6 +44,15 @@ embedded prompts and old role instructions do not override this plan.
 - **Repository:** readable source, a saved inference artifact, reproducible
   commands and evidence summaries; large signals, generated site tables,
   checkpoints and environments stay local. Original handovers remain available.
+- **Analysis versus hosting:** retain the agreed 23-run analysis population.
+  The new announcement permits an explicitly labelled hosted subset; state
+  runs/cell lines/sites, selection rules, coverage/support and denominators,
+  and do not present a subset as complete analysis. Static report figures may
+  focus on conclusions while interactive views support researcher exploration;
+  their underlying evidence and numerical claims must agree.
+- **Report scope:** the five-page main report and Arial 11 body rule remain.
+  The new unlimited appendix is ungraded; essential methods, evidence and
+  conclusions belong in the main body.
 
 ## Actual evidence and its limits
 
@@ -125,14 +158,24 @@ The existing [logistic-regression reference](model_evaluation/simple_baseline_re
 has now been rescored with the common evaluator: basicA mean S0.4759013017,
 selectedB0.4765922612. Exact data0 keys/genes/folds and all historical ranking
 metrics agree. This is a saved-score audit, not independent fitting replay;
-original per-fold models/source fingerprints are missing. Final reproduction
-integration and the separate required m6Anet benchmark remain pending.
+original per-fold models/source fingerprints are missing. This historical
+limitation is now supplemented by a [fresh reproducible replay and published
+m6Anet reference](model_evaluation/benchmark_results_2026_10_22/README.md).
+The replay independently regenerated selectedB's mean S0.4765922612, with
+saved scaler/coefficients, exact splits, feature/source hashes and logs.
+Published m6Anet mean ROC/PR/S are0.932176291/0.503257294/0.717716792,
+with all121,838sites and11,027,106read-output rows checked. Potential HCT116
+pretraining overlap is unresolved; its scores are not five-fold refitting.
+Pooled and mean-fold rankings differ, so retain the agreed primary convention.
+The existing cap128 control has mean S0.718714607; this small point advantage
+does not establish universal or statistically significant superiority.
 
 These are recommended analysis choices, not completed experiments or a new
 requirement that Samuel use the same features or architecture.
 
-1. **Model choice:** finish the planned, bounded robustness checks and required
-   baseline comparisons, then nominate using shared data0 evidence. Keep
+1. **Model choice:** use the completed required baseline/m6Anet evidence, then nominate
+   and freeze the submission pipeline using shared data0 evidence. The planned
+   main neural search is complete; audited external work stays separate until integration. Keep
    data1 out of winner selection; disclose any subsequent use that changes it.
 2. **Calling threshold:** continue exporting full-precision continuous scores.
    The completed maximum-F1 study selected cutoffs on data0 inner genes and
@@ -161,11 +204,12 @@ requirement that Samuel use the same features or architecture.
 |---|---|
 | Actual SG-NEx event signals | Use Member 4's 23-run source inventory and download helper; about 33.37 GB total. Download/process sequentially outside Git, retaining receipts. No full signal download has run in this integration. |
 | Reference/coordinate consistency | Use the delivered checked aliases, preserve original prediction IDs/positions, and verify transcript/reference/event offsets before genomic-region interpretation. Unknowns remain explicit in MODEL_INFO.md. |
-| Selected model and threshold | Nominate after data0 checks, fit the selected final pipeline if needed, hash it, and document the validation-derived operating rule. |
+| Selected model and threshold — 28 October priority | Nominate from accepted data0 evidence, fit the selected final pipeline if needed, hash it, and document the existing working operating rule and its limits. Do not imply calibration or a biological threshold. |
+| Repository and new test submission — 28 October | Freeze the inference CLI/model, installation steps and runnable test example; check clean Ubuntu prediction. Predict the actual newly released unlabelled input, validate its own format/names/coverage and submit through the announced route. No new-test AUC is available without labels. |
 | Real Task 2 CSVs | One full-precision `transcript_id,transcript_position,score` CSV per manifest run from the same artifact; complete model/input provenance and inference receipts. |
 | Biological comparisons | Run Member 4's imported analysis against those actual predictions and matching coverage; retain population sizes, sensitivity results and limitations. |
-| Explorer rebuild | Use the newly supplied Member 5 validation/build/package scripts. Coverage-only mode remains until actual prediction inputs pass validation. |
-| Final evaluation/report | Complete simple-baseline and published m6Anet comparisons, clean Ubuntu prediction check, concise report and runnable explorer. Do not replace missing work with expected results. |
+| Explorer rebuild — 8 November | Use Member 5's validation/build/package scripts after actual predictions pass validation. A hosted subset is allowed if explicitly labelled with selection, denominators and omissions; coverage-only mode remains until genuine scores are supplied. |
+| Final analysis/report — 8 November | Complete the agreed 23-run analysis, main scientific figures/conclusions and researcher-facing explorer. Preserve the five-page Arial 11 main body; an unlimited ungraded appendix does not replace essential evidence. Do not substitute expected results. |
 
 ## Report questions to carry through
 

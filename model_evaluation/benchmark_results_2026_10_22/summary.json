@@ -1,0 +1,309 @@
+{
+  "status": "complete",
+  "population": {
+    "sites": 121838,
+    "positives": 5475,
+    "genes": 3852
+  },
+  "primary": "unweighted mean of five fold (ROC AUC + trapezoidal PR AUC)/2",
+  "candidates": {
+    "fixed18_balanced_C1": {
+      "predictions": "model_evaluation/simple_baseline/outputs/replay_v1/data0_oof.csv",
+      "predictions_sha256": "76cab883cbedb01a13a388b48de16d05931a2b42be0703e737f3daad6b26ac95",
+      "metrics": "model_evaluation/simple_baseline/outputs/replay_v1/data0_cv_metrics.json",
+      "metrics_sha256": "8acd2449786874ac78ef630d39f8e033736300c297cab0cd8664947945814e1c",
+      "mean_fold": {
+        "roc_auc": 0.8040558823364881,
+        "pr_auc_trapezoid": 0.14912864016183275,
+        "average_precision": 0.1495534332086314,
+        "selection_score": 0.4765922612491605
+      },
+      "pooled": {
+        "n_sites": 121838,
+        "n_positives": 5475,
+        "positive_fraction": 0.044936719250151844,
+        "roc_auc": 0.8039940216996121,
+        "pr_auc_trapezoid": 0.1489451297601818,
+        "average_precision": 0.14902989682682613,
+        "selection_score": 0.47646957572989695,
+        "threshold": 0.5,
+        "tn": 83200,
+        "fp": 33163,
+        "fn": 1313,
+        "tp": 4162,
+        "precision": 0.11150703281982585,
+        "recall": 0.7601826484018265,
+        "f1": 0.19448598130841122,
+        "specificity": 0.7150039101776338,
+        "accuracy": 0.7170340944532905
+      }
+    },
+    "samuel": {
+      "predictions": "model_samuel/outputs/data0_oof.csv",
+      "predictions_sha256": "78ac518c56d16d3a0e97abe749e0950a1d9a8bbe6ad170b4290500b6b1ba9c7b",
+      "metrics": "model_samuel/results/data0_cv_metrics.json",
+      "metrics_sha256": "56373f86d9d728066d2a49d27d64e56ace8741ca68cb86076d5b6efce2e50481",
+      "mean_fold": {
+        "roc_auc": 0.9218967458283268,
+        "pr_auc_trapezoid": 0.49899625146701865,
+        "average_precision": 0.4995659252568417,
+        "selection_score": 0.7104464986476727
+      },
+      "pooled": {
+        "n_sites": 121838,
+        "n_positives": 5475,
+        "positive_fraction": 0.044936719250151844,
+        "roc_auc": 0.9217906365048721,
+        "pr_auc_trapezoid": 0.49807675032014864,
+        "average_precision": 0.4982710419817766,
+        "selection_score": 0.7099336934125104,
+        "threshold": 0.5,
+        "tn": 115207,
+        "fp": 1156,
+        "fn": 3528,
+        "tp": 1947,
+        "precision": 0.6274572993876893,
+        "recall": 0.3556164383561644,
+        "f1": 0.4539519701562136,
+        "specificity": 0.9900655706710896,
+        "accuracy": 0.9615555081337513
+      }
+    },
+    "elgin_cap128": {
+      "predictions": "model_elgin/outputs/read_cap_v1/cv/none/data0_oof.csv",
+      "predictions_sha256": "0b6b0cbb659f861a096f118b5e9e816feb632a01ee001526a7d368c2fbc8c63c",
+      "metrics": "model_elgin/outputs/read_cap_v1/cv/none/data0_cv_metrics.json",
+      "metrics_sha256": "63f89cc94b008f6fccbbf90f0baf2f709517862875fd1a88d4e1770fc2301d23",
+      "mean_fold": {
+        "roc_auc": 0.9318281773700772,
+        "pr_auc_trapezoid": 0.5056010366399271,
+        "average_precision": 0.5062502328067268,
+        "selection_score": 0.7187146070050021
+      },
+      "pooled": {
+        "n_sites": 121838,
+        "n_positives": 5475,
+        "positive_fraction": 0.044936719250151844,
+        "roc_auc": 0.9310519604118698,
+        "pr_auc_trapezoid": 0.5020558540352483,
+        "average_precision": 0.5022134380756301,
+        "selection_score": 0.716553907223559,
+        "threshold": 0.5,
+        "tn": 112630,
+        "fp": 3733,
+        "fn": 2112,
+        "tp": 3363,
+        "precision": 0.47392897406989853,
+        "recall": 0.6142465753424657,
+        "f1": 0.5350409673057036,
+        "specificity": 0.967919355808977,
+        "accuracy": 0.9520264613667329
+      }
+    },
+    "m6anet": {
+      "predictions": "model_evaluation/outputs/m6anet_v1/scored/data0_reference_scores.csv",
+      "predictions_sha256": "bce228839c7e4cb8975cc790c25450d897d08abfc76d2817592fdf18a7258d97",
+      "metrics": "model_evaluation/outputs/m6anet_v1/scored/data0_reference_metrics.json",
+      "metrics_sha256": "c227ddf0f6c46389ed07923f8512b11e1793e4c9840a448d84a2b7649a982b43",
+      "mean_fold": {
+        "roc_auc": 0.9321762908123139,
+        "pr_auc_trapezoid": 0.5032572939418496,
+        "average_precision": 0.5038709715096357,
+        "selection_score": 0.7177167923770817
+      },
+      "pooled": {
+        "n_sites": 121838,
+        "n_positives": 5475,
+        "positive_fraction": 0.044936719250151844,
+        "roc_auc": 0.9321262438981589,
+        "pr_auc_trapezoid": 0.5029718338381804,
+        "average_precision": 0.503107572486197,
+        "selection_score": 0.7175490388681697,
+        "threshold": 0.5,
+        "tn": 103395,
+        "fp": 12968,
+        "fn": 873,
+        "tp": 4602,
+        "precision": 0.26192373363688104,
+        "recall": 0.8405479452054795,
+        "f1": 0.39939249294857887,
+        "specificity": 0.8885556405386592,
+        "accuracy": 0.8863983322116252
+      }
+    }
+  },
+  "resources": {
+    "baseline_invocation": {
+      "wall_seconds": 93.39298669999698,
+      "process_cpu_seconds": 90.859375,
+      "sampled_peak_process_rss_mib": 362.71875,
+      "sampling_interval_seconds": 0.1,
+      "sampling_errors": 0
+    },
+    "baseline_feature_cache_reused": false,
+    "baseline_fresh_fits_in_invocation": 5,
+    "m6anet_command": {
+      "wall_seconds": 1303.3671258999966,
+      "sampled_process_tree_cpu_seconds_lower_bound": 1070.34375,
+      "sampled_peak_tree_rss_mib": 761.5234375,
+      "sampling_interval_seconds": 0.2,
+      "sampling_errors": 0
+    },
+    "m6anet_official_inference": {
+      "cpu_scope": "launcher process only; excludes spawned DataLoader/Pool children",
+      "parent_process_cpu_seconds": 256.8125,
+      "wall_seconds": 1033.7406074
+    }
+  },
+  "m6anet_parameters": {
+    "batch_size": 2048,
+    "device": "cpu",
+    "multiprocessing_start_method": "spawn",
+    "n_processes": 1,
+    "num_iterations": 1000,
+    "pretrained_model": "HCT116_RNA002",
+    "save_per_batch": 2147483647,
+    "seed": 2026,
+    "torch_threads": 4
+  },
+  "vendor_files": {
+    "__init__.py": {
+      "bytes": 946,
+      "sha256": "7a247948904f38547171881615fac2faede8bc67d3ea5c9d65f0043545a71cc3"
+    },
+    "deprecated/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "deprecated/compute_norm_factors.py": {
+      "bytes": 1885,
+      "sha256": "278e292c0030ccb54b4f8b39af725d972e03021c36693bacf619af9abb07868d"
+    },
+    "deprecated/dataprep.py": {
+      "bytes": 2865,
+      "sha256": "7fa9209ff3d4ddb5e4195a55de3c3f5f0d47dd21d1422240e5da63f9b9c182dc"
+    },
+    "deprecated/inference.py": {
+      "bytes": 4297,
+      "sha256": "bb8002867ecaad16fe669a6916f582e37d4593af4f23875832f8aca98b028946"
+    },
+    "deprecated/train.py": {
+      "bytes": 5817,
+      "sha256": "46d49c4accc29bef3dca00b5cd4855c3036d733bf3c30a97f4f79aee3e1d1225"
+    },
+    "model/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "model/configs/model_configs/m6anet.toml": {
+      "bytes": 578,
+      "sha256": "85af00732acf3e0e66a24f29426f1497dee4ada6be4bf95a0836725614cc225d"
+    },
+    "model/model.py": {
+      "bytes": 7116,
+      "sha256": "61ee774c1f55c6bead60f140446a29ab6b76e776c973d2571eae66e677b0fac4"
+    },
+    "model/model_blocks/__init__.py": {
+      "bytes": 810,
+      "sha256": "81393020933c33c63ff5a241555ee99c3e886c6c2c68b29381b6ec8932e78ab9"
+    },
+    "model/model_blocks/blocks.py": {
+      "bytes": 9672,
+      "sha256": "a2f5e7da0c397edf16f58c6a451f254181ff5c6b35909afdbe5fa0e6edc39f53"
+    },
+    "model/model_blocks/pooling_blocks.py": {
+      "bytes": 15720,
+      "sha256": "f2912b2d3127997eb8cf279f2ee32c7e67a81b1e2fc52e38507d4b741793ee6c"
+    },
+    "model/model_states/rna002_hct116.pt": {
+      "bytes": 37083,
+      "sha256": "61017b5e856063a5ef165eb024975bedca57c17ab9242a094a04dd65b38873dd"
+    },
+    "model/norm_factors/rna002_hct116.joblib": {
+      "bytes": 179264,
+      "sha256": "e9d2060167c226f954c71a98727062839519f10d948e109e01931d58cd15e48c"
+    },
+    "scripts/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "scripts/compute_norm_factors.py": {
+      "bytes": 1608,
+      "sha256": "e7c8bf1578821e1a9aa7da7ed521e1f042fc86b6089735a6597f3e97e077cd3e"
+    },
+    "scripts/convert.py": {
+      "bytes": 1056,
+      "sha256": "d145dc796b2906a2088bf63c2f633b548414ac57489e44f7f709d0752f576692"
+    },
+    "scripts/dataprep.py": {
+      "bytes": 2817,
+      "sha256": "8df4a78cacba2d512106ebb75a44621ff845568019a343ab93c14162d78bd827"
+    },
+    "scripts/inference.py": {
+      "bytes": 4730,
+      "sha256": "44cbe4c80bfce0b5207b30f6ff2788b87d94d6023b62573970b9ac6b4c769caa"
+    },
+    "scripts/train.py": {
+      "bytes": 5570,
+      "sha256": "51fd1c2bc51f2412b2cea4d6a6725970782b0c410eef2c3ee450be27e1d350b1"
+    },
+    "utils/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "utils/builder.py": {
+      "bytes": 5099,
+      "sha256": "98c98b4c5bfa06598178d47e14ca2240db8123b3144155caadb19fe7fc91074b"
+    },
+    "utils/constants.py": {
+      "bytes": 2098,
+      "sha256": "95856756d9ecc1debba6d6833d4bdcc18a6a123026f52067d9b4d7f59c2ddf15"
+    },
+    "utils/data_utils.py": {
+      "bytes": 27787,
+      "sha256": "b929f3b7cedb42820df6daba5f2a280f05d55e924742fb68ba4547704099efd3"
+    },
+    "utils/dataprep_utils.py": {
+      "bytes": 26928,
+      "sha256": "e96f34681b1e3519cb6df5611041c1170d87809615004a5181e2770fc5ca0fb3"
+    },
+    "utils/helper.py": {
+      "bytes": 3281,
+      "sha256": "c19c576a3ba5023985a245dc36c48e54c031ba9209144c48978a49e5e99b6c3e"
+    },
+    "utils/inference_utils.py": {
+      "bytes": 7722,
+      "sha256": "44a3e3158788f2958c47aba232b5d16422d157711e1529c3d991477f82069ebc"
+    },
+    "utils/loss_functions/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "utils/loss_functions/loss_functions.py": {
+      "bytes": 1473,
+      "sha256": "06e0b807c00f9a8313cc71c37a8f0ee03ea9cca619c881fb2dac3a841f24cc05"
+    },
+    "utils/norm_utils.py": {
+      "bytes": 8833,
+      "sha256": "a3027517c972ef60b3e0cd48c5a9c11c3f83268662942f1bef78132f1bdfc76d"
+    },
+    "utils/sampler_utils.py": {
+      "bytes": 11172,
+      "sha256": "901fb2c0da32d8faa0dcb5876fb43f196b006623b401031a7391aadcb76474ad"
+    },
+    "utils/training_utils.py": {
+      "bytes": 11905,
+      "sha256": "7367f5ba9492ff7dc165d69659a2a3880cd53e04b84dfc369bea0694698a7028"
+    }
+  },
+  "benchmark_source_sha256": "233b712f64ba33a029d05b5c1f181130abbb28cf3434401278e22b02b2c5fd0b",
+  "scorer_sha256": "43217301e0c9f9aeac821175763c096a171ec699fe342c04099f0d09a42e7727",
+  "labels_sha256": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978",
+  "folds_sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0",
+  "limits": [
+    "Off-the-shelf published HCT116_RNA002 reference; potential pretraining overlap with course HCT116 data is unresolved. This is not independent five-fold gene-held-out training or an unbiased unseen-data assessment.",
+    "Repeated development folds and historical data exposure do not establish blind-test performance.",
+    "The separate audited external neural candidate is not integrated or nominated in this comparison.",
+    "Resource scopes differ; pretrained inference time is not neural training time."
+  ]
+}

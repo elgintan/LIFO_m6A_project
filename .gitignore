@@ -49,6 +49,8 @@ dataset*.json.gz
 /model_elgin/reference_check_*/*
 !/model_elgin/reference_check_*/README.md
 /model_samuel/outputs/
+/model_evaluation/outputs/
+/model_evaluation/simple_baseline/outputs/
 /sgnex_analysis/outputs/
 /data_visualisation/outputs/
 /data_visualisation/task2_viz/site/data/

@@ -289,3 +289,30 @@ The negative ablation remains in the report progression, with aggregate
 tables/plots, provenance and commands published separately from local site
 predictions and checkpoints. Required benchmark, final artifact, Task2 and
 report/explorer/Ubuntu work remain pending.
+
+## 22 October 2026: required reference benchmarks and checks
+
+The assistant implemented a fixed 18-feature logistic-regression replay and a
+deterministic launcher of unmodified published m6Anet, executed actual data0
+comparisons and retained models, scores, logs, hashes and measured resources.
+The shared scorer was unchanged. Independent review checked gene separation,
+training-only scalers, learned coefficients and exact prediction coverage.
+Published pretraining provenance is explicitly different from our held-out
+fits; no data1 result was used to choose a winner in this work.
+
+Two setup assumptions required correction. A broad assistant recommendation
+that Bioconda could not be used on Windows overlooked the noarch m6Anet
+package with available Windows dependencies. Actual Conda solving and native
+execution established the feasible route, preserving the handout's Python3.8
+and Conda requirement. Separately, requesting `cpuonly` did not by itself
+prevent the solver selecting a legacy CUDA Torch build. Inspecting the dry-run
+package plan detected this; an explicit CPU build was pinned before installing.
+The original plans and corrections remain in local setup logs.
+
+Source inspection also found that the official output-flush condition can omit
+the final batch and that its parent seed does not seed fresh Windows pool
+workers. A documented large CLI flush interval and module-level child seeding
+preserve vendor algorithms while addressing those issues. Two actual two-batch
+pilots matched official CSV hashes. The computation batch size was amended
+before any labelled scoring, with both old and new pilot evidence retained.
+These checks support the measured benchmark, not an unseen-data guarantee.

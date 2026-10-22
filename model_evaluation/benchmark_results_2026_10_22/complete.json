@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "files": {
+    "README.md": "6a7e72418e3f523404a8bf2c3bd709616ab51b13ba4a95ee7765c59385ecfafb",
+    "comparison.csv": "834bff830588e72195878816d6355522d2566d0487006bc95f149aeec6d6a692",
+    "summary.json": "c75bd1e2852804405fbe81185a583b2f150611888f9dde2c582472bb83191e38",
+    "reference_curves.png": "42ce85f516a34a5717724014a77044ac3d256832a9e979ad32b0c0db8bdbf952",
+    "reference_curves.svg": "85d8c9bb77de12000da6533d050f06d79767ad6483a5df5ba12fd4faf0b8c349"
+  }
+}

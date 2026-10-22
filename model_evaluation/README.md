@@ -61,11 +61,17 @@ Model selection uses the agreed development comparison. A reserved future
 official/eligible external evaluation, if available, must stay outside selection.
 Supplied datasets have previous exposure; do not call repeated scoring blind.
 
-The report requires comparison against a simple baseline and published m6Anet.
-Those new controlled comparisons remain pending. Prespecify their input
-coverage, provenance, prediction/training settings and comparable populations.
-Record differences in eligible sites rather than silently dropping difficult
-cases to make one method appear better.
+The required [simple-baseline and published m6Anet references](benchmark_results_2026_10_22/README.md)
+are now complete on all121,838data0 sites. Fresh fixed logistic regression
+has mean S0.476592; published m6Anet has0.717717, versus cap1280.718715 and
+Samuel0.710446. m6Anet has higher ROC and recall at0.5 than the cap128 control;
+cap128 has higher mean PR and S, precision and F1 at0.5. These are observed
+tradeoffs, not proof of universal superiority. Potential HCT116 pretraining
+overlap makes m6Anet an off-the-shelf reference, not an independent fold-refit
+competitor. Retained code, counts, source/asset hashes, costs, commands and
+pooled ROC/PR figures distinguish those designs. No data1 or final-model
+selection was performed in the benchmark. Clean Ubuntu reproduction and
+the selected final saved pipeline remain pending.
 
 Expected handover: one short evaluation draft, metrics/comparison table,
 essential plots and reproducible checking code. State which changes helped,

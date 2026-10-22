@@ -10,6 +10,11 @@ validated calling cutoff and real whole-run Task 2 predictions remain pending.
 The current explorer is **coverage-only**. The older simulated prototype is
 archival and is not biological evidence.
 
+**Deadline update supplied by the user on 22 October:** code repositories and
+predictions for the new unlabelled test dataset remain due **28 October**;
+the report and interactive visualisation are extended to **8 November**.
+The latter's exact time is unconfirmed. See [deadlines and priorities](PROJECT_DEADLINES.md).
+
 ## Start here
 
 1. Read [current evidence, decisions and remaining gaps](INTEGRATION_STATUS.md).
@@ -63,14 +68,26 @@ candidate sites, not other modifications or measured modified-molecule fractions
 
 Working Task 2 scope is the **23 available processed runs** in the canonical
 `sgnex_analysis/manifest.csv`. Missing observations are not unmodified sites.
-See [project context](PROJECT_CONTEXT.md) and [data access](DATA_ACCESS.md).
+The hosted explorer may show an explicitly labelled subset, with its selection
+rule, displayed population and omissions stated. Static report figures and
+interactive views can serve different scientific/exploration purposes while
+remaining consistent with the same evidence. See
+[project context](PROJECT_CONTEXT.md) and [data access](DATA_ACCESS.md).
 
 Report and interactive visualisation carry 50 percentage points; model
 performance carries 5 and leaderboard rank does not determine the grade. The
-formal report limit is five pages with the handout's permitted exclusions.
-Required simple-baseline/m6Anet comparisons, clean Ubuntu reproduction and
-final report/real-result explorer are still unfinished. The supplied deadline
-is 28 October 2026, 23:59 Singapore time; check later course announcements.
+formal main-report limit remains five pages in Arial 11, with the handout's
+permitted exclusions. The new announcement allows an unlimited, **ungraded**
+appendix; essential arguments and conclusions must remain in the main body.
+The [required simple-baseline/m6Anet comparisons](model_evaluation/benchmark_results_2026_10_22/README.md)
+are complete: mean S0.476592 and0.717717 respectively, versus the existing
+cap128 control0.718715. The published reference may overlap in pretraining;
+its fold-stratified scores are not five-fold refitting. Clean Ubuntu reproduction
+and the final report/real-result explorer are still unfinished. Prioritise a frozen,
+runnable inference pipeline and the new unlabelled-test predictions for
+28 October, then complete Task 2 analysis/report/explorer for 8 November.
+The original 28 October deadline is 23:59 Singapore time; **8 November's exact
+time is not confirmed**. See [the supplied deadline update](PROJECT_DEADLINES.md).
 
 Large signals, prediction tables, caches, environments and training checkpoints
 stay outside ordinary Git uploads. They remain local or are regenerated through
