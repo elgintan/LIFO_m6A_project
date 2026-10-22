@@ -357,3 +357,40 @@ resource scopes and exact commands. The main assistant inspected both figures
 and checked all final CSV keys, package receipts and unchanged historical CV
 hashes. The report is evidence for the final scientific write-up, not the
 finished five-page report or completed Task2 analysis.
+
+## 23 October 2026: Task 2 first-run evidence and sequential execution
+
+The assistant attempted the isolated Ubuntu check. Docker's local backend
+crashed before any image/package download or Linux execution. A small-context
+CPU recipe and prepare-only receipt were retained; no Docker reset, WSL
+installation, operating-system change or AWS success claim followed.
+
+Member4's fixed inventory and coverage matrix determined the23-run scope,
+>=20-source-read eligibility, exact key/count checks and later50/100-read
+sensitivity and equal metadata-group weighting. The assistant added a strict
+input auditor, selected-model adapter, resumable sequential runner and targeted
+checks. Nine adapter and eight orchestration tests passed. A genuine1,024-site
+probe reproduced the unchanged predictor's95 eligible scores within1.49e-8.
+The first full run scored135,870sites using10,572,838reads with the original
+frozen artifact;1,166,644low-depth sites remain explicitly unscored in QC.
+No model fitting, imputation, per-line normalisation or threshold tuning ran.
+
+A separate reporter independently verified hashes, every prediction/QC key
+and read-count agreement with Member4, then produced actual aggregate tables,
+coverage/score plots and computation scopes. The main assistant inspected the
+figures. The first completed run and its resume were checked on real files:
+the repeated command reverified and skipped it without inference. Full23-run
+execution then started sequentially, with pinned source/data/model identities,
+per-run checkpoints and logs. This is not completed biological analysis.
+
+Context checks combined Member1's motif table with fingerprinted data0 cache
+and labels. All18central motifs/all288canonical7mers occurred in training;
+the15 previously evaluable motifs reflected class-support restrictions, not
+three unseen motifs. Sparse positive-label counts were retained as evidence
+limits, not calibrated uncertainty or exclusion criteria. One valid first-run
+site slightly above the training read-depth maximum was retained. No Task2
+assay labels were supplied, so score fractions are not accuracy or measured
+modification prevalence. The explorer remains coverage-only until real-score
+integration, and reference/coordinate and laboratory-independence limits stay
+explicit. These assistant-executed checks are not the user's personal
+individual-assessment reflection.

@@ -23,6 +23,12 @@ ROC/PR/S is0.827381010/0.382349993/0.604865501; this is already-exposed transfer
 evidence, with no selection or threshold change after scoring.
 See [actual final results](model_elgin/final_cap128_results/results.md) and
 [runnable training/prediction instructions](model_elgin/FINAL_MODEL_USAGE.md).
+
+**Current stage: Task 2 predictions.** The first Hct116rep3run4 input and its
+135,870 eligible predictions passed full Member 4 coverage-key/count and
+provenance checks. The sequential 23-run workflow is now running, with logs
+and completed-run checkpoints. See [actual first-run QC](sgnex_analysis/first_prediction_qc/README.md)
+and [execution/resume instructions](sgnex_analysis/ELGIN_TASK2_RUNNER.md).
 See [the fixed selection decision](model_elgin/FINAL_MODEL_SELECTION.md) and
 [current stages](CURRENT_STAGE.md).
 
@@ -112,10 +118,13 @@ fresh18-epoch all-data0 final fit has completed; the saved7October model/results
 are historical. Its full data0 predictions are fitted-data scores and will not
 replace the held-out-gene OOF validation.
 
-Member 4's completed results concern sample structure, coverage and candidate
-software checks. Member 5's delivered current explorer is coverage-only, not
-a real m6A result viewer. No full-run selected-model SG-NEx predictions or
-final between-cell-line modification conclusions have been produced.
+Member 4's foundation concerns sample structure, coverage and software checks.
+It now directly verifies the source/eligible population for real predictions:
+the first full run scored135,870 sites using10,572,838 reads, with1,166,644
+below20-read source sites explicitly unscored in QC. All18 training motifs and
+288 model-encoded7mers were represented, with sparse positive-label evidence
+flagged separately. Member 5's current explorer remains coverage-only. The
+remaining predictions and final between-cell-line analysis are not complete.
 
 Local integration checks completed: Samuel's three saved-model contract tests;
 Member 4's nine analysis/reference/restoration checks plus a separately passing

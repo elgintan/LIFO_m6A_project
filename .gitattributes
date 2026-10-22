@@ -24,6 +24,7 @@ model_elgin/tools/package_final_cap128.py -text whitespace=cr-at-eol
 model_elgin/tools/report_final_cap128.py -text whitespace=cr-at-eol
 model_elgin/train_final.py -text whitespace=cr-at-eol
 model_elgin/artifacts/cap128_weight3_v1/** -text whitespace=cr-at-eol
+model_elgin/reproducibility/** -text whitespace=cr-at-eol
 model_elgin/final_cap128_results/** -text whitespace=cr-at-eol
 model_elgin/final_cap128_results/*.svg binary
 model_evaluation/simple_baseline_reference_2026_10_20/** -text whitespace=cr-at-eol
@@ -39,6 +40,7 @@ model_samuel/results/** -text whitespace=cr-at-eol
 model_samuel/examples/** -text whitespace=cr-at-eol
 model_samuel/docs/RECEIVED_README.md -text whitespace=cr-at-eol
 sgnex_analysis/** -text whitespace=cr-at-eol
+sgnex_analysis/first_prediction_qc/*.svg binary
 data_visualisation/task2_viz/** -text whitespace=cr-at-eol
 # Empty trailing fields are meaningful in the unchanged official TSV snapshot.
 data_visualisation/task2_viz/team_inputs/member4_2026-10-19/samples.tsv whitespace=-blank-at-eol,cr-at-eol

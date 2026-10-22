@@ -2,7 +2,17 @@
 
 This folder integrates Member 4's code and scientific handover. The agreed population is **23 m6Anet-processed direct-RNA runs, seven cell lines and 17 replicate-number groups**. The broader 56-row inventory is background; expanding to it is not required for the current task. Conclusions must describe the processed subset.
 
-**Completed:** sample/coverage work and its report contribution; received package integrity checked on the receiving laptop. **Pending:** final model selection, full signal downloads, input/reference checks, genuine per-run predictions, real-score comparisons and biological interpretation. This integration creates none of those full-run results.
+**23 October:** Member 4's coverage foundation is integrated. Elgin's frozen
+cap128/weight3 neural model is selected. The first full signal input passed
+strict validation and exact coverage-key/count agreement, and a real small
+adapter/predictor parity check passed. The first run's135,870 predictions are
+complete and independently verified; the full23-run workflow is running.
+Biological comparisons and interpretation remain unfinished.
+See [the execution design](TASK2_EXECUTION_PLAN.md) and
+[selected model information](MODEL_INFO.md).
+See [actual first-run QC](first_prediction_qc/README.md),
+[training-context evidence](training_context_support/README.md) and
+[the sequential runner/resume guide](ELGIN_TASK2_RUNNER.md).
 
 Read [findings.md](findings.md), [REFERENCE_STATUS.md](REFERENCE_STATUS.md) and [INTEGRATION.md](INTEGRATION.md). Original source evidence is preserved in [the received handover](provenance/member4_20261019/HANDOFF.md); its original package-relative commands differ from the integrated commands below. Older Explorer modification scores were simulated and are excluded from the coverage analysis.
 
@@ -10,7 +20,7 @@ Read [findings.md](findings.md), [REFERENCE_STATUS.md](REFERENCE_STATUS.md) and 
 
 - `scripts/`, `tests/`, `requirements.txt`: analysis/verification code and small checks.
 - `metadata/sample_manifest.csv`: the exact 23 runs, group mapping, public signal links and saved object sizes. Signal JSONs total **33,365,823,342 bytes** (33.37 GB); they are not bundled.
-- `manifest.csv`, `MODEL_INFO.md`: prediction handoff. Final model/reference fields remain pending. Coverage and future prediction paths use ignored `outputs/`.
+- `manifest.csv`, `MODEL_INFO.md`: selected-model handoff. Exact historical reference/preprocessing and nucleotide offsets remain unverified. Coverage and prediction paths use ignored `outputs/`.
 - `outputs/received_member4_20261019/`: local received coverage, annotations, aliases, figures, guides and logs. These are retained on the laptop, not public site-level data uploads.
 - `outputs/predictions/`: future three-column per-run CSVs and receipts.
 - `provenance/member4_20261019/`: unchanged original handover, scientific/report/AI-use evidence and source inventory. This inventory describes the received package, including deliberately unpublished files.
@@ -71,16 +81,39 @@ On another computer replace `--source` with its extraction folder. The helper ch
 
 Expected files include `results/coverage_matrix_ge20_union.csv.gz`, `results/site_annotations.csv.gz` and `metadata/transcript_aliases_checked.csv` beneath that local destination. Its HTML/notebook describe the received coverage work; the notebook's real-analysis cell remains disabled. Original logs retain historical preparation paths, not required paths on this laptop.
 
-## 3. Genuine signals and model predictions: pending
+## 3. Genuine signals and selected-model predictions
 
-After model nomination and planning input checks, obtain one run first:
+Obtain one run first, then validate its full input against inherited coverage:
 
 ```powershell
 $signals = "sgnex_analysis/outputs/signals"
 & $py -B sgnex_analysis/scripts/download_signal_inputs.py --dest $signals --run-id SGNex_Hct116_directRNA_replicate3_run4
+& $py -B sgnex_analysis/scripts/audit_elgin_input.py --input "$signals/SGNex_Hct116_directRNA_replicate3_run4/data.json" --run-id SGNex_Hct116_directRNA_replicate3_run4 --output sgnex_analysis/outputs/preflight/first_full_input_audit.json
 ```
 
-The standard-library helper uses the saved 23-run public HTTPS manifest; no AWS credentials are needed. It writes `<run_id>/data.json` and download receipts. Size matching is not independent upstream content authentication. Interrupted `.partial` downloads restart; byte-range resume is not implemented. After inspecting the first real input, `--all` selects the same 23 runs. **No full signal download was executed by this integration.** Matching nine-value array shape alone does not prove preprocessing/reference compatibility.
+The helper uses the fixed public HTTPS inventory without AWS credentials.
+Interrupted `.partial` downloads restart; byte-range resume is not implemented.
+The first actual download and full audit completed on 23 October:
+1,302,514 sites / 15,133,352 reads, with exactly 135,870 eligible >=20-read
+sites matching Member 4. Size/count agreement is not independent upstream
+SHA authentication or proof of exact historical reference identity.
+
+The selected-model adapter checks **every** source site, including low-coverage
+ones, and copies eligible original JSON record bytes verbatim into gzip before
+calling the unchanged predictor. All available reads are used at each eligible
+site. All-source QC/sequence/count metadata records why others are unscored.
+
+```powershell
+& $py -B sgnex_analysis/scripts/predict_elgin_run.py --input "$signals/SGNex_Hct116_directRNA_replicate3_run4/data.json" --run-id SGNex_Hct116_directRNA_replicate3_run4 --output sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.csv --min-reads 20 --threads 4
+```
+
+Nine targeted contract tests passed. A real 1,024-source-site probe scored
+95 eligible sites / 51,056 reads, with maximum score difference 1.49e-8 from
+the unchanged predictor on the original source (tolerance 3e-6). This checks
+software parity, not biological accuracy. Completed adapter runs can be reused
+only when every input/model/code/output fingerprint matches. Partial work is
+preserved and requires a fresh output filename; completed runs, rather than
+individual partial CSV batches, are resumable.
 
 Use one selected saved checkpoint and its unchanged trained preprocessing across all runs. The interface is exactly:
 
@@ -88,7 +121,11 @@ Use one selected saved checkpoint and its unchanged trained preprocessing across
 transcript_id,transcript_position,score
 ```
 
-Preserve original IDs/positions, unique keys, finite scores in `[0,1]` and full precision. Keep metadata/receipts separately. If a model emits all sites, retain that original export and create a separate Task 2 export using >=20 run-specific source reads. Investigate unmatched keys and finite-read failures rather than silently removing them.
+Preserve original IDs/positions, unique keys, finite scores in `[0,1]` and full
+precision. The `.model_export.csv` preserves the core's complete **eligible-input**
+export; the Task 2 CSV is byte-identical. Low-coverage source sites remain in QC
+metadata and the raw source. Investigate unmatched keys and finite-read failures
+rather than silently dropping malformed reads or calling missing scores zero.
 
 This optional command is specific to the received Member 3 candidate, **not final selection or an adapter for another checkpoint**. Use its documented prediction environment and canonical files:
 
@@ -101,7 +138,12 @@ The current laptop already has this environment, prepared during canonical candi
 
 ## 4. Compare real predictions after prerequisites are complete
 
-Complete MODEL_INFO.md and pending manifest model/reference values using one compatible version across all 23 rows. Retain model/input hashes, preprocessing, coordinates and failed-site evidence. The current manifest deliberately cannot pass production validation. A real-input declaration does not establish biological validity.
+The active manifest identifies the selected artifact consistently across
+23 rows. Its reference string records upstream-reported but unverified
+provenance, not established FASTA identity. Full comparisons still need actual
+CSVs, matching coverage, aliases, cross-run context checks and provenance review.
+Missing prediction files cause failure. A real-input declaration does not
+establish biological validity.
 
 ```powershell
 & $py -B sgnex_analysis/scripts/compare_predictions.py --manifest sgnex_analysis/manifest.csv --model-info sgnex_analysis/MODEL_INFO.md --coverage-matrix sgnex_analysis/outputs/received_member4_20261019/results/coverage_matrix_ge20_union.csv.gz --annotations sgnex_analysis/outputs/received_member4_20261019/results/site_annotations.csv.gz --aliases sgnex_analysis/outputs/received_member4_20261019/metadata/transcript_aliases_checked.csv --confirm-real-predictions --out sgnex_analysis/outputs/real_analysis_v1
@@ -115,4 +157,6 @@ Future outputs include group/line means, separate pairwise/all-line common popul
 
 Describe replicated **predicted patterns**, retaining conflicting examples. Scores are not individual-read labels, modified-molecule fractions, other modification types or causal cell-line effects. Common-site selection, sequence preference, chemistry/batch, abundance and isoforms limit interpretation. Replicate-number labels do not independently prove separate laboratory preparations.
 
-The laptop can continue without more Member 4 code. Final selection, real signals/reference evidence, genuine predictions, analysis and display integration still require work within the fixed 23-run scope.
+The laptop can continue from Member 4's code. Selection is complete; real
+predictions, remaining input/reference checks, comparisons and display
+integration continue within the same 23-run scope.

@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "training_sites": 121838,
+  "positive_labels": 5475,
+  "negative_labels": 116363,
+  "training_reads": 11027106,
+  "training_reads_min": 20,
+  "training_reads_max": 991,
+  "central5_contexts": 18,
+  "exact7_contexts": 288,
+  "complete_canonical_DRACH7_universe": true,
+  "sevenmers_zero_positive_labels": 56,
+  "sevenmers_fewer_than20_positive_labels": 211,
+  "sevenmers_atleast20_each_class": 77,
+  "sparse_positive_central5_motifs": [
+    "AAACC",
+    "TAACA",
+    "TAACC"
+  ],
+  "first_run": {
+    "run_id": "SGNex_Hct116_directRNA_replicate3_run4",
+    "input_sha256": "9a745cfa717474a7d46ad8e52198e6640283e5a8e3beb2406530104d330166bd",
+    "audit_sha256": "ac804c1521b807ef7da12089919cde093166faac4e5626beba86a41749c50f87",
+    "eligible_sites_ge20": 135870,
+    "unseen_encoded_central5_sites": 0,
+    "unseen_encoded_7mer_sites": 0,
+    "unseen_7mer_method": "Deduction from complete training canonical universe and audited canonical central motifs; U maps to T",
+    "distinct_observed_7mers": null,
+    "raw_input_rescanned": false,
+    "sparse_central5_positive_support_sites": 15708,
+    "sparse_central5_positive_support_fraction": 0.11561051004636785,
+    "raw_sites_below20": 1166644,
+    "scope": "One run's input/coverage audit; no SG-NEx prediction completion or label accuracy implied"
+  },
+  "source_sha256": {
+    "cache_manifest.json": "a5077952fcdc7e8063a1b4fabb209b918e01bbb9f087830d02c96980487a26fa",
+    "seq.npy": "d43d7551943a3c60a6e848f65fbfe68f64e36ba60163ec2a1caafb6b56e48005",
+    "keys.csv": "7f2af2c106df526dc5e3a5c46472198e0ee0e4abcd550e2eccc31a8bbeaeff97",
+    "offsets.npy": "7d04496524e2cd2cc472f51da8e5f8da917fecb3a51952eaf08841ae7663df93",
+    "data0_labels": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978",
+    "member1_motif_summary.csv": "d45304151b3c4fdc20bb4759f98551a44293c008940d292fca4dafc08a1167f8",
+    "first_full_input_audit.json": "ac804c1521b807ef7da12089919cde093166faac4e5626beba86a41749c50f87"
+  },
+  "reporter_sha256": "4c4fa270b5a217aaae73b90a8c56129efcc73aa875033f15e0616c1dd2ad79ea",
+  "resources": {
+    "wall_seconds": 2.215447900001891,
+    "process_cpu_seconds": 2.21875
+  },
+  "scope": "Existing cache/label/EDA aggregate analysis; no model fitting, inference or raw SG-NEx rescan"
+}

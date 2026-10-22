@@ -1,6 +1,8 @@
 # Current project stage — 23 October 2026
 
-**Task 1: final training, supplied-data predictions and data1 scoring are complete.**
+**Current stage: Task 2 SG-NEx predictions.** The first run is complete and
+independently verified; the sequential 23-run workflow is running. Task 1 final
+training, supplied-data predictions and data1 scoring are complete.
 The original-feature cap128 neural configuration with positive loss weight 3
 completed its fresh **18-epoch all-data0 fit in 679.823 seconds (11.33 minutes)**.
 The saved model and a real ten-site prediction example passed verification.
@@ -28,8 +30,8 @@ benchmarks have completed.
 | Task 1: frozen data1 diagnostic | **Complete**: S0.604865501 | Retain already-exposed transfer evidence and all metric tradeoffs; no winner selection |
 | Task 1: predictions on supplied data0/data1/data2 | **Complete**: 121,838 / 90,810 / 1,323 sites | Preserve CSVs and manifests; fitted-data0 scores are separate from OOF validation |
 | Task 1: new unlabelled test submission | Pending actual release/input/instructions | Same frozen artifact, exact coverage/format checks and required submission files; no unavailable label metrics |
-| Code reproducibility | Clean Ubuntu check pending | Install instructions, saved-model access, small runnable prediction example and verified Ubuntu output |
-| Task 2: real SG-NEx predictions | Pending | Same-model site scores for the agreed 23 processed runs |
+| Code reproducibility | Ubuntu attempt stopped before execution: local Docker backend startup failed | Prepared isolated CPU recipe; still needs a working Ubuntu environment and separate AWS verification |
+| Task 2: real SG-NEx predictions | **First run verified; full 23-run workflow running** | Same-model eligible scores, full source QC and exact Member 4 coverage checks for each run |
 | Task 2: biological/data analysis | Foundations integrated; prediction-based conclusions pending | Replicate-aware common-site comparisons, coverage sensitivity, uncertainty and supported scientific figures |
 | Interactive visualisation | Integrated foundation; currently **coverage-only** | Genuine-score explorer, with any hosted subset explicitly identified |
 | Final scientific report | Evidence available; final five-page report unfinished | Main-body methods, findings, limitations and scientific figures; appendix is unlimited but ungraded |
@@ -49,3 +51,9 @@ Local predictions and their manifests are retained under
 key to its supplied label file and verified model/input/output/source hashes;
 the original CV files remain unchanged. Completion receipts, rather than this
 stage tracker alone, establish which commands actually finished.
+
+The first real run scored 135,870 eligible sites using 10,572,838 reads.
+Its 1,166,644 source sites below 20 reads remain explicitly unscored in QC.
+See [actual first-run evidence](sgnex_analysis/first_prediction_qc/README.md)
+and [the sequential-run guide](sgnex_analysis/ELGIN_TASK2_RUNNER.md).
+This is not a completed 23-run comparison, dashboard or biological conclusion.

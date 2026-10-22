@@ -1,0 +1,590 @@
+{
+  "status": "complete",
+  "scope": "First of 23 runs only: source/input-support and predicted-score QC",
+  "run_id": "SGNex_Hct116_directRNA_replicate3_run4",
+  "cell_line": "Hct116",
+  "replicate_group": "Hct116:rep3",
+  "model_version": "elgin-cap128-weight3-18epoch-b2d38ff29a91",
+  "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+  "model_epochs": 18,
+  "input_counts": {
+    "input_sites": 1302514,
+    "input_reads": 15133352,
+    "finite_reads": 15133352,
+    "eligible_sites": 135870,
+    "eligible_reads": 10572838,
+    "below_minimum_source_reads": 1166644,
+    "reads_discarded_nonfinite": 0
+  },
+  "source_depth_thresholds": {
+    "1": 1302514,
+    "5": 465624,
+    "10": 261857,
+    "20": 135870,
+    "50": 50332,
+    "100": 21438
+  },
+  "source_depth_minimum": 1,
+  "source_depth_maximum": 993,
+  "training_depth_minimum": 20,
+  "training_depth_maximum": 991,
+  "eligible_above_training_maximum_retained": 1,
+  "actual_observed_eligible_7mers": 288,
+  "actual_observed_eligible_central_motifs": 18,
+  "unseen_model_encoded_7mers": 0,
+  "unseen_central_motifs": 0,
+  "member4_complete_key_and_count_match": true,
+  "run_specific_aliases_applied_for_comparison_only": 0,
+  "coverage_bins": [
+    {
+      "population": "20-49 reads",
+      "n_scored_sites": 85538,
+      "mean_score": 0.10616652303315055,
+      "median_score": 0.022924129851162434,
+      "minimum_score": 5.274862814985681e-06,
+      "maximum_score": 0.9772586226463318,
+      "n_score_ge0p5": 6569,
+      "fraction_score_ge0p5": 0.07679627767775725,
+      "n_score_ge0p7": 3226,
+      "fraction_score_ge0p7": 0.037714232271037436,
+      "n_score_ge0p9": 221,
+      "fraction_score_ge0p9": 0.0025836470340667305
+    },
+    {
+      "population": "50-99 reads",
+      "n_scored_sites": 28894,
+      "mean_score": 0.10318948141846782,
+      "median_score": 0.027670650742948055,
+      "minimum_score": 1.2681430234806612e-05,
+      "maximum_score": 0.9681519865989685,
+      "n_score_ge0p5": 1959,
+      "fraction_score_ge0p5": 0.06779954315774901,
+      "n_score_ge0p7": 944,
+      "fraction_score_ge0p7": 0.0326711427978127,
+      "n_score_ge0p9": 50,
+      "fraction_score_ge0p9": 0.0017304630719180453
+    },
+    {
+      "population": "100-199 reads",
+      "n_scored_sites": 12234,
+      "mean_score": 0.0976017018858865,
+      "median_score": 0.030625762417912483,
+      "minimum_score": 1.5457066183444113e-05,
+      "maximum_score": 0.9441327452659607,
+      "n_score_ge0p5": 689,
+      "fraction_score_ge0p5": 0.0563184567598496,
+      "n_score_ge0p7": 324,
+      "fraction_score_ge0p7": 0.026483570377636097,
+      "n_score_ge0p9": 18,
+      "fraction_score_ge0p9": 0.0014713094654242277
+    },
+    {
+      "population": ">=200 reads",
+      "n_scored_sites": 9204,
+      "mean_score": 0.08120267425755047,
+      "median_score": 0.030717207118868828,
+      "minimum_score": 4.116981290280819e-05,
+      "maximum_score": 0.9538617134094238,
+      "n_score_ge0p5": 322,
+      "fraction_score_ge0p5": 0.03498478922207736,
+      "n_score_ge0p7": 114,
+      "fraction_score_ge0p7": 0.012385919165580182,
+      "n_score_ge0p9": 3,
+      "fraction_score_ge0p9": 0.0003259452411994785
+    }
+  ],
+  "depth_sensitivity": [
+    {
+      "population": ">=20 reads",
+      "n_scored_sites": 135870,
+      "mean_score": 0.10307115299958247,
+      "median_score": 0.025119855999946594,
+      "minimum_score": 5.274862814985681e-06,
+      "maximum_score": 0.9772586226463318,
+      "n_score_ge0p5": 9539,
+      "fraction_score_ge0p5": 0.07020681533819091,
+      "n_score_ge0p7": 4608,
+      "fraction_score_ge0p7": 0.03391477147273129,
+      "n_score_ge0p9": 292,
+      "fraction_score_ge0p9": 0.002149113122838007
+    },
+    {
+      "population": ">=50 reads",
+      "n_scored_sites": 50332,
+      "mean_score": 0.09781064751735753,
+      "median_score": 0.028948224149644375,
+      "minimum_score": 1.2681430234806612e-05,
+      "maximum_score": 0.9681519865989685,
+      "n_score_ge0p5": 2970,
+      "fraction_score_ge0p5": 0.05900818564730192,
+      "n_score_ge0p7": 1382,
+      "fraction_score_ge0p7": 0.027457680998172137,
+      "n_score_ge0p9": 71,
+      "fraction_score_ge0p9": 0.0014106333942620996
+    },
+    {
+      "population": ">=100 reads",
+      "n_scored_sites": 21438,
+      "mean_score": 0.09056108940845368,
+      "median_score": 0.03068460524082184,
+      "minimum_score": 1.5457066183444113e-05,
+      "maximum_score": 0.9538617134094238,
+      "n_score_ge0p5": 1011,
+      "fraction_score_ge0p5": 0.04715924993003079,
+      "n_score_ge0p7": 438,
+      "fraction_score_ge0p7": 0.020431010355443605,
+      "n_score_ge0p9": 21,
+      "fraction_score_ge0p9": 0.0009795689896445563
+    }
+  ],
+  "motifs": [
+    {
+      "population": "AAACA",
+      "n_scored_sites": 11247,
+      "mean_score": 0.012427140153393782,
+      "median_score": 0.0075225867331027985,
+      "minimum_score": 1.5542265828116797e-05,
+      "maximum_score": 0.7810251116752625,
+      "n_score_ge0p5": 3,
+      "fraction_score_ge0p5": 0.00026673779674579886,
+      "n_score_ge0p7": 1,
+      "fraction_score_ge0p7": 8.891259891526629e-05,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 10152,
+      "data0_positive_labels": 38
+    },
+    {
+      "population": "AAACC",
+      "n_scored_sites": 7210,
+      "mean_score": 0.008738036979673718,
+      "median_score": 0.006549766985699534,
+      "minimum_score": 2.719676194828935e-05,
+      "maximum_score": 0.16548727452754974,
+      "n_score_ge0p5": 0,
+      "fraction_score_ge0p5": 0.0,
+      "n_score_ge0p7": 0,
+      "fraction_score_ge0p7": 0.0,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 6502,
+      "data0_positive_labels": 11
+    },
+    {
+      "population": "AAACT",
+      "n_scored_sites": 9519,
+      "mean_score": 0.08225923971250408,
+      "median_score": 0.019687050953507423,
+      "minimum_score": 7.376735084108077e-06,
+      "maximum_score": 0.8603143692016602,
+      "n_score_ge0p5": 370,
+      "fraction_score_ge0p5": 0.038869629162727175,
+      "n_score_ge0p7": 108,
+      "fraction_score_ge0p7": 0.01134572959344469,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 8627,
+      "data0_positive_labels": 255
+    },
+    {
+      "population": "AGACA",
+      "n_scored_sites": 8303,
+      "mean_score": 0.0437926860005025,
+      "median_score": 0.006878915708512068,
+      "minimum_score": 8.372442607651465e-06,
+      "maximum_score": 0.9273483753204346,
+      "n_score_ge0p5": 228,
+      "fraction_score_ge0p5": 0.02745995423340961,
+      "n_score_ge0p7": 81,
+      "fraction_score_ge0p7": 0.009755510056606046,
+      "n_score_ge0p9": 1,
+      "fraction_score_ge0p9": 0.00012043839576056847,
+      "data0_training_sites": 7396,
+      "data0_positive_labels": 147
+    },
+    {
+      "population": "AGACC",
+      "n_scored_sites": 7616,
+      "mean_score": 0.0439699746339503,
+      "median_score": 0.025295882485806942,
+      "minimum_score": 0.00016502734797541052,
+      "maximum_score": 0.8747335076332092,
+      "n_score_ge0p5": 57,
+      "fraction_score_ge0p5": 0.007484243697478992,
+      "n_score_ge0p7": 24,
+      "fraction_score_ge0p7": 0.0031512605042016808,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 6785,
+      "data0_positive_labels": 60
+    },
+    {
+      "population": "AGACT",
+      "n_scored_sites": 7158,
+      "mean_score": 0.16443857865883965,
+      "median_score": 0.034748880192637444,
+      "minimum_score": 5.714561848435551e-05,
+      "maximum_score": 0.9538057446479797,
+      "n_score_ge0p5": 1092,
+      "fraction_score_ge0p5": 0.15255658005029338,
+      "n_score_ge0p7": 512,
+      "fraction_score_ge0p7": 0.07152835987706063,
+      "n_score_ge0p9": 6,
+      "fraction_score_ge0p9": 0.0008382229673093043,
+      "data0_training_sites": 6405,
+      "data0_positive_labels": 525
+    },
+    {
+      "population": "GAACA",
+      "n_scored_sites": 8783,
+      "mean_score": 0.07729485280343422,
+      "median_score": 0.04102693498134613,
+      "minimum_score": 0.0007096974295563996,
+      "maximum_score": 0.8035992383956909,
+      "n_score_ge0p5": 64,
+      "fraction_score_ge0p5": 0.007286804053284754,
+      "n_score_ge0p7": 3,
+      "fraction_score_ge0p7": 0.0003415689399977229,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 7934,
+      "data0_positive_labels": 187
+    },
+    {
+      "population": "GAACC",
+      "n_scored_sites": 6372,
+      "mean_score": 0.04995747293624501,
+      "median_score": 0.033468740060925484,
+      "minimum_score": 0.0012371412012726068,
+      "maximum_score": 0.6409350037574768,
+      "n_score_ge0p5": 11,
+      "fraction_score_ge0p5": 0.001726302573760201,
+      "n_score_ge0p7": 0,
+      "fraction_score_ge0p7": 0.0,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 5719,
+      "data0_positive_labels": 124
+    },
+    {
+      "population": "GAACT",
+      "n_scored_sites": 7714,
+      "mean_score": 0.2691268718240928,
+      "median_score": 0.1985754370689392,
+      "minimum_score": 0.00029981666011735797,
+      "maximum_score": 0.9009791612625122,
+      "n_score_ge0p5": 1566,
+      "fraction_score_ge0p5": 0.20300751879699247,
+      "n_score_ge0p7": 461,
+      "fraction_score_ge0p7": 0.05976147264713508,
+      "n_score_ge0p9": 1,
+      "fraction_score_ge0p9": 0.00012963443090484831,
+      "data0_training_sites": 6957,
+      "data0_positive_labels": 783
+    },
+    {
+      "population": "GGACA",
+      "n_scored_sites": 8744,
+      "mean_score": 0.17989681376645578,
+      "median_score": 0.041906122118234634,
+      "minimum_score": 1.3622625374409836e-05,
+      "maximum_score": 0.9772586226463318,
+      "n_score_ge0p5": 1393,
+      "fraction_score_ge0p5": 0.15930924062214089,
+      "n_score_ge0p7": 758,
+      "fraction_score_ge0p7": 0.08668801463860933,
+      "n_score_ge0p9": 87,
+      "fraction_score_ge0p9": 0.00994967978042086,
+      "data0_training_sites": 7727,
+      "data0_positive_labels": 691
+    },
+    {
+      "population": "GGACC",
+      "n_scored_sites": 8228,
+      "mean_score": 0.16929177411196664,
+      "median_score": 0.058674655854701996,
+      "minimum_score": 0.00010486697283340618,
+      "maximum_score": 0.9655323624610901,
+      "n_score_ge0p5": 1019,
+      "fraction_score_ge0p5": 0.12384540593096743,
+      "n_score_ge0p7": 548,
+      "fraction_score_ge0p7": 0.06660184735051045,
+      "n_score_ge0p9": 26,
+      "fraction_score_ge0p9": 0.0031599416626154593,
+      "data0_training_sites": 7353,
+      "data0_positive_labels": 552
+    },
+    {
+      "population": "GGACT",
+      "n_scored_sites": 7174,
+      "mean_score": 0.3499505452130151,
+      "median_score": 0.22888794541358948,
+      "minimum_score": 0.0005588912754319608,
+      "maximum_score": 0.9644695520401001,
+      "n_score_ge0p5": 2613,
+      "fraction_score_ge0p5": 0.36423194870365205,
+      "n_score_ge0p7": 1648,
+      "fraction_score_ge0p7": 0.22971842765542236,
+      "n_score_ge0p9": 138,
+      "fraction_score_ge0p9": 0.019236130471145804,
+      "data0_training_sites": 6376,
+      "data0_positive_labels": 1440
+    },
+    {
+      "population": "TAACA",
+      "n_scored_sites": 5199,
+      "mean_score": 0.003257751048578836,
+      "median_score": 0.0012953681871294975,
+      "minimum_score": 5.274862814985681e-06,
+      "maximum_score": 0.061170000582933426,
+      "n_score_ge0p5": 0,
+      "fraction_score_ge0p5": 0.0,
+      "n_score_ge0p7": 0,
+      "fraction_score_ge0p7": 0.0,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 4695,
+      "data0_positive_labels": 1
+    },
+    {
+      "population": "TAACC",
+      "n_scored_sites": 3299,
+      "mean_score": 0.0033920195579841363,
+      "median_score": 0.002093218732625246,
+      "minimum_score": 1.5280034858733416e-05,
+      "maximum_score": 0.036669567227363586,
+      "n_score_ge0p5": 0,
+      "fraction_score_ge0p5": 0.0,
+      "n_score_ge0p7": 0,
+      "fraction_score_ge0p7": 0.0,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 2966,
+      "data0_positive_labels": 2
+    },
+    {
+      "population": "TAACT",
+      "n_scored_sites": 4968,
+      "mean_score": 0.04479819334908564,
+      "median_score": 0.014877327717840672,
+      "minimum_score": 3.79180237359833e-05,
+      "maximum_score": 0.7899793386459351,
+      "n_score_ge0p5": 33,
+      "fraction_score_ge0p5": 0.006642512077294686,
+      "n_score_ge0p7": 8,
+      "fraction_score_ge0p7": 0.001610305958132045,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 4433,
+      "data0_positive_labels": 71
+    },
+    {
+      "population": "TGACA",
+      "n_scored_sites": 8615,
+      "mean_score": 0.04757005957639362,
+      "median_score": 0.01779256947338581,
+      "minimum_score": 7.3668438744789455e-06,
+      "maximum_score": 0.8948229551315308,
+      "n_score_ge0p5": 62,
+      "fraction_score_ge0p5": 0.0071967498549042365,
+      "n_score_ge0p7": 20,
+      "fraction_score_ge0p7": 0.0023215322112594312,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 7718,
+      "data0_positive_labels": 68
+    },
+    {
+      "population": "TGACC",
+      "n_scored_sites": 8122,
+      "mean_score": 0.060927773971830745,
+      "median_score": 0.04782350733876228,
+      "minimum_score": 0.0005071237101219594,
+      "maximum_score": 0.8890257477760315,
+      "n_score_ge0p5": 11,
+      "fraction_score_ge0p5": 0.001354346220142822,
+      "n_score_ge0p7": 4,
+      "fraction_score_ge0p7": 0.0004924895345973898,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0,
+      "data0_training_sites": 7304,
+      "data0_positive_labels": 90
+    },
+    {
+      "population": "TGACT",
+      "n_scored_sites": 7599,
+      "mean_score": 0.18921423385403702,
+      "median_score": 0.08401980251073837,
+      "minimum_score": 3.288462175987661e-05,
+      "maximum_score": 0.9515054225921631,
+      "n_score_ge0p5": 1017,
+      "fraction_score_ge0p5": 0.13383339913146466,
+      "n_score_ge0p7": 432,
+      "fraction_score_ge0p7": 0.0568495854717726,
+      "n_score_ge0p9": 33,
+      "fraction_score_ge0p9": 0.0043426766679826295,
+      "data0_training_sites": 6789,
+      "data0_positive_labels": 430
+    }
+  ],
+  "sevenmer_training_positive_support": [
+    {
+      "population": "0 positive training labels",
+      "n_scored_sites": 16643,
+      "mean_score": 0.010043549511082741,
+      "median_score": 0.003515267977491021,
+      "minimum_score": 5.274862814985681e-06,
+      "maximum_score": 0.5635343790054321,
+      "n_score_ge0p5": 5,
+      "fraction_score_ge0p5": 0.0003004266057802079,
+      "n_score_ge0p7": 0,
+      "fraction_score_ge0p7": 0.0,
+      "n_score_ge0p9": 0,
+      "fraction_score_ge0p9": 0.0
+    },
+    {
+      "population": "1-19 positive training labels",
+      "n_scored_sites": 71916,
+      "mean_score": 0.053395182675147014,
+      "median_score": 0.02077536005526781,
+      "minimum_score": 7.3668438744789455e-06,
+      "maximum_score": 0.9739149212837219,
+      "n_score_ge0p5": 1140,
+      "fraction_score_ge0p5": 0.015851827131653597,
+      "n_score_ge0p7": 379,
+      "fraction_score_ge0p7": 0.005270037265698871,
+      "n_score_ge0p9": 16,
+      "fraction_score_ge0p9": 0.0002224817843039101
+    },
+    {
+      "population": ">=20 positive training labels",
+      "n_scored_sites": 47311,
+      "mean_score": 0.211307197190388,
+      "median_score": 0.07891067117452621,
+      "minimum_score": 1.0340242624806706e-05,
+      "maximum_score": 0.9772586226463318,
+      "n_score_ge0p5": 8394,
+      "fraction_score_ge0p5": 0.17742174124410814,
+      "n_score_ge0p7": 4229,
+      "fraction_score_ge0p7": 0.08938724609498848,
+      "n_score_ge0p9": 276,
+      "fraction_score_ge0p9": 0.00583373845405931
+    }
+  ],
+  "working_score_cutoffs_not_calibrated_biological_calls": [
+    0.5,
+    0.7,
+    0.9
+  ],
+  "core_inference_resources": {
+    "wall_seconds": 127.22902440000325,
+    "cpu_seconds": 493.40625,
+    "sampled_peak_process_tree_rss_mib": 390.78125,
+    "sampling_interval_seconds": 0.2,
+    "sampling_errors": 0
+  },
+  "adapter_resources": {
+    "wall_seconds": 466.3779441000079,
+    "process_cpu_seconds_excluding_child": 324.046875
+  },
+  "inference_resource_scope": "Wrapper wall includes full-source QC, child prediction and export audit; core timings overlap. Wrapper process CPU excludes predictor child; no total-CPU claim.",
+  "source_input_audit_resources": {
+    "wall_seconds": 117.57445430004736,
+    "process_cpu_seconds": 116.734375
+  },
+  "probe_software_check": {
+    "status": "complete",
+    "scope": "Genuine1024source-site software parity, not full-run or biological validation",
+    "source_sites": 1024,
+    "eligible_sites": 95,
+    "eligible_reads": 51056,
+    "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+    "adapter_sha256": "df1e37ced5a180bb708d8af0f36ea7871d51538d6678e2063ba9c2e8422428cb",
+    "maximum_absolute_score_difference": 1.4901161193847656e-08,
+    "absolute_tolerance": 3e-06,
+    "all_eligible_source_keys_match": true,
+    "all_receipt_hashes_match": true,
+    "same_core_all_source_reference_used": true,
+    "below_minimum_sites": 929
+  },
+  "source_sha256": {
+    "receipt": {
+      "path": "sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.receipt.json",
+      "sha256": "522e97e3a0ee4c2e4653c13fc6e6bc614ce89cabd14e83fc716d56a7bc0aad24"
+    },
+    "predictions": {
+      "path": "sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.csv",
+      "sha256": "cf28339b9296a5a67a16bc181b7b2732d58c057a1ada7817d3915736c79ba64c"
+    },
+    "metadata": {
+      "path": "sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.site_metadata.csv.gz",
+      "sha256": "f6dbbd7188f3759db36152a8479ba3eb86717da9efdf38fb19a249713e2b1968"
+    },
+    "input_qc": {
+      "path": "sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.input_qc.json",
+      "sha256": "302e797f6077380f02ad494cf714b1787545abcb959b4df72169e8f3699ed157"
+    },
+    "core_manifest": {
+      "path": "sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.model_export.csv.manifest.json",
+      "sha256": "fff899b2dd1bf3725235839f27c7b9b3580d5f5564e75150f48f9924d96db958"
+    },
+    "audit": {
+      "path": "sgnex_analysis/outputs/preflight/first_full_input_audit.json",
+      "sha256": "ac804c1521b807ef7da12089919cde093166faac4e5626beba86a41749c50f87"
+    },
+    "depth_profile": {
+      "path": "sgnex_analysis/outputs/preflight/first_depth_context_profile.json",
+      "sha256": "e00f137a36a375c0df0cf2964d9800ea28523be059e48aacf51579904e695075"
+    },
+    "probe": {
+      "path": "sgnex_analysis/outputs/preflight/first_real_probe_20261023/probe_verification.json",
+      "sha256": "fa1ea90b1c7fe72229f48e8f8bbc7389e1846fafda7d05bbadf7dba1f5acfaff"
+    },
+    "inventory": {
+      "path": "sgnex_analysis/metadata/sample_manifest.csv",
+      "sha256": "c06ea04a7a3252592b9bc265f1fd10ac4b4cc3d622c681ec68fe047236696a1d"
+    },
+    "coverage": {
+      "path": "sgnex_analysis/outputs/received_member4_20261019/results/coverage_matrix_ge20_union.csv.gz",
+      "sha256": "5e93d50bd0d0aa9addc0d18fa08484a8e7d772bda1648db84efa48483c961723"
+    },
+    "aliases": {
+      "path": "sgnex_analysis/outputs/received_member4_20261019/metadata/transcript_aliases_checked.csv",
+      "sha256": "0a8aaeafde0898f9463f493a978c2c5705452b38bb5fccbe5bb85cbd5b0ada00"
+    },
+    "training_7mer": {
+      "path": "sgnex_analysis/training_context_support/training_7mer_support.csv",
+      "sha256": "164896ea98625a0587c154f089ed373239e29c8e4847684d12750bcb99877150"
+    },
+    "training_motif": {
+      "path": "sgnex_analysis/training_context_support/training_motif_support.csv",
+      "sha256": "695615a07e5ae9cb18bdf33cdb22e2c609069eb48b1f075709782c5bb7bc8999"
+    },
+    "model": {
+      "path": "model_elgin/artifacts/cap128_weight3_v1/model.pt",
+      "sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668"
+    },
+    "model_metadata": {
+      "path": "model_elgin/artifacts/cap128_weight3_v1/metadata.json",
+      "sha256": "32890e837bde8adb56c9c0c832c1394bf1f811d520994ebe1154b70f7d953d2a"
+    },
+    "source": {
+      "path": "sgnex_analysis/outputs/signals/SGNex_Hct116_directRNA_replicate3_run4/data.json",
+      "sha256": "9a745cfa717474a7d46ad8e52198e6640283e5a8e3beb2406530104d330166bd"
+    }
+  },
+  "reporter_sha256": "06d0340d2ab3fa888229383ca66ace9054275799a35861dac4a15d4fdebbcd8d",
+  "limitations": [
+    "One sequencing run, not a cell-line or replicate comparison.",
+    "No compatible independent assay labels supplied: no SG-NEx accuracy/ROC/PR claim.",
+    "Scores/cutoff fractions are not chemical prevalence, modified-read fractions or other RNA marks.",
+    "Raw-source schema/count agreement does not prove historical preprocessing/reference/event-coordinate identity.",
+    "Sparse training labels are evidence limits, not a calibrated per-site uncertainty estimate.",
+    "Depth/context comparisons are descriptive and confounded; no causal or significance claim."
+  ],
+  "report_generation_resources": {
+    "wall_seconds": 31.215946900018025,
+    "process_cpu_seconds": 30.546875,
+    "scope": "Receipt/source hashes, stored CSV/QC metadata, joins and figure/report generation; no inference"
+  }
+}

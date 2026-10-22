@@ -14,7 +14,12 @@ These annotated-human denominators were independently reproduced during the read
 
 Public-source manifests, scientific code and original report/AI-use evidence are integrated. All 89 hashes in the latest package inventory matched the received files. Large tables, figures and original logs remain local under ignored `outputs/received_member4_20261019/`; local checks are recorded in INTEGRATION.md.
 
-**No full SG-NEx predictions or real-score biological comparisons are complete.** The Member 3 checkpoint and example are real development/software evidence, not team selection. Its data1 was exposed during development. Historical Explorer modification scores were simulated and excluded from this coverage work.
+**23 October: the first selected-model run is complete; the full23-run
+collection and biological comparisons are not.** Hct116rep3run4 has135,870
+verified eligible scores from the frozen Elgin model. The sequential workflow
+is running; see [first-run QC](first_prediction_qc/README.md). The older Member3
+checkpoint/example remains comparison evidence. Historical Explorer modification
+scores were simulated and excluded from coverage and current prediction work.
 
 Next, apply one selected frozen model consistently after input/reference checks, then compare within-group run means and equally weighted group means on common-site populations. Preserve effects that weaken under depth/support controls and overlapping replicate ranges. Descriptive score cutoffs/difference screens are not calibration, significance or stoichiometry.
 

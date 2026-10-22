@@ -19,6 +19,16 @@ the documented tradeoff review. See [current stages](CURRENT_STAGE.md) and
 The current explorer is **coverage-only**. The older simulated prototype is
 archival and is not biological evidence.
 
+**Current stage: Task 2 SG-NEx predictions.** The first full run has 135,870
+verified eligible scores; the fixed 23-run workflow is running sequentially.
+Member 4's coverage matrix directly checks eligibility and later common-site/
+replicate comparisons. See [first-run QC](sgnex_analysis/first_prediction_qc/README.md),
+[training-context support](sgnex_analysis/training_context_support/README.md)
+and [the resumable run guide](sgnex_analysis/ELGIN_TASK2_RUNNER.md).
+The local Ubuntu attempt stopped before execution because Docker's backend
+failed; [its isolated recipe and remaining check](model_elgin/reproducibility/README.md)
+are documented. The full Task 2 analysis/report/explorer remains unfinished.
+
 **Deadline update supplied by the user on 22 October:** code repositories and
 predictions for the new unlabelled test dataset remain due **28 October**;
 the report and interactive visualisation are extended to **8 November**.

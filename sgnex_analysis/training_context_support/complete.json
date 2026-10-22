@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "reporter_sha256": "4c4fa270b5a217aaae73b90a8c56129efcc73aa875033f15e0616c1dd2ad79ea",
+  "files_sha256": {
+    "first_run_context_support.json": "f65a2a384b259e628af7278da5494e6eadc90d702d92e9828b7a85aa19d7cb8a",
+    "provenance.json": "e5ec9f8a70bba0f60ac69d1a34291b7f06665c404dbe687c05a58fd716f1054f",
+    "README.md": "4907b8b64e338e728a52fbc229831bd02e6895c47c58b37244c4962ec606738f",
+    "status.json": "970587076af8c4ebf6e94dc3999b017a4c3792faf7660c408eb91572fd86128b",
+    "training_7mer_support.csv": "164896ea98625a0587c154f089ed373239e29c8e4847684d12750bcb99877150",
+    "training_motif_support.csv": "695615a07e5ae9cb18bdf33cdb22e2c609069eb48b1f075709782c5bb7bc8999"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "reporter_sha256": "06d0340d2ab3fa888229383ca66ace9054275799a35861dac4a15d4fdebbcd8d",
+  "files_sha256": {
+    "coverage_bins.csv": "575e1ca61fcd5d67240520056a0929c85819ee23d6e6cb9c56607868c18eae20",
+    "coverage_population.png": "eaf5d42e88ea446c97d021aeae67c4443f16111e4fd6b02f407097457c9859ac",
+    "coverage_population.svg": "b2385c8f6c7cf5c1ba7ebe0db9714f4b17fe627c999e3894e88668741c9273fa",
+    "depth_sensitivity.csv": "642427f42859791c8d9d59e2e5f93a4346bf10f6f8ab915ebfd5bd8a0296178e",
+    "motif_summary.csv": "6c65b79797f6ef776fb0851dd2ca275b03dc4ff8984a7038ed886cced4c0b396",
+    "README.md": "231c9aff6f6babf7a8bb88f335602e927b43ab9a09ccfd258e8155ab369f15ac",
+    "score_depth_cdf.png": "7ec103525d33e23afa43a7b87356d6cc330b11d412eb25f3e0038f5b6c79a882",
+    "score_depth_cdf.svg": "bffa1f36edb57e1d918a55831d4d1215a2bb9fe440bc2b550df0dd42ee3c65a4",
+    "summary.json": "6e73a2a91a5ae68393489de09681f4317b568606109b0d8fc3d5c2bda4ce8666",
+    "training_support_summary.csv": "6d9eb83c0c3211d24063b19a64b951e7a3b7a0010bacf31565a63c8922f878ab"
+  }
+}

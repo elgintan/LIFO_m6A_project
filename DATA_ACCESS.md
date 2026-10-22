@@ -47,7 +47,10 @@ Elgin selected the **23 available processed direct-RNA runs** as the working
 scope on 20 October. The canonical run list is `sgnex_analysis/manifest.csv`;
 the delivered source inventory and download helper are documented in that
 folder. Total processed signal size is approximately 33.37 GB. No full signal
-download was performed during integration. Download/process sequentially into
+download was performed during the original integration. On23October the first
+1.5-GB full input passed strict validation and exact inherited coverage checks;
+the full23-run sequential download/audit/prediction workflow is now running.
+See [the run guide](sgnex_analysis/ELGIN_TASK2_RUNNER.md). Download/process into
 local ignored storage and retain source/size/hash receipts. Broader metadata
 entries do not automatically expand this agreed subset.
 

@@ -2,6 +2,14 @@
 
 Scope remains the selected 23 processed runs; the broader inventory is not another completion gate.
 
+23 October: the first full Hct116rep3run4 input passed strict nine-feature
+parsing and exact inherited >=20 coverage-key/count agreement. It contains
+1,302,514 sites / 15,133,352 reads, with 135,870 at 20 reads, 50,332 at 50
+and 21,438 at 100. All its model-encoded canonical contexts are supported by
+data0 training, although positive-label support differs. This technical evidence
+does not resolve the reference/coordinate uncertainties below. See
+[selected model information](MODEL_INFO.md).
+
 | Item | Evidence available | Pending / limits |
 |---|---|---|
 | Runs/signals | Exact public links and saved sizes for 23 runs; original count source hashes | Actual signal content hashes, parsing/count agreement and feature-preprocessing compatibility |

@@ -1,0 +1,15 @@
+{
+  "run_id": "SGNex_Hct116_directRNA_replicate3_run4",
+  "input_sha256": "9a745cfa717474a7d46ad8e52198e6640283e5a8e3beb2406530104d330166bd",
+  "audit_sha256": "ac804c1521b807ef7da12089919cde093166faac4e5626beba86a41749c50f87",
+  "eligible_sites_ge20": 135870,
+  "unseen_encoded_central5_sites": 0,
+  "unseen_encoded_7mer_sites": 0,
+  "unseen_7mer_method": "Deduction from complete training canonical universe and audited canonical central motifs; U maps to T",
+  "distinct_observed_7mers": null,
+  "raw_input_rescanned": false,
+  "sparse_central5_positive_support_sites": 15708,
+  "sparse_central5_positive_support_fraction": 0.11561051004636785,
+  "raw_sites_below20": 1166644,
+  "scope": "One run's input/coverage audit; no SG-NEx prediction completion or label accuracy implied"
+}
