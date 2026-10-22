@@ -29,10 +29,13 @@ excluded outer genes. Pooled F1 changed0.535041->0.534624; mean-fold F1 was
 nearly unchanged. The0.510309 median is an unevaluated final-model proposal,
 not the cutoff used for those pooled results. Keep0.5 as the working rule;
 this is a development choice, not a biological threshold/calibration claim.
-The next authorised [weight3-to1 comparison](../model_elgin/LOSS_WEIGHT_EXPERIMENT.md)
-preserves the same cap128 network, all sites, gene folds and evaluator. Its
-[execution status](../model_elgin/LOSS_WEIGHT_STATUS.md) distinguishes checks
-from full CV; a new full candidate score is not yet available.
+The completed [weight3-to1 comparison](../model_elgin/loss_weight_results/README.md)
+preserves the same cap128 network, all sites, gene folds and evaluator.
+Weight1 mean S0.718381 versus weight3's0.718715 does not justify replacement
+under the predeclared criterion. Weight1 has higher pooled S and precision,
+but lower mean PR and fixed0.5 recall/F1. Preserve all these tradeoffs; see the
+[review](../model_elgin/LOSS_WEIGHT_REVIEW_2026_10_22.md). This is a close
+development comparison, not established statistical superiority.
 No final model has been selected. Current comparisons and outstanding work
 are in [integration status](../INTEGRATION_STATUS.md). New all-data0 fitting
 for Elgin's eventual nominated pipeline and real SG-NEx predictions are

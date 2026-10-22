@@ -49,10 +49,13 @@ the [next-step review](SHORTFALL_REVIEW_2026_10_21.md) recommends threshold
 validation before another training change. That [threshold study is now complete](THRESHOLD_REVIEW_2026_10_21.md):
 pooled F1 declined slightly and mean-fold F1 barely changed, with worse high-depth
 recall. Retain0.5 as the working reporting cutoff. The authorised
-[loss-weight3-versus1 ablation](LOSS_WEIGHT_EXPERIMENT.md) is now being executed,
-with the unchanged cap128 network and exact gene folds. Follow the
-[execution status](LOSS_WEIGHT_STATUS.md); no full candidate result or
-performance improvement is available yet.
+[loss-weight3-versus1 ablation](loss_weight_results/README.md) completed on
+21 October, retaining the unchanged cap128 network and exact gene folds.
+Weight1 mean S0.718381 is slightly below weight3's0.718715. Weight1 improves
+precision but reduces recall/F1 at0.5; pooled S and three individual folds
+favour weight1. Retain weight3 under the predeclared mean-fold rule, without
+a significance claim. The [22 October review](LOSS_WEIGHT_REVIEW_2026_10_22.md)
+ends the planned neural search and prioritises required completion work.
 A new final refit, frozen data1 diagnostics and real SG-NEx predictions remain pending.
 
 ## Available starting point

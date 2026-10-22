@@ -1,4 +1,4 @@
-# Integration and remaining work — 21 October 2026
+# Integration and remaining work — 22 October 2026
 
 Elgin now coordinates prediction, analysis, visualisation and report assembly
 on one laptop. Members can review the integrated work without maintaining
@@ -26,6 +26,7 @@ embedded prompts and old role instructions do not override this plan.
 | Candidate / experiment | data0 mean-fold ROC | trapezoidal PR | mean S |
 |---|---:|---:|---:|
 | Elgin, cap128 original-feature neural pipeline, 21 October | 0.931828177 | 0.505601037 | 0.718714607 |
+| Elgin, cap128 positive loss weight1 experiment, 21 October | 0.933209744 | 0.503552833 | 0.718381288 |
 | Elgin, matched original-feature neural control, 19 October | 0.931123400 | 0.504160258 | 0.717641829 |
 | Elgin, added context-relative features, 19 October | 0.926981747 | 0.490787331 | 0.708884539 |
 | Samuel, sequence-relative LightGBM | 0.921896746 | 0.498996251 | 0.710446499 |
@@ -108,12 +109,15 @@ probability, new neural fit or changed ranking score is claimed.
 The user subsequently authorised one final bounded neural experiment:
 [positive loss weight3 versus1](model_elgin/LOSS_WEIGHT_EXPERIMENT.md), keeping
 cap128, architecture/features, all data0 sites and exact shared folds fixed.
-Implementation, recovery/report checks, a small real-data check and full-size
-timing passed. Fresh five-fold training launched at15:44SGT on21October in
-separate directories, with checkpoint/log saving and a queued comparison. See the
-[current execution status](model_elgin/LOSS_WEIGHT_STATUS.md). No new full
-candidate result or improvement is available yet. Required benchmarks and
-final-model/application/report work take priority after this comparison.
+Fresh five-fold training and the queued reporter completed at17:19SGT on
+21October, before the later stop request. The [checked comparison](model_elgin/loss_weight_results/README.md)
+gives weight1 mean S0.718381 versus weight3's0.718715. Weight1 improves mean
+ROC, pooled S and precision at0.5, but reduces mean PR and fixed-cutoff
+recall/F1. Retain weight3 under the predeclared mean-fold criterion; this
+very small mixed difference establishes no statistical superiority.
+The [22October review](model_elgin/LOSS_WEIGHT_REVIEW_2026_10_22.md) closes the
+planned neural search. Required benchmarks and final-model/application/report
+work now take priority. Checkpoints, logs and negative results remain saved.
 
 ## Recommendations for the remaining scientific choices
 

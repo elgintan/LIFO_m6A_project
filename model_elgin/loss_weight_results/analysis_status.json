@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "invocation": {
+    "working_directory": ".",
+    "arguments": [],
+    "baseline_cv": "model_elgin/outputs/read_cap_v1/cv",
+    "candidate_cv": "model_elgin/outputs/loss_weight_v1/cv",
+    "output_dir": "model_elgin/outputs/loss_weight_v1/comparison"
+  },
+  "comparison_manifest_sha256": "ddb337bb0597b15bf7415bfa8c6c1671566e75f205d571fb6ea874be71ff8d28",
+  "public_export": {
+    "derived_receipt": true,
+    "original_status_sha256": "7d9a56b780372a85bb69f7c8f628f62c5ed67588084a71b80bdfe8dfc6aa38d5",
+    "original_comparison_manifest_sha256": "ad57604124ecf6076480fab561a6e455bd0c49493351d1be3820b761d9f96341",
+    "note": "Paths are repository-relative; the comparison hash refers to the derived public manifest in this folder."
+  }
+}

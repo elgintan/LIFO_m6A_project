@@ -1,0 +1,101 @@
+{
+  "scope": "Saved full-population data0 cap128 positive loss weight3 versus weight1 gene-grouped CV development comparison only",
+  "export_kind": "Exact scientific aggregate copies plus explicitly derived public receipts",
+  "source_directory": "model_elgin/outputs/loss_weight_v1/comparison",
+  "source_manifest_sha256": "ad57604124ecf6076480fab561a6e455bd0c49493351d1be3820b761d9f96341",
+  "source_status_sha256": "7d9a56b780372a85bb69f7c8f628f62c5ed67588084a71b80bdfe8dfc6aa38d5",
+  "source_manifest_signature": "400b08ae468b25c62a10a521d798bf68d1a44ca7a44cd0a1507648f092cd0195",
+  "no_site_predictions_or_weights": true,
+  "no_labels_signals_or_private_paths": true,
+  "exact_byte_files": {
+    "README.md": {
+      "source_name": "comparison.md",
+      "sha256": "abebc70f211952f36ff7f3edacfc940d18be1634e9a969b1cc63bd370d05e81a"
+    },
+    "metrics.csv": {
+      "source_name": "metrics.csv",
+      "sha256": "d04b15310531d985f478dff37d7117db64cb65187c18af79bae12fdcd28294f5"
+    },
+    "paired_delta_summary.csv": {
+      "source_name": "paired_delta_summary.csv",
+      "sha256": "5385293b200d08a23dfd1678ead9fb8a599c132b770af941f0c92f6d6c3f41ac"
+    },
+    "paired_fold_deltas.csv": {
+      "source_name": "paired_fold_deltas.csv",
+      "sha256": "934f0a7a882933ff5fe33fc994866999ee77554219597398e6f9a7ab7e610265"
+    },
+    "resources.csv": {
+      "source_name": "resources.csv",
+      "sha256": "98b40f0aaf36855ffc695fbee66b0b98ceebba2dce2fab9eccdb2f3daf48facc"
+    },
+    "paired_fold_scores.png": {
+      "source_name": "paired_fold_scores.png",
+      "sha256": "d0513b36c8f1b45ed8440e63e020e21df9c45369c0707c690d9effe0cb93faad"
+    },
+    "mean_ranking_metrics.png": {
+      "source_name": "mean_ranking_metrics.png",
+      "sha256": "f5c089bb6756b9d6f39ff49a6c921f5c5cd25c319823bb347f6cf3981f175363"
+    }
+  },
+  "derived_receipt_files": [
+    "comparison_manifest.json",
+    "analysis_status.json"
+  ],
+  "redaction": "Only personal absolute repository paths in derived JSON metadata were made repository-relative; scientific report/table/plot bytes are unchanged. Original local manifests and source artifacts were never edited.",
+  "excluded_local_evidence": [
+    "Per-site data0 OOF and per-fold prediction CSVs for both models",
+    "Model weights, optimiser/RNG checkpoints and full training histories/logs",
+    "Data0 labels, raw read signals and feature caches",
+    "Original private-path-bearing comparison manifest/status and wrapper invocation receipts"
+  ],
+  "retained_hash_only_references": "Public manifest retains relative filenames and SHA256 fingerprints for omitted evidence; those files are not included.",
+  "verified_source_count": 11,
+  "verified_saved_evidence_and_command_files": 102,
+  "executed_training_commands": [
+    {
+      "model": "weight3",
+      "receipt": "cv_arguments_1792487318167985900.json",
+      "arguments": [
+        "--phase",
+        "cv"
+      ],
+      "command": "../advanced_model/.venv/Scripts/python.exe -B -u model_elgin/tools/train_read_cap.py '--phase' 'cv'"
+    },
+    {
+      "model": "weight3",
+      "receipt": "cv_arguments_1792545080560498200.json",
+      "arguments": [
+        "--phase",
+        "cv"
+      ],
+      "command": "../advanced_model/.venv/Scripts/python.exe -B -u model_elgin/tools/train_read_cap.py '--phase' 'cv'"
+    },
+    {
+      "model": "weight1",
+      "receipt": "cv_arguments_1792568689316683100.json",
+      "arguments": [
+        "--phase",
+        "cv"
+      ],
+      "command": "../advanced_model/.venv/Scripts/python.exe -B -u model_elgin/tools/train_loss_weight.py '--phase' 'cv'"
+    }
+  ],
+  "report_command": "../advanced_model/.venv/Scripts/python.exe -B model_elgin/tools/report_loss_weight.py",
+  "exporter": {
+    "path": "model_elgin/outputs/loss_weight_v1/checks/export_loss_weight_20261022.py",
+    "sha256": "cfeabad1d92b7f7d3ac1d252bf4d82bcbe22500cbaac85fe0387bbfe71e5c435"
+  },
+  "resource_limit": "Recorded fitting totals include recovered checkpoint snapshot lower bounds. Unmeasured work after the identified checkpoint epochs and before interruption is omitted. Each recovered snapshot and each resumed invocation is counted once; complete.json cumulative snapshots are not added again.",
+  "output_sha256": {
+    "README.md": "abebc70f211952f36ff7f3edacfc940d18be1634e9a969b1cc63bd370d05e81a",
+    "analysis_status.json": "ee4e4cb0965460fd589a3cfaac3407cb0d9ee270cf52d6d760f9a1e895bcf450",
+    "comparison_manifest.json": "ddb337bb0597b15bf7415bfa8c6c1671566e75f205d571fb6ea874be71ff8d28",
+    "mean_ranking_metrics.png": "f5c089bb6756b9d6f39ff49a6c921f5c5cd25c319823bb347f6cf3981f175363",
+    "metrics.csv": "d04b15310531d985f478dff37d7117db64cb65187c18af79bae12fdcd28294f5",
+    "paired_delta_summary.csv": "5385293b200d08a23dfd1678ead9fb8a599c132b770af941f0c92f6d6c3f41ac",
+    "paired_fold_deltas.csv": "934f0a7a882933ff5fe33fc994866999ee77554219597398e6f9a7ab7e610265",
+    "paired_fold_scores.png": "d0513b36c8f1b45ed8440e63e020e21df9c45369c0707c690d9effe0cb93faad",
+    "resources.csv": "98b40f0aaf36855ffc695fbee66b0b98ceebba2dce2fab9eccdb2f3daf48facc"
+  },
+  "signature": "aa74d58c05f049ef6a8717f80efb866e1ecaa100536069b7716d58c9409b4b29"
+}

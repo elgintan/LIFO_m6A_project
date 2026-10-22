@@ -265,3 +265,27 @@ after full success and pins its source hash. No full candidate result is
 available at this snapshot. No data1/data2/SG-NEx access, calibration, new
 cutoff selection or final all-data0 fitting is included. Final nomination and
 required benchmark/application/report work remain pending.
+
+## 22 October 2026: completed loss-weight results review
+
+The five-fold run and queued comparison had already finished successfully
+at17:19SGT on21October, before the user later asked to stop. The assistant
+confirmed the original session's exit0 and checked20saved last/best
+checkpoints plus20history/completion files. A timestamped local pause receipt
+preserves their hashes. The pause did not interrupt a fit and no recovery fit
+was needed when the user returned on22October.
+
+The assistant reviewed the generated tables and both figures, with separate
+read-only scientific and saved-evidence checks. Weight1 mean-fold S0.7183812884
+is slightly below weight3's0.7187146070; its pooled S and three individual
+folds improve. Weight1 also raises precision but lowers recall/F1 at0.5.
+The predeclared mean-fold criterion was retained rather than switching to
+the more favourable pooled score. Retain weight3 as the leading neural
+candidate; no significance or universal-superiority claim is made.
+
+This review changes no model weights, checkpoint, source recipe, threshold
+or prediction. No training, model inference or data1/SG-NEx access was run.
+The negative ablation remains in the report progression, with aggregate
+tables/plots, provenance and commands published separately from local site
+predictions and checkpoints. Required benchmark, final artifact, Task2 and
+report/explorer/Ubuntu work remain pending.

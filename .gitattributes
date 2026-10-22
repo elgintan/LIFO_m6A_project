@@ -9,6 +9,7 @@ model_elgin/read_cap_results/** -text whitespace=cr-at-eol
 model_elgin/read_cap_shortfalls_results/** -text whitespace=cr-at-eol
 model_elgin/tools/analyse_read_cap_shortfalls.py -text whitespace=cr-at-eol
 model_elgin/threshold_results/** -text whitespace=cr-at-eol
+model_elgin/loss_weight_results/** -text whitespace=cr-at-eol
 model_elgin/tools/validate_calling_threshold.py -text whitespace=cr-at-eol
 model_elgin/THRESHOLD_EXPERIMENT.md -text whitespace=cr-at-eol
 model_elgin/tools/review_signal_cases.py -text whitespace=cr-at-eol

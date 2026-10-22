@@ -4,7 +4,7 @@ NUS DSA4262 team project: understand nanopore event data, compare two trained
 candidate pipelines using shared gene-grouped validation, and apply one
 selected model to investigate predicted m6A patterns across cell lines.
 
-**21 October 2026:** Elgin is consolidating the received work on one laptop.
+**22 October 2026:** Elgin is consolidating the received work on one laptop.
 Both candidates have real data0 validation evidence; final model selection,
 validated calling cutoff and real whole-run Task 2 predictions remain pending.
 The current explorer is **coverage-only**. The older simulated prototype is
@@ -32,10 +32,11 @@ archival and is not biological evidence.
    misses and differing score reliability. The [recommended next step](model_elgin/SHORTFALL_REVIEW_2026_10_21.md)
    was training-side cutoff validation. The [completed threshold study](model_elgin/THRESHOLD_REVIEW_2026_10_21.md)
    found no convincing F1 gain; 0.5 remains the working reporting cutoff.
-   The authorised [loss-weight comparison](model_elgin/LOSS_WEIGHT_EXPERIMENT.md)
-   is now being executed; see [actual execution status](model_elgin/LOSS_WEIGHT_STATUS.md).
-   It changes only positive loss weight3 to1. No full candidate score,
-   improvement or fitted probability calibrator is available yet.
+   The [completed loss-weight comparison](model_elgin/loss_weight_results/README.md)
+   gave mean S0.718381 for weight1 versus0.718715 for weight3. Retain weight3:
+   removing the extra positive penalty raised precision but reduced recall
+   and F1 at0.5. The [review](model_elgin/LOSS_WEIGHT_REVIEW_2026_10_22.md)
+   retains the mixed fold and pooled results; no calibrator was fitted.
 4. Continue [SG-NEx analysis](sgnex_analysis/README.md) and the
    [current explorer pipeline](data_visualisation/README.md) after selected-model
    predictions are available. Their supplied scripts are now integrated.

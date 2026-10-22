@@ -5,11 +5,23 @@ The [fixed design](LOSS_WEIGHT_EXPERIMENT.md) changes positive loss weight3->1
 while keeping cap128, architecture, features, raw labels, natural prevalence,
 exact five gene folds and the inner-selection/fresh-refit procedure unchanged.
 
-**Current stage: full candidate five-fold training running.** Started on
-21 October at15:44SGT (07:44UTC). Estimated90–120minutes from launch, subject
-to early stopping and machine load; this is not a completion guarantee.
-The same local job queues the comparison reporter only after successful CV.
-No complete new candidate score or improvement is available yet.
+**Current stage: training and queued comparison completed; results reviewed
+on22October.** Training finished on21October at17:19:42SGT; the
+reporter finished at17:19:55SGT. Both exited0 before the later stop request.
+The original job returned completion when the stop signal was sent; no new
+training or restart was launched. Full training took95.251minutes command
+elapsed, within the original90–120minute estimate from15:44SGT.
+
+All20last/best checkpoint files across the10inner/refit fits, plus their
+20history/completion files, were checked for presence and hashed into a local
+timestamped pause receipt. Logs, predictions and generated comparison remain
+in the experiment output folder. The user returned on22October for results
+review; this completed CV was not restarted. The [checked aggregate results](loss_weight_results/README.md)
+give mean-fold S0.7183812884 for weight1 versus0.7187146070 for weight3.
+Retain weight3 under the predeclared criterion; the difference is small and
+mixed, with higher pooled S/precision but lower mean PR/recall/F1 for weight1.
+See the [decision and limits](LOSS_WEIGHT_REVIEW_2026_10_22.md). There is no
+active training for this experiment.
 
 Nine training checks passed in9.088s, including tensor-identical
 weight3 delegation and exact interrupted weight1 recovery. Twelve reporter
@@ -37,8 +49,8 @@ reusing completed work. Do not launch a duplicate from another tool merely
 because its process list cannot see the original Windows execution session.
 The timestamped pipeline/training/report receipts and console logs are in
 `outputs/loss_weight_v1/checks/`; `cv_status.json` records the trainer phase.
-The original local execution job, rather than an unrelated process inventory,
-is authoritative while this invocation runs.
+The original local job confirmed exit0. For future experiments, that original
+execution session rather than an unrelated process inventory is authoritative.
 
 The full command, from the repository root, is:
 
@@ -46,8 +58,8 @@ The full command, from the repository root, is:
 ../advanced_model/.venv/Scripts/python.exe -B -u model_elgin/tools/train_loss_weight.py --phase cv
 ```
 
-The local orchestration job will run the following only after successful full
-CV, keeping timestamped console logs for both commands:
+The local orchestration job successfully ran the following after full CV,
+keeping timestamped console logs for both commands:
 
 ```powershell
 ../advanced_model/.venv/Scripts/python.exe -B model_elgin/tools/report_loss_weight.py
