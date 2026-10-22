@@ -316,3 +316,44 @@ preserve vendor algorithms while addressing those issues. Two actual two-batch
 pilots matched official CSV hashes. The computation batch size was amended
 before any labelled scoring, with both old and new pilot evidence retained.
 These checks support the measured benchmark, not an unseen-data guarantee.
+
+## 22 October 2026: original-model selection and final release
+
+The assistant initially described the separate external neural trial as a
+clear recommended winner after checking its higher ranking score. The user
+pointed out that its own review classified replacement as inconclusive.
+Rereading that review confirmed unresolved high-coverage recall and motif
+tradeoffs. The assistant corrected the promotion claim, retained the contrary
+score evidence and followed the user's instruction to finalise the original
+cap128/positive-weight3 pipeline. A valid numerical audit did not itself
+justify promotion. The external trial remains separate.
+
+The assistant added an isolated final-fit delegate, a public fixed-recipe
+training interface and an artifact packager without changing frozen model or
+CV code. Nine delegate tests, three existing final/resume guard tests and two
+public-fit/promotion tests passed. A real full-input check of the public
+interface passed without fitting a second real-data model. The actual fresh
+all-data0 final fit completed18epochs in679.823seconds, with optimizer/RNG
+checkpoints, logs and measured resources retained. The packaged model and
+real ten-site example passed independent byte/source checks.
+
+Supplied-data application uses that one saved artifact. Validation continues
+to refer to the earlier held-out-gene OOF predictions; fitting all data0 does
+not create a new validation result. Data1 remains previously exposed transfer
+evidence, and data2's fractional labels are not silently binarised. Clean
+Ubuntu execution and new unlabelled-test submission remain unverified.
+
+Actual inference and shared data1 scoring completed by23October00:21SGT.
+All121,838/90,810/1,323 data0/data1/data2 predictions use the same model hash;
+independent full-CSV checks matched all supplied keys and valid score ranges.
+Data1 neural S0.604865501 is slightly above LightGBM0.602321536; LightGBM
+has better PR/precision/specificity/accuracy and neural better ROC/recall/F1.
+Those outcomes are retained without choosing a new threshold or another model.
+
+A separate reporter independently rescored both stored OOF and data1 files
+with the unchanged common evaluator and reproduced all saved metrics. It
+generated aggregate tables, actual training-loss and data1 ROC/PR figures,
+resource scopes and exact commands. The main assistant inspected both figures
+and checked all final CSV keys, package receipts and unchanged historical CV
+hashes. The report is evidence for the final scientific write-up, not the
+finished five-page report or completed Task2 analysis.

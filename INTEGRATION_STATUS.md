@@ -1,4 +1,4 @@
-# Integration and remaining work — 22 October 2026
+# Integration and remaining work — 23 October 2026
 
 Elgin now coordinates prediction, analysis, visualisation and report assembly
 on one laptop. Members can review the integrated work without maintaining
@@ -14,9 +14,20 @@ and predictions for the new **unlabelled** test dataset retain the original
 28 October time is 23:59 Singapore time. See
 [PROJECT_DEADLINES.md](PROJECT_DEADLINES.md) for the source and retained rules.
 
-First protect the 28 October deliverables: review the completed required benchmark
-evidence, nominate/freeze the main model and inference interface, save the
-final artifact, provide a runnable test example and installation/prediction
+**Task 1: selection, final training, supplied-data predictions and data1 scoring
+are complete.** The original-feature cap128, positive loss weight3 pipeline
+completed a fresh 18-epoch all-data0 fit in 679.823 seconds. Its saved artifact
+and real ten-site prediction example passed verification.
+All three supplied datasets have complete same-model CSVs. Frozen data1
+ROC/PR/S is0.827381010/0.382349993/0.604865501; this is already-exposed transfer
+evidence, with no selection or threshold change after scoring.
+See [actual final results](model_elgin/final_cap128_results/results.md) and
+[runnable training/prediction instructions](model_elgin/FINAL_MODEL_USAGE.md).
+See [the fixed selection decision](model_elgin/FINAL_MODEL_SELECTION.md) and
+[current stages](CURRENT_STAGE.md).
+
+First protect the 28 October deliverables: retain the frozen model and
+inference interface, runnable example and installation/prediction
 instructions, verify clean Ubuntu prediction, then generate and validate
 predictions on the actual newly released test input. Its unlabelled status
 does not permit a measured test ROC/PR claim. Older intermediate prediction
@@ -25,8 +36,9 @@ CSVs do not substitute for that release's submission.
 Next complete the genuine 23-run SG-NEx analysis, scientific report and
 explorer for 8 November. The current explorer is still coverage-only. An
 external neural experiment has passed an independent saved-evidence audit
-and remains separate pending explicit integration and nomination; its temporary
-report does not itself replace the main pipeline or submission model.
+and has genuinely higher mean-fold S. Its promotion remains inconclusive and
+it stays separate. Keeping cap128 is a documented conservative deployment
+choice, not a claim that cap128 maximises every metric across all experiments.
 No new open-ended neural search is part of these priorities.
 
 ## Decisions already made
@@ -38,6 +50,12 @@ No new open-ended neural search is part of these priorities.
 - **Task 1 comparison:** retain the exact five data0 gene folds and the shared
   evaluator. Training/tuning use data0; data1 is already-exposed transfer
   evidence, and data2 has separate descriptive interpretation. No resplitting.
+- **Task 1 nomination:** original-feature cap128 with positive loss weight3,
+  followed by a fresh all-data0 fit for18epochs (median inner durations
+  9/20/19/18/17). The external trial's higher S, recall/subgroup tradeoffs,
+  cost and seed limits are retained in the decision. The verified artifact is
+  `model_elgin/artifacts/cap128_weight3_v1/model.pt`; its SHA256 is
+  `b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668`.
 - **One model for application:** integration of Samuel's contribution does
   not select his model. Use one selected saved pipeline and its unchanged
   preprocessing for all application runs.
@@ -66,14 +84,22 @@ No new open-ended neural search is part of these priorities.
 
 S is the mean of ROC AUC and trapezoidal PR AUC, averaged over the same five
 folds. These are development comparisons of complete pipelines. Elgin's
-cap128 pipeline has the highest point estimate; no significance or universal model
-superiority is established. The failed context improvement remains report
+cap128 pipeline has the highest point estimate among the main trained
+configurations in this table. The separate external candidate's S0.726643986
+is higher and is not promoted; no significance or universal model superiority
+is established. The failed context improvement remains report
 evidence connecting Member 1's EDA to a tested modelling decision.
 
 Samuel supplied an all-data0 model and five-fold OOF scores, plus data1/data2
 scores. His recorded data1 ROC/PR/S are
 0.821764271/0.382878802/0.602321536. Previous feature exploration examined
-data1, so this is exposed transfer evidence. Data0 scores were independently
+data1, so this is exposed transfer evidence. The completed selected neural
+model has data1 ROC/PR/S0.827381010/0.382349993/0.604865501. At0.5, neural
+precision/recall/F1 is0.484693/0.444259/0.463596 versus Samuel's
+0.579131/0.226452/0.325592. LightGBM has higher PR AUC, precision, specificity
+and accuracy; neural has higher ROC, S, recall and F1. This small ranking
+advantage establishes no statistical significance or universal superiority.
+Data0 scores were independently
 recomputed with the shared scorer during PR review. Current integration
 checks and their exact commands are recorded in `model_samuel/VALIDATION.md`.
 Repeat-seed summaries are received evidence: their raw repeat OOF files were
@@ -81,8 +107,10 @@ not supplied. Neither receipt checks nor rescoring independently replay training
 
 **OOF is not a final-model prediction:** Samuel's `outputs/data0_oof.csv`
 uses five held-out fits. If selected, his final model still needs its own
-all-data0 prediction file. Elgin's 19 October pipeline needs a fresh all-data0
-final fit after nomination; the saved 7 October model/results are historical.
+all-data0 prediction file. The selected cap128 pipeline's
+fresh18-epoch all-data0 final fit has completed; the saved7October model/results
+are historical. Its full data0 predictions are fitted-data scores and will not
+replace the held-out-gene OOF validation.
 
 Member 4's completed results concern sample structure, coverage and candidate
 software checks. Member 5's delivered current explorer is coverage-only, not
@@ -173,10 +201,13 @@ does not establish universal or statistically significant superiority.
 These are recommended analysis choices, not completed experiments or a new
 requirement that Samuel use the same features or architecture.
 
-1. **Model choice:** use the completed required baseline/m6Anet evidence, then nominate
-   and freeze the submission pipeline using shared data0 evidence. The planned
-   main neural search is complete; audited external work stays separate until integration. Keep
-   data1 out of winner selection; disclose any subsequent use that changes it.
+1. **Model choice — decided:** nominate original-feature cap128, positive
+   weight3. The completed required references and documented external
+   promotion tradeoffs support this conservative main-project choice; it is
+   not the highest S across all experiments. Its fresh18-epoch final
+   fit and saved-pipeline verification are complete. The planned main
+   neural search is complete; external work stays separate. Keep data1 out
+   of winner selection; disclose any subsequent use that changes it.
 2. **Calling threshold:** continue exporting full-precision continuous scores.
    The completed maximum-F1 study selected cutoffs on data0 inner genes and
    assessed them inside the declared outer boundaries. It did not justify
@@ -204,7 +235,7 @@ requirement that Samuel use the same features or architecture.
 |---|---|
 | Actual SG-NEx event signals | Use Member 4's 23-run source inventory and download helper; about 33.37 GB total. Download/process sequentially outside Git, retaining receipts. No full signal download has run in this integration. |
 | Reference/coordinate consistency | Use the delivered checked aliases, preserve original prediction IDs/positions, and verify transcript/reference/event offsets before genomic-region interpretation. Unknowns remain explicit in MODEL_INFO.md. |
-| Selected model and threshold — 28 October priority | Nominate from accepted data0 evidence, fit the selected final pipeline if needed, hash it, and document the existing working operating rule and its limits. Do not imply calibration or a biological threshold. |
+| Selected model and threshold — completed | Original cap128/positive weight3 completed its fresh18-epoch all-data0 fit. The model hash and real prediction example are verified. Retain0.5 as the working reporting rule, with its documented limits; do not imply calibration or a biological threshold. |
 | Repository and new test submission — 28 October | Freeze the inference CLI/model, installation steps and runnable test example; check clean Ubuntu prediction. Predict the actual newly released unlabelled input, validate its own format/names/coverage and submit through the announced route. No new-test AUC is available without labels. |
 | Real Task 2 CSVs | One full-precision `transcript_id,transcript_position,score` CSV per manifest run from the same artifact; complete model/input provenance and inference receipts. |
 | Biological comparisons | Run Member 4's imported analysis against those actual predictions and matching coverage; retain population sizes, sensitivity results and limitations. |

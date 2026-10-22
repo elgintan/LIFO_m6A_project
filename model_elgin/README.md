@@ -1,10 +1,16 @@
 # Elgin's model
 
-Owner: Elgin, model lead and final report integrator. Neural networks are the
-provisional direction, including alternatives to the original architecture.
-Samuel develops a separate candidate in `model_samuel`.
+Owner: Elgin, model lead and final report integrator. The selected final model
+is the sequence-aware attention neural network with training cap128 and
+positive loss weight3. Its fresh 18-epoch all-data0 fit is complete; weights,
+training recipe and a verified ten-site example are packaged. Follow the
+[final-model training and prediction guide](FINAL_MODEL_USAGE.md).
+[Actual final results](final_cap128_results/results.md) include validation,
+data1 comparisons, same-model coverage, figures, measured resources and commands.
+Samuel's LightGBM remains the comparison candidate in `model_samuel`.
 
-**Start with [Elgin's first-step guide](FIRST_STEPS.md).** On 19 October, the
+The following records development history; [the first-step guide](FIRST_STEPS.md)
+is historical. On 19 October, the
 saved historical OOF predictions were verified and rescored using the shared
 evaluator: [reference check](reference_check_2026_10_19/README.md).
 The [working trainer/predictor](context_reference_v1/README.md) now implements
@@ -56,7 +62,11 @@ precision but reduces recall/F1 at0.5; pooled S and three individual folds
 favour weight1. Retain weight3 under the predeclared mean-fold rule, without
 a significance claim. The [22 October review](LOSS_WEIGHT_REVIEW_2026_10_22.md)
 ends the planned neural search and prioritises required completion work.
-A new final refit, frozen data1 diagnostics and real SG-NEx predictions remain pending.
+The final refit, frozen data1 diagnostic and supplied-data predictions are
+complete. Data1 ROC/PR/S is0.827381010/0.382349993/0.604865501; LightGBM's
+S is0.602321536, with better PR and precision but lower recall/F1 at0.5.
+Real SG-NEx predictions remain pending. See
+[project stages](../CURRENT_STAGE.md).
 
 ## Available starting point
 

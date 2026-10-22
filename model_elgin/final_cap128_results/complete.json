@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "files_sha256": {
+    "data0_mean_fold_comparison.csv": "833e58021acb10fa36299eaaab4248e3b3c3c0f5a919f5f2451d1f567280f0af",
+    "data1_comparison.csv": "861a584a5e30a59e2c37706ab1f9885a09bc54b4289262338d0ec90b027c9cb7",
+    "data1_curves.png": "29ed9eb68f0dac946aab70707770d102146663032c4549fb7306a3c5e048165e",
+    "data1_curves.svg": "f56bf33f73ccd3a0946e41fb65ed63db389da4e40e5d37902b8913224e6814cb",
+    "final_training_loss.png": "a98f14ca7c53c5eb04f986b70e0b5334aabdbd956038ad1a3726072747e62151",
+    "final_training_loss.svg": "447304ce48421acc3c35be647ebf42dee9001adbfe1a3658f746dca8e18cf929",
+    "results.md": "f63e2e49b2c11959fce40bc78ae54dd3545855fe6fb516e90d346eef679dbfae",
+    "summary.json": "bd139db4f267906a1c04764ab8eb11c718ed68f00a5e58648ac771fbd219be1d",
+    "training_history.csv": "c94398e3a1f71ad58f1f149711d5ada90e9ae727fcab42363f65b6cc57c0955c"
+  }
+}

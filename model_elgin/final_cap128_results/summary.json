@@ -1,0 +1,755 @@
+{
+  "status": "complete",
+  "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+  "model": {
+    "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+    "stage": "final_data0",
+    "config": {
+      "width": 48,
+      "dropout": 0.25,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "pos_weight": 3.0,
+      "cap": 128,
+      "summary_n": 63,
+      "pool": "attention",
+      "context_mode": "none",
+      "min_sites": 30
+    },
+    "epochs": 18,
+    "seed": 2026,
+    "training_sites": 121838,
+    "training_reads": 11027106,
+    "calling_rule": "0.5 working reporting cutoff; continuous outputs; no fitted calibrator",
+    "selection_plan_sha256": "e11a7434e2668410de75be51f00f5af6741ade471982f3513391b5408ef0b4d2",
+    "final_entrypoint_sha256": "68e4c8bbb9f1524ea9e593481af9e0e4e9b4fca580a92574a56a244814da3029",
+    "example_sites": 10,
+    "example_reads": 1887,
+    "example_scope": "First ten data0 sites, for software checks only; not unseen validation",
+    "training_data": "data0 only; no data1/data2/SG-NEx fitting",
+    "validation": "Use saved five-fold OOF scores, not fitted-data0 final predictions"
+  },
+  "metrics": {
+    "Elgin cap128/data0": {
+      "dataset": "data0",
+      "evaluation_kind": "data0_gene_grouped_oof_development",
+      "pooled": {
+        "n_sites": 121838,
+        "n_positives": 5475,
+        "positive_fraction": 0.044936719250151844,
+        "roc_auc": 0.9310519604118698,
+        "pr_auc_trapezoid": 0.5020558540352483,
+        "average_precision": 0.5022134380756301,
+        "selection_score": 0.716553907223559,
+        "threshold": 0.5,
+        "tn": 112630,
+        "fp": 3733,
+        "fn": 2112,
+        "tp": 3363,
+        "precision": 0.47392897406989853,
+        "recall": 0.6142465753424657,
+        "f1": 0.5350409673057036,
+        "specificity": 0.967919355808977,
+        "accuracy": 0.9520264613667329
+      },
+      "per_fold": [
+        {
+          "fold_id": 0,
+          "n_sites": 24358,
+          "n_positives": 1090,
+          "positive_fraction": 0.044749158387388126,
+          "roc_auc": 0.9223417245876921,
+          "pr_auc_trapezoid": 0.4858232274660801,
+          "average_precision": 0.48626212630828575,
+          "selection_score": 0.7040824760268861,
+          "threshold": 0.5,
+          "tn": 22616,
+          "fp": 652,
+          "fn": 463,
+          "tp": 627,
+          "precision": 0.490226739640344,
+          "recall": 0.5752293577981651,
+          "f1": 0.5293372731110173,
+          "specificity": 0.9719786831700189,
+          "accuracy": 0.9542244847688645
+        },
+        {
+          "fold_id": 1,
+          "n_sites": 24371,
+          "n_positives": 1097,
+          "positive_fraction": 0.04501251487423577,
+          "roc_auc": 0.9302547222110595,
+          "pr_auc_trapezoid": 0.5053672124784727,
+          "average_precision": 0.505809773105539,
+          "selection_score": 0.7178109673447661,
+          "threshold": 0.5,
+          "tn": 22553,
+          "fp": 721,
+          "fn": 442,
+          "tp": 655,
+          "precision": 0.47601744186046513,
+          "recall": 0.5970829535095715,
+          "f1": 0.5297209866558835,
+          "specificity": 0.9690212254017359,
+          "accuracy": 0.9522793484058922
+        },
+        {
+          "fold_id": 2,
+          "n_sites": 24387,
+          "n_positives": 1105,
+          "positive_fraction": 0.045311026366506746,
+          "roc_auc": 0.9334687314030103,
+          "pr_auc_trapezoid": 0.513563054820484,
+          "average_precision": 0.5144536205702376,
+          "selection_score": 0.7235158931117471,
+          "threshold": 0.5,
+          "tn": 22414,
+          "fp": 868,
+          "fn": 356,
+          "tp": 749,
+          "precision": 0.46320346320346323,
+          "recall": 0.6778280542986426,
+          "f1": 0.550330639235856,
+          "specificity": 0.962717979555021,
+          "accuracy": 0.9498093246401771
+        },
+        {
+          "fold_id": 3,
+          "n_sites": 24378,
+          "n_positives": 1100,
+          "positive_fraction": 0.04512265157108869,
+          "roc_auc": 0.941202969639691,
+          "pr_auc_trapezoid": 0.5251055232680361,
+          "average_precision": 0.5259870916272411,
+          "selection_score": 0.7331542464538635,
+          "threshold": 0.5,
+          "tn": 22618,
+          "fp": 660,
+          "fn": 419,
+          "tp": 681,
+          "precision": 0.5078299776286354,
+          "recall": 0.6190909090909091,
+          "f1": 0.5579680458828349,
+          "specificity": 0.9716470487155254,
+          "accuracy": 0.9557387808679957
+        },
+        {
+          "fold_id": 4,
+          "n_sites": 24344,
+          "n_positives": 1083,
+          "positive_fraction": 0.04448734801183043,
+          "roc_auc": 0.9318727390089331,
+          "pr_auc_trapezoid": 0.4981461651665625,
+          "average_precision": 0.49873855242233023,
+          "selection_score": 0.7150094520877478,
+          "threshold": 0.5,
+          "tn": 22429,
+          "fp": 832,
+          "fn": 432,
+          "tp": 651,
+          "precision": 0.4389750505731625,
+          "recall": 0.6011080332409973,
+          "f1": 0.5074045206547155,
+          "specificity": 0.9642319762692919,
+          "accuracy": 0.9480775550443641
+        }
+      ],
+      "mean_fold": {
+        "roc_auc": 0.9318281773700772,
+        "pr_auc_trapezoid": 0.5056010366399271,
+        "average_precision": 0.5062502328067268,
+        "selection_score": 0.7187146070050021
+      },
+      "sample_sd_fold_ddof1": {
+        "roc_auc": 0.00676477421838492,
+        "pr_auc_trapezoid": 0.014921546922768866,
+        "average_precision": 0.01510780357330403,
+        "selection_score": 0.010726130829067444
+      },
+      "primary_score": 0.7187146070050021,
+      "primary_score_definition": "Unweighted mean of five fold (ROC AUC + trapezoidal PR AUC) / 2",
+      "data0_labels_canonical_sha256": "153f4658b82e4f6d95c449723d238b63153cd0102c826a3c61e3a652749b1a87",
+      "schema_version": "1.0",
+      "scorer_sha256": "43217301e0c9f9aeac821175763c096a171ec699fe342c04099f0d09a42e7727",
+      "created_utc": "2026-10-22T16:25:56.441822+00:00",
+      "inputs": {
+        "labels": {
+          "filename": "data.info.labelled",
+          "sha256": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978"
+        },
+        "predictions": {
+          "filename": "data0_oof.csv",
+          "sha256": "0b6b0cbb659f861a096f118b5e9e816feb632a01ee001526a7d368c2fbc8c63c"
+        },
+        "folds": {
+          "filename": "data0_folds.csv",
+          "sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0"
+        }
+      },
+      "label_column": "label",
+      "versions": {
+        "python": "3.12.14",
+        "numpy": "2.5.3",
+        "scikit_learn": "1.9.1"
+      },
+      "limitations": [
+        "File validation cannot prove training excluded assessment genes; retain fit logs and code.",
+        "data0 CV used for model selection is development evidence, not an untouched test.",
+        "data1 was previously examined and is not an untouched final test."
+      ]
+    },
+    "Samuel LightGBM/data0": {
+      "dataset": "data0",
+      "evaluation_kind": "data0_gene_grouped_oof_development",
+      "pooled": {
+        "n_sites": 121838,
+        "n_positives": 5475,
+        "positive_fraction": 0.044936719250151844,
+        "roc_auc": 0.9217906365048721,
+        "pr_auc_trapezoid": 0.49807675032014864,
+        "average_precision": 0.4982710419817766,
+        "selection_score": 0.7099336934125104,
+        "threshold": 0.5,
+        "tn": 115207,
+        "fp": 1156,
+        "fn": 3528,
+        "tp": 1947,
+        "precision": 0.6274572993876893,
+        "recall": 0.3556164383561644,
+        "f1": 0.4539519701562136,
+        "specificity": 0.9900655706710896,
+        "accuracy": 0.9615555081337513
+      },
+      "per_fold": [
+        {
+          "fold_id": 0,
+          "n_sites": 24358,
+          "n_positives": 1090,
+          "positive_fraction": 0.044749158387388126,
+          "roc_auc": 0.9129998202043047,
+          "pr_auc_trapezoid": 0.49340429907201017,
+          "average_precision": 0.4941822619420125,
+          "selection_score": 0.7032020596381574,
+          "threshold": 0.5,
+          "tn": 23053,
+          "fp": 215,
+          "fn": 733,
+          "tp": 357,
+          "precision": 0.6241258741258742,
+          "recall": 0.3275229357798165,
+          "f1": 0.4296028880866426,
+          "specificity": 0.9907598418428744,
+          "accuracy": 0.9610805484850973
+        },
+        {
+          "fold_id": 1,
+          "n_sites": 24371,
+          "n_positives": 1097,
+          "positive_fraction": 0.04501251487423577,
+          "roc_auc": 0.9205178779000655,
+          "pr_auc_trapezoid": 0.4789640731569888,
+          "average_precision": 0.47964992997209743,
+          "selection_score": 0.6997409755285271,
+          "threshold": 0.5,
+          "tn": 23039,
+          "fp": 235,
+          "fn": 694,
+          "tp": 403,
+          "precision": 0.6316614420062696,
+          "recall": 0.3673655423883318,
+          "f1": 0.46455331412103745,
+          "specificity": 0.9899028959353785,
+          "accuracy": 0.9618809240490748
+        },
+        {
+          "fold_id": 2,
+          "n_sites": 24387,
+          "n_positives": 1105,
+          "positive_fraction": 0.045311026366506746,
+          "roc_auc": 0.9229144453933108,
+          "pr_auc_trapezoid": 0.519199565387035,
+          "average_precision": 0.5195509327671916,
+          "selection_score": 0.7210570053901729,
+          "threshold": 0.5,
+          "tn": 23022,
+          "fp": 260,
+          "fn": 686,
+          "tp": 419,
+          "precision": 0.6170839469808542,
+          "recall": 0.37918552036199094,
+          "f1": 0.4697309417040359,
+          "specificity": 0.9888325745210893,
+          "accuracy": 0.9612088407758231
+        },
+        {
+          "fold_id": 3,
+          "n_sites": 24378,
+          "n_positives": 1100,
+          "positive_fraction": 0.04512265157108869,
+          "roc_auc": 0.9291995954041665,
+          "pr_auc_trapezoid": 0.5156295772060528,
+          "average_precision": 0.5161713448339588,
+          "selection_score": 0.7224145863051097,
+          "threshold": 0.5,
+          "tn": 23083,
+          "fp": 195,
+          "fn": 720,
+          "tp": 380,
+          "precision": 0.6608695652173913,
+          "recall": 0.34545454545454546,
+          "f1": 0.4537313432835821,
+          "specificity": 0.9916229916659507,
+          "accuracy": 0.9624661580113217
+        },
+        {
+          "fold_id": 4,
+          "n_sites": 24344,
+          "n_positives": 1083,
+          "positive_fraction": 0.04448734801183043,
+          "roc_auc": 0.9238519902397869,
+          "pr_auc_trapezoid": 0.48778374251300644,
+          "average_precision": 0.48827515676894845,
+          "selection_score": 0.7058178663763967,
+          "threshold": 0.5,
+          "tn": 23010,
+          "fp": 251,
+          "fn": 695,
+          "tp": 388,
+          "precision": 0.6071987480438185,
+          "recall": 0.358264081255771,
+          "f1": 0.45063879210220675,
+          "specificity": 0.9892094063023945,
+          "accuracy": 0.961140322050608
+        }
+      ],
+      "mean_fold": {
+        "roc_auc": 0.9218967458283268,
+        "pr_auc_trapezoid": 0.49899625146701865,
+        "average_precision": 0.4995659252568417,
+        "selection_score": 0.7104464986476727
+      },
+      "sample_sd_fold_ddof1": {
+        "roc_auc": 0.005900145493193915,
+        "pr_auc_trapezoid": 0.017628952570758572,
+        "average_precision": 0.01752321771562974,
+        "selection_score": 0.010539595984056791
+      },
+      "primary_score": 0.7104464986476727,
+      "primary_score_definition": "Unweighted mean of five fold (ROC AUC + trapezoidal PR AUC) / 2",
+      "data0_labels_canonical_sha256": "153f4658b82e4f6d95c449723d238b63153cd0102c826a3c61e3a652749b1a87",
+      "schema_version": "1.0",
+      "scorer_sha256": "43217301e0c9f9aeac821175763c096a171ec699fe342c04099f0d09a42e7727",
+      "created_utc": "2026-10-22T16:26:01.432389+00:00",
+      "inputs": {
+        "labels": {
+          "filename": "data.info.labelled",
+          "sha256": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978"
+        },
+        "predictions": {
+          "filename": "data0_oof.csv",
+          "sha256": "78ac518c56d16d3a0e97abe749e0950a1d9a8bbe6ad170b4290500b6b1ba9c7b"
+        },
+        "folds": {
+          "filename": "data0_folds.csv",
+          "sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0"
+        }
+      },
+      "label_column": "label",
+      "versions": {
+        "python": "3.12.14",
+        "numpy": "2.5.3",
+        "scikit_learn": "1.9.1"
+      },
+      "limitations": [
+        "File validation cannot prove training excluded assessment genes; retain fit logs and code.",
+        "data0 CV used for model selection is development evidence, not an untouched test.",
+        "data1 was previously examined and is not an untouched final test."
+      ]
+    },
+    "Elgin cap128/data1": {
+      "dataset": "data1",
+      "evaluation_kind": "data1_exposed_transfer",
+      "pooled": {
+        "n_sites": 90810,
+        "n_positives": 6593,
+        "positive_fraction": 0.07260213632859817,
+        "roc_auc": 0.8273810096381982,
+        "pr_auc_trapezoid": 0.382349993165059,
+        "average_precision": 0.38250506091254505,
+        "selection_score": 0.6048655014016286,
+        "threshold": 0.5,
+        "tn": 81103,
+        "fp": 3114,
+        "fn": 3664,
+        "tp": 2929,
+        "precision": 0.484693033261625,
+        "recall": 0.4442590626421963,
+        "f1": 0.46359607470718583,
+        "specificity": 0.9630240925228873,
+        "accuracy": 0.9253606431009801
+      },
+      "primary_score": 0.6048655014016286,
+      "primary_score_definition": "Pooled (ROC AUC + trapezoidal PR AUC) / 2; already-exposed transfer diagnostic",
+      "schema_version": "1.0",
+      "scorer_sha256": "43217301e0c9f9aeac821175763c096a171ec699fe342c04099f0d09a42e7727",
+      "created_utc": "2026-10-22T16:26:03.402183+00:00",
+      "inputs": {
+        "labels": {
+          "filename": "data.info",
+          "sha256": "05c8441c4d60a6228f79d219bb7240921699495f23052b378cdda432417acaf3"
+        },
+        "predictions": {
+          "filename": "data1_predictions.csv",
+          "sha256": "726b869bcc7fa1ab7260fc5f875093e8b95b14b98a63e3d92e5b83fbd0026d91"
+        }
+      },
+      "label_column": "label",
+      "versions": {
+        "python": "3.12.14",
+        "numpy": "2.5.3",
+        "scikit_learn": "1.9.1"
+      },
+      "limitations": [
+        "File validation cannot prove training excluded assessment genes; retain fit logs and code.",
+        "data0 CV used for model selection is development evidence, not an untouched test.",
+        "data1 was previously examined and is not an untouched final test."
+      ]
+    },
+    "Samuel LightGBM/data1": {
+      "dataset": "data1",
+      "evaluation_kind": "data1_exposed_transfer",
+      "pooled": {
+        "n_sites": 90810,
+        "n_positives": 6593,
+        "positive_fraction": 0.07260213632859817,
+        "roc_auc": 0.8217642710359293,
+        "pr_auc_trapezoid": 0.3828788018432001,
+        "average_precision": 0.3830708269890862,
+        "selection_score": 0.6023215364395647,
+        "threshold": 0.5,
+        "tn": 83132,
+        "fp": 1085,
+        "fn": 5100,
+        "tp": 1493,
+        "precision": 0.5791311093871218,
+        "recall": 0.22645229789170332,
+        "f1": 0.3255915385454149,
+        "specificity": 0.9871166154101904,
+        "accuracy": 0.931890760929413
+      },
+      "primary_score": 0.6023215364395647,
+      "primary_score_definition": "Pooled (ROC AUC + trapezoidal PR AUC) / 2; already-exposed transfer diagnostic",
+      "schema_version": "1.0",
+      "scorer_sha256": "43217301e0c9f9aeac821175763c096a171ec699fe342c04099f0d09a42e7727",
+      "created_utc": "2026-10-22T16:26:05.129009+00:00",
+      "inputs": {
+        "labels": {
+          "filename": "data.info",
+          "sha256": "05c8441c4d60a6228f79d219bb7240921699495f23052b378cdda432417acaf3"
+        },
+        "predictions": {
+          "filename": "data1_predictions.csv",
+          "sha256": "1a398d005694a573e44505e5a208086bffb4a5c6b457d6c3ccc2477cd4c26fb6"
+        }
+      },
+      "label_column": "label",
+      "versions": {
+        "python": "3.12.14",
+        "numpy": "2.5.3",
+        "scikit_learn": "1.9.1"
+      },
+      "limitations": [
+        "File validation cannot prove training excluded assessment genes; retain fit logs and code.",
+        "data0 CV used for model selection is development evidence, not an untouched test.",
+        "data1 was previously examined and is not an untouched final test."
+      ]
+    }
+  },
+  "predictions": {
+    "data0": {
+      "status": "complete",
+      "kind": "context_reference_v1",
+      "stage": "final_data0",
+      "context_mode": "none",
+      "allow_development_model": false,
+      "input_basename": "dataset0.json.gz",
+      "model_basename": "model.pt",
+      "output_basename": "data0_predictions.csv",
+      "input_sha256": "622410b2918692b75a880b753f1a621e8d892d6dbc13c1f430babc5543a0584e",
+      "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+      "output_sha256": "b3a8a341d8dbd283a1eb7d9737ef2158a810056e842b64f15e33e0d89c013ed0",
+      "code_sha256": {
+        "predict.py": "fdc1a6bad52b725265d9f195fe4bf467266827cd6bbb130a8de5394bc4fb63c0",
+        "model.py": "0fa59b34cd85f1981eccd910d704412cb54de6602fe05fbff8d7ab4362d402c2",
+        "data.py": "91f8a13e3ecb6cf5461c2f33a640f523e7884362c8545e4125f9f5c4b14ebf70",
+        "context_features.py": "4a35f26e54aab767af0982f495f6d1abb7f5aa7bc1a3accb76e2bc3e0378c9e0",
+        "common.py": "6a26cab89aea3155db924244bae1b69080c2f5037fb1ba00dc231d8487d30eaa"
+      },
+      "n_sites": 121838,
+      "n_reads": 11027106,
+      "exact_input_key_coverage": true,
+      "all_reads_used": true,
+      "labels_read": false,
+      "threads": 4,
+      "batch_size_limit": 32,
+      "max_padded_reads_budget": 65536,
+      "maximum_observed_padded_reads": 31712,
+      "n_batches": 3808,
+      "resources": {
+        "wall_seconds": 117.2826818000176,
+        "cpu_seconds": 453.4375,
+        "sampled_peak_process_tree_rss_mib": 377.3203125,
+        "sampling_interval_seconds": 0.2,
+        "sampling_errors": 0
+      },
+      "measurement_scope": "input/model hashing and loading, complete parsing, prediction, CSV verification/write; imports excluded",
+      "hardware": {
+        "platform": "Windows-11-10.0.26300-SP0",
+        "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+        "logical_cpus": 20,
+        "total_ram_bytes": 29841797120
+      },
+      "versions": {
+        "torch": "2.14.1+cpu",
+        "numpy": "2.5.3"
+      }
+    },
+    "data1": {
+      "status": "complete",
+      "kind": "context_reference_v1",
+      "stage": "final_data0",
+      "context_mode": "none",
+      "allow_development_model": false,
+      "input_basename": "dataset1.json.gz",
+      "model_basename": "model.pt",
+      "output_basename": "data1_predictions.csv",
+      "input_sha256": "5e88520aa2ea8b83dee626d290934dd81672a92e5b04ecb7dbd828b65659a6ef",
+      "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+      "output_sha256": "726b869bcc7fa1ab7260fc5f875093e8b95b14b98a63e3d92e5b83fbd0026d91",
+      "code_sha256": {
+        "predict.py": "fdc1a6bad52b725265d9f195fe4bf467266827cd6bbb130a8de5394bc4fb63c0",
+        "model.py": "0fa59b34cd85f1981eccd910d704412cb54de6602fe05fbff8d7ab4362d402c2",
+        "data.py": "91f8a13e3ecb6cf5461c2f33a640f523e7884362c8545e4125f9f5c4b14ebf70",
+        "context_features.py": "4a35f26e54aab767af0982f495f6d1abb7f5aa7bc1a3accb76e2bc3e0378c9e0",
+        "common.py": "6a26cab89aea3155db924244bae1b69080c2f5037fb1ba00dc231d8487d30eaa"
+      },
+      "n_sites": 90810,
+      "n_reads": 7907952,
+      "exact_input_key_coverage": true,
+      "all_reads_used": true,
+      "labels_read": false,
+      "threads": 4,
+      "batch_size_limit": 32,
+      "max_padded_reads_budget": 65536,
+      "maximum_observed_padded_reads": 31808,
+      "n_batches": 2838,
+      "resources": {
+        "wall_seconds": 86.6793561000377,
+        "cpu_seconds": 334.546875,
+        "sampled_peak_process_tree_rss_mib": 369.39453125,
+        "sampling_interval_seconds": 0.2,
+        "sampling_errors": 0
+      },
+      "measurement_scope": "input/model hashing and loading, complete parsing, prediction, CSV verification/write; imports excluded",
+      "hardware": {
+        "platform": "Windows-11-10.0.26300-SP0",
+        "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+        "logical_cpus": 20,
+        "total_ram_bytes": 29841797120
+      },
+      "versions": {
+        "torch": "2.14.1+cpu",
+        "numpy": "2.5.3"
+      }
+    },
+    "data2": {
+      "status": "complete",
+      "kind": "context_reference_v1",
+      "stage": "final_data0",
+      "context_mode": "none",
+      "allow_development_model": false,
+      "input_basename": "dataset2.json.gz",
+      "model_basename": "model.pt",
+      "output_basename": "data2_predictions.csv",
+      "input_sha256": "8bb7b21a2936efc6b26b1f18513748f0dcd47dfd932d03c4ac8c084ab9f8a288",
+      "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+      "output_sha256": "175cfcd516d65c8f6ff375ca2ec3b2c5cb707dc7f94dffb56cfa9f3356700423",
+      "code_sha256": {
+        "predict.py": "fdc1a6bad52b725265d9f195fe4bf467266827cd6bbb130a8de5394bc4fb63c0",
+        "model.py": "0fa59b34cd85f1981eccd910d704412cb54de6602fe05fbff8d7ab4362d402c2",
+        "data.py": "91f8a13e3ecb6cf5461c2f33a640f523e7884362c8545e4125f9f5c4b14ebf70",
+        "context_features.py": "4a35f26e54aab767af0982f495f6d1abb7f5aa7bc1a3accb76e2bc3e0378c9e0",
+        "common.py": "6a26cab89aea3155db924244bae1b69080c2f5037fb1ba00dc231d8487d30eaa"
+      },
+      "n_sites": 1323,
+      "n_reads": 1171940,
+      "exact_input_key_coverage": true,
+      "all_reads_used": true,
+      "labels_read": false,
+      "threads": 4,
+      "batch_size_limit": 32,
+      "max_padded_reads_budget": 65536,
+      "maximum_observed_padded_reads": 65520,
+      "n_batches": 44,
+      "resources": {
+        "wall_seconds": 10.294405900000129,
+        "cpu_seconds": 34.890625,
+        "sampled_peak_process_tree_rss_mib": 365.03515625,
+        "sampling_interval_seconds": 0.2,
+        "sampling_errors": 0
+      },
+      "measurement_scope": "input/model hashing and loading, complete parsing, prediction, CSV verification/write; imports excluded",
+      "hardware": {
+        "platform": "Windows-11-10.0.26300-SP0",
+        "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+        "logical_cpus": 20,
+        "total_ram_bytes": 29841797120
+      },
+      "versions": {
+        "torch": "2.14.1+cpu",
+        "numpy": "2.5.3"
+      }
+    }
+  },
+  "final_fit_resources": {
+    "wall_seconds": 679.8233691999922,
+    "cpu_seconds": 2614.3125,
+    "sampled_peak_process_tree_rss_mib": 938.3046875,
+    "sampling_interval_seconds": 0.2,
+    "sampling_errors": 0
+  },
+  "resource_scope": "Wrapper invocation, including preflight/core delegation; overlaps core fit timers, do not add totals",
+  "provenance": {
+    "data0": {
+      "prediction": "model_elgin/outputs/final_cap128_v1/data0_predictions.csv",
+      "prediction_sha256": "b3a8a341d8dbd283a1eb7d9737ef2158a810056e842b64f15e33e0d89c013ed0",
+      "manifest_sha256": "f7962170da1c5ab59de57b019740caec1acf1623ef5dcbe7e069243220cd3c28"
+    },
+    "data1": {
+      "prediction": "model_elgin/outputs/final_cap128_v1/data1_predictions.csv",
+      "prediction_sha256": "726b869bcc7fa1ab7260fc5f875093e8b95b14b98a63e3d92e5b83fbd0026d91",
+      "manifest_sha256": "cfaceefb496216fc53d6afc97fe9fc24e491f4226e8580f91695adb7ba36906c"
+    },
+    "data2": {
+      "prediction": "model_elgin/outputs/final_cap128_v1/data2_predictions.csv",
+      "prediction_sha256": "175cfcd516d65c8f6ff375ca2ec3b2c5cb707dc7f94dffb56cfa9f3356700423",
+      "manifest_sha256": "8560c355732c5e1a3e7cb54d978a922b0162b205976c7ecfb96b029ebc8bb51c"
+    },
+    "Elgin cap128/data0": {
+      "prediction": "model_elgin/outputs/read_cap_v1/cv/none/data0_oof.csv",
+      "prediction_sha256": "0b6b0cbb659f861a096f118b5e9e816feb632a01ee001526a7d368c2fbc8c63c",
+      "original_metrics_sha256": "63f89cc94b008f6fccbbf90f0baf2f709517862875fd1a88d4e1770fc2301d23"
+    },
+    "Samuel LightGBM/data0": {
+      "prediction": "model_samuel/outputs/data0_oof.csv",
+      "prediction_sha256": "78ac518c56d16d3a0e97abe749e0950a1d9a8bbe6ad170b4290500b6b1ba9c7b",
+      "original_metrics_sha256": "56373f86d9d728066d2a49d27d64e56ace8741ca68cb86076d5b6efce2e50481"
+    },
+    "Elgin cap128/data1": {
+      "prediction": "model_elgin/outputs/final_cap128_v1/data1_predictions.csv",
+      "prediction_sha256": "726b869bcc7fa1ab7260fc5f875093e8b95b14b98a63e3d92e5b83fbd0026d91",
+      "original_metrics_sha256": "1095d7421d667cb9eed534a3c2200c9d6c3ce6dc52c294564219a73d7a11cc40"
+    },
+    "Samuel LightGBM/data1": {
+      "prediction": "model_samuel/outputs/data1_predictions.csv",
+      "prediction_sha256": "1a398d005694a573e44505e5a208086bffb4a5c6b457d6c3ccc2477cd4c26fb6",
+      "original_metrics_sha256": "e3ed94a478ea21869f1500fe2fe20d837eb7a49247f618dd4dfa814eb9e04fea"
+    }
+  },
+  "scorer_sha256": "43217301e0c9f9aeac821175763c096a171ec699fe342c04099f0d09a42e7727",
+  "reporter_sha256": "f689d60b04ae81555586ad185a1133ac47f70abd430a03c6e4ecf4c1bf86ca86",
+  "folds_sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0",
+  "final_phase_sha256": "3bc5132d29eee223e0e98f71b9da3b64ff0ccef7ae12f80e41817772277a9ba0",
+  "training_history": [
+    {
+      "epoch": 1,
+      "loss": 0.30132122881895573,
+      "wall_seconds": 36.87972919997992
+    },
+    {
+      "epoch": 2,
+      "loss": 0.24483061601650918,
+      "wall_seconds": 35.739560800022446
+    },
+    {
+      "epoch": 3,
+      "loss": 0.23287026556495682,
+      "wall_seconds": 35.531083400011994
+    },
+    {
+      "epoch": 4,
+      "loss": 0.225983846887214,
+      "wall_seconds": 36.295490099990275
+    },
+    {
+      "epoch": 5,
+      "loss": 0.22113326668786285,
+      "wall_seconds": 36.64705839997623
+    },
+    {
+      "epoch": 6,
+      "loss": 0.21888321032707114,
+      "wall_seconds": 36.53870460001053
+    },
+    {
+      "epoch": 7,
+      "loss": 0.2169408417326883,
+      "wall_seconds": 36.64612980000675
+    },
+    {
+      "epoch": 8,
+      "loss": 0.2151626980807237,
+      "wall_seconds": 37.83658280002419
+    },
+    {
+      "epoch": 9,
+      "loss": 0.2127443434980514,
+      "wall_seconds": 38.10881350003183
+    },
+    {
+      "epoch": 10,
+      "loss": 0.21108421523975027,
+      "wall_seconds": 37.64845619996777
+    },
+    {
+      "epoch": 11,
+      "loss": 0.21043371806063466,
+      "wall_seconds": 37.79311890003737
+    },
+    {
+      "epoch": 12,
+      "loss": 0.2086692937819803,
+      "wall_seconds": 38.19120770000154
+    },
+    {
+      "epoch": 13,
+      "loss": 0.20778685304342043,
+      "wall_seconds": 37.637560400005896
+    },
+    {
+      "epoch": 14,
+      "loss": 0.20689178604396144,
+      "wall_seconds": 36.995736599958036
+    },
+    {
+      "epoch": 15,
+      "loss": 0.2061881567825368,
+      "wall_seconds": 35.809901500004344
+    },
+    {
+      "epoch": 16,
+      "loss": 0.20428222751254044,
+      "wall_seconds": 35.77814169996418
+    },
+    {
+      "epoch": 17,
+      "loss": 0.20303526183025833,
+      "wall_seconds": 36.67042720003519
+    },
+    {
+      "epoch": 18,
+      "loss": 0.20158907989519353,
+      "wall_seconds": 36.136389399995096
+    }
+  ]
+}

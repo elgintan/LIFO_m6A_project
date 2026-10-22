@@ -4,9 +4,18 @@ NUS DSA4262 team project: understand nanopore event data, compare two trained
 candidate pipelines using shared gene-grouped validation, and apply one
 selected model to investigate predicted m6A patterns across cell lines.
 
-**22 October 2026:** Elgin is consolidating the received work on one laptop.
-Both candidates have real data0 validation evidence; final model selection,
-validated calling cutoff and real whole-run Task 2 predictions remain pending.
+**23 October 2026:** Elgin is consolidating the received work on one laptop.
+**Task 1 model selection is complete:** original-feature cap128 with positive
+loss weight3 is selected. The fresh 18-epoch all-data0 fit is complete
+(11.33 minutes), and the saved artifact and real ten-site example are verified.
+Full data0/data1/data2 prediction and frozen data1 evaluation are complete.
+Neural data1 S is0.604866 versus LightGBM0.602322; this is a small exposed-data
+diagnostic advantage. LightGBM has higher PR AUC and, at0.5, higher precision,
+specificity and accuracy. Neither model dominates every metric.
+See the [actual results, plots, resource measurements and commands](model_elgin/final_cap128_results/results.md).
+The separate external trial has higher ranking S but remains unpromoted after
+the documented tradeoff review. See [current stages](CURRENT_STAGE.md) and
+[the fixed selection decision](model_elgin/FINAL_MODEL_SELECTION.md).
 The current explorer is **coverage-only**. The older simulated prototype is
 archival and is not biological evidence.
 
@@ -17,12 +26,15 @@ The latter's exact time is unconfirmed. See [deadlines and priorities](PROJECT_D
 
 ## Start here
 
-1. Read [current evidence, decisions and remaining gaps](INTEGRATION_STATUS.md).
+1. Check [the current stage and next result](CURRENT_STAGE.md), then read
+   [current evidence, decisions and remaining gaps](INTEGRATION_STATUS.md).
 2. Follow the [minimum shared evaluation rules](model_evaluation/SHARED_RULES.md).
    Keep the exact five data0 gene folds and common scorer; model designs remain
    independent. Data1 is already exposed and is a transfer diagnostic.
-3. For a runnable saved candidate, follow [Samuel's example](model_samuel/README.md).
-   For the completed neural CV experiment, follow [Elgin's guide](model_elgin/context_reference_v1/README.md).
+3. To run the selected saved model or reproduce its fixed final training,
+   follow [Elgin's final-model guide](model_elgin/FINAL_MODEL_USAGE.md).
+   [Samuel's example](model_samuel/README.md) retains the LightGBM candidate.
+   For the completed neural CV experiment, follow [the development guide](model_elgin/context_reference_v1/README.md).
    The [completed read-depth investigation](model_elgin/read_depth_stability_results/README.md)
    supports retaining all-read prediction; it is a matched-cohort diagnostic,
    not a newly trained model or replacement full-CV score.
