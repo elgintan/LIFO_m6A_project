@@ -13,6 +13,10 @@ The full local real-score explorer is also built; report assembly and public
 hosting remain pending. See the
 [fixed context QC rules](CROSS_RUN_CONTEXT_QC_PLAN.md). Original exports and
 historical handovers are preserved.
+Focused [biological case interpretation](biological_case_results_2026_10_23/README.md)
+now provides four fixed gene/site examples, full original-run evidence, training
+overlap diagnostics, primary literature and two figure pairs. The selection plan
+and full ranked pools are preserved; no assay, significance or causal claim follows.
 See [the execution design](TASK2_EXECUTION_PLAN.md) and
 [selected model information](MODEL_INFO.md).
 See [actual first-run QC](first_prediction_qc/README.md),

@@ -1,0 +1,13 @@
+{
+  "n_persistent_pair_sites": 1004,
+  "n_persistent_unique_sites": 545,
+  "n_persistent_nontraining_pair_sites": 539,
+  "n_persistent_training_pair_sites": 465,
+  "n_inconclusive_pair_sites": 6098,
+  "n_inconclusive_nontraining_pair_sites": 4109,
+  "n_shared_high_at_07": 41,
+  "shared_cutoff_used": 0.7,
+  "n_shared_high_used": 41,
+  "n_selected_cases": 4,
+  "selection_is_tail_illustration_not_inference": true
+}

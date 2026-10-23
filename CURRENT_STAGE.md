@@ -1,6 +1,12 @@
 # Current project stage — 23 October 2026
 
 **Current stage: Task 2 analysis and full local actual-score explorer complete; report assembly and hosting next.**
+Focused biological interpretation now includes [four fixed gene/site cases](sgnex_analysis/biological_case_results_2026_10_23/README.md):
+HNRNPA1/RAB1B contrasts, ACTG1 shared-high scores and an inconclusive G3BP2 example.
+Case rankings, original23run evidence, training-key exposure, technical metadata,
+primary literature and two figure pairs were checked. This is descriptive
+interpretation, not exact-site assay validation or an exhaustive biological analysis.
+The new case-entry interface remains pending; its data payload is prepared.
 All 23 runs completed at 05:46:47 Singapore time on 23 October, exit0; the
 checkpoint is complete and no run lock remains. The verified exports contain
 2,983,948 scored run-site observations / 232,253,678 reads. These are repeated

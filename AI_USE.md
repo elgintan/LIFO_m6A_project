@@ -448,3 +448,37 @@ original bytes archived, and builderUTF8regression added to28passing tests.
 MeanPearson/disjoint-band explorer agreement is labelled separately from report
 Spearman/cumulative-depth analysis. These software checks do not validate m6A
 chemistry or complete public deployment or the five-page report.
+
+## Focused biological interpretation — 23 October
+
+The user's follow-up exposed that the assistant's phrase 'Task2analysiscomplete'
+was too broad: computational comparisons were complete, but namedgene/site
+interpretation remained. The checkpoint was corrected and the user authorised
+the focused next step. Before reading gene outcomes, a fixed tail-case selection
+plan specified persistent contrasts, a separate training-line diagnostic, shared
+high scores and an inconclusive overlap case. Gene literature did not choose cases.
+
+All63pair tables were checked. A first selection attempt stopped because a
+cell-line cache lacked a completed-reporter hash pin; the original failed run/
+source were retained. The retry uses annotation from an already pinned pair table,
+without changing criteria. Independent implementation reproduced all rankings:
+1004persistent pair-site rows/545keys,41shared-high sites,6098inconclusive rows.
+HNRNPA1/RAB1B/ACTG1/G3BP2 were selected. A separate original-export reconstruction
+checked92case/run rows,80scored/12below20unscored, all group/line averages and12
+depth checks. Twelve small software tests passed. Matplotlib cache-permission
+warning during tests was nonfatal; actual figures completed and were inspected.
+
+Postselection lookup found data0matching keys/labels1,0,1 for HNRNPA1/RAB1B/ACTG1,
+while G3BP2was absent. This did not change ranking. Data0labels do not validate
+SG-NEx or prove a false positive at a different sample. Basecaller/platform
+confounding, nested thresholds and unverified preparation independence remain.
+Two plot versions are retained; version2 only repairs overlapping labels/legend.
+
+Primary studies provide gene functions and prior HNRNPA1/ACTG1 mRNA-m6A evidence,
+but no selected exact-site assay correspondence was established. Direct requests
+sometimes failed403/429; primary extracts/available publisher PDF supplied the
+checked claims. Independent scientific/visual review found no blocking issue.
+The assistant prepared case narrative, figure captions, a report paragraph,
+full-precision tables and future explorer payload. No new training/inference,
+RNAmodification-type discovery, causal mechanism or public UI deployment is claimed.
+This is assistant-executed team-project work, not the user's personal AI reflection.

@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "production_selection_imported": false,
+  "fitting_or_inference": false,
+  "selection_complete_sha256": "d84fe1a1dc89517f075567d04350aca0a7652cd715121beab9d282153b6d823c",
+  "reporter_complete_sha256": "b7446ca961e7626bd56f9ac5f73448eca88c9162e05218b2d035d720b417d7ee",
+  "qc_complete_sha256": "aaa5190d61f800de3071a57dc4c6247609210d079af8c3872785862353b7a713",
+  "script_sha256": "f2b211618a44d93ee5cd6b36aa82bf572a38023fc90ca0398f5cbd5edc2ab92f",
+  "n_input_pins_checked": 71,
+  "n_output_hashes_checked": 6,
+  "n_full_pair_tables_checked": 63,
+  "n_full_pair_rows_checked": 2238466,
+  "n_persistent_pair_rows": 1004,
+  "n_persistent_unique_keys": 545,
+  "n_persistent_nontraining_pair_rows": 539,
+  "n_persistent_training_pair_rows": 465,
+  "n_inconclusive_pair_rows": 6098,
+  "n_shared_high_07": 41,
+  "shared_cutoff": 0.7,
+  "all_rank_orders_and_selected_keys_match": true,
+  "max_pair_delta_recompute_difference": 0.0,
+  "max_pair_depth_ratio_recompute_difference": 0.0,
+  "selected": [
+    {
+      "role": "persistent_difference_nontraining_lines",
+      "transcript_id": "ENST00000340913",
+      "transcript_position": 177,
+      "gene_name": "HNRNPA1",
+      "training_positive_context_count": 48
+    },
+    {
+      "role": "persistent_difference_training_line",
+      "transcript_id": "ENST00000311481",
+      "transcript_position": 1947,
+      "gene_name": "RAB1B",
+      "training_positive_context_count": 41
+    },
+    {
+      "role": "shared_high",
+      "transcript_id": "ENST00000331925",
+      "transcript_position": 607,
+      "gene_name": "ACTG1",
+      "training_positive_context_count": 133
+    },
+    {
+      "role": "overlapping_groups_inconclusive",
+      "transcript_id": "ENST00000359707",
+      "transcript_position": 2510,
+      "gene_name": "G3BP2",
+      "training_positive_context_count": 40
+    }
+  ],
+  "resources": {
+    "wall_seconds": 160.49425270000938,
+    "process_cpu_seconds": 150.515625
+  },
+  "resource_scope": "Current process after imports through input/output fingerprint checks and independent reconstruction; excludes final evidence writes. No peak memory claim",
+  "limitations": "Selection and saved source-table audit only. Original23run score/group reconstruction and biological literature interpretation are separate root tasks; no chemical truth or significance test established"
+}

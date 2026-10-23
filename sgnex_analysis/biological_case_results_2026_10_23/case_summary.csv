@@ -1,0 +1,5 @@
+case_id,gene_name,gene_id,transcript_id,transcript_position,sequence_7mer,positive_training_context_labels,training_key_present,data0_label,n_scored_runs_20,n_below20_runs
+persistent_difference_nontraining_lines,HNRNPA1,ENSG00000135486,ENST00000340913,177,CGGACTG,48,True,1.0,23,0
+persistent_difference_training_line,RAB1B,ENSG00000174903,ENST00000311481,1947,AGGACAA,41,True,0.0,23,0
+shared_high,ACTG1,ENSG00000184009,ENST00000331925,607,TGGACTC,133,True,1.0,23,0
+overlapping_groups_inconclusive,G3BP2,ENSG00000138757,ENST00000359707,2510,AGGACAT,40,False,,11,12

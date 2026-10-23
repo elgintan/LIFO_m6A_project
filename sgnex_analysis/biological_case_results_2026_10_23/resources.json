@@ -1,0 +1,65 @@
+{
+  "separate_command_scopes_do_not_sum_overlapping_timers": true,
+  "commands": [
+    {
+      "role": "selection first attempt: failed annotation-pin guard",
+      "source": "sgnex_analysis/outputs/checks/biological_case_selection_20261023/measurement.json",
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 61.11529410001822,
+      "sampled_process_tree_cpu_seconds_lower_bound": 54.125,
+      "sampled_peak_tree_rss_mib": 157.57421875,
+      "cpu_scope": "maximum observed user+system CPU per command-tree PID; sampled lower bound",
+      "rss_scope": "maximum sampled simultaneous sum of command-tree RSS; excludes monitor"
+    },
+    {
+      "role": "completed selection retry",
+      "source": "sgnex_analysis/outputs/checks/biological_case_selection_retry_20261023/measurement.json",
+      "status": "complete",
+      "exit_code": 0,
+      "wall_seconds": 56.43811200000346,
+      "sampled_process_tree_cpu_seconds_lower_bound": 51.96875,
+      "sampled_peak_tree_rss_mib": 152.28125,
+      "cpu_scope": "maximum observed user+system CPU per command-tree PID; sampled lower bound",
+      "rss_scope": "maximum sampled simultaneous sum of command-tree RSS; excludes monitor"
+    },
+    {
+      "role": "original23run evidence reconstruction",
+      "source": "sgnex_analysis/outputs/checks/biological_case_evidence_20261023/measurement.json",
+      "status": "complete",
+      "exit_code": 0,
+      "wall_seconds": 23.286717600014526,
+      "sampled_process_tree_cpu_seconds_lower_bound": 20.484375,
+      "sampled_peak_tree_rss_mib": 181.30078125,
+      "cpu_scope": "maximum observed user+system CPU per command-tree PID; sampled lower bound",
+      "rss_scope": "maximum sampled simultaneous sum of command-tree RSS; excludes monitor"
+    },
+    {
+      "role": "figure/report first layout",
+      "source": "sgnex_analysis/outputs/checks/biological_case_figures_20261023/measurement.json",
+      "status": "complete",
+      "exit_code": 0,
+      "wall_seconds": 15.590125599992462,
+      "sampled_process_tree_cpu_seconds_lower_bound": 10.390625,
+      "sampled_peak_tree_rss_mib": 162.59375,
+      "cpu_scope": "maximum observed user+system CPU per command-tree PID; sampled lower bound",
+      "rss_scope": "maximum sampled simultaneous sum of command-tree RSS; excludes monitor"
+    },
+    {
+      "role": "figure/report layout repair",
+      "source": "sgnex_analysis/outputs/checks/biological_case_figures_layout_20261023/measurement.json",
+      "status": "complete",
+      "exit_code": 0,
+      "wall_seconds": 11.553583399974741,
+      "sampled_process_tree_cpu_seconds_lower_bound": 9.6875,
+      "sampled_peak_tree_rss_mib": 162.3984375,
+      "cpu_scope": "maximum observed user+system CPU per command-tree PID; sampled lower bound",
+      "rss_scope": "maximum sampled simultaneous sum of command-tree RSS; excludes monitor"
+    }
+  ],
+  "independent_audit": {
+    "wall_seconds": 160.49425270000938,
+    "process_cpu_seconds": 150.515625
+  },
+  "independent_audit_scope": "Current process after imports through input/output fingerprint checks and independent reconstruction; excludes final evidence writes. No peak memory claim"
+}

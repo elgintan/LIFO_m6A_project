@@ -1,0 +1,5 @@
+case_id,gene_id_annotation,gene_name,transcript_id,transcript_position,gene_id_data0,label,training_key_present,gene_id_matches_when_present,independent_validation
+persistent_difference_nontraining_lines,ENSG00000135486,HNRNPA1,ENST00000340913,177,ENSG00000135486,1.0,True,True,False
+persistent_difference_training_line,ENSG00000174903,RAB1B,ENST00000311481,1947,ENSG00000174903,0.0,True,True,False
+shared_high,ENSG00000184009,ACTG1,ENST00000331925,607,ENSG00000184009,1.0,True,True,False
+overlapping_groups_inconclusive,ENSG00000138757,G3BP2,ENST00000359707,2510,,,False,True,False

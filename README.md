@@ -40,6 +40,12 @@ and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md) are av
 Final five-page report assembly, public explorer hosting and the actual newly
 released test submission remain pending.
 
+[Four focused biological cases](sgnex_analysis/biological_case_results_2026_10_23/README.md)
+now connect the score comparisons to named transcripts, primary literature and
+uncertainty: HNRNPA1/RAB1B contrasts, ACTG1 shared high signal, and G3BP2 group/
+coverage limitations. Their training-key exposure and technical confounding are
+explicit. These are predicted m6A patterns, not confirmed differential chemistry.
+
 **Deadline update supplied by the user on 22 October:** code repositories and
 predictions for the new unlabelled test dataset remain due **28 October**;
 the report and interactive visualisation are extended to **8 November**.

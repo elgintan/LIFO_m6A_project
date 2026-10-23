@@ -1,0 +1,29 @@
+case_id,cell_line,n_runs,basecallers,platforms,dates,min_reads,max_reads
+overlapping_groups_inconclusive,A549,2,albacore-GIS | guppy-3.2.10-GIS,GridION | MinION,20181213.0 | 20200302.0,13,30
+overlapping_groups_inconclusive,H9,6,guppy-3.2.10-GIS,GridION,20210311.0 | 20210324.0,7,36
+overlapping_groups_inconclusive,HEYA8,5,guppy-3.2.10-GIS,GridION,20210311.0 | 20210324.0,3,35
+overlapping_groups_inconclusive,Hct116,3,guppy-1.4.3-GIS | guppy-3.2.10-GIS,GridION,20190322.0 | 20200302.0,14,36
+overlapping_groups_inconclusive,HepG2,2,albacore-GIS | guppy-flipflop-MinIT,GridION | MinION,20181011.0 | 20181121.0,45,61
+overlapping_groups_inconclusive,K562,3,guppy-1.4.3-GIS | guppy-3.2.10-GIS,GridION,20190318.0 | 20200302.0,3,7
+overlapping_groups_inconclusive,MCF7,2,guppy-1.4.3-GIS | guppy-2.1.3-albacore,GridION | MinION,20190220.0 | 20190322.0,2,9
+persistent_difference_nontraining_lines,A549,2,albacore-GIS | guppy-3.2.10-GIS,GridION | MinION,20181213.0 | 20200302.0,111,258
+persistent_difference_nontraining_lines,H9,6,guppy-3.2.10-GIS,GridION,20210311.0 | 20210324.0,170,764
+persistent_difference_nontraining_lines,HEYA8,5,guppy-3.2.10-GIS,GridION,20210311.0 | 20210324.0,148,581
+persistent_difference_nontraining_lines,Hct116,3,guppy-1.4.3-GIS | guppy-3.2.10-GIS,GridION,20190322.0 | 20200302.0,341,674
+persistent_difference_nontraining_lines,HepG2,2,albacore-GIS | guppy-flipflop-MinIT,GridION | MinION,20181011.0 | 20181121.0,390,445
+persistent_difference_nontraining_lines,K562,3,guppy-1.4.3-GIS | guppy-3.2.10-GIS,GridION,20190318.0 | 20200302.0,275,384
+persistent_difference_nontraining_lines,MCF7,2,guppy-1.4.3-GIS | guppy-2.1.3-albacore,GridION | MinION,20190220.0 | 20190322.0,200,305
+persistent_difference_training_line,A549,2,albacore-GIS | guppy-3.2.10-GIS,GridION | MinION,20181213.0 | 20200302.0,56,197
+persistent_difference_training_line,H9,6,guppy-3.2.10-GIS,GridION,20210311.0 | 20210324.0,23,93
+persistent_difference_training_line,HEYA8,5,guppy-3.2.10-GIS,GridION,20210311.0 | 20210324.0,41,209
+persistent_difference_training_line,Hct116,3,guppy-1.4.3-GIS | guppy-3.2.10-GIS,GridION,20190322.0 | 20200302.0,135,267
+persistent_difference_training_line,HepG2,2,albacore-GIS | guppy-flipflop-MinIT,GridION | MinION,20181011.0 | 20181121.0,159,179
+persistent_difference_training_line,K562,3,guppy-1.4.3-GIS | guppy-3.2.10-GIS,GridION,20190318.0 | 20200302.0,73,157
+persistent_difference_training_line,MCF7,2,guppy-1.4.3-GIS | guppy-2.1.3-albacore,GridION | MinION,20190220.0 | 20190322.0,258,305
+shared_high,A549,2,albacore-GIS | guppy-3.2.10-GIS,GridION | MinION,20181213.0 | 20200302.0,596,895
+shared_high,H9,6,guppy-3.2.10-GIS,GridION,20210311.0 | 20210324.0,414,915
+shared_high,HEYA8,5,guppy-3.2.10-GIS,GridION,20210311.0 | 20210324.0,450,936
+shared_high,Hct116,3,guppy-1.4.3-GIS | guppy-3.2.10-GIS,GridION,20190322.0 | 20200302.0,770,888
+shared_high,HepG2,2,albacore-GIS | guppy-flipflop-MinIT,GridION | MinION,20181011.0 | 20181121.0,814,867
+shared_high,K562,3,guppy-1.4.3-GIS | guppy-3.2.10-GIS,GridION,20190318.0 | 20200302.0,248,335
+shared_high,MCF7,2,guppy-1.4.3-GIS | guppy-2.1.3-albacore,GridION | MinION,20190220.0 | 20190322.0,366,856

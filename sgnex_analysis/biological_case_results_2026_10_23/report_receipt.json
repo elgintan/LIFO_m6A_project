@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "script_sha256": "a424de91c415394c65056f39e1af5bb6f50efe084964a28a73c36d621b6e5853",
+  "inputs": [
+    {
+      "path": "sgnex_analysis/outputs/biological_case_selection_v2/complete.json",
+      "sha256": "d84fe1a1dc89517f075567d04350aca0a7652cd715121beab9d282153b6d823c"
+    },
+    {
+      "path": "sgnex_analysis/outputs/biological_case_evidence_v1/complete.json",
+      "sha256": "45c7e698e5bba491198303ca3db5e877ddad18ef1738aae7cde62f845a33afdf"
+    },
+    {
+      "path": "../data0/data.info.labelled",
+      "sha256": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978"
+    },
+    {
+      "path": "model_elgin/artifacts/cap128_weight3_v1/training_specification.json",
+      "sha256": "ce6c40e89477659f7274e27de529c703e75e19881d421fa4aaf12cdcc2ad1e80"
+    }
+  ],
+  "outputs": {
+    "case_depth_sensitivity.png": {
+      "sha256": "45fd99a001528ecd60be7350d309a121d84c11126a27609e40f16433517274a4",
+      "size_bytes": 226159
+    },
+    "case_depth_sensitivity.svg": {
+      "sha256": "0040560ee30301972b1be45466a80c618a28f3a27d9d24864879077ab5d8424e",
+      "size_bytes": 44102
+    },
+    "case_group_score_patterns.png": {
+      "sha256": "b1c3a4b8a04e7f03c2f0756371a4466d836faacd9de2b408e0a63d5c1d8ddb8a",
+      "size_bytes": 365605
+    },
+    "case_group_score_patterns.svg": {
+      "sha256": "c8bd7175302f250edfebceee62ad5411dd0933d91578cb41ba8bab8b283bdbeb",
+      "size_bytes": 94841
+    },
+    "case_summary.csv": {
+      "sha256": "5f299124e1dda804aead414747bb7ef32c53468049af632c36d23d108ee01384",
+      "size_bytes": 569
+    },
+    "training_key_diagnostics.csv": {
+      "sha256": "9f1a275fc63868a63184cb269432d134f9bd62906caaac8a1312d8ffcf0ba8d9",
+      "size_bytes": 588
+    },
+    "training_key_scope.json": {
+      "sha256": "8947aac0f5c9d773c17de5a15d4a1eb070a02cd6064f96d20e93867313e9bdfc",
+      "size_bytes": 422
+    }
+  },
+  "no_training_or_inference": true,
+  "wall_seconds_internal": 6.049525599984918
+}

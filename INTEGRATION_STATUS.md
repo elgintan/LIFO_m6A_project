@@ -55,6 +55,15 @@ it stays separate. Keeping cap128 is a documented conservative deployment
 choice, not a claim that cap128 maximises every metric across all experiments.
 No new open-ended neural search is part of these priorities.
 
+The user correctly identified a remaining gap behind the phrase 'analysis
+complete': global/pairwise computation was finished, while named-gene biological
+interpretation was not. [Focused case analysis](sgnex_analysis/biological_case_results_2026_10_23/README.md)
+now addresses this with four deterministic examples and primary literature.
+Independent rankings and original23run group means passed; three keys occur in
+data0 and technical metadata differ across contrasted lines. These limits stay
+visible. Case-entry UI integration is specified with a prepared small payload,
+but not yet implemented/deployed. Final report and hosting remain unfinished.
+
 ## Decisions already made
 
 - **Task 2 scope:** the 23 available m6Anet-processed SG-NEx runs in
