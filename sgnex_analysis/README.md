@@ -2,12 +2,17 @@
 
 This folder integrates Member 4's code and scientific handover. The agreed population is **23 m6Anet-processed direct-RNA runs, seven cell lines and 17 replicate-number groups**. The broader 56-row inventory is background; expanding to it is not required for the current task. Conclusions must describe the processed subset.
 
-**23 October:** Member 4's coverage foundation is integrated. Elgin's frozen
-cap128/weight3 neural model is selected. The first full signal input passed
-strict validation and exact coverage-key/count agreement, and a real small
-adapter/predictor parity check passed. The first run's135,870 predictions are
-complete and independently verified; the full23-run workflow is running.
-Biological comparisons and interpretation remain unfinished.
+**23 October:** all 23 frozen cap128/weight3 prediction runs completed and passed
+verification at 05:46:47 SGT, exit0. The completed checkpoint has no run lock.
+Exports contain 2,983,948 scored run-site observations / 232,253,678 reads,
+not unique sites or confirmed modifications. The [completed context audit](context_qc_results/README.md)
+found no conflicts or exclusions across all451,352scoreable keys. Scientific
+comparisons completed, including all21pairs at20/50/100reads, separate all-line
+panels and0.5/0.7/0.9summaries. Read [actual findings, figures and limitations](task2_results_2026_10_23/README.md).
+The full local real-score explorer is also built; report assembly and public
+hosting remain pending. See the
+[fixed context QC rules](CROSS_RUN_CONTEXT_QC_PLAN.md). Original exports and
+historical handovers are preserved.
 See [the execution design](TASK2_EXECUTION_PLAN.md) and
 [selected model information](MODEL_INFO.md).
 See [actual first-run QC](first_prediction_qc/README.md),
@@ -22,7 +27,7 @@ Read [findings.md](findings.md), [REFERENCE_STATUS.md](REFERENCE_STATUS.md) and 
 - `metadata/sample_manifest.csv`: the exact 23 runs, group mapping, public signal links and saved object sizes. Signal JSONs total **33,365,823,342 bytes** (33.37 GB); they are not bundled.
 - `manifest.csv`, `MODEL_INFO.md`: selected-model handoff. Exact historical reference/preprocessing and nucleotide offsets remain unverified. Coverage and prediction paths use ignored `outputs/`.
 - `outputs/received_member4_20261019/`: local received coverage, annotations, aliases, figures, guides and logs. These are retained on the laptop, not public site-level data uploads.
-- `outputs/predictions/`: future three-column per-run CSVs and receipts.
+- `outputs/predictions/`: completed three-column per-run CSVs, all-source context metadata and receipts.
 - `provenance/member4_20261019/`: unchanged original handover, scientific/report/AI-use evidence and source inventory. This inventory describes the received package, including deliberately unpublished files.
 
 The optional Member 3 adapter uses the canonical sibling `model_samuel/`. Its model, examples and development outputs are not duplicated here. An explicit `--candidate-dir` can identify another received local snapshot.

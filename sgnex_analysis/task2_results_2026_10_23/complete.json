@@ -1,0 +1,742 @@
+{
+  "status": "complete",
+  "script_sha256": "4aa7c8642b93e15ee0b4ebbacbf7774ee08af8fef278a54e191194e8c0d9228b",
+  "inputs": [
+    {
+      "name": "complete.json",
+      "path": "sgnex_analysis/outputs/context_qc_v1/complete.json",
+      "sha256": "aaa5190d61f800de3071a57dc4c6247609210d079af8c3872785862353b7a713",
+      "size_bytes": 28886
+    },
+    {
+      "name": "analysis_receipt.json",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/analysis_receipt.json",
+      "sha256": "5a7c2bfdd32e501da839add815c05fe3dd0fc4f55efdba2a28f0b8163d3b094d",
+      "size_bytes": 8511
+    },
+    {
+      "name": "manifest.csv",
+      "path": "sgnex_analysis/manifest.csv",
+      "sha256": "def88c354bc12c55bef29f0d5c530f0a941de25aafbda7d23de9ebc75853b7cd",
+      "size_bytes": 6886
+    },
+    {
+      "name": "SGNex_Hct116_directRNA_replicate3_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run1.csv",
+      "sha256": "93d853ad77b15efb5119b9aba76800f8501c54e8dc5046f5127062eb983820d4",
+      "size_bytes": 6508199
+    },
+    {
+      "name": "SGNex_Hct116_directRNA_replicate3_run4.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.csv",
+      "sha256": "cf28339b9296a5a67a16bc181b7b2732d58c057a1ada7817d3915736c79ba64c",
+      "size_bytes": 5655155
+    },
+    {
+      "name": "SGNex_Hct116_directRNA_replicate4_run3.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_Hct116_directRNA_replicate4_run3.csv",
+      "sha256": "292213c0e996f8e7e175cf481d7281c5031b22696987748669db060a51226cbd",
+      "size_bytes": 9929532
+    },
+    {
+      "name": "SGNex_A549_directRNA_replicate5_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_A549_directRNA_replicate5_run1.csv",
+      "sha256": "396bb156eac189deae72dd99f3d68245fd35888f278c4939a8c74131c522f7dd",
+      "size_bytes": 2770279
+    },
+    {
+      "name": "SGNex_A549_directRNA_replicate6_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_A549_directRNA_replicate6_run1.csv",
+      "sha256": "5b1bfb61a1aab80d946ff9e864a485d596eea1252a0afbc091bc38ae105abfe1",
+      "size_bytes": 7787200
+    },
+    {
+      "name": "SGNex_H9_directRNA_replicate2_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_H9_directRNA_replicate2_run1.csv",
+      "sha256": "5794482f4ca81a81c1b540c2d5788e3f23c88ec67b34fd2f78b81cfb61c9f513",
+      "size_bytes": 4353972
+    },
+    {
+      "name": "SGNex_H9_directRNA_replicate2_run2.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_H9_directRNA_replicate2_run2.csv",
+      "sha256": "b0e3ceda90e2436be555bb73f4e8b775c56a2ad8db028e02bf9141d0bc9e39f2",
+      "size_bytes": 2148283
+    },
+    {
+      "name": "SGNex_H9_directRNA_replicate3_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_H9_directRNA_replicate3_run1.csv",
+      "sha256": "8041d234b99ac112bf680a1b2ec8eee4e33b1929bfa08948cdc1cb2eed76aefe",
+      "size_bytes": 4075652
+    },
+    {
+      "name": "SGNex_H9_directRNA_replicate3_run2.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_H9_directRNA_replicate3_run2.csv",
+      "sha256": "7d6a96f653ff444927267bff7ff5b98d503432f35e7292ffc34d3ffdbca990e8",
+      "size_bytes": 1909224
+    },
+    {
+      "name": "SGNex_H9_directRNA_replicate4_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_H9_directRNA_replicate4_run1.csv",
+      "sha256": "ca97929154938c41dda33e576f4da69f3cfba152df6073bf0f3e264dd198a506",
+      "size_bytes": 6139686
+    },
+    {
+      "name": "SGNex_H9_directRNA_replicate4_run2.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_H9_directRNA_replicate4_run2.csv",
+      "sha256": "f9c2d915681d9524974ad299318fa8409f259f45b33684e48c11ca9f00c565c1",
+      "size_bytes": 1428445
+    },
+    {
+      "name": "SGNex_HEYA8_directRNA_replicate1_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_HEYA8_directRNA_replicate1_run1.csv",
+      "sha256": "4c095f8a030e704421d86f86bc293ccf6c8a0e2e7b68836fb8a2b72e5e0712d2",
+      "size_bytes": 7236556
+    },
+    {
+      "name": "SGNex_HEYA8_directRNA_replicate1_run2.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_HEYA8_directRNA_replicate1_run2.csv",
+      "sha256": "11c33a5e147bc33d8a41551e7bd46f6360d8d2eef3abff326641299aa74a0ada",
+      "size_bytes": 1667971
+    },
+    {
+      "name": "SGNex_HEYA8_directRNA_replicate2_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_HEYA8_directRNA_replicate2_run1.csv",
+      "sha256": "60b8b495b0ebb69488bea77f4d7b9cef750991019f694bb7a052b575d7e0f016",
+      "size_bytes": 6622088
+    },
+    {
+      "name": "SGNex_HEYA8_directRNA_replicate2_run2.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_HEYA8_directRNA_replicate2_run2.csv",
+      "sha256": "0bf2dcfa9074f207f654c4efe838db6a74ae7366972017dd980551e882b0ada8",
+      "size_bytes": 4962540
+    },
+    {
+      "name": "SGNex_HEYA8_directRNA_replicate3_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_HEYA8_directRNA_replicate3_run1.csv",
+      "sha256": "6c0a78808c3dd9a91b5d7868c9a2dad6e64a934443c159b3ce7913310451d09a",
+      "size_bytes": 8427145
+    },
+    {
+      "name": "SGNex_HepG2_directRNA_replicate5_run2.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_HepG2_directRNA_replicate5_run2.csv",
+      "sha256": "4df23da9ee3b3d9bfbdf436714e5cf568a43de577b445c5511aa740b9c23489f",
+      "size_bytes": 10867140
+    },
+    {
+      "name": "SGNex_HepG2_directRNA_replicate6_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_HepG2_directRNA_replicate6_run1.csv",
+      "sha256": "0b768befc1cc532055e8d0646a8f7c9d7a09453d1531f792c007f999fb9323db",
+      "size_bytes": 10295323
+    },
+    {
+      "name": "SGNex_K562_directRNA_replicate4_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_K562_directRNA_replicate4_run1.csv",
+      "sha256": "8f3103a593e4b3a8ef8724600d838708779dafba1d424be83c91cf770a73fd34",
+      "size_bytes": 3617230
+    },
+    {
+      "name": "SGNex_K562_directRNA_replicate5_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_K562_directRNA_replicate5_run1.csv",
+      "sha256": "8f81142f93df38e252a5034609033788357e03b8d5a81c07204b69255506ce39",
+      "size_bytes": 3301610
+    },
+    {
+      "name": "SGNex_K562_directRNA_replicate6_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_K562_directRNA_replicate6_run1.csv",
+      "sha256": "8420f912420cfc33f7db186aca2e49054aaef75acbe3037d11734e4a2fcadfb4",
+      "size_bytes": 4177906
+    },
+    {
+      "name": "SGNex_MCF7_directRNA_replicate3_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_MCF7_directRNA_replicate3_run1.csv",
+      "sha256": "3411d492c8d4cea7e8eeb08800af1ed918221cbcf713b9c1df470a216a950772",
+      "size_bytes": 4798327
+    },
+    {
+      "name": "SGNex_MCF7_directRNA_replicate4_run1.csv",
+      "path": "sgnex_analysis/outputs/predictions/SGNex_MCF7_directRNA_replicate4_run1.csv",
+      "sha256": "d1fe606a85f70ff2f8898304a4fa1c75638b475cf17ce03e2f5e691fa83708c8",
+      "size_bytes": 5982052
+    },
+    {
+      "name": "population_effects.csv",
+      "path": "sgnex_analysis/outputs/context_qc_v1/population_effects.csv",
+      "sha256": "51326604bccf29bf71c348db2791e85b2fade3ef2ebaa6d775a557798d5d47ad",
+      "size_bytes": 4418
+    },
+    {
+      "name": "summary.json",
+      "path": "sgnex_analysis/outputs/context_qc_v1/summary.json",
+      "sha256": "237ecd3b3549be82b6459b8d4990f840ede1cae1e03479ab37a2c39f4470d94c",
+      "size_bytes": 2657
+    },
+    {
+      "name": "key_context_qc.csv.gz",
+      "path": "sgnex_analysis/outputs/context_qc_v1/key_context_qc.csv.gz",
+      "sha256": "684d902cecbf6ab462e28863d98d45e044008141422e38bcbaaf6cf5ddfd900d",
+      "size_bytes": 5849761
+    },
+    {
+      "name": "prediction_availability.csv",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/prediction_availability.csv",
+      "sha256": "c6df1c50c79a9b05e1a3b11a68fffa333662cc51f2d82257cb515775cf16c53c",
+      "size_bytes": 1286
+    },
+    {
+      "name": "all_line_summary.csv",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/all_line_summary.csv",
+      "sha256": "5e57f2aa248c6bcbeb7a5d3bcd889170f87fe1f231d44c37b5c2c49af8e6a033",
+      "size_bytes": 5190
+    },
+    {
+      "name": "all_line_common_scores_cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/all_line_common_scores_cov20.csv.gz",
+      "sha256": "25d91b3ce147d2d0104aea0fb9ac02ebaffd05eb7e8699f4e47c759ffc86810b",
+      "size_bytes": 2293155
+    },
+    {
+      "name": "all_line_common_scores_cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/all_line_common_scores_cov50.csv.gz",
+      "sha256": "5e55eb2ec2c2694c2df8f6425ae9f12e94e4052632dbf16ad2799daa531b0fcf",
+      "size_bytes": 792716
+    },
+    {
+      "name": "all_line_common_scores_cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/all_line_common_scores_cov100.csv.gz",
+      "sha256": "94c0f41248f4aac58fde5545b72a6c10ca0c409e3c4ad4dd73f8f74f808ba419",
+      "size_bytes": 347352
+    },
+    {
+      "name": "pair_summary.csv",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pair_summary.csv",
+      "sha256": "2ee3b97b3551c42d40db83291dda7a163cbd8bb00ecb20fe17067b8e608478f8",
+      "size_bytes": 11808
+    },
+    {
+      "name": "A549__H9__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__H9__cov20.csv.gz",
+      "sha256": "2dd445740f712c9dbbccda7e80048f4547ebb48f77350b2c88dcbf82e9454fe4",
+      "size_bytes": 6540502
+    },
+    {
+      "name": "A549__HEYA8__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__HEYA8__cov20.csv.gz",
+      "sha256": "91a0d2706e73873a284f021f13283c8687da5af1a0a6e194f042b1833d9534d3",
+      "size_bytes": 7468002
+    },
+    {
+      "name": "A549__Hct116__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__Hct116__cov20.csv.gz",
+      "sha256": "6239041e91bae99f8303479c1aff7309836ed3cc8495ad2cb656b0e172dd3229",
+      "size_bytes": 7539622
+    },
+    {
+      "name": "A549__HepG2__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__HepG2__cov20.csv.gz",
+      "sha256": "ac5e32882efcb8a848a1d5106c6593d0c8c0e29dc126bd7c1611a6efe171935f",
+      "size_bytes": 7318924
+    },
+    {
+      "name": "A549__K562__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__K562__cov20.csv.gz",
+      "sha256": "ad6ac9566708fe00a7ef8aa4ececbf18dafdabe18bcd30ca69c5a609b2c5b9d4",
+      "size_bytes": 5669242
+    },
+    {
+      "name": "A549__MCF7__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__MCF7__cov20.csv.gz",
+      "sha256": "dfbdd08ae5fe74a1d65789459da6af03ddabdd1378d1f970f46b31e3e62f1a59",
+      "size_bytes": 5642860
+    },
+    {
+      "name": "H9__HEYA8__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__HEYA8__cov20.csv.gz",
+      "sha256": "83228f10facd6c645a702e7f538d79a9300e05222c467f01c9c0f9a812bfb089",
+      "size_bytes": 11196000
+    },
+    {
+      "name": "H9__Hct116__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__Hct116__cov20.csv.gz",
+      "sha256": "a6a07b5d39774ec2fbb65383f300467a1661f568ef744fb71d54873b9079401d",
+      "size_bytes": 11229336
+    },
+    {
+      "name": "H9__HepG2__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__HepG2__cov20.csv.gz",
+      "sha256": "d52a765b58ba90e6855dc4f5c4329c1531677c563b67dcdd1e609f82a639b5bb",
+      "size_bytes": 11205322
+    },
+    {
+      "name": "H9__K562__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__K562__cov20.csv.gz",
+      "sha256": "1b3869010a2faef842d2976e65c022f9c34adb50061f8aea04a114131ecd4f47",
+      "size_bytes": 7238608
+    },
+    {
+      "name": "H9__MCF7__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__MCF7__cov20.csv.gz",
+      "sha256": "ad2a254993e6053f8aed7387b7e09751db6f525986b77c062dee7f7c9ce56a50",
+      "size_bytes": 6860405
+    },
+    {
+      "name": "HEYA8__Hct116__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__Hct116__cov20.csv.gz",
+      "sha256": "72580e0362a2424a18ea20fff98b3045239ed15c87cf75571db81796e527aaa1",
+      "size_bytes": 14862494
+    },
+    {
+      "name": "HEYA8__HepG2__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__HepG2__cov20.csv.gz",
+      "sha256": "db42af1401acc308d8a2e52cfbb57603f099a446e8bc89c8b7b38ed78938ee1b",
+      "size_bytes": 15249923
+    },
+    {
+      "name": "HEYA8__K562__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__K562__cov20.csv.gz",
+      "sha256": "c6cbbe9b7e634c8461978feb70208d45e1a168efd8b0213b63c6b254c3c63241",
+      "size_bytes": 8440272
+    },
+    {
+      "name": "HEYA8__MCF7__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__MCF7__cov20.csv.gz",
+      "sha256": "d349ffe7879e1d0909ac9f2cd9fbaaae6d3378a6268f6b61bde4ce070abca34a",
+      "size_bytes": 8227245
+    },
+    {
+      "name": "Hct116__HepG2__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__HepG2__cov20.csv.gz",
+      "sha256": "a771891c6a6ca2b793516adeaffd6819a1dcf916fd3c1cbf580130a94535a5cb",
+      "size_bytes": 15201520
+    },
+    {
+      "name": "Hct116__K562__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__K562__cov20.csv.gz",
+      "sha256": "9b4b880a491d5656f82a51f22151dc3c45032b6f0f248dc9d3a5ecf66e8a7468",
+      "size_bytes": 8764675
+    },
+    {
+      "name": "Hct116__MCF7__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__MCF7__cov20.csv.gz",
+      "sha256": "77a12f91051cafeddd441cbb39c206f8ed255a45af93ebd8ba68b7f9a37023e8",
+      "size_bytes": 8710228
+    },
+    {
+      "name": "HepG2__K562__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HepG2__K562__cov20.csv.gz",
+      "sha256": "e3e58f880342c8a533c0a35c9fcd83c642cc7046a669375883369fa271606e3d",
+      "size_bytes": 8671143
+    },
+    {
+      "name": "HepG2__MCF7__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HepG2__MCF7__cov20.csv.gz",
+      "sha256": "5348cfdf8f08739d762703af2628bcf7632e912fd2dc9ef9b9117dadba876392",
+      "size_bytes": 8717373
+    },
+    {
+      "name": "K562__MCF7__cov20.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/K562__MCF7__cov20.csv.gz",
+      "sha256": "55de88da854ad21ba4853e7ca44059d502e9a4c76d1acc0de3c297fc80e02038",
+      "size_bytes": 6616991
+    },
+    {
+      "name": "A549__H9__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__H9__cov50.csv.gz",
+      "sha256": "6782fba7b81af4f91e35e864b4576d12f43649d8c9e215816035d16b251cc92f",
+      "size_bytes": 2133724
+    },
+    {
+      "name": "A549__HEYA8__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__HEYA8__cov50.csv.gz",
+      "sha256": "d75d06d5a1558177bf017f2cb76f04ed1223138b0060253bb32bc2918fdffeef",
+      "size_bytes": 2488797
+    },
+    {
+      "name": "A549__Hct116__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__Hct116__cov50.csv.gz",
+      "sha256": "5c47f8c22800c5d372472fa619f4d8f530d37f3f21e4ee55f860ba9d4aba2c45",
+      "size_bytes": 2562470
+    },
+    {
+      "name": "A549__HepG2__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__HepG2__cov50.csv.gz",
+      "sha256": "fb7172f585b6e885fdeeef71dada615e336ff0d101281beb744ed77b6235f20b",
+      "size_bytes": 2468188
+    },
+    {
+      "name": "A549__K562__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__K562__cov50.csv.gz",
+      "sha256": "e4b0af7d53fc09181b9e0cf4076e5082c0d25d05fcf91bed26476e76e07669c0",
+      "size_bytes": 1954045
+    },
+    {
+      "name": "A549__MCF7__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__MCF7__cov50.csv.gz",
+      "sha256": "60c0f1211b8d36e4bc9df958ce83c757e05b182a30ffcdaa8ac2a6f7d27af972",
+      "size_bytes": 1952346
+    },
+    {
+      "name": "H9__HEYA8__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__HEYA8__cov50.csv.gz",
+      "sha256": "310484ae21db986761bfb0ec9812dc7df754cbed06697f58e502b78be51e88fb",
+      "size_bytes": 3719669
+    },
+    {
+      "name": "H9__Hct116__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__Hct116__cov50.csv.gz",
+      "sha256": "ddf99c49336addb1239a0be26e7bd62c07676169d6a3a7914d82448f9f269421",
+      "size_bytes": 3777115
+    },
+    {
+      "name": "H9__HepG2__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__HepG2__cov50.csv.gz",
+      "sha256": "78e9e2f641a81ea78e15ffebd2416b1552e3bee03e935d126f74b2a4fc5e8015",
+      "size_bytes": 3785704
+    },
+    {
+      "name": "H9__K562__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__K562__cov50.csv.gz",
+      "sha256": "9b9cbe6c7df0ffc9446cd6e4ac3790e32fc33402bf279090febd4adf71a70eaf",
+      "size_bytes": 2447022
+    },
+    {
+      "name": "H9__MCF7__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__MCF7__cov50.csv.gz",
+      "sha256": "c53c0dc6d9e4b00fd3a82a2f179fa9eac6095c7a641c442ea15131d6142e0119",
+      "size_bytes": 2367654
+    },
+    {
+      "name": "HEYA8__Hct116__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__Hct116__cov50.csv.gz",
+      "sha256": "635cfe5f0dc4015cabaaad792ed3232d2d0fa2583b0f3712826fd4fe267ac882",
+      "size_bytes": 5238234
+    },
+    {
+      "name": "HEYA8__HepG2__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__HepG2__cov50.csv.gz",
+      "sha256": "4dd3d39c930e206365dff1872cc759bc6e8c4dd2d3ff9ed5deb9bf92442d1374",
+      "size_bytes": 5523397
+    },
+    {
+      "name": "HEYA8__K562__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__K562__cov50.csv.gz",
+      "sha256": "036cbdecdcc9cf886fcc1ebfe088f1e5273ac29a7515ce3f9361be790b157838",
+      "size_bytes": 2951482
+    },
+    {
+      "name": "HEYA8__MCF7__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__MCF7__cov50.csv.gz",
+      "sha256": "af41114bba94db085e3e892dde7505ed597630a04313808dff7b41884620e652",
+      "size_bytes": 2904978
+    },
+    {
+      "name": "Hct116__HepG2__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__HepG2__cov50.csv.gz",
+      "sha256": "1af546bd0e6e758ebf6b3e02cc43715676298d8a7b7156fe43b6fd9667ba3440",
+      "size_bytes": 5707324
+    },
+    {
+      "name": "Hct116__K562__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__K562__cov50.csv.gz",
+      "sha256": "aa788fc943298a0ce251a6bf80641c2c83dbf654c6da7ec534388fd45fa9000d",
+      "size_bytes": 3096271
+    },
+    {
+      "name": "Hct116__MCF7__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__MCF7__cov50.csv.gz",
+      "sha256": "f154b5954a41cac567d734a9c970f7fb4fd0cfe639bd10b6865eca198e53e98f",
+      "size_bytes": 3087800
+    },
+    {
+      "name": "HepG2__K562__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HepG2__K562__cov50.csv.gz",
+      "sha256": "c2fc8fa5b3a82e6cbbe36cd8405a7e57058804098ccdce49423f8a96337a11af",
+      "size_bytes": 3098666
+    },
+    {
+      "name": "HepG2__MCF7__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HepG2__MCF7__cov50.csv.gz",
+      "sha256": "7e09fc4e33a937335e9cd874c327abc913060b32479fbfcafd85065bf1bdaddf",
+      "size_bytes": 3128537
+    },
+    {
+      "name": "K562__MCF7__cov50.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/K562__MCF7__cov50.csv.gz",
+      "sha256": "a9b319aea3b66eecd26dc3a8887c18cd4fa7733221bba6824548de10f53caa8c",
+      "size_bytes": 2298999
+    },
+    {
+      "name": "A549__H9__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__H9__cov100.csv.gz",
+      "sha256": "4560a8523a0c3d6f1bbaa07e202d23752b8a62ae65f1de9e984eecaf21e2a031",
+      "size_bytes": 909729
+    },
+    {
+      "name": "A549__HEYA8__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__HEYA8__cov100.csv.gz",
+      "sha256": "cd7a997e8616eaea99e559b21b759f7ecaaae5965f3414377d8cf33b68b89fdc",
+      "size_bytes": 1043130
+    },
+    {
+      "name": "A549__Hct116__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__Hct116__cov100.csv.gz",
+      "sha256": "72abe847fa9e3b476faaadb6bd7512823f607379af7cb8bd4fe50631b7f984f5",
+      "size_bytes": 1066672
+    },
+    {
+      "name": "A549__HepG2__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__HepG2__cov100.csv.gz",
+      "sha256": "3766a224abb3dfedc82d0c99511346d10d55c6675eda24c3979f020cc685247c",
+      "size_bytes": 1031366
+    },
+    {
+      "name": "A549__K562__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__K562__cov100.csv.gz",
+      "sha256": "a0165daaea79cb75aa128718d344b15cd8ba1b1e93c38656c133dfcb950877f9",
+      "size_bytes": 823572
+    },
+    {
+      "name": "A549__MCF7__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/A549__MCF7__cov100.csv.gz",
+      "sha256": "5b57fbeee90c743a914d258fbd7342ee31ed84719a97eefbb338b198e1990800",
+      "size_bytes": 804166
+    },
+    {
+      "name": "H9__HEYA8__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__HEYA8__cov100.csv.gz",
+      "sha256": "1d2f0b0a416816e737a869efcaad82d2638658a26b3f29e3076e1b454b2f6643",
+      "size_bytes": 1587710
+    },
+    {
+      "name": "H9__Hct116__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__Hct116__cov100.csv.gz",
+      "sha256": "7302abc3f94e932cb2600fc44a811d341bea492ea9ada94f457e32162ca9b20b",
+      "size_bytes": 1613473
+    },
+    {
+      "name": "H9__HepG2__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__HepG2__cov100.csv.gz",
+      "sha256": "6a4afbdf82c4dfb9043a99c686a95fb3aecfedf125eb48663f280fb88263dd1f",
+      "size_bytes": 1581348
+    },
+    {
+      "name": "H9__K562__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__K562__cov100.csv.gz",
+      "sha256": "9687c54765a7f5c3133c397e5c03c6a8e77accba4aacc055fbabc865ad680bfa",
+      "size_bytes": 1042190
+    },
+    {
+      "name": "H9__MCF7__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/H9__MCF7__cov100.csv.gz",
+      "sha256": "589fb991bfed46d9c079ac8b54357872b05235d6c0f130ce6557fe7a0fb98e07",
+      "size_bytes": 1013120
+    },
+    {
+      "name": "HEYA8__Hct116__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__Hct116__cov100.csv.gz",
+      "sha256": "aab84d8880cd3440937d9b635654d7d70e670e4f6e9fcab6fcdfe52c3540e365",
+      "size_bytes": 2231513
+    },
+    {
+      "name": "HEYA8__HepG2__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__HepG2__cov100.csv.gz",
+      "sha256": "b83be75d4554f3f3d427508d326773f414f3d1df2d3b14d7fb2e437836c25ec1",
+      "size_bytes": 2354870
+    },
+    {
+      "name": "HEYA8__K562__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__K562__cov100.csv.gz",
+      "sha256": "5d7e6fafbcc7bf89b49ea05a7a8778f9f7b1a126bd4322b9e1a562fa33404287",
+      "size_bytes": 1309035
+    },
+    {
+      "name": "HEYA8__MCF7__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HEYA8__MCF7__cov100.csv.gz",
+      "sha256": "4795cc7c1432b3565d98aab6bb21a65530b3c262c6c58b2540bffa14c0b63f32",
+      "size_bytes": 1258504
+    },
+    {
+      "name": "Hct116__HepG2__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__HepG2__cov100.csv.gz",
+      "sha256": "6b02dc555c31059136191584d45ebc51860327cda5d6fe4dbd1b2c7473d8bc6c",
+      "size_bytes": 2344332
+    },
+    {
+      "name": "Hct116__K562__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__K562__cov100.csv.gz",
+      "sha256": "bcbfbe9b625198b7006e709569d8c6e617ef1871f07b6eab17fbe334e51d7c5c",
+      "size_bytes": 1361870
+    },
+    {
+      "name": "Hct116__MCF7__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/Hct116__MCF7__cov100.csv.gz",
+      "sha256": "566d15500f37cf34f2ff94809e924a5ebc851855992cfa89c4f3d11966bc12bc",
+      "size_bytes": 1329370
+    },
+    {
+      "name": "HepG2__K562__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HepG2__K562__cov100.csv.gz",
+      "sha256": "6527c8984251082dee6ac57820b488a38e4df505a6e2c6e94711ecbbc4315d0b",
+      "size_bytes": 1347050
+    },
+    {
+      "name": "HepG2__MCF7__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/HepG2__MCF7__cov100.csv.gz",
+      "sha256": "caf35a87ca29f5cb42a6d1bf26c589565ea8555f464ccf0014d34f8151aa228f",
+      "size_bytes": 1313086
+    },
+    {
+      "name": "K562__MCF7__cov100.csv.gz",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/pairs/K562__MCF7__cov100.csv.gz",
+      "sha256": "18ab0ea2d5d02d282249c9cb86d9842c5576de8cb70fb4a17391d625ddf90769",
+      "size_bytes": 1010995
+    },
+    {
+      "name": "agreement.csv",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/agreement.csv",
+      "sha256": "117aed31a107c5eedc0d54169dbecf43885269866294dfbcdf35acdb63d3b88e",
+      "size_bytes": 133563
+    },
+    {
+      "name": "score_coverage_dependence.csv",
+      "path": "sgnex_analysis/outputs/real_analysis_context_v2/score_coverage_dependence.csv",
+      "sha256": "f9471857d87c59d1042be2ec9880a5e158533e312da0d8c068a544a6b76e0b11",
+      "size_bytes": 4747
+    },
+    {
+      "name": "sample_manifest.csv",
+      "path": "sgnex_analysis/metadata/sample_manifest.csv",
+      "sha256": "c06ea04a7a3252592b9bc265f1fd10ac4b4cc3d622c681ec68fe047236696a1d",
+      "size_bytes": 62328
+    }
+  ],
+  "qc_complete_sha256": "aaa5190d61f800de3071a57dc4c6247609210d079af8c3872785862353b7a713",
+  "analysis_receipt_sha256": "5a7c2bfdd32e501da839add815c05fe3dd0fc4f55efdba2a28f0b8163d3b094d",
+  "outputs": {
+    "agreement_by_metadata_relationship.csv": {
+      "name": "agreement_by_metadata_relationship.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/agreement_by_metadata_relationship.csv",
+      "sha256": "a3fb890d92519e9a0ba48b94c5c3074b8eaa189623018f153ff4653b8ace4501",
+      "size_bytes": 163045
+    },
+    "agreement_summary.csv": {
+      "name": "agreement_summary.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/agreement_summary.csv",
+      "sha256": "145c321181e5a4d7f8224e1a2319508dc69ddfb9e21f5dfe456807e93d593aa0",
+      "size_bytes": 2040
+    },
+    "all_line_score_cdf_grid.csv": {
+      "name": "all_line_score_cdf_grid.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/all_line_score_cdf_grid.csv",
+      "sha256": "d2043c7c79023a2d68e2cd6eeaa31b59cf007a946536c41b49c97e7850c91509",
+      "size_bytes": 492154
+    },
+    "all_line_score_summary.csv": {
+      "name": "all_line_score_summary.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/all_line_score_summary.csv",
+      "sha256": "b1a8cc2c4f9e918a9c15d437c9e2b52cdf1f72fc17dc7884e126e70632269237",
+      "size_bytes": 5414
+    },
+    "all_pairwise_effects.png": {
+      "name": "all_pairwise_effects.png",
+      "path": "sgnex_analysis/outputs/task2_report_v2/all_pairwise_effects.png",
+      "sha256": "a7f7db8f00909e57bf109e03b794a078dc985ecf63d111f85672abf4788266a9",
+      "size_bytes": 274462
+    },
+    "all_pairwise_effects.svg": {
+      "name": "all_pairwise_effects.svg",
+      "path": "sgnex_analysis/outputs/task2_report_v2/all_pairwise_effects.svg",
+      "sha256": "b287b99baf008a71651ff30e2e11ef08a600108bd8fbd169406a3e029ae2c3b1",
+      "size_bytes": 41131
+    },
+    "all_pair_summary.csv": {
+      "name": "all_pair_summary.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/all_pair_summary.csv",
+      "sha256": "2ee3b97b3551c42d40db83291dda7a163cbd8bb00ecb20fe17067b8e608478f8",
+      "size_bytes": 11808
+    },
+    "common_site_training_context_support.csv": {
+      "name": "common_site_training_context_support.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/common_site_training_context_support.csv",
+      "sha256": "3ab81d40212402b50884b32af50deade38e272215b82244c47113a4012c44383",
+      "size_bytes": 669
+    },
+    "context_population_consequences.png": {
+      "name": "context_population_consequences.png",
+      "path": "sgnex_analysis/outputs/task2_report_v2/context_population_consequences.png",
+      "sha256": "a95494e2be0be48b4197ac4aa04ce39c368073aaf25dc76f531f308747bae57d",
+      "size_bytes": 212598
+    },
+    "context_population_consequences.svg": {
+      "name": "context_population_consequences.svg",
+      "path": "sgnex_analysis/outputs/task2_report_v2/context_population_consequences.svg",
+      "sha256": "85dd9b9456402290a4b64cf07a6de820cce48f506f196eaadf74056b94cd1fdd",
+      "size_bytes": 31837
+    },
+    "context_population_effects.csv": {
+      "name": "context_population_effects.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/context_population_effects.csv",
+      "sha256": "51326604bccf29bf71c348db2791e85b2fade3ef2ebaa6d775a557798d5d47ad",
+      "size_bytes": 4418
+    },
+    "findings.md": {
+      "name": "findings.md",
+      "path": "sgnex_analysis/outputs/task2_report_v2/findings.md",
+      "sha256": "99845286c2b65808e01986d79a3a64abffdf07cb4288405b3e97fcd4000f02d7",
+      "size_bytes": 4919
+    },
+    "matched_site_score_patterns.png": {
+      "name": "matched_site_score_patterns.png",
+      "path": "sgnex_analysis/outputs/task2_report_v2/matched_site_score_patterns.png",
+      "sha256": "c08464525e2f9010f1531b8bade7c4d69080f99cc0d6fe4454cfd81dacc3f34b",
+      "size_bytes": 183611
+    },
+    "matched_site_score_patterns.svg": {
+      "name": "matched_site_score_patterns.svg",
+      "path": "sgnex_analysis/outputs/task2_report_v2/matched_site_score_patterns.svg",
+      "sha256": "9b372fff18d13f898e4f4c956146629c49c21fdc2a25e024e55aa450a13fcdd2",
+      "size_bytes": 37047
+    },
+    "run_group_agreement.png": {
+      "name": "run_group_agreement.png",
+      "path": "sgnex_analysis/outputs/task2_report_v2/run_group_agreement.png",
+      "sha256": "1d16de3aa0e745a12bf752362e2e71fe1b72fd03ab53733d364c6e618df1513c",
+      "size_bytes": 162204
+    },
+    "run_group_agreement.svg": {
+      "name": "run_group_agreement.svg",
+      "path": "sgnex_analysis/outputs/task2_report_v2/run_group_agreement.svg",
+      "sha256": "204c7fc6490004f8ae90fd56a53bab97a64cca89c7b8e3001bf613f5cf33f0e3",
+      "size_bytes": 45618
+    },
+    "score_coverage_dependence.csv": {
+      "name": "score_coverage_dependence.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/score_coverage_dependence.csv",
+      "sha256": "f9471857d87c59d1042be2ec9880a5e158533e312da0d8c068a544a6b76e0b11",
+      "size_bytes": 4747
+    },
+    "technical_metadata_counts.csv": {
+      "name": "technical_metadata_counts.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/technical_metadata_counts.csv",
+      "sha256": "39c65a09f574485c5cf2ccb954482bd5207e1d97e12f1e0010913c66ff04e537",
+      "size_bytes": 2204
+    },
+    "technical_run_metadata.csv": {
+      "name": "technical_run_metadata.csv",
+      "path": "sgnex_analysis/outputs/task2_report_v2/technical_run_metadata.csv",
+      "sha256": "1b43616f1adba70fcefd6b12180569d2ae9ff18aea48d8e7904cb9b560bde1e3",
+      "size_bytes": 4743
+    }
+  },
+  "no_training_or_inference": true,
+  "resources": {
+    "wall_seconds": 59.827220600040164,
+    "process_cpu_seconds": 58.734375
+  },
+  "resource_scope": "Current process after new-directory creation through validation/analysis/plots/input-rehash; excludes final completion/status writes and imports. External monitor may record peak memory separately",
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2"
+  }
+}

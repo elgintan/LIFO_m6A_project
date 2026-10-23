@@ -212,7 +212,7 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
     <div>
       <p class="eyebrow">DSA4262 Team LIFO · Task 2</p>
       <h1>SG-NEx <span class="m6a">m6A</span> Explorer</h1>
-      <p class="lede">Look up a gene and see, run by run, which candidate m6A sites were measured and with how many reads, so you know where a prediction can be trusted. Data from the Singapore Nanopore Expression Project: <span id="mastCounts">23 direct RNA runs from 7 cell lines</span>.</p>
+      <p class="lede">Look up a gene and see each run's predicted site scores alongside its read support and sequence-context checks. Data from the Singapore Nanopore Expression Project: <span id="mastCounts">23 direct RNA runs from 7 cell lines</span>.</p>
     </div>
     <div class="chips" id="statusChips"></div>
   </header>
@@ -304,7 +304,7 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
       </div>
       <div class="panel">
         <h3>Runs, replicates and how they were sequenced</h3>
-        <p class="sub">Each cell line has two or three biological replicates; some replicates were sequenced more than once. Runs of one replicate are repeat measurements of the same sample.</p>
+        <p class="sub">Each cell line has two or three metadata replicate-number groups; some groups contain several sequencing runs. Independent laboratory preparations have not been verified.</p>
         <div class="scroll-x chart"><table class="data" id="runTable"></table></div>
         <p class="note" id="techNote"></p>
       </div>
@@ -312,7 +312,7 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
         <div class="panel-head">
           <div>
             <h3>Replicate support per cell line</h3>
-            <p class="sub">Sites measured in at least one, at least two, or every biological replicate of a line. A replicate counts once, however many runs it has.</p>
+            <p class="sub">Sites measured in at least one, at least two, or every metadata group of a line. A group counts once, however many runs it has.</p>
           </div>
           <div class="controls">
             <div class="field">
@@ -376,13 +376,13 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
     <section class="view" id="v-lines" role="tabpanel" aria-labelledby="t-lines" hidden>
       <div class="view-head">
         <h2>Comparing cell lines</h2>
-        <p>Scores are compared only on sites measured in every cell line, so a missing site is never read as an unmodified one. A line's score is the mean over its replicates, each replicate being the mean of its runs with enough reads.</p>
+        <p>Scores are compared on sites measured in every cell line. Each line's score averages eligible runs within each metadata group, then gives groups equal weight. Missing measurements remain missing.</p>
       </div>
       <div class="panel">
         <h3>Sites that can be compared across all seven cell lines</h3>
         <p class="sub">Annotated-gene sites measured in every line, by read threshold and by how many replicates per line must measure the site.</p>
         <div class="scroll-x chart"><table class="data" id="popTable"></table></div>
-        <p class="note">Stricter rules leave fewer sites but make each comparison rest on more independent samples. These counts come from measured reads only.</p>
+        <p class="note">Stricter rules leave fewer sites and require more metadata groups. Independent laboratory preparations have not been verified. These counts come from measured reads only; context-qualified score populations are shown separately below.</p>
       </div>
       <div id="scoreSection" class="view" style="padding-top:0"></div>
     </section>
@@ -399,8 +399,9 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
           <ul>
             <li>A site with no reads in a run is unmeasured. It is not evidence that the site is unmodified.</li>
             <li>Read counts say how well a site was measured. They are not a direct measure of how much RNA the cell makes.</li>
-            <li>Runs of the same replicate are repeat sequencing of one sample. Only different replicates count as independent biological repeats.</li>
-            <li>A score, once shown, is the model's confidence that a site is modified. It is not the fraction of RNA molecules carrying m6A, and no score has been confirmed by an independent experiment in these cell lines.</li>
+            <li>Runs are grouped by the metadata's replicate number. Each group receives equal weight; independent laboratory preparations have not been verified.</li>
+            <li>A score is a model prediction. Its probability calibration has not been established; it is not the fraction of RNA molecules carrying m6A. No compatible independent assay validation was supplied for these runs.</li>
+            <li>Hct116 is also the training cell line. Higher Hct116 scores may reflect biological, technical or training-domain effects; this analysis cannot separate them.</li>
             <li>Replicates were sequenced on different dates, devices and basecaller versions. Differences between them can be technical.</li>
           </ul>
         </div>
@@ -410,12 +411,10 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
         </div>
       </div>
       <div class="panel prose">
-        <h3>Adding the team's predictions</h3>
-        <p>The prediction hand-off uses the team's nine-column <code>manifest.csv</code> (run_id, cell_line, biological_replicate, sequencing_run, prediction_file, coverage_file, min_reads, reference_version, model_version), a completed <code>MODEL_INFO.md</code>, and one CSV per run with the columns <code>transcript_id,transcript_position,score</code>. Then:</p>
-<pre>python scripts/validate_task2_inputs.py --inputs task2_inputs --public public_data
-python scripts/build_site_data.py --public public_data --sample-metadata team_inputs/member4_2026-10-19/sample_manifest.csv --predictions task2_inputs --score-status exploratory --out site/data
-python scripts/package_site.py</pre>
-        <p>The validator checks every file against the public read counts for its run and refuses a manifest whose model is still pending. Use <code>--score-status final</code> only once the team has selected the model.</p>
+        <h3>How scores are compared</h3>
+        <p>One saved model supplies the scores for all 23 runs. Only eligible runs with at least 20 reads enter a score comparison; 50 and 100 reads provide sensitivity checks. Eligible run scores are averaged within each metadata group, then groups receive equal weight.</p>
+        <p>The primary all-line view requires at least two metadata groups per line, annotated human transcripts and agreement among saved seven-base contexts. The sensitivity controls show how the population changes. Conflicts and unusual valid scores remain available in gene views; missing values are never assigned a score of zero.</p>
+        <p>Exact historical reference identity, nucleotide offsets, independent laboratory replication and external assay accuracy remain unverified. Reproducible code and detailed methods are available in the <a href="https://github.com/elgintan/LIFO_m6A_project" target="_blank" rel="noopener">LIFO project repository</a>.</p>
       </div>
       <div class="grid-2">
         <div class="panel prose">
@@ -459,7 +458,7 @@ const state = {
   ov: null, rows: [], byKey: new Map(), byLabel: new Map(), txIndex: null, lowcov: null, buckets: new Map(),
   gene: null, geneRow: null, txId: null, site: null,
   rowMode: "runs", minReads: 20, mapTable: false, coverT: 20, supportT: 20, pop: "annotated_human",
-  compareT: 20, compareRule: "ge1",
+  compareT: 20, compareRule: "ge2", comparePolicy: "primary",
 };
 const $ = (id) => document.getElementById(id);
 
@@ -622,7 +621,7 @@ const ICONS = {
 function applyBuild() {
   const b = state.ov.build;
   const nRuns = state.ov.runs.length, nLines = state.ov.lines.length;
-  $("mastCounts").textContent = `${nRuns} direct RNA runs (${nGroups()} biological replicates) from ${nLines} cell lines`;
+  $("mastCounts").textContent = `${nRuns} direct RNA runs (${nGroups()} metadata groups) from ${nLines} cell lines`;
   const scoreChip = !hasScores()
     ? h("span", { class: "chip info" }, svgEl(12, 12, ICONS.info), "m6A scores: not yet available")
     : h("span", { class: `chip ${exploratory() ? "warn" : "good"}` }, svgEl(12, 12, ICONS[exploratory() ? "warn" : "good"]), `Scores: ${modelLabel()}${exploratory() ? " (exploratory)" : ""}`);
@@ -674,10 +673,11 @@ function renderAbout() {
     ca ? `Member 4's alias table maps the same ${fmt(ca.rows_in_both)} IDs to identical transcripts. It marks ${fmt(ca.member4_verified)} as verified because it was checked only against transcripts with well-covered sites; checked against the full Ensembl 91 table, ${fmt(ca.pipeline_version_matches)} match.` : null,
     cx ? `Member 4 recounted replicate support independently. All ${fmt(cx.values_compared)} values agree with this pipeline's counts${cx.all_match ? "" : ` except ${cx.n_mismatches}`}.` : null,
     `${fmt(alt)} sites with at least 20 reads lie on transcripts that are not in the primary-assembly table, such as copies of RPL7A on patch scaffolds. They can be found by transcript ID only.`,
-    `The runs contain synthetic spike-in RNAs (SIRV, ERCC and sequin controls; ${fmt(spikes)} sites with at least 20 reads). They should carry no m6A, so once scores exist they show how often the model reports a modification where there is none.`,
+    `The runs contain synthetic spike-in RNAs (SIRV, ERCC and sequin controls; ${fmt(spikes)} sites with at least 20 reads). Their scores are diagnostic: exact modification chemistry and candidate validity have not been independently confirmed, so high scores are not established false positives.`,
     "Replicates of the same line were often sequenced on different dates, devices and basecallers (for example A549: albacore on a MinION in December 2018, guppy 3.2.10 on a GridION in March 2020). Signal-based scores can shift with such changes.",
     `Read counts stop just below 1,000 per site (highest: ${fmt(maxReads)}), which suggests the preprocessing caps the reads kept per site.`,
     "The SG-NEx sample sheet lists 56 direct RNA runs. This explorer uses the 23 with published m6Anet-processed inputs, the team's current working scope.",
+    b.context_qc ? "Score comparisons use context-consistent annotated human sites by default. Conflicting contexts remain visible at individual sites. Agreement does not establish exact historical FASTA identity or chemical nucleotide coordinates." : "This build has no cross-run context audit; its comparisons are unqualified context diagnostics.",
   ].filter(Boolean);
   $("issueList").replaceChildren(...issues.map((t) => h("li", { text: t })));
 
@@ -821,7 +821,7 @@ function setupGeneControls() {
   if (sp) {
     const b = h("button", { type: "button", text: "SIRV spike-ins" });
     b.addEventListener("click", () => { $("geneSearch").value = sp.label; openGene(sp.key); });
-    ex.append(h("span", { class: "muted", text: "or a negative control:" }), b);
+    ex.append(h("span", { class: "muted", text: "or a synthetic control:" }), b);
   }
 }
 
@@ -856,10 +856,11 @@ function geneMessage(text) {
 const currentTx = () => state.gene.tx.find((t) => t.id === state.txId) || state.gene.tx[0];
 function parseSites(tx) {
   if (!tx._parsed) {
-    tx._parsed = tx.sites.map(([pos, rs, ss]) => ({
+    tx._parsed = tx.sites.map(([pos, rs, ss, context]) => ({
       pos,
       reads: rs.split(",").map((v) => (v === "" ? 0 : +v)),
       scores: ss == null ? null : ss.split(",").map((v) => (v === "" ? null : +v)),
+      context: context || null,
     }));
   }
   return tx._parsed;
@@ -869,7 +870,7 @@ function renderGeneHead() {
   $("geneName").textContent = g.label;
   $("geneId").textContent = g.gene_id || "";
   $("geneKind").textContent = kindText(row);
-  $("geneLoc").textContent = g.loc ? `Location ${g.loc}, GRCh38` : "";
+  $("geneLoc").textContent = g.loc ? `Gene annotation: ${g.loc}, Ensembl 91` : "";
   $("geneDesc").textContent = g.desc || "";
   $("geneFacts").replaceChildren(
     h("span", { class: "fact", text: `${g.tx.length} transcript${g.tx.length > 1 ? "s" : ""} with data` }),
@@ -1134,8 +1135,16 @@ function renderDetail(tx, sites) {
   }
   $("detailFacts").replaceChildren(...facts);
   $("detailNote").textContent = hasScores()
-    ? "A score is the model's confidence that the site is modified in that run. It is not the share of RNA molecules carrying m6A. A run with no reads at a site tells you nothing about modification there."
+    ? "A score is an uncalibrated model prediction for this run. It is not the share of RNA molecules carrying m6A. A run with no reads at a site tells you nothing about modification there."
     : "Scores will appear in a second column here once predictions are added. A run with no reads at a site tells you nothing about modification there.";
+  if (s.context) {
+    const q = s.context;
+    facts.push(h("span", { class: "fact", text: q.all_source_consistent ? `Context agrees: ${q.encoded7mer_all_source}` : "Context conflict: excluded from primary comparison; original scores retained" }));
+    if (q.weak_positive_support_lt20) facts.push(h("span", { class: "fact", text: "Fewer than 20 positive training labels for this context; support warning only" }));
+    if (q.training_support_known_for_all_contexts === false) facts.push(h("span", { class: "fact", text: "Training support is unknown for at least one observed context" }));
+    $("detailFacts").replaceChildren(...facts);
+    $("detailNote").textContent += " Context checks include low-read observations at every site scored in at least one run; they do not validate reference identity or nucleotide offsets.";
+  }
 
   const width = Math.max(320, host.clientWidth);
   const labelW = width < 520 ? 116 : 160;
@@ -1213,7 +1222,7 @@ function renderCoverage() {
   const ov = state.ov, T = String(state.coverT);
   const medians = ov.runs.map((r) => r.median);
   $("covTiles").replaceChildren(
-    tile("Runs", fmt(ov.runs.length), `${nGroups()} biological replicates, ${ov.lines.length} cell lines`),
+    tile("Runs", fmt(ov.runs.length), `${nGroups()} metadata groups, ${ov.lines.length} cell lines`),
     tile("Candidate sites with any reads", fmtS(ov.totals.union_sites["1"]), "DRACH sites seen in at least one run"),
     tile(`Sites with ${T}+ reads in some run`, fmtS(ov.sharing.by_T[T].n_sites), `${pct1(ov.sharing.by_T[T].n_sites / ov.totals.union_sites["1"])} of all candidate sites`),
     tile("Typical reads per site", `${d3.min(medians)}–${d3.max(medians)}`, "median within each run"),
@@ -1414,7 +1423,7 @@ function renderKinds() {
 function renderPopTable() {
   const ov = state.ov, t = $("popTable");
   const rules = [["ge1", "≥1 replicate per line"], ["ge2", "≥2 replicates per line"], ["all", "Every replicate"]];
-  t.replaceChildren(h("thead", {}, h("tr", {}, h("th", { text: "Reads per replicate" }), ...rules.map(([, lab]) => h("th", { class: "num", text: lab })))));
+  t.replaceChildren(h("thead", {}, h("tr", {}, h("th", { text: "Minimum reads per run" }), ...rules.map(([, lab]) => h("th", { class: "num", text: lab })))));
   const tb = h("tbody");
   const max = d3.max(ov.support.thresholds, (T) => ov.support.by_key[`${T}_annotated_human`].all_lines.ge1);
   for (const T of ov.support.thresholds) {
@@ -1443,16 +1452,26 @@ function renderLines() {
   }
   const ov = state.ov;
   const controls = h("div", { class: "controls" },
-    h("div", { class: "field" }, h("label", { for: "compareT", text: "Use replicates with at least" }),
+    h("div", { class: "field" }, h("label", { for: "compareT", text: "Eligible runs need at least" }),
       (() => { const s = h("select", { id: "compareT" }); ov.compare.thresholds.forEach((T) => s.append(h("option", { value: T, text: `${T} reads` }))); s.value = String(state.compareT); s.addEventListener("change", (e) => { state.compareT = +e.target.value; renderLines(); }); return s; })()),
     h("div", { class: "field" }, h("span", { class: "label", id: "ruleLabel", text: "Each line needs" }),
       (() => { const seg = h("div", { class: "seg", role: "radiogroup", "aria-labelledby": "ruleLabel" });
-        [["ge1", "≥1 replicate"], ["ge2", "≥2 replicates"]].forEach(([v, lab]) => { const inp = h("input", { type: "radio", name: "rule", id: `rule-${v}`, value: v }); if (state.compareRule === v) inp.checked = true; inp.addEventListener("change", () => { state.compareRule = v; renderLines(); }); seg.append(inp, h("label", { for: `rule-${v}`, text: lab })); });
+        [["ge1", "≥1 metadata group"], ["ge2", "≥2 metadata groups"]].forEach(([v, lab]) => { const inp = h("input", { type: "radio", name: "rule", id: `rule-${v}`, value: v }); if (state.compareRule === v) inp.checked = true; inp.addEventListener("change", () => { state.compareRule = v; renderLines(); }); seg.append(inp, h("label", { for: `rule-${v}`, text: lab })); });
         return seg; })()));
   host.append(controls);
-  const c = ov.compare.by_key[`${state.compareT}_${state.compareRule}`], L = ov.lines.length;
+  if (ov.build.context_qc) {
+    const contextControl = h("div", { class: "field" }, h("label", { for: "comparePolicy", text: "Sequence-context population" }));
+    const policySelect = h("select", { id: "comparePolicy" });
+    [["primary", "Primary: all saved contexts agree"], ["scored", "Sensitivity: scored contexts agree"], ["diagnostic", "Diagnostic: before context qualification"]].forEach(([value, text]) => policySelect.append(h("option", { value, text })));
+    policySelect.value = state.comparePolicy;
+    policySelect.addEventListener("change", (event) => { state.comparePolicy = event.target.value; renderLines(); });
+    contextControl.append(policySelect); controls.append(contextControl);
+  }
+  const comparisonData = state.comparePolicy === "scored" ? ov.compare.scored_consistency_sensitivity : state.comparePolicy === "diagnostic" ? ov.compare.before_context_diagnostic : ov.compare.by_key;
+  const c = (comparisonData || ov.compare.by_key)[`${state.compareT}_${state.compareRule}`], L = ov.lines.length;
+  host.append(h("p", { class: "note", text: `All-line population: annotated human sites; ${state.compareRule === "ge2" ? "at least two metadata groups" : "at least one metadata group (exploratory sensitivity)"} per line; ${state.compareT}+ reads per eligible run. ${state.comparePolicy === "primary" && ov.build.context_qc ? "All saved contexts at each scoreable site must agree, including low-read observations." : state.comparePolicy === "scored" ? "Context agreement is required only among scored observations; low-read conflicts may remain." : "Context conflicts are retained here: this is an unqualified diagnostic."} Original run scores remain visible in gene views.` }));
   host.append(h("div", { class: "tiles" },
-    tile(`Sites scored in all ${L} lines`, fmt(c.common_sites), `${state.compareRule === "ge2" ? "≥2 replicates" : "≥1 replicate"} per line with ${state.compareT}+ reads`),
+    tile(`Sites scored in all ${L} lines`, fmt(c.common_sites), `${state.compareRule === "ge2" ? "≥2 metadata groups" : "≥1 metadata group"} per line with eligible ${state.compareT}+ read runs`),
     tile("High-score cut-off", ov.build.high_score.toFixed(1), "display only; not a calibrated threshold"),
     tile("Sites high in no line", fmt(c.high_in_none), `${pct1(c.high_in_none / Math.max(1, c.common_sites))} of the shared sites`)));
   const histPanel = h("div", { class: "panel" }, h("h3", { text: "Score distribution in each cell line" }),
@@ -1484,17 +1503,25 @@ function renderLines() {
   const upHost = h("div", { class: "chart" });
   upPanel.append(upHost);
   const agPanel = h("div", { class: "panel" }, h("h3", { text: "Agreement between repeat measurements" }),
-    h("p", { class: "sub", text: "Correlation of scores between replicates, and between runs of one replicate, by how many reads both have." }));
+    h("p", { class: "sub", text: "Mean Pearson correlation across measurement pairs in disjoint read bands. This panel always uses the primary context-qualified population; each pair has its own shared sites. Group depth sums reads from eligible runs. Sites may recur across pairs. The scientific report separately uses pairwise Spearman correlations at cumulative read thresholds." }));
   const agLegend = h("div", { class: "legend" }), agHost = h("div", { class: "chart" });
   agPanel.append(agLegend, agHost);
   host.append(h("div", { class: "grid-2" }, upPanel, agPanel));
   upsetChart(upHost, c.high_combos, c.common_sites, { unit: "sites", emphasizeAll: true });
   renderAgreement(agHost, agLegend);
+  const sensitivityTable = h("table", { class: "data" }, h("thead", {}, h("tr", {}, h("th", { text: "Cell line" }), ...[0.5, 0.7, 0.9].map((cutoff) => h("th", { class: "num", text: `Score ≥${cutoff}` })))));
+  const sensitivityBody = h("tbody");
+  for (const line of ov.lines) {
+    const values = c.lines[line.name].fractions_by_cutoff;
+    sensitivityBody.append(h("tr", {}, h("td", { text: line.name }), ...[0.5, 0.7, 0.9].map((cutoff) => h("td", { class: "num", text: values && values[String(cutoff)] != null ? pct1(values[String(cutoff)]) : "—" }))));
+  }
+  sensitivityTable.append(sensitivityBody);
+  host.append(h("div", { class: "panel" }, h("h3", { text: "Descriptive cutoff sensitivity" }), h("p", { class: "sub", text: `Fraction of the same ${fmt(c.common_sites)} all-line common sites above each cutoff. These are prediction summaries, not modification prevalence or validated biological thresholds.` }), h("div", { class: "scroll-x" }, sensitivityTable)));
 }
 
 function renderAgreement(host, lg) {
   const ov = state.ov, bins = ov.compare.agree_bins;
-  lg.replaceChildren(h("span", { class: "item", text: "Reads in both:" }), ...bins.map((b, i) => h("span", { class: "item" }, svgEl(12, 12, `<circle cx="6" cy="6" r="5" fill="${P.ord[i]}"/>`), b)));
+  lg.replaceChildren(h("span", { class: "item", text: "Read band in both measurements:" }), ...bins.map((b, i) => h("span", { class: "item" }, svgEl(12, 12, `<circle cx="6" cy="6" r="5" fill="${P.ord[i]}"/>`), b)));
   const items = ov.compare.agreement.filter((a) => a.r != null);
   if (!items.length) { host.append(h("p", { class: "muted", text: "Not enough shared sites to compute agreement." })); return; }
   const rowsOut = [];
@@ -1503,7 +1530,7 @@ function renderAgreement(host, lg) {
   const rmin = Math.floor((d3.min(items, (a) => a.r) ?? 0.5) * 10) / 10;
   const xs = d3.scaleLinear().domain([Math.min(rmin, 0.8), 1]).range([labelW, width - 16]);
   const height = top + rowsOut.length * rowH + 10;
-  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`).attr("role", "img").attr("aria-label", "Correlation of scores between repeat measurements");
+  const svg = d3.select(host).append("svg").attr("width", width).attr("height", height).attr("viewBox", `0 0 ${width} ${height}`).attr("role", "img").attr("aria-label", "Mean Pearson correlation of scores between repeat measurements");
   xs.ticks(5).forEach((t) => {
     svg.append("line").attr("x1", xs(t)).attr("x2", xs(t)).attr("y1", top - 4).attr("y2", height - 6).attr("stroke", P.hair);
     svg.append("text").attr("x", xs(t)).attr("y", top - 9).attr("text-anchor", "middle").attr("fill", P.muted).attr("font-size", 11).text(t.toFixed(2));
@@ -1517,7 +1544,7 @@ function renderAgreement(host, lg) {
     pts.forEach((p) => svg.append("circle").attr("cx", xs(p.r)).attr("cy", cy).attr("r", 5.5).attr("fill", P.ord[p.bi]).attr("stroke", P.surface).attr("stroke-width", 2));
     svg.append("rect").attr("x", 0).attr("y", cy - rowH / 2).attr("width", width).attr("height", rowH).attr("fill", "transparent")
       .on("pointermove", (evt) => showTipAt(evt.clientX, evt.clientY, [h("div", { class: "v", text: `${ro.line}: ${ro.kind}` }),
-        ...pts.map((p) => h("div", { class: "s", text: `${p.bin} reads: r = ${p.r.toFixed(2)} (${p.n_pairs} pair${p.n_pairs > 1 ? "s" : ""}, ${fmt(p.n_sites)} sites)` })),
+        ...pts.map((p) => h("div", { class: "s", text: `${p.bin} reads: mean Pearson r = ${p.r.toFixed(2)} (${p.n_pairs} pair${p.n_pairs > 1 ? "s" : ""}, ${fmt(p.n_sites)} paired-site observations)` })),
         h("div", { class: "s", text: ro.arr[0].pairs.join("; ") })])).on("pointerleave", hideTip);
   });
 }

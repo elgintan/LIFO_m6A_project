@@ -16,18 +16,29 @@ See the [actual results, plots, resource measurements and commands](model_elgin/
 The separate external trial has higher ranking S but remains unpromoted after
 the documented tradeoff review. See [current stages](CURRENT_STAGE.md) and
 [the fixed selection decision](model_elgin/FINAL_MODEL_SELECTION.md).
-The current explorer is **coverage-only**. The older simulated prototype is
-archival and is not biological evidence.
+The full local explorer now contains **actual scores for all 23 runs and
+451,352 sites**, with context/support warnings. Public hosting is pending.
+The older simulated prototype and received coverage-only dashboard are historical.
 
-**Current stage: Task 2 SG-NEx predictions.** The first full run has 135,870
-verified eligible scores; the fixed 23-run workflow is running sequentially.
+**Current stage: Task 2 descriptive analysis and local actual-score explorer complete.**
+All 23 runs completed and passed verification at 05:46:47 SGT on 23 October.
+They contain 2,983,948 scored run-site observations / 232,253,678 reads;
+these are not unique sites or assay-confirmed modifications. No training or
+prediction needs restarting. The [fixed context QC rules](sgnex_analysis/CROSS_RUN_CONTEXT_QC_PLAN.md)
+qualify matching sites before comparisons and preserve conflicts explicitly.
+The [completed audit](sgnex_analysis/context_qc_results/README.md) found no
+context conflicts across all 451,352 scoreable keys; no scores were excluded.
 Member 4's coverage matrix directly checks eligibility and later common-site/
 replicate comparisons. See [first-run QC](sgnex_analysis/first_prediction_qc/README.md),
 [training-context support](sgnex_analysis/training_context_support/README.md)
 and [the resumable run guide](sgnex_analysis/ELGIN_TASK2_RUNNER.md).
-The local Ubuntu attempt stopped before execution because Docker's backend
-failed; [its isolated recipe and remaining check](model_elgin/reproducibility/README.md)
-are documented. The full Task 2 analysis/report/explorer remains unfinished.
+The earlier local Docker failure is preserved. A separate hosted Ubuntu 24.04
+check now passed with the exact model/pins and verified ten-site numerical parity:
+see [actual Linux evidence](model_elgin/ubuntu_prediction_results_2026_10_23/README.md).
+Fresh AWS-host verification remains open. [Scientific findings, all-pair summaries
+and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md) are available.
+Final five-page report assembly, public explorer hosting and the actual newly
+released test submission remain pending.
 
 **Deadline update supplied by the user on 22 October:** code repositories and
 predictions for the new unlabelled test dataset remain due **28 October**;

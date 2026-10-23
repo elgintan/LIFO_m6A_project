@@ -24,23 +24,31 @@ evidence, with no selection or threshold change after scoring.
 See [actual final results](model_elgin/final_cap128_results/results.md) and
 [runnable training/prediction instructions](model_elgin/FINAL_MODEL_USAGE.md).
 
-**Current stage: Task 2 predictions.** The first Hct116rep3run4 input and its
-135,870 eligible predictions passed full Member 4 coverage-key/count and
-provenance checks. The sequential 23-run workflow is now running, with logs
-and completed-run checkpoints. See [actual first-run QC](sgnex_analysis/first_prediction_qc/README.md)
+**Current stage: completed Task 2 descriptive comparison and full local real-score explorer.** All 23 runs
+completed at 05:46:47 SGT on 23 October with exit0, verified coverage-key/count
+and provenance checks, a complete checkpoint and no run lock. Their 2,983,948
+scored run-site observations use 232,253,678 reads. Preserve repeated-observation
+denominators. The [completed context audit](sgnex_analysis/context_qc_results/README.md)
+found no conflicts across all451,352scoreable keys, including low-read observations;
+no context exclusions are needed. See [the fixed rules](sgnex_analysis/CROSS_RUN_CONTEXT_QC_PLAN.md),
+[actual first-run QC](sgnex_analysis/first_prediction_qc/README.md)
 and [execution/resume instructions](sgnex_analysis/ELGIN_TASK2_RUNNER.md).
 See [the fixed selection decision](model_elgin/FINAL_MODEL_SELECTION.md) and
 [current stages](CURRENT_STAGE.md).
 
 First protect the 28 October deliverables: retain the frozen model and
 inference interface, runnable example and installation/prediction
-instructions, verify clean Ubuntu prediction, then generate and validate
+instructions, retain the [passed hosted Ubuntu prediction check](model_elgin/ubuntu_prediction_results_2026_10_23/README.md),
+complete separate AWS-host verification, then generate and validate
 predictions on the actual newly released test input. Its unlabelled status
 does not permit a measured test ROC/PR claim. Older intermediate prediction
 CSVs do not substitute for that release's submission.
 
-Next complete the genuine 23-run SG-NEx analysis, scientific report and
-explorer for 8 November. The current explorer is still coverage-only. An
+The genuine 23-run comparison and full local actual-score explorer now completed.
+[Actual findings and scientific figures](sgnex_analysis/task2_results_2026_10_23/README.md)
+retain all 21 pairs, separate populations and sensitivity checks. Explorer
+validation passed190checks;189cutoff fractions match the report exactly. Final
+report assembly and public hosting remain for 8 November. An
 external neural experiment has passed an independent saved-evidence audit
 and has genuinely higher mean-fold S. Its promotion remains inconclusive and
 it stays separate. Keeping cap128 is a documented conservative deployment
@@ -123,8 +131,9 @@ It now directly verifies the source/eligible population for real predictions:
 the first full run scored135,870 sites using10,572,838 reads, with1,166,644
 below20-read source sites explicitly unscored in QC. All18 training motifs and
 288 model-encoded7mers were represented, with sparse positive-label evidence
-flagged separately. Member 5's current explorer remains coverage-only. The
-remaining predictions and final between-cell-line analysis are not complete.
+flagged separately. Member 5's integrated explorer now contains actual scores
+in the full local build. Context QC, all21pair comparisons and scientific
+figures are complete. This first-run description is historical evidence.
 
 Local integration checks completed: Samuel's three saved-model contract tests;
 Member 4's nine analysis/reference/restoration checks plus a separately passing
@@ -242,14 +251,14 @@ requirement that Samuel use the same features or architecture.
 
 | Remaining input/action | Recommended way to close it |
 |---|---|
-| Actual SG-NEx event signals | Use Member 4's 23-run source inventory and download helper; about 33.37 GB total. Download/process sequentially outside Git, retaining receipts. No full signal download has run in this integration. |
+| Actual SG-NEx event signals — completed | All 23 original inputs, 33,365,823,342 bytes, retained locally with verified source/audit receipts. No further download is needed for the accepted scope. |
 | Reference/coordinate consistency | Use the delivered checked aliases, preserve original prediction IDs/positions, and verify transcript/reference/event offsets before genomic-region interpretation. Unknowns remain explicit in MODEL_INFO.md. |
 | Selected model and threshold — completed | Original cap128/positive weight3 completed its fresh18-epoch all-data0 fit. The model hash and real prediction example are verified. Retain0.5 as the working reporting rule, with its documented limits; do not imply calibration or a biological threshold. |
-| Repository and new test submission — 28 October | Freeze the inference CLI/model, installation steps and runnable test example; check clean Ubuntu prediction. Predict the actual newly released unlabelled input, validate its own format/names/coverage and submit through the announced route. No new-test AUC is available without labels. |
-| Real Task 2 CSVs | One full-precision `transcript_id,transcript_position,score` CSV per manifest run from the same artifact; complete model/input provenance and inference receipts. |
-| Biological comparisons | Run Member 4's imported analysis against those actual predictions and matching coverage; retain population sizes, sensitivity results and limitations. |
-| Explorer rebuild — 8 November | Use Member 5's validation/build/package scripts after actual predictions pass validation. A hosted subset is allowed if explicitly labelled with selection, denominators and omissions; coverage-only mode remains until genuine scores are supplied. |
-| Final analysis/report — 8 November | Complete the agreed 23-run analysis, main scientific figures/conclusions and researcher-facing explorer. Preserve the five-page Arial 11 main body; an unlimited ungraded appendix does not replace essential evidence. Do not substitute expected results. |
+| Repository and new test submission — 28 October | Frozen model/example and hosted Ubuntu container prediction are verified; fresh AWS-host verification remains. Predict the actual newly supplied unlabelled input, validate its own format/names/coverage and submit through the announced route. No new-test AUC is available without labels. |
+| Real Task 2 CSVs — completed | All 23 full-precision original-key exports from the same artifact are verified. Keep them intact; context qualification belongs to the analysis layer. |
+| Biological comparisons — completed | Context-qualified all21pairs, separate all-seven panels, all depth/cutoff sensitivities and scientific figures completed. Review interpretation without new model selection. |
+| Explorer rebuild — completed locally; hosting due 8 November | All23actual runs and451,352sites built and desktop-checked. Public hosting/deployment and responsive review remain. A hosted subset must label selection, denominators and omissions. |
+| Final report — 8 November | Assemble the completed evidence into a coherent five-page Arial11 main body; an unlimited ungraded appendix does not replace essential evidence. Team review and final submission remain. |
 
 ## Report questions to carry through
 

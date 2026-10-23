@@ -20,15 +20,16 @@ requirements must follow the actual release instructions.
 
 ## First: protect the 28 October deliverables
 
-1. Review the completed required simple-baseline/m6Anet evidence and make an
-   explicit main-model nomination from the accepted data0 development evidence.
-   An external candidate under audit is not an integrated replacement.
-2. Fit/save/hash the nominated final all-data0 pipeline if required. Freeze
-   its inference code and preprocessing; preserve checkpoint provenance and
-   distinguish the already-exposed data1 diagnostic from independent testing.
+1. Preserve the completed required references and accepted original
+   cap128/weight3 model selection. The higher-S external candidate remains
+   unpromoted after the documented tradeoff review.
+2. Preserve the completed fresh 18-epoch all-data0 fit and frozen saved artifact,
+   inference code, preprocessing, checkpoints and same-model supplied-data CSVs.
+   The already-exposed data1 diagnostic is separate from independent testing.
 3. Verify a fresh installation, documented training/prediction commands and
-   a small runnable input/output example. Complete the clean Ubuntu prediction
-   check and ensure the repository gives access to the required model artifact.
+   a small runnable input/output example. The hosted Ubuntu24.04 container check
+   has now passed; retain its evidence and complete separate fresh AWS-host
+   verification. Ensure the repository gives access to the required model artifact.
 4. When the new unlabelled test input is released, predict with that same
    artifact and validate the submission contract. Do not substitute the older
    intermediate dataset CSVs. Labels are unavailable: format/coverage checks
@@ -42,10 +43,10 @@ Keep actual status in [INTEGRATION_STATUS.md](INTEGRATION_STATUS.md).
 
 Our agreed Task 2 analysis population remains **23 available processed SG-NEx
 runs**, seven cell lines and 17 metadata replicate groups. The extension does
-not turn missing predictions into completed biological evidence. Obtain real
-signals, check reference/preprocessing compatibility, predict from one frozen
-pipeline, and retain replicate-aware comparisons, denominators, missingness and
-coverage sensitivity before drawing conclusions.
+not turn predictions into completed biological evidence. All 23 real-signal
+audits, frozen-model predictions, cross-run context QC and descriptive comparisons
+are complete as of 23 October. Retain group-aware comparisons, denominators,
+missingness and coverage sensitivity when assembling the report and hosted view.
 
 The announcement permits hosting an **explicitly labelled subset** in the
 interactive dashboard. State which runs/cell lines/sites are displayed, the

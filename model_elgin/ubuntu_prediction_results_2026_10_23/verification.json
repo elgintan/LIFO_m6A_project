@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "kind": "local_ubuntu_container_inference_check",
+  "not_aws_host_validation": true,
+  "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+  "python": "3.12.3",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "psutil": "7.2.2",
+    "scikit_learn": "1.9.1",
+    "torch": "2.14.1+cpu"
+  },
+  "cuda_available": false,
+  "n_sites": 10,
+  "n_reads": 1887,
+  "absolute_tolerance": 3e-06,
+  "maximum_absolute_score_difference": 1.4901161193847656e-08,
+  "prediction_sha256": "fa925342050a49c174178f3d6379e78b1367508f042f886a2650c9d7247a7793",
+  "command": [
+    "/opt/venv/bin/python",
+    "-B",
+    "/work/code/predict.py",
+    "--input",
+    "/work/example_input.json",
+    "--model",
+    "/work/model.pt",
+    "--output",
+    "/output/predictions.csv",
+    "--threads",
+    "4"
+  ],
+  "inference_resources": {
+    "wall_seconds": 0.020626495999977124,
+    "cpu_seconds": 0.032897016999999806,
+    "sampled_peak_process_tree_rss_mib": 322.4453125,
+    "sampling_interval_seconds": 0.2,
+    "sampling_errors": 0
+  },
+  "scope": "Fresh Linux CPU inference on a real data0 example; no training, new biological validation or AWS-host check"
+}

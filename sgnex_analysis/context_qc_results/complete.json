@@ -1,0 +1,671 @@
+{
+  "status": "complete",
+  "inputs": {
+    "manifest": {
+      "path": "manifest.csv",
+      "sha256": "def88c354bc12c55bef29f0d5c530f0a941de25aafbda7d23de9ebc75853b7cd",
+      "size_bytes": 6886
+    },
+    "coverage": {
+      "path": "coverage_matrix_ge20_union.csv.gz",
+      "sha256": "5e93d50bd0d0aa9addc0d18fa08484a8e7d772bda1648db84efa48483c961723",
+      "size_bytes": 9601569
+    },
+    "annotations": {
+      "path": "site_annotations.csv.gz",
+      "sha256": "adaef6847f963bcb96bc9d7d60c19ecd3f28116f3aff9420ea88b2737fe5d2fd",
+      "size_bytes": 1917135
+    },
+    "aliases": {
+      "path": "transcript_aliases_checked.csv",
+      "sha256": "0a8aaeafde0898f9463f493a978c2c5705452b38bb5fccbe5bb85cbd5b0ada00",
+      "size_bytes": 7864655
+    },
+    "training_support": {
+      "path": "training_7mer_support.csv",
+      "sha256": "164896ea98625a0587c154f089ed373239e29c8e4847684d12750bcb99877150",
+      "size_bytes": 15510
+    },
+    "plan": {
+      "path": "CROSS_RUN_CONTEXT_QC_PLAN.md",
+      "sha256": "357c84e9f21181daa3021cd02d22601719786dfe876085e24214c6c11ad9cd08",
+      "size_bytes": 3970
+    },
+    "model_encoder_source": {
+      "path": "data.py",
+      "sha256": "91f8a13e3ecb6cf5461c2f33a640f523e7884362c8545e4125f9f5c4b14ebf70",
+      "size_bytes": 16859
+    },
+    "model": {
+      "path": "model.pt",
+      "sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+      "size_bytes": 98043
+    },
+    "predictions": [
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate3_run1",
+        "path": "SGNex_Hct116_directRNA_replicate3_run1.csv",
+        "sha256": "93d853ad77b15efb5119b9aba76800f8501c54e8dc5046f5127062eb983820d4",
+        "size_bytes": 6508199
+      },
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate3_run4",
+        "path": "SGNex_Hct116_directRNA_replicate3_run4.csv",
+        "sha256": "cf28339b9296a5a67a16bc181b7b2732d58c057a1ada7817d3915736c79ba64c",
+        "size_bytes": 5655155
+      },
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate4_run3",
+        "path": "SGNex_Hct116_directRNA_replicate4_run3.csv",
+        "sha256": "292213c0e996f8e7e175cf481d7281c5031b22696987748669db060a51226cbd",
+        "size_bytes": 9929532
+      },
+      {
+        "run_id": "SGNex_A549_directRNA_replicate5_run1",
+        "path": "SGNex_A549_directRNA_replicate5_run1.csv",
+        "sha256": "396bb156eac189deae72dd99f3d68245fd35888f278c4939a8c74131c522f7dd",
+        "size_bytes": 2770279
+      },
+      {
+        "run_id": "SGNex_A549_directRNA_replicate6_run1",
+        "path": "SGNex_A549_directRNA_replicate6_run1.csv",
+        "sha256": "5b1bfb61a1aab80d946ff9e864a485d596eea1252a0afbc091bc38ae105abfe1",
+        "size_bytes": 7787200
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate2_run1",
+        "path": "SGNex_H9_directRNA_replicate2_run1.csv",
+        "sha256": "5794482f4ca81a81c1b540c2d5788e3f23c88ec67b34fd2f78b81cfb61c9f513",
+        "size_bytes": 4353972
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate2_run2",
+        "path": "SGNex_H9_directRNA_replicate2_run2.csv",
+        "sha256": "b0e3ceda90e2436be555bb73f4e8b775c56a2ad8db028e02bf9141d0bc9e39f2",
+        "size_bytes": 2148283
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate3_run1",
+        "path": "SGNex_H9_directRNA_replicate3_run1.csv",
+        "sha256": "8041d234b99ac112bf680a1b2ec8eee4e33b1929bfa08948cdc1cb2eed76aefe",
+        "size_bytes": 4075652
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate3_run2",
+        "path": "SGNex_H9_directRNA_replicate3_run2.csv",
+        "sha256": "7d6a96f653ff444927267bff7ff5b98d503432f35e7292ffc34d3ffdbca990e8",
+        "size_bytes": 1909224
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate4_run1",
+        "path": "SGNex_H9_directRNA_replicate4_run1.csv",
+        "sha256": "ca97929154938c41dda33e576f4da69f3cfba152df6073bf0f3e264dd198a506",
+        "size_bytes": 6139686
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate4_run2",
+        "path": "SGNex_H9_directRNA_replicate4_run2.csv",
+        "sha256": "f9c2d915681d9524974ad299318fa8409f259f45b33684e48c11ca9f00c565c1",
+        "size_bytes": 1428445
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate1_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate1_run1.csv",
+        "sha256": "4c095f8a030e704421d86f86bc293ccf6c8a0e2e7b68836fb8a2b72e5e0712d2",
+        "size_bytes": 7236556
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate1_run2",
+        "path": "SGNex_HEYA8_directRNA_replicate1_run2.csv",
+        "sha256": "11c33a5e147bc33d8a41551e7bd46f6360d8d2eef3abff326641299aa74a0ada",
+        "size_bytes": 1667971
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate2_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate2_run1.csv",
+        "sha256": "60b8b495b0ebb69488bea77f4d7b9cef750991019f694bb7a052b575d7e0f016",
+        "size_bytes": 6622088
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate2_run2",
+        "path": "SGNex_HEYA8_directRNA_replicate2_run2.csv",
+        "sha256": "0bf2dcfa9074f207f654c4efe838db6a74ae7366972017dd980551e882b0ada8",
+        "size_bytes": 4962540
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate3_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate3_run1.csv",
+        "sha256": "6c0a78808c3dd9a91b5d7868c9a2dad6e64a934443c159b3ce7913310451d09a",
+        "size_bytes": 8427145
+      },
+      {
+        "run_id": "SGNex_HepG2_directRNA_replicate5_run2",
+        "path": "SGNex_HepG2_directRNA_replicate5_run2.csv",
+        "sha256": "4df23da9ee3b3d9bfbdf436714e5cf568a43de577b445c5511aa740b9c23489f",
+        "size_bytes": 10867140
+      },
+      {
+        "run_id": "SGNex_HepG2_directRNA_replicate6_run1",
+        "path": "SGNex_HepG2_directRNA_replicate6_run1.csv",
+        "sha256": "0b768befc1cc532055e8d0646a8f7c9d7a09453d1531f792c007f999fb9323db",
+        "size_bytes": 10295323
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate4_run1",
+        "path": "SGNex_K562_directRNA_replicate4_run1.csv",
+        "sha256": "8f3103a593e4b3a8ef8724600d838708779dafba1d424be83c91cf770a73fd34",
+        "size_bytes": 3617230
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate5_run1",
+        "path": "SGNex_K562_directRNA_replicate5_run1.csv",
+        "sha256": "8f81142f93df38e252a5034609033788357e03b8d5a81c07204b69255506ce39",
+        "size_bytes": 3301610
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate6_run1",
+        "path": "SGNex_K562_directRNA_replicate6_run1.csv",
+        "sha256": "8420f912420cfc33f7db186aca2e49054aaef75acbe3037d11734e4a2fcadfb4",
+        "size_bytes": 4177906
+      },
+      {
+        "run_id": "SGNex_MCF7_directRNA_replicate3_run1",
+        "path": "SGNex_MCF7_directRNA_replicate3_run1.csv",
+        "sha256": "3411d492c8d4cea7e8eeb08800af1ed918221cbcf713b9c1df470a216a950772",
+        "size_bytes": 4798327
+      },
+      {
+        "run_id": "SGNex_MCF7_directRNA_replicate4_run1",
+        "path": "SGNex_MCF7_directRNA_replicate4_run1.csv",
+        "sha256": "d1fe606a85f70ff2f8898304a4fa1c75638b475cf17ce03e2f5e691fa83708c8",
+        "size_bytes": 5982052
+      }
+    ],
+    "metadata": [
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate3_run1",
+        "path": "SGNex_Hct116_directRNA_replicate3_run1.site_metadata.csv.gz",
+        "sha256": "15dd7ef1b7c1fef5dd5b9aa52b6986e0fb75c7ebc971cf900bdd9c4bbd5609db",
+        "size_bytes": 9551222
+      },
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate3_run4",
+        "path": "SGNex_Hct116_directRNA_replicate3_run4.site_metadata.csv.gz",
+        "sha256": "f6dbbd7188f3759db36152a8479ba3eb86717da9efdf38fb19a249713e2b1968",
+        "size_bytes": 8972487
+      },
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate4_run3",
+        "path": "SGNex_Hct116_directRNA_replicate4_run3.site_metadata.csv.gz",
+        "sha256": "8446912f84acd2df3bd9321b456a69bd6b6b0dcad95adb9543edbfd5914556cb",
+        "size_bytes": 11156827
+      },
+      {
+        "run_id": "SGNex_A549_directRNA_replicate5_run1",
+        "path": "SGNex_A549_directRNA_replicate5_run1.site_metadata.csv.gz",
+        "sha256": "94ab78ea39e5581eb7c3ce30b3db5a013c86ed5aa8acbf31221362ce29fa73bf",
+        "size_bytes": 6787223
+      },
+      {
+        "run_id": "SGNex_A549_directRNA_replicate6_run1",
+        "path": "SGNex_A549_directRNA_replicate6_run1.site_metadata.csv.gz",
+        "sha256": "5c437d5413c036fc79577e56f0628afa7860e529327c1edbab9b2d2737f24480",
+        "size_bytes": 10363732
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate2_run1",
+        "path": "SGNex_H9_directRNA_replicate2_run1.site_metadata.csv.gz",
+        "sha256": "4d154271625ef6b3d1ab590b99a9ef6dd87aa1e4da37d2be4a06f962f17dd2b6",
+        "size_bytes": 8378335
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate2_run2",
+        "path": "SGNex_H9_directRNA_replicate2_run2.site_metadata.csv.gz",
+        "sha256": "77dc891428902e43f66ac6481f9e76ca366702aeedb5230bd24ddf235ca90780",
+        "size_bytes": 6739445
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate3_run1",
+        "path": "SGNex_H9_directRNA_replicate3_run1.site_metadata.csv.gz",
+        "sha256": "a5aa60683515db8c6fab1e181dccbb43de6f7a5ab4e834b55913c1d23c96fe5a",
+        "size_bytes": 8251203
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate3_run2",
+        "path": "SGNex_H9_directRNA_replicate3_run2.site_metadata.csv.gz",
+        "sha256": "f06030f14993cae9b7b29070230c1f89970c7f484c8672d9d229f0fc3d5607cf",
+        "size_bytes": 6413505
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate4_run1",
+        "path": "SGNex_H9_directRNA_replicate4_run1.site_metadata.csv.gz",
+        "sha256": "b1e18f5896de287e739b1a78ca2b5a6b8dde65cece979624ce9b35d8397ab38a",
+        "size_bytes": 9661663
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate4_run2",
+        "path": "SGNex_H9_directRNA_replicate4_run2.site_metadata.csv.gz",
+        "sha256": "ede3f55c569c92958708a19db4cc7c1c0d123b62e1ecf2c08eb935fcc068489e",
+        "size_bytes": 5795364
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate1_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate1_run1.site_metadata.csv.gz",
+        "sha256": "ae6b20350d239e9b475268d3f0fbb381d0eeaa35ef0314943547946538d25106",
+        "size_bytes": 9183464
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate1_run2",
+        "path": "SGNex_HEYA8_directRNA_replicate1_run2.site_metadata.csv.gz",
+        "sha256": "180e369d19e710278cf2fbd0928e4b78480ad86f0edcbc39e94213e7db455304",
+        "size_bytes": 5483731
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate2_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate2_run1.site_metadata.csv.gz",
+        "sha256": "1ee93de19c4d2dd651e0b00319ef773842f92304434778875c37c001eb2be50c",
+        "size_bytes": 8911432
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate2_run2",
+        "path": "SGNex_HEYA8_directRNA_replicate2_run2.site_metadata.csv.gz",
+        "sha256": "6ac4dd7421af38cedbd029b2f6d4d65814429ab3f9f143e39aecbe19485ff471",
+        "size_bytes": 8076567
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate3_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate3_run1.site_metadata.csv.gz",
+        "sha256": "bb22fa8cea052f75b7b9b29ba04d30196c5fce57340e2428aa75eb710f1d2440",
+        "size_bytes": 9694798
+      },
+      {
+        "run_id": "SGNex_HepG2_directRNA_replicate5_run2",
+        "path": "SGNex_HepG2_directRNA_replicate5_run2.site_metadata.csv.gz",
+        "sha256": "b245419c2fb748419a411e25df97d9726e541324d83f5166d20bb568689c1cca",
+        "size_bytes": 11149333
+      },
+      {
+        "run_id": "SGNex_HepG2_directRNA_replicate6_run1",
+        "path": "SGNex_HepG2_directRNA_replicate6_run1.site_metadata.csv.gz",
+        "sha256": "096d643b2b87c729f9347db0e3806e7dcc53fa9cce86c0fb23204ed13d4d0a39",
+        "size_bytes": 10906879
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate4_run1",
+        "path": "SGNex_K562_directRNA_replicate4_run1.site_metadata.csv.gz",
+        "sha256": "fc7859bc20d4c71e438790ba13ccbebbaaacf820d219ac59a64119f01ddac6a1",
+        "size_bytes": 7569107
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate5_run1",
+        "path": "SGNex_K562_directRNA_replicate5_run1.site_metadata.csv.gz",
+        "sha256": "0d57d9ecc8739cf33f2a4486692da5e9e91fe9c734376ee3ae2d555dd9272ae3",
+        "size_bytes": 7202146
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate6_run1",
+        "path": "SGNex_K562_directRNA_replicate6_run1.site_metadata.csv.gz",
+        "sha256": "6f301419fe473a43eba6a4d2bdbea1b20efadfbe295432ab157584516f0e849b",
+        "size_bytes": 6974229
+      },
+      {
+        "run_id": "SGNex_MCF7_directRNA_replicate3_run1",
+        "path": "SGNex_MCF7_directRNA_replicate3_run1.site_metadata.csv.gz",
+        "sha256": "72c38236aa31279ea66a8c676d31760232fbaf1e623b255086a998e5363f5253",
+        "size_bytes": 8842809
+      },
+      {
+        "run_id": "SGNex_MCF7_directRNA_replicate4_run1",
+        "path": "SGNex_MCF7_directRNA_replicate4_run1.site_metadata.csv.gz",
+        "sha256": "26a93198fb01fb7b8233c5dc8a7b224ae66ec4c9b92d096769289ceff2a7aafa",
+        "size_bytes": 9926368
+      }
+    ],
+    "receipts": [
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate3_run1",
+        "path": "SGNex_Hct116_directRNA_replicate3_run1.receipt.json",
+        "sha256": "3aef4883c703c3410e34fc8054251ef2402c2731a7a4681aea21befccc7f9649",
+        "size_bytes": 3692
+      },
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate3_run4",
+        "path": "SGNex_Hct116_directRNA_replicate3_run4.receipt.json",
+        "sha256": "522e97e3a0ee4c2e4653c13fc6e6bc614ce89cabd14e83fc716d56a7bc0aad24",
+        "size_bytes": 3691
+      },
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate4_run3",
+        "path": "SGNex_Hct116_directRNA_replicate4_run3.receipt.json",
+        "sha256": "8c49dba64d71657c8fa016e90fbde908969f91223b47748eee55e0909f556d1a",
+        "size_bytes": 3691
+      },
+      {
+        "run_id": "SGNex_A549_directRNA_replicate5_run1",
+        "path": "SGNex_A549_directRNA_replicate5_run1.receipt.json",
+        "sha256": "4fcf1972a6d2b46581b928e7e947be4193c615e9ff22dd1e24b43b641e5c3320",
+        "size_bytes": 3671
+      },
+      {
+        "run_id": "SGNex_A549_directRNA_replicate6_run1",
+        "path": "SGNex_A549_directRNA_replicate6_run1.receipt.json",
+        "sha256": "02b26397c0463df470730711f3d5193df0836e48a310476c7193b39af3a131ec",
+        "size_bytes": 3677
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate2_run1",
+        "path": "SGNex_H9_directRNA_replicate2_run1.receipt.json",
+        "sha256": "5a50465d8e2715c9f50483d3d75cb3af30041fa5e2d8858ff12c5ea8f9e8eb28",
+        "size_bytes": 3659
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate2_run2",
+        "path": "SGNex_H9_directRNA_replicate2_run2.receipt.json",
+        "sha256": "8ddd629bb7b1c073cd72082856d901d0143b3e665caeb35b58f348bb714004e3",
+        "size_bytes": 3657
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate3_run1",
+        "path": "SGNex_H9_directRNA_replicate3_run1.receipt.json",
+        "sha256": "af3fd56581e0cac88f07b5e90a81ea2eb0928f609166361324b2a23649fe72da",
+        "size_bytes": 3657
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate3_run2",
+        "path": "SGNex_H9_directRNA_replicate3_run2.receipt.json",
+        "sha256": "fdace8f25fda36cd300baab133437eb7256d00cfc6f03d053e720ef0708caca4",
+        "size_bytes": 3653
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate4_run1",
+        "path": "SGNex_H9_directRNA_replicate4_run1.receipt.json",
+        "sha256": "d0e5ccf0bd27f4be173de674ec5295ba4a6835ba214cdf4857c5ca3c62102f0d",
+        "size_bytes": 3662
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate4_run2",
+        "path": "SGNex_H9_directRNA_replicate4_run2.receipt.json",
+        "sha256": "a1931aaf0aafa571691deb2f2de708ea148efc0da6a1fefc263579a38f875fc0",
+        "size_bytes": 3654
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate1_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate1_run1.receipt.json",
+        "sha256": "ae46969b6dadde886fd2465a2fe5053f1380f8b252d22d60f20462df148605ac",
+        "size_bytes": 3684
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate1_run2",
+        "path": "SGNex_HEYA8_directRNA_replicate1_run2.receipt.json",
+        "sha256": "daa198809d876eded146c860a62f1ef84573bbc8167592dbc3d1e530ef82e512",
+        "size_bytes": 3675
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate2_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate2_run1.receipt.json",
+        "sha256": "9324595f715fa95c67fc26992aead8f5cb27d06ee1ec4438b63b72f84c3f658e",
+        "size_bytes": 3679
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate2_run2",
+        "path": "SGNex_HEYA8_directRNA_replicate2_run2.receipt.json",
+        "sha256": "8ddf0ae6b3ccfb78308477426e516be5d74a9f1ada7306ee60b72e109a33689d",
+        "size_bytes": 3685
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate3_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate3_run1.receipt.json",
+        "sha256": "3a6708a3b22e4541a13d7cbe29b8d8662439b98dc9aad1fe8b1fc7c26d0f0c47",
+        "size_bytes": 3680
+      },
+      {
+        "run_id": "SGNex_HepG2_directRNA_replicate5_run2",
+        "path": "SGNex_HepG2_directRNA_replicate5_run2.receipt.json",
+        "sha256": "b9dc4e884961627c85a7ebd339d49f5851ab640bffd500d7de949afcd86d8bee",
+        "size_bytes": 3682
+      },
+      {
+        "run_id": "SGNex_HepG2_directRNA_replicate6_run1",
+        "path": "SGNex_HepG2_directRNA_replicate6_run1.receipt.json",
+        "sha256": "824d5386c0ae7fdff9a7b7fc0c401c433ac6a4eb4f041bbcf77e3bd1d4a38cf6",
+        "size_bytes": 3687
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate4_run1",
+        "path": "SGNex_K562_directRNA_replicate4_run1.receipt.json",
+        "sha256": "8f8b1a4c302a7ce4d2f22c2876ea8e7a0f70ab18f2cb14fe86c47f5d6f0c184f",
+        "size_bytes": 3673
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate5_run1",
+        "path": "SGNex_K562_directRNA_replicate5_run1.receipt.json",
+        "sha256": "c1392b582485d0af4d896fcb184a85b3f31b07b7eb789e7eb1b132e6784241ab",
+        "size_bytes": 3671
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate6_run1",
+        "path": "SGNex_K562_directRNA_replicate6_run1.receipt.json",
+        "sha256": "1705aad1cd888c711d7200556a0b9f47e56ceb736d4ed77c761e6bf298f83ee9",
+        "size_bytes": 3669
+      },
+      {
+        "run_id": "SGNex_MCF7_directRNA_replicate3_run1",
+        "path": "SGNex_MCF7_directRNA_replicate3_run1.receipt.json",
+        "sha256": "f579e8533cfb7604b44554282a83956ea353f311d7eae3937f81a60514a793d5",
+        "size_bytes": 3677
+      },
+      {
+        "run_id": "SGNex_MCF7_directRNA_replicate4_run1",
+        "path": "SGNex_MCF7_directRNA_replicate4_run1.receipt.json",
+        "sha256": "fb6fe03784aee68d057b2345124503bc3a47ec8d36b2eb7715c6ed7945c4ca4f",
+        "size_bytes": 3674
+      }
+    ],
+    "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+    "input_audits": [
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate3_run1",
+        "path": "SGNex_Hct116_directRNA_replicate3_run1.json",
+        "sha256": "96d694a8600e058212efa17cb2f3fcd182b9faf4b57f4a786ac66056e132d6a3",
+        "size_bytes": 1917
+      },
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate3_run4",
+        "path": "SGNex_Hct116_directRNA_replicate3_run4.json",
+        "sha256": "ac804c1521b807ef7da12089919cde093166faac4e5626beba86a41749c50f87",
+        "size_bytes": 1917
+      },
+      {
+        "run_id": "SGNex_Hct116_directRNA_replicate4_run3",
+        "path": "SGNex_Hct116_directRNA_replicate4_run3.json",
+        "sha256": "4ec2683f046182a7581d63cb3cf24e39761ed56bfebbb97dd43b5d297f52c309",
+        "size_bytes": 1928
+      },
+      {
+        "run_id": "SGNex_A549_directRNA_replicate5_run1",
+        "path": "SGNex_A549_directRNA_replicate5_run1.json",
+        "sha256": "eca853e19a7160709fd895da9dfd14067ec522effa858e379507219a9155810a",
+        "size_bytes": 1908
+      },
+      {
+        "run_id": "SGNex_A549_directRNA_replicate6_run1",
+        "path": "SGNex_A549_directRNA_replicate6_run1.json",
+        "sha256": "8022cebedf6601cae18ac4477c6e21166f4e5f58e0ac04b76db8182b4d43b2f3",
+        "size_bytes": 1923
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate2_run1",
+        "path": "SGNex_H9_directRNA_replicate2_run1.json",
+        "sha256": "bc7c9918fad65f810ce4b42fcc0a3be1dcfe9b81981ef0126b737d291a00b41e",
+        "size_bytes": 1909
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate2_run2",
+        "path": "SGNex_H9_directRNA_replicate2_run2.json",
+        "sha256": "842036d4ce3c67a015adeb87b4b9a107742aa93372b29b4c32e89f088c0769fd",
+        "size_bytes": 1906
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate3_run1",
+        "path": "SGNex_H9_directRNA_replicate3_run1.json",
+        "sha256": "789cc5f72fd33785696f0b89c6b0fa9e091af41c27d296344936a4e47066eb8e",
+        "size_bytes": 1908
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate3_run2",
+        "path": "SGNex_H9_directRNA_replicate3_run2.json",
+        "sha256": "ac983fd3432aa5ff16ceb80cecd40407b94bd848eb1f3eb1759f1746a221a7c9",
+        "size_bytes": 1904
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate4_run1",
+        "path": "SGNex_H9_directRNA_replicate4_run1.json",
+        "sha256": "ea81a631051b68df4510af8a90e8b6662aeb70cc7f4b11b7eaf2fb6289273289",
+        "size_bytes": 1914
+      },
+      {
+        "run_id": "SGNex_H9_directRNA_replicate4_run2",
+        "path": "SGNex_H9_directRNA_replicate4_run2.json",
+        "sha256": "3f6f64d7029bfe22ca217290921ade71e4a55b239e2565c107ad1c1b8e3940b2",
+        "size_bytes": 1900
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate1_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate1_run1.json",
+        "sha256": "2eab42d4fbaf5178eed503af24b0f983e0b95b0a310cbf3aab0095e91a57e59e",
+        "size_bytes": 1922
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate1_run2",
+        "path": "SGNex_HEYA8_directRNA_replicate1_run2.json",
+        "sha256": "388ba0b880035870a9c9c7c512e3e79dca49e82767f0a32d5bedb3c95f800a2c",
+        "size_bytes": 1905
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate2_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate2_run1.json",
+        "sha256": "638c3882227cec7f3c08b6891c543c1f3cc2c8690673c0701a7f9ea67249a392",
+        "size_bytes": 1919
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate2_run2",
+        "path": "SGNex_HEYA8_directRNA_replicate2_run2.json",
+        "sha256": "d1e2b64f6e35299e32f5baa080240c417fca43075b8514e982b98a1569ceeeac",
+        "size_bytes": 1914
+      },
+      {
+        "run_id": "SGNex_HEYA8_directRNA_replicate3_run1",
+        "path": "SGNex_HEYA8_directRNA_replicate3_run1.json",
+        "sha256": "aac3922a537b9db04103022797beb0efb414cfa8fd7ee0a8b013cabda688d67b",
+        "size_bytes": 1928
+      },
+      {
+        "run_id": "SGNex_HepG2_directRNA_replicate5_run2",
+        "path": "SGNex_HepG2_directRNA_replicate5_run2.json",
+        "sha256": "2208c9f608c6490d1f7a33a259e7ccd4b0d83c55786612e5221120bfe83de84f",
+        "size_bytes": 1933
+      },
+      {
+        "run_id": "SGNex_HepG2_directRNA_replicate6_run1",
+        "path": "SGNex_HepG2_directRNA_replicate6_run1.json",
+        "sha256": "2734e9ef2b9ba0ea2639ae46f25af85f575488fb56c15ae0b9766f3a5e4173cb",
+        "size_bytes": 1929
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate4_run1",
+        "path": "SGNex_K562_directRNA_replicate4_run1.json",
+        "sha256": "4cb3a283d44927cd2e6ab0c80fa3efa3e0dcb95f49082f3238ba291aa786c3ec",
+        "size_bytes": 1908
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate5_run1",
+        "path": "SGNex_K562_directRNA_replicate5_run1.json",
+        "sha256": "f212412e2ced6fa153443636fe6cbb06a5ce040c6f790e7fdd21fb7854c6cd12",
+        "size_bytes": 1909
+      },
+      {
+        "run_id": "SGNex_K562_directRNA_replicate6_run1",
+        "path": "SGNex_K562_directRNA_replicate6_run1.json",
+        "sha256": "c6cea51b7ae632d4c49812895c11307ff05599dd5e854f3232bd1e543019bb04",
+        "size_bytes": 1910
+      },
+      {
+        "run_id": "SGNex_MCF7_directRNA_replicate3_run1",
+        "path": "SGNex_MCF7_directRNA_replicate3_run1.json",
+        "sha256": "c088cb29b033cfecd78bc1652cc4313e256f1ded259ba169d190de75fd1aba18",
+        "size_bytes": 1914
+      },
+      {
+        "run_id": "SGNex_MCF7_directRNA_replicate4_run1",
+        "path": "SGNex_MCF7_directRNA_replicate4_run1.json",
+        "sha256": "88d69c1525efcbb76f739e210167d14f318096b99ee9530ed45451fa838004f1",
+        "size_bytes": 1912
+      }
+    ]
+  },
+  "outputs": {
+    "conflicting_context_observations.csv.gz": {
+      "path": "conflicting_context_observations.csv.gz",
+      "sha256": "4616bc12ade7e95d264e791ebd188692db7530c0df37cae15a8bd72b4d81a49e",
+      "size_bytes": 190
+    },
+    "key_context_qc.csv.gz": {
+      "path": "key_context_qc.csv.gz",
+      "sha256": "684d902cecbf6ab462e28863d98d45e044008141422e38bcbaaf6cf5ddfd900d",
+      "size_bytes": 5849761
+    },
+    "population_effects.csv": {
+      "path": "population_effects.csv",
+      "sha256": "51326604bccf29bf71c348db2791e85b2fade3ef2ebaa6d775a557798d5d47ad",
+      "size_bytes": 4418
+    },
+    "run_qc_counts.csv": {
+      "path": "run_qc_counts.csv",
+      "sha256": "3046bd0df7683e8454d840ce6dc000c9b975bcaa8ec0d691bd39bd3d7ca42f70",
+      "size_bytes": 2874
+    },
+    "summary.json": {
+      "path": "summary.json",
+      "sha256": "237ecd3b3549be82b6459b8d4990f840ede1cae1e03479ab37a2c39f4470d94c",
+      "size_bytes": 2657
+    },
+    "within_run_key_collisions.csv.gz": {
+      "path": "within_run_key_collisions.csv.gz",
+      "sha256": "016b0d55d58f2abc99422834a8538c1eb0c85a5a7aecdf5f771f782cbdd9c223",
+      "size_bytes": 111
+    }
+  },
+  "policy": {
+    "primary": "all_source_consistent",
+    "sensitivity": "scored_consistent",
+    "scope": "Every coverage-union key; all source observations at those keys, including below20 reads",
+    "outside_union": "All metadata rows counted; cross-run contexts outside the scoreable coverage union are not compared",
+    "encoding": "ASCII uppercase; U becomes T; recognised ambiguous IUPAC letters map to N (model unknown code4)",
+    "primary_rule": "One identical unambiguous central-A model-encoded7mer among all source observations at the key",
+    "scored_rule": "Same rule restricted to observations with source reads>=20",
+    "no_score_based_selection": true,
+    "training_support": "Descriptive only; weak=True if ANY observed known context has<20 data0 positives. False is not assurance for unknown/ambiguous contexts; see training_support_known_for_all_contexts. No support filter",
+    "identifiers": "Literal positions; only exact per-run aliases from the supplied table; no generic stripping or offset"
+  },
+  "script_sha256": "3aa6b983e958303f8bc60901270bf63b97e2f3ca6501b6e243d7164041d3c103",
+  "no_training_or_inference": true,
+  "counts": {
+    "coverage_union_keys": 451352,
+    "primary_all_source_consistent_keys": 451352,
+    "scored_only_consistent_keys": 451352,
+    "multi_run_source_keys": 451352,
+    "multi_run_scored_keys": 358890,
+    "encoded_conflict_all_source_keys": 0,
+    "encoded_conflict_scored_keys": 0,
+    "literal_difference_only_keys": 0,
+    "ambiguous_all_source_keys": 0,
+    "noncentral_a_all_source_keys": 0,
+    "primary_zero_positive_support_keys": 55253,
+    "primary_lt20_positive_support_keys": 294896,
+    "primary_unseen_training_context_keys": 0
+  },
+  "resources": {
+    "wall_seconds": 578.0988863999955,
+    "process_cpu_seconds": 564.875
+  }
+}

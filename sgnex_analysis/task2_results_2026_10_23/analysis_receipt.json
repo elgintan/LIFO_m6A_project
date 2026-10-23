@@ -1,0 +1,171 @@
+{
+  "analysis_status": "exploratory real-model predictions; not independent validation",
+  "arguments": {
+    "manifest": "sgnex_analysis/manifest.csv",
+    "coverage_matrix": "sgnex_analysis/outputs/received_member4_20261019/results/coverage_matrix_ge20_union.csv.gz",
+    "annotations": "sgnex_analysis/outputs/received_member4_20261019/results/site_annotations.csv.gz",
+    "aliases": "sgnex_analysis/outputs/received_member4_20261019/metadata/transcript_aliases_checked.csv",
+    "model_info": "sgnex_analysis/MODEL_INFO.md",
+    "confirm_real_predictions": true,
+    "out": "sgnex_analysis/outputs/real_analysis_context_v2",
+    "coverage": "20,50,100",
+    "cutoffs": "0.5,0.7,0.9",
+    "min_replicates": 2,
+    "require_all_replicates": false,
+    "context_qc": "sgnex_analysis/outputs/context_qc_v1",
+    "context_policy": "all-source-consistent",
+    "max_coverage_ratio": 2,
+    "min_delta": 0.2,
+    "allow_missing_predictions": false
+  },
+  "model_version": "elgin-cap128-weight3-18epoch-b2d38ff29a91",
+  "manifest_sha256": "def88c354bc12c55bef29f0d5c530f0a941de25aafbda7d23de9ebc75853b7cd",
+  "model_info_sha256": "aae6e25dc99f96e89630291d1d6baed1cf6e1ed1f1a1329924efbaf852570ced",
+  "coordinate_documentation": "manifest coordinate_convention when present; otherwise MODEL_INFO.md must document the input positions",
+  "coverage_sha256": "5e93d50bd0d0aa9addc0d18fa08484a8e7d772bda1648db84efa48483c961723",
+  "annotation_sha256": "adaef6847f963bcb96bc9d7d60c19ecd3f28116f3aff9420ea88b2737fe5d2fd",
+  "predictions": [
+    {
+      "run_id": "SGNex_Hct116_directRNA_replicate3_run1",
+      "path": "outputs/predictions/SGNex_Hct116_directRNA_replicate3_run1.csv",
+      "sha256": "93d853ad77b15efb5119b9aba76800f8501c54e8dc5046f5127062eb983820d4"
+    },
+    {
+      "run_id": "SGNex_Hct116_directRNA_replicate3_run4",
+      "path": "outputs/predictions/SGNex_Hct116_directRNA_replicate3_run4.csv",
+      "sha256": "cf28339b9296a5a67a16bc181b7b2732d58c057a1ada7817d3915736c79ba64c"
+    },
+    {
+      "run_id": "SGNex_Hct116_directRNA_replicate4_run3",
+      "path": "outputs/predictions/SGNex_Hct116_directRNA_replicate4_run3.csv",
+      "sha256": "292213c0e996f8e7e175cf481d7281c5031b22696987748669db060a51226cbd"
+    },
+    {
+      "run_id": "SGNex_A549_directRNA_replicate5_run1",
+      "path": "outputs/predictions/SGNex_A549_directRNA_replicate5_run1.csv",
+      "sha256": "396bb156eac189deae72dd99f3d68245fd35888f278c4939a8c74131c522f7dd"
+    },
+    {
+      "run_id": "SGNex_A549_directRNA_replicate6_run1",
+      "path": "outputs/predictions/SGNex_A549_directRNA_replicate6_run1.csv",
+      "sha256": "5b1bfb61a1aab80d946ff9e864a485d596eea1252a0afbc091bc38ae105abfe1"
+    },
+    {
+      "run_id": "SGNex_H9_directRNA_replicate2_run1",
+      "path": "outputs/predictions/SGNex_H9_directRNA_replicate2_run1.csv",
+      "sha256": "5794482f4ca81a81c1b540c2d5788e3f23c88ec67b34fd2f78b81cfb61c9f513"
+    },
+    {
+      "run_id": "SGNex_H9_directRNA_replicate2_run2",
+      "path": "outputs/predictions/SGNex_H9_directRNA_replicate2_run2.csv",
+      "sha256": "b0e3ceda90e2436be555bb73f4e8b775c56a2ad8db028e02bf9141d0bc9e39f2"
+    },
+    {
+      "run_id": "SGNex_H9_directRNA_replicate3_run1",
+      "path": "outputs/predictions/SGNex_H9_directRNA_replicate3_run1.csv",
+      "sha256": "8041d234b99ac112bf680a1b2ec8eee4e33b1929bfa08948cdc1cb2eed76aefe"
+    },
+    {
+      "run_id": "SGNex_H9_directRNA_replicate3_run2",
+      "path": "outputs/predictions/SGNex_H9_directRNA_replicate3_run2.csv",
+      "sha256": "7d6a96f653ff444927267bff7ff5b98d503432f35e7292ffc34d3ffdbca990e8"
+    },
+    {
+      "run_id": "SGNex_H9_directRNA_replicate4_run1",
+      "path": "outputs/predictions/SGNex_H9_directRNA_replicate4_run1.csv",
+      "sha256": "ca97929154938c41dda33e576f4da69f3cfba152df6073bf0f3e264dd198a506"
+    },
+    {
+      "run_id": "SGNex_H9_directRNA_replicate4_run2",
+      "path": "outputs/predictions/SGNex_H9_directRNA_replicate4_run2.csv",
+      "sha256": "f9c2d915681d9524974ad299318fa8409f259f45b33684e48c11ca9f00c565c1"
+    },
+    {
+      "run_id": "SGNex_HEYA8_directRNA_replicate1_run1",
+      "path": "outputs/predictions/SGNex_HEYA8_directRNA_replicate1_run1.csv",
+      "sha256": "4c095f8a030e704421d86f86bc293ccf6c8a0e2e7b68836fb8a2b72e5e0712d2"
+    },
+    {
+      "run_id": "SGNex_HEYA8_directRNA_replicate1_run2",
+      "path": "outputs/predictions/SGNex_HEYA8_directRNA_replicate1_run2.csv",
+      "sha256": "11c33a5e147bc33d8a41551e7bd46f6360d8d2eef3abff326641299aa74a0ada"
+    },
+    {
+      "run_id": "SGNex_HEYA8_directRNA_replicate2_run1",
+      "path": "outputs/predictions/SGNex_HEYA8_directRNA_replicate2_run1.csv",
+      "sha256": "60b8b495b0ebb69488bea77f4d7b9cef750991019f694bb7a052b575d7e0f016"
+    },
+    {
+      "run_id": "SGNex_HEYA8_directRNA_replicate2_run2",
+      "path": "outputs/predictions/SGNex_HEYA8_directRNA_replicate2_run2.csv",
+      "sha256": "0bf2dcfa9074f207f654c4efe838db6a74ae7366972017dd980551e882b0ada8"
+    },
+    {
+      "run_id": "SGNex_HEYA8_directRNA_replicate3_run1",
+      "path": "outputs/predictions/SGNex_HEYA8_directRNA_replicate3_run1.csv",
+      "sha256": "6c0a78808c3dd9a91b5d7868c9a2dad6e64a934443c159b3ce7913310451d09a"
+    },
+    {
+      "run_id": "SGNex_HepG2_directRNA_replicate5_run2",
+      "path": "outputs/predictions/SGNex_HepG2_directRNA_replicate5_run2.csv",
+      "sha256": "4df23da9ee3b3d9bfbdf436714e5cf568a43de577b445c5511aa740b9c23489f"
+    },
+    {
+      "run_id": "SGNex_HepG2_directRNA_replicate6_run1",
+      "path": "outputs/predictions/SGNex_HepG2_directRNA_replicate6_run1.csv",
+      "sha256": "0b768befc1cc532055e8d0646a8f7c9d7a09453d1531f792c007f999fb9323db"
+    },
+    {
+      "run_id": "SGNex_K562_directRNA_replicate4_run1",
+      "path": "outputs/predictions/SGNex_K562_directRNA_replicate4_run1.csv",
+      "sha256": "8f3103a593e4b3a8ef8724600d838708779dafba1d424be83c91cf770a73fd34"
+    },
+    {
+      "run_id": "SGNex_K562_directRNA_replicate5_run1",
+      "path": "outputs/predictions/SGNex_K562_directRNA_replicate5_run1.csv",
+      "sha256": "8f81142f93df38e252a5034609033788357e03b8d5a81c07204b69255506ce39"
+    },
+    {
+      "run_id": "SGNex_K562_directRNA_replicate6_run1",
+      "path": "outputs/predictions/SGNex_K562_directRNA_replicate6_run1.csv",
+      "sha256": "8420f912420cfc33f7db186aca2e49054aaef75acbe3037d11734e4a2fcadfb4"
+    },
+    {
+      "run_id": "SGNex_MCF7_directRNA_replicate3_run1",
+      "path": "outputs/predictions/SGNex_MCF7_directRNA_replicate3_run1.csv",
+      "sha256": "3411d492c8d4cea7e8eeb08800af1ed918221cbcf713b9c1df470a216a950772"
+    },
+    {
+      "run_id": "SGNex_MCF7_directRNA_replicate4_run1",
+      "path": "outputs/predictions/SGNex_MCF7_directRNA_replicate4_run1.csv",
+      "sha256": "d1fe606a85f70ff2f8898304a4fa1c75638b475cf17ce03e2f5e691fa83708c8"
+    }
+  ],
+  "aliases_sha256": "0a8aaeafde0898f9463f493a978c2c5705452b38bb5fccbe5bb85cbd5b0ada00",
+  "script_sha256": "3eea1c99fe0ff43b18429e3f4e2d481b1342ac9d0786b1fbbb19230a1265aa23",
+  "context_qualification": {
+    "policy": "all-source-consistent",
+    "qc_complete_sha256": "aaa5190d61f800de3071a57dc4c6247609210d079af8c3872785862353b7a713",
+    "table_sha256": "684d902cecbf6ab462e28863d98d45e044008141422e38bcbaaf6cf5ddfd900d",
+    "n_union_keys": 451352,
+    "n_qualified_union_keys": 451352,
+    "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+    "scope": "analysis-layer gate; complete original prediction exports validated before qualification",
+    "verification": "QC table and shared analysis/prediction hashes checked; source metadata not rescanned by comparator"
+  },
+  "n_annotated_run_sites_before_context_qc": 2931463,
+  "n_annotated_run_sites_excluded_context_qc": 0,
+  "aggregation": "mean eligible run scores within replicate, then equal replicate mean; no raw-read pooling",
+  "limitations": [
+    "Score differences do not estimate stoichiometry.",
+    "Coverage balancing does not fully adjust RNA abundance or batch.",
+    "Candidate flag is descriptive; no differential-modification significance test.",
+    "Common-site selection favours highly expressed transcripts.",
+    "Gene/isoform correlations preclude treating sites as independent biological replicates."
+  ],
+  "software": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3"
+  },
+  "status": "complete"
+}

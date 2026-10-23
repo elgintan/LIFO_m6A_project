@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "qc_complete_sha256": "aaa5190d61f800de3071a57dc4c6247609210d079af8c3872785862353b7a713",
+  "qc_source_sha256": "3aa6b983e958303f8bc60901270bf63b97e2f3ca6501b6e243d7164041d3c103",
+  "input_hashes_recomputed": {
+    "manifest": "def88c354bc12c55bef29f0d5c530f0a941de25aafbda7d23de9ebc75853b7cd",
+    "coverage": "5e93d50bd0d0aa9addc0d18fa08484a8e7d772bda1648db84efa48483c961723",
+    "annotations": "adaef6847f963bcb96bc9d7d60c19ecd3f28116f3aff9420ea88b2737fe5d2fd",
+    "aliases": "0a8aaeafde0898f9463f493a978c2c5705452b38bb5fccbe5bb85cbd5b0ada00",
+    "training_support": "164896ea98625a0587c154f089ed373239e29c8e4847684d12750bcb99877150",
+    "plan": "357c84e9f21181daa3021cd02d22601719786dfe876085e24214c6c11ad9cd08",
+    "model_encoder_source": "91f8a13e3ecb6cf5461c2f33a640f523e7884362c8545e4125f9f5c4b14ebf70",
+    "model": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668"
+  },
+  "output_hashes_recomputed": {
+    "conflicting_context_observations.csv.gz": "4616bc12ade7e95d264e791ebd188692db7530c0df37cae15a8bd72b4d81a49e",
+    "key_context_qc.csv.gz": "684d902cecbf6ab462e28863d98d45e044008141422e38bcbaaf6cf5ddfd900d",
+    "population_effects.csv": "51326604bccf29bf71c348db2791e85b2fade3ef2ebaa6d775a557798d5d47ad",
+    "run_qc_counts.csv": "3046bd0df7683e8454d840ce6dc000c9b975bcaa8ec0d691bd39bd3d7ca42f70",
+    "summary.json": "237ecd3b3549be82b6459b8d4990f840ede1cae1e03479ab37a2c39f4470d94c",
+    "within_run_key_collisions.csv.gz": "016b0d55d58f2abc99422834a8538c1eb0c85a5a7aecdf5f771f782cbdd9c223"
+  },
+  "counts_independently_reproduced": {
+    "coverage_union_keys": 451352,
+    "primary_all_source_consistent_keys": 451352,
+    "scored_only_consistent_keys": 451352,
+    "multi_run_source_keys": 451352,
+    "multi_run_scored_keys": 358890,
+    "encoded_conflict_all_source_keys": 0,
+    "encoded_conflict_scored_keys": 0,
+    "literal_difference_only_keys": 0,
+    "ambiguous_all_source_keys": 0,
+    "noncentral_a_all_source_keys": 0,
+    "primary_zero_positive_support_keys": 55253,
+    "primary_lt20_positive_support_keys": 294896,
+    "primary_unseen_training_context_keys": 0,
+    "conflict_union_observations": 0,
+    "conflict_scored_observations": 0
+  },
+  "source_totals_reconciled": {
+    "source_ambiguous_contexts": 0,
+    "source_reads": 331864925,
+    "source_noncentral_a": 0,
+    "scored_reads": 232253678,
+    "outside_coverage_union_reads": 55344543,
+    "scored_sites": 2983948,
+    "union_source_observations": 8780071,
+    "union_source_reads": 276520382,
+    "outside_coverage_union_sites": 19890009,
+    "explicit_alias_observations_in_union": 374079,
+    "source_sites": 28670080
+  },
+  "all_line_population_effects": [
+    {
+      "coverage_threshold": 20,
+      "population_type": "all_lines",
+      "cell_lines": "A549|H9|HEYA8|Hct116|HepG2|K562|MCF7",
+      "n_annotated_coverage_qualified": 33452,
+      "n_primary_all_source_consistent": 33452,
+      "n_excluded_primary_context": 0,
+      "n_scored_only_consistent": 33452,
+      "n_additional_scored_only_vs_primary": 0
+    },
+    {
+      "coverage_threshold": 50,
+      "population_type": "all_lines",
+      "cell_lines": "A549|H9|HEYA8|Hct116|HepG2|K562|MCF7",
+      "n_annotated_coverage_qualified": 11560,
+      "n_primary_all_source_consistent": 11560,
+      "n_excluded_primary_context": 0,
+      "n_scored_only_consistent": 11560,
+      "n_additional_scored_only_vs_primary": 0
+    },
+    {
+      "coverage_threshold": 100,
+      "population_type": "all_lines",
+      "cell_lines": "A549|H9|HEYA8|Hct116|HepG2|K562|MCF7",
+      "n_annotated_coverage_qualified": 5058,
+      "n_primary_all_source_consistent": 5058,
+      "n_excluded_primary_context": 0,
+      "n_scored_only_consistent": 5058,
+      "n_additional_scored_only_vs_primary": 0
+    }
+  ],
+  "n_population_rows_recomputed": 87,
+  "conflict_read_totals": {},
+  "verification_scope": "Independent complete key-table/conflict-table audit plus coverage/annotation/training/alias tables and all87 population rows; allQC output hashes and current small input/model/source/plan pins checked. Prediction/metadata size+hash declarations reconciled to current saved adapter receipts; no28m-row metadata or predictionCSV rescan, no raw signals/model load/inference.",
+  "resources": {
+    "wall_seconds": 22.389951599994674,
+    "process_cpu_seconds": 21.59375,
+    "sampled_peak_process_rss_mib": 764.08984375,
+    "sampling_interval_seconds": 0.2,
+    "scope": "Current audit process after imports/output-directory creation through checks; excludes final report/CSV writes; no child processes"
+  },
+  "auditor_sha256": "63f5d35d4cd7bb495dc986cd587adf3159470aed1ca3a1dabdced28e5d035a85"
+}

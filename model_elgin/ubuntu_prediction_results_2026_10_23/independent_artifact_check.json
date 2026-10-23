@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "run_id": 39885223601,
+  "job_id": 120191729462,
+  "commit": "4510ef463447b81522ab7f17aeac145a169cb5f6",
+  "run_url": "https://github.com/elgintan/LIFO_m6A_project/actions/runs/39885223601",
+  "artifact_id": 12472024107,
+  "artifact_sha256": "587f1dd1e00acf9515a4c48d07b4dd372a8dc17d0ba27525063ca99058eea78f",
+  "artifact_crc_and_all_files_verified": true,
+  "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+  "maximum_absolute_score_difference": 1.4901161193847656e-08,
+  "n_sites": 10,
+  "n_reads": 1887,
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "psutil": "7.2.2",
+    "scikit_learn": "1.9.1",
+    "torch": "2.14.1+cpu"
+  },
+  "python": "3.12.3",
+  "not_aws_host_validation": true,
+  "scope": "Independent downloaded-artifact hash/CRC/file/ten-key/numeric checks; hosted Ubuntu24.04 CPU prediction only, no training or AWS validation",
+  "verification_sha256": "66d5b7373cfff81544d241c50e0310c24e2be08d89a674b75d4b7e8f95909f17"
+}

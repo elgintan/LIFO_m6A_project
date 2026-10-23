@@ -11,8 +11,8 @@ Inputs
                       page labels the scores
   --member4-support   optional: Member 4's replicate_coverage_support.csv, compared with
                       this pipeline's own counts as an independent cross-check
-  --member4-aliases   optional: Member 4's transcript_aliases_checked.csv, compared with
-                      this pipeline's alias table
+  --member4-aliases   explicit per-run alias table; required with final scores
+  --context-qc        completed cross-run audit directory; required with final scores
 
 Outputs
   <out>/overview.json, genes_index.json, tx_index.json, genes_lowcov.json, genes/bNNN.json
@@ -43,7 +43,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import task2lib as lib  # noqa: E402
 
-PIPELINE_VERSION = "0.2.0"
+PIPELINE_VERSION = "0.3.0"
 LADDER_EDGES = [2, 5, 10, 20, 50, 100, 200, 500]          # bins: 1 | 2-4 | 5-9 | ... | 500+
 LADDER_LABELS = ["1", "2–4", "5–9", "10–19", "20–49", "50–99", "100–199", "200–499", "500+"]
 COVER_THRESHOLDS = [1, 5, 10, 20, 50, 100]
@@ -105,7 +105,8 @@ def load_predictions(pred_dir: Path, runs: pd.DataFrame, aliases: dict, tx_cats:
             print(f"  note: no predictions for {r.run_id}; it will show read counts only")
             continue
         path = pred_dir / man.loc[r.run_id, "prediction_file"]
-        pred = pd.read_csv(path, dtype={"transcript_id": "string", "transcript_position": "int64", "score": "float64"})
+        pred = pd.read_csv(path, dtype={"transcript_id": "string", "transcript_position": "int64", "score": "float64"},
+                           float_precision="round_trip")
         if list(pred.columns) != lib.PRED_COLUMNS or not pred.score.between(0, 1).all():
             raise SystemExit(f"{path}: failed basic checks; run validate_task2_inputs.py first")
         amap = aliases.get(r.run_id, {})
@@ -136,9 +137,11 @@ def group_mean(pr: pd.DataFrame, runs: pd.DataFrame, min_reads: int) -> pd.DataF
              .groupby(["site", "gidx"]).score.mean().rename("score").reset_index())
 
 
-def compare_lines(pr: pd.DataFrame, runs: pd.DataFrame, lines: list[str]) -> dict:
+def compare_lines(pr: pd.DataFrame, runs: pd.DataFrame, lines: list[str], site_keep=None) -> dict:
     """Cell-line scores: mean over eligible runs within each replicate group, then equal weight per group."""
     meta = runs.drop_duplicates("gidx").set_index("gidx")
+    if site_keep is not None:
+        pr = pr[np.asarray(site_keep, dtype=bool)[pr.site.to_numpy(np.int64)]]
     out = {}
     for T in COMPARE_THRESHOLDS:
         gm = group_mean(pr, runs, T)
@@ -153,6 +156,10 @@ def compare_lines(pr: pd.DataFrame, runs: pd.DataFrame, lines: list[str]) -> dic
                 hist, _ = np.histogram(v, bins=20, range=(0, 1))
                 per_line[line] = {"hist": [int(x) for x in hist], "n": int(len(v)),
                                   "frac_high": round(float((v >= HIGH_SCORE).mean()), 4) if len(v) else None,
+                                  "fractions_by_cutoff": {str(c): float((v >= c).mean()) if len(v) else None
+                                                          for c in (.5, .7, .9)},
+                                  "frac_high_by_cutoff": {str(c): float((v >= c).mean()) if len(v) else None
+                                                          for c in (.5, .7, .9)},
                                   "median": round(float(np.median(v)), 3) if len(v) else None}
             hi = (pd.Series(sum((common[i].to_numpy() >= HIGH_SCORE).astype(np.int64) << i for i in range(len(lines))),
                             index=common.index) if len(common) else pd.Series(dtype=np.int64))
@@ -160,6 +167,36 @@ def compare_lines(pr: pd.DataFrame, runs: pd.DataFrame, lines: list[str]) -> dic
                                   "high_combos": upset(hi, lines) if len(common) else [],
                                   "high_in_none": int((hi == 0).sum()) if len(common) else 0}
     return out
+
+
+def context_site_flags(qc: pd.DataFrame, tx_cats: pd.Index, key_index: pd.Index,
+                       site_max: np.ndarray) -> pd.DataFrame:
+    """Require the QC table to cover exactly the scoreable public coverage union."""
+    tc = pd.Categorical(qc.transcript_id, categories=tx_cats).codes.astype(np.int64)
+    if (tc < 0).any() or (qc.transcript_position >= 2**POS_BITS).any():
+        raise ValueError("Context QC contains keys outside the public coverage universe")
+    ids = key_index.get_indexer(site_key(tc, qc.transcript_position.to_numpy(np.int64)))
+    if (ids < 0).any() or len(np.unique(ids)) != len(ids):
+        raise ValueError("Context QC contains missing or duplicate canonical site keys")
+    expected = np.flatnonzero(site_max >= 20)
+    if not np.array_equal(np.sort(ids), expected):
+        raise ValueError("Context QC must cover exactly every public site reaching 20 reads in any run")
+    return qc.assign(site=ids).set_index("site")
+
+
+def site_payload(position: int, reads, scores=None, context=None) -> list:
+    """Preserve all displayed observations, with context flags alongside original scores."""
+    row = [int(position), ",".join("" if v == 0 else str(int(v)) for v in reads)]
+    if scores is not None:
+        row.append(",".join("" if np.isnan(v) else format(float(v), ".17g") for v in scores))
+        row.append(None if context is None else {
+            "all_source_consistent": bool(context.all_source_consistent),
+            "scored_consistent": bool(context.scored_consistent),
+            "encoded7mer_all_source": str(context.encoded7mer_all_source),
+            "encoded7mer_scored": str(context.encoded7mer_scored),
+            "weak_positive_support_lt20": bool(context.weak_positive_support_lt20),
+            "training_support_known_for_all_contexts": bool(context.get("training_support_known_for_all_contexts", False))})
+    return row
 
 
 def agreement(pr: pd.DataFrame, runs: pd.DataFrame, lines: list[str], min_reads: int) -> list[dict]:
@@ -249,6 +286,8 @@ def main() -> int:
     ap.add_argument("--score-status", choices=["exploratory", "final"], default=None)
     ap.add_argument("--member4-support", type=Path, default=None)
     ap.add_argument("--member4-aliases", type=Path, default=None)
+    ap.add_argument("--context-qc", type=Path, default=None,
+                    help="Completed context audit; preserves scores, qualifies primary comparisons")
     ap.add_argument("--out", type=Path, default=Path("site/data"))
     ap.add_argument("--reports", type=Path, default=Path("reports"))
     ap.add_argument("--keep-min-reads", type=int, default=20)
@@ -261,6 +300,10 @@ def main() -> int:
         from validate_task2_inputs import main as validate_inputs
         validation_args = ["--inputs", str(args.predictions), "--public", str(args.public),
                            "--report", str(args.reports / "prediction_validation.json")]
+        if args.member4_aliases:
+            validation_args += ["--aliases", str(args.member4_aliases)]
+        if args.context_qc:
+            validation_args += ["--context-qc", str(args.context_qc)]
         if args.score_status == "final":
             validation_args.append("--require-complete")
         status = validate_inputs(validation_args)
@@ -281,7 +324,7 @@ def main() -> int:
         raise SystemExit(f"replicate groups disagree with the sample metadata for {group_conflict}")
 
     print("Loading read counts ...")
-    aliases: dict[str, dict] = {}
+    aliases = lib.load_aliases(args.member4_aliases, runs.run_id)
     rc = lib.load_readcounts(args.public, runs, aliases=aliases)
     tx_cats = rc.transcript_id.cat.categories
     tx_code = rc.transcript_id.cat.codes.to_numpy(np.int64)
@@ -331,6 +374,21 @@ def main() -> int:
             "platform": md.platform, "spike_in": md.spike_in,
         })
     site_max = pd.Series(nreads).groupby(site_codes).max().reindex(range(S)).to_numpy()
+    context_info, context_rows = None, None
+    primary_keep = site_is_annotated.copy()
+    scored_keep = site_is_annotated.copy()
+    if args.context_qc:
+        if not args.predictions or not args.member4_aliases:
+            raise SystemExit("--context-qc requires --predictions and --member4-aliases")
+        context_qc, context_info = lib.load_context_qc(args.context_qc, args.predictions / "manifest.csv",
+                                                     args.member4_aliases, args.predictions)
+        context_rows = context_site_flags(context_qc, tx_cats, key_index, site_max)
+        primary = context_rows.all_source_consistent.reindex(range(S), fill_value=False).to_numpy(bool)
+        scored = context_rows.scored_consistent.reindex(range(S), fill_value=False).to_numpy(bool)
+        primary_keep &= primary
+        scored_keep &= scored
+        context_info.update({"comparison_population": "annotated human; all source contexts consistent; >=2 metadata groups per line",
+                             "diagnostic_scores_retained": True, "metadata_group_independence_verified": False})
     union = {str(t): int((site_max >= t).sum()) for t in COVER_THRESHOLDS}
 
     kinds = []
@@ -376,12 +434,14 @@ def main() -> int:
         mine = alias_df.set_index(["run_id", "raw_transcript_id"])
         theirs = m4.set_index(["run_id", "raw_transcript_id"])
         both = mine.join(theirs, how="inner", rsuffix="_m4")
+        verified = (theirs["primary_annotation_version_verified"] == "True") if "primary_annotation_version_verified" in theirs else pd.Series(False, index=theirs.index)
+        both_verified = verified.reindex(both.index, fill_value=False)
         cross["aliases"] = {
             "pipeline_rows": int(len(mine)), "member4_rows": int(len(theirs)), "rows_in_both": int(len(both)),
             "same_joined_id": int((both.transcript_id == both.transcript_id_m4).sum()),
-            "member4_verified": int((theirs.primary_annotation_version_verified == "True").sum()),
+            "member4_verified": int(verified.sum()),
             "pipeline_version_matches": int(mine.version_matches_ensembl91.sum()),
-            "member4_verified_but_pipeline_not": int(((both.primary_annotation_version_verified == "True")
+            "member4_verified_but_pipeline_not": int((both_verified
                                                       & ~both.version_matches_ensembl91.astype(bool)).sum()),
         }
 
@@ -398,12 +458,12 @@ def main() -> int:
     mode = "coverage_only"
     SCORES = None
     pinfo = {"model_versions": [], "min_reads": [], "n_runs_with_predictions": 0, "model_info": ""}
-    compare, agree = None, None
+    compare, agree, compare_scored, compare_before_context = None, None, None, None
     if args.predictions:
         pr, pinfo = load_predictions(args.predictions, runs, aliases, tx_cats, key_index, site_codes, run_idx, nreads)
         if len(pr):
             mode = "scores"
-            SCORES = np.full((K, R), np.nan, dtype=np.float32)
+            SCORES = np.full((K, R), np.nan, dtype=np.float64)
             pk = kept_pos_of_site[pr.site.to_numpy(np.int64)]
             ok = pk >= 0
             SCORES[pk[ok], pr.run_idx.to_numpy(np.int64)[ok]] = pr.score.to_numpy()[ok]
@@ -412,8 +472,10 @@ def main() -> int:
                 row["n_scored"] = int(per_run[i])
             min_reads = min(pinfo["min_reads"]) if pinfo["min_reads"] else args.keep_min_reads
             print("Cell-line comparison ...")
-            compare = compare_lines(pr, runs, lines)
-            agree = agreement(pr, runs, lines, min_reads)
+            compare = compare_lines(pr, runs, lines, primary_keep)
+            compare_scored = compare_lines(pr, runs, lines, scored_keep)
+            compare_before_context = compare_lines(pr, runs, lines, site_is_annotated)
+            agree = agreement(pr[np.asarray(primary_keep)[pr.site.to_numpy(np.int64)]], runs, lines, min_reads)
 
     print("Grouping sites by gene ...")
     ann_idx = ann.set_index("transcript_id")
@@ -451,9 +513,8 @@ def main() -> int:
         for k in ks:
             reads = READS[k]
             lm |= int(np.bitwise_or.reduce(line_masks_per_run[reads >= args.keep_min_reads]))
-            site = [int(kept_pos[k]), ",".join("" if v == 0 else str(int(v)) for v in reads)]
-            if SCORES is not None:
-                site.append(",".join("" if np.isnan(v) else f"{float(v):.4f}".rstrip("0").rstrip(".") for v in SCORES[k]))
+            qrow = context_rows.loc[kept_ids[k]] if context_rows is not None and kept_ids[k] in context_rows.index else None
+            site = site_payload(kept_pos[k], reads, None if SCORES is None else SCORES[k], qrow)
             sites.append(site)
         g["tx"].append({"id": tid, "ver": tver, "len": tlen, "len_known": known, "n_exons": nex, "sites": sites})
         g["_lines"] = g.get("_lines", 0) | lm
@@ -475,11 +536,11 @@ def main() -> int:
                            b, g["biotype"], n_lines])
         tx_index.extend([t["id"], row] for t in g["tx"])
     for b, content in enumerate(buckets):
-        (out / "genes" / f"b{b:03d}.json").write_text(json.dumps(content, separators=(",", ":"), ensure_ascii=False))
+        (out / "genes" / f"b{b:03d}.json").write_text(json.dumps(content, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
     (out / "genes_index.json").write_text(json.dumps(
         {"fields": ["key", "label", "gene_id", "kind", "n_sites", "bucket", "biotype", "n_lines"], "rows": index_rows},
-        separators=(",", ":"), ensure_ascii=False))
-    (out / "tx_index.json").write_text(json.dumps(tx_index, separators=(",", ":")))
+        separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
+    (out / "tx_index.json").write_text(json.dumps(tx_index, separators=(",", ":")), encoding="utf-8")
 
     # Genes seen in the data but with no site reaching --keep-min-reads, so a search
     # can explain why they have no data on the page instead of reporting them as absent.
@@ -497,7 +558,7 @@ def main() -> int:
     lowcov = [[symbol_of[g] or g, g, int(n_sites_any[i]), int(max_reads[i]), int(n_runs_any[i])]
               for i, g in enumerate(gene_names) if n_sites_any[i] > 0 and g not in indexed]
     (out / "genes_lowcov.json").write_text(json.dumps({"fields": ["label", "gene_id", "n_sites", "max_reads", "n_runs"],
-                                                       "rows": lowcov}, separators=(",", ":")))
+                                                       "rows": lowcov}, separators=(",", ":")), encoding="utf-8")
 
     by_label = {r[1]: r for r in index_rows if r[3] == "annotated"}
     examples = [g for g in EXAMPLE_CANDIDATES if g in by_label and by_label[g][7] == len(lines)][:5]
@@ -506,7 +567,7 @@ def main() -> int:
                        key=lambda r: -r[4])
         examples += [r[1] for r in extra[: 5 - len(examples)]]
 
-    (args.reports / "crosscheck_member4.json").write_text(json.dumps(cross, indent=1, default=str))
+    (args.reports / "crosscheck_member4.json").write_text(json.dumps(cross, indent=1, default=str), encoding="utf-8")
     overview = {
         "build": {"generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
                   "pipeline_version": PIPELINE_VERSION, "mode": mode, "score_status": args.score_status if mode == "scores" else None,
@@ -516,6 +577,8 @@ def main() -> int:
                   "annotation": "Ensembl release 91 transcript table from the SG-NEx bucket",
                   "sample_metadata": "official SG-NEx sample sheet (samples.tsv, via Member 4, received 19 Oct 2026)",
                   "aliases": alias_summary,
+                  "context_qc": context_info,
+                  "score_precision": "float64 round-trip decimal; original prediction CSVs remain authoritative",
                   "crosscheck": {k: {kk: vv for kk, vv in v.items() if kk != "mismatches"} | {"n_mismatches": len(v.get("mismatches", []))}
                                  if k == "replicate_support" else v for k, v in cross.items()}},
         "lines": [{"name": c, "info": lib.CELL_LINE_INFO.get(c, ""), "n_runs": int((runs.cell_line == c).sum()),
@@ -528,10 +591,14 @@ def main() -> int:
         "support": {"thresholds": SUPPORT_THRESHOLDS, "by_key": support},
         "overlap": {"thresholds": OVERLAP_THRESHOLDS, "by_T": overlap},
         "compare": None if compare is None else {"thresholds": COMPARE_THRESHOLDS, "by_key": compare,
+                                                 "default_rule": "ge2", "population": "annotated_human_context_consistent" if context_info else "annotated_human_no_context_qc",
+                                                 "scored_consistency_sensitivity": compare_scored,
+                                                 "before_context_diagnostic": compare_before_context,
+                                                 "score_cutoffs": [.5, .7, .9],
                                                  "agreement": agree, "agree_bins": [b[2] for b in AGREE_BINS]},
         "examples": examples,
     }
-    (out / "overview.json").write_text(json.dumps(overview, separators=(",", ":"), ensure_ascii=False))
+    (out / "overview.json").write_text(json.dumps(overview, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
     sizes = sorted(p.stat().st_size for p in (out / "genes").glob("*.json"))
     total = sum(sizes) + sum(p.stat().st_size for p in out.glob("*.json"))
     print(f"Done in {(dt.datetime.now() - t0).seconds}s ({mode}): {K:,} sites in {len(genes):,} groups; "

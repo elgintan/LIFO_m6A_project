@@ -1,0 +1,61 @@
+cell_line,metadata_field,value,n_runs
+A549,flowcell,FLO-MIN106D,2
+A549,kit,SQK-RNA002,2
+A549,Platform,MinION,1
+A549,Platform,GridION,1
+A549,basecaller_version,albacore-GIS,1
+A549,basecaller_version,guppy-3.2.10-GIS,1
+A549,generation_date,20181213.0,1
+A549,generation_date,20200302.0,1
+A549,spike_in_description,not supplied,2
+H9,flowcell,MIN106D,6
+H9,kit,SQK-RNA002,6
+H9,Platform,GridION,6
+H9,basecaller_version,guppy-3.2.10-GIS,6
+H9,generation_date,20210311.0,3
+H9,generation_date,20210324.0,3
+H9,spike_in_description,1% spike-in of 6ng SIRV-4,6
+HEYA8,flowcell,MIN106D,5
+HEYA8,kit,SQK-RNA002,5
+HEYA8,Platform,GridION,5
+HEYA8,basecaller_version,guppy-3.2.10-GIS,5
+HEYA8,generation_date,20210324.0,3
+HEYA8,generation_date,20210311.0,2
+HEYA8,spike_in_description,"1% spike-in of 6ng RNA sequin Mix A V2, 6ng SIRV-1 E2",5
+Hct116,flowcell,FLO-MIN106D,3
+Hct116,kit,SQK-RNA002,3
+Hct116,Platform,GridION,3
+Hct116,basecaller_version,guppy-3.2.10-GIS,2
+Hct116,basecaller_version,guppy-1.4.3-GIS,1
+Hct116,generation_date,20200302.0,2
+Hct116,generation_date,20190322.0,1
+Hct116,spike_in_description,not supplied,2
+Hct116,spike_in_description,1% RNA sequin Mix A v1.0 @5ng,1
+HepG2,flowcell,FLO-MIN106D,2
+HepG2,kit,SQK-RNA002,2
+HepG2,Platform,MinION,1
+HepG2,Platform,GridION,1
+HepG2,basecaller_version,albacore-GIS,1
+HepG2,basecaller_version,guppy-flipflop-MinIT,1
+HepG2,generation_date,20181121.0,1
+HepG2,generation_date,20181011.0,1
+HepG2,spike_in_description,not supplied,2
+K562,flowcell,FLO-MIN106D,3
+K562,kit,SQK-RNA002,3
+K562,Platform,GridION,3
+K562,basecaller_version,guppy-1.4.3-GIS,2
+K562,basecaller_version,guppy-3.2.10-GIS,1
+K562,generation_date,20190318.0,2
+K562,generation_date,20200302.0,1
+K562,spike_in_description,1% RNA sequin Mix A v1.0 @5ng,2
+K562,spike_in_description,not supplied,1
+MCF7,flowcell,FLO-MIN106D,2
+MCF7,kit,SQK-RNA002,2
+MCF7,Platform,MinION,1
+MCF7,Platform,GridION,1
+MCF7,basecaller_version,guppy-2.1.3-albacore,1
+MCF7,basecaller_version,guppy-1.4.3-GIS,1
+MCF7,generation_date,20190220.0,1
+MCF7,generation_date,20190322.0,1
+MCF7,spike_in_description,not supplied,1
+MCF7,spike_in_description,1% RNA sequin Mix A v1.0 @5ng,1

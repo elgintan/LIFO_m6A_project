@@ -2,6 +2,13 @@
 
 Scope remains the selected 23 processed runs; the broader inventory is not another completion gate.
 
+23 October completion update: all 23 genuine inputs passed strict source and
+eligible-key/count checks and their predictions completed. Cross-run context
+QC has completed: all451,352scoreable keys have consistent saved contexts,
+including low-read observations. No context exclusions are needed. This does
+not establish FASTA identity; see [actual QC evidence](context_qc_results/README.md).
+The earlier first-run evidence below remains valid within its stated scope.
+
 23 October: the first full Hct116rep3run4 input passed strict nine-feature
 parsing and exact inherited >=20 coverage-key/count agreement. It contains
 1,302,514 sites / 15,133,352 reads, with 135,870 at 20 reads, 50,332 at 50
@@ -12,12 +19,12 @@ does not resolve the reference/coordinate uncertainties below. See
 
 | Item | Evidence available | Pending / limits |
 |---|---|---|
-| Runs/signals | Exact public links and saved sizes for 23 runs; original count source hashes | Actual signal content hashes, parsing/count agreement and feature-preprocessing compatibility |
+| Runs/signals | All 23 original signals retained with completed content hashes, strict parsing and coverage/count checks | Exact historical feature-preprocessing compatibility remains qualified |
 | Coverage | Saved original read-count verification; retained matrix independently recounted locally | Not validation of signal-event offsets or alignments |
 | Reference | Upstream-reported GRCh38/Ensembl91; inherited transcript versions/lengths | Exact FASTA/GTF filenames/hashes, complete composition and per-input provenance |
 | MCF7 replicate3 run1 aliases | Explicit 46,297-row map: 13,589 inherited annotated-version matches; 32,708 coverage-only/unverified | Independent FASTA identity; no blanket suffix stripping or application to other runs |
 | Literal position | Original integer key retained | Zero/one-based origin, candidate-A/event meaning and seven-base window offset |
-| Reference utility | Synthetic exact-offset success/wrong-offset refusal | No genuine SG-NEx context check or exon/GTF genomic conversion |
+| Reference utility | Synthetic exact-offset success/wrong-offset refusal; cross-run saved-context agreement now checked at all451,352scoreable keys | No genuine FASTA-offset validation or exon/GTF genomic conversion |
 | Primary annotation | Inherited annotated-human category; other classes separate | Independent reconstruction, CDS/UTR/genomic validation |
 | Replicates | 17 cell-line-plus-replicate-number metadata groups | Independent laboratory preparation provenance |
 | Orthogonal assays | Matched-data flags/citations | Actual compatible labels, sample/coordinate identity, overlap/absence/coverage rules |

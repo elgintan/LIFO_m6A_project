@@ -1,0 +1,24 @@
+run_id,cell_line,biological_replicate,replicate_status,flowcell,kit,Platform,basecaller_version,generation_date,spike_in_description
+SGNex_Hct116_directRNA_replicate3_run1,Hct116,3,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-1.4.3-GIS,20190322.0,1% RNA sequin Mix A v1.0 @5ng
+SGNex_Hct116_directRNA_replicate3_run4,Hct116,3,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20200302.0,
+SGNex_Hct116_directRNA_replicate4_run3,Hct116,4,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20200302.0,
+SGNex_A549_directRNA_replicate5_run1,A549,5,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,MinION,albacore-GIS,20181213.0,
+SGNex_A549_directRNA_replicate6_run1,A549,6,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20200302.0,
+SGNex_H9_directRNA_replicate2_run1,H9,2,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210311.0,1% spike-in of 6ng SIRV-4
+SGNex_H9_directRNA_replicate2_run2,H9,2,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210324.0,1% spike-in of 6ng SIRV-4
+SGNex_H9_directRNA_replicate3_run1,H9,3,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210311.0,1% spike-in of 6ng SIRV-4
+SGNex_H9_directRNA_replicate3_run2,H9,3,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210324.0,1% spike-in of 6ng SIRV-4
+SGNex_H9_directRNA_replicate4_run1,H9,4,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210311.0,1% spike-in of 6ng SIRV-4
+SGNex_H9_directRNA_replicate4_run2,H9,4,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210324.0,1% spike-in of 6ng SIRV-4
+SGNex_HEYA8_directRNA_replicate1_run1,HEYA8,1,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210311.0,"1% spike-in of 6ng RNA sequin Mix A V2, 6ng SIRV-1 E2"
+SGNex_HEYA8_directRNA_replicate1_run2,HEYA8,1,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210324.0,"1% spike-in of 6ng RNA sequin Mix A V2, 6ng SIRV-1 E2"
+SGNex_HEYA8_directRNA_replicate2_run1,HEYA8,2,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210311.0,"1% spike-in of 6ng RNA sequin Mix A V2, 6ng SIRV-1 E2"
+SGNex_HEYA8_directRNA_replicate2_run2,HEYA8,2,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210324.0,"1% spike-in of 6ng RNA sequin Mix A V2, 6ng SIRV-1 E2"
+SGNex_HEYA8_directRNA_replicate3_run1,HEYA8,3,sample-name grouping; independent preparations not independently verified,MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20210324.0,"1% spike-in of 6ng RNA sequin Mix A V2, 6ng SIRV-1 E2"
+SGNex_HepG2_directRNA_replicate5_run2,HepG2,5,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,MinION,albacore-GIS,20181121.0,
+SGNex_HepG2_directRNA_replicate6_run1,HepG2,6,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-flipflop-MinIT,20181011.0,
+SGNex_K562_directRNA_replicate4_run1,K562,4,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-1.4.3-GIS,20190318.0,1% RNA sequin Mix A v1.0 @5ng
+SGNex_K562_directRNA_replicate5_run1,K562,5,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-1.4.3-GIS,20190318.0,1% RNA sequin Mix A v1.0 @5ng
+SGNex_K562_directRNA_replicate6_run1,K562,6,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-3.2.10-GIS,20200302.0,
+SGNex_MCF7_directRNA_replicate3_run1,MCF7,3,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,MinION,guppy-2.1.3-albacore,20190220.0,
+SGNex_MCF7_directRNA_replicate4_run1,MCF7,4,sample-name grouping; independent preparations not independently verified,FLO-MIN106D,SQK-RNA002,GridION,guppy-1.4.3-GIS,20190322.0,1% RNA sequin Mix A v1.0 @5ng

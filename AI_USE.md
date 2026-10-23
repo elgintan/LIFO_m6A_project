@@ -394,3 +394,57 @@ modification prevalence. The explorer remains coverage-only until real-score
 integration, and reference/coordinate and laboratory-independence limits stay
 explicit. These assistant-executed checks are not the user's personal
 individual-assessment reflection.
+
+## 23 October continuation: context QC, real-score integration and Linux evidence
+
+The assistant verified the completed23-run batch and frozen model, then added
+a predeclared context audit, explicit comparison-population gate and explorer
+warnings. It streamed28,670,080saved metadata rows, compared8,780,071observations
+at all451,352scoreable keys and found no context conflicts or exclusions.
+A separately written saved-table audit independently reproduced all key/support
+flags and87population rows. Never-scored keys outside this universe were not
+claimed context-validated. Sparse-positive training support remains a warning,
+not an exclusion. Ten audit fixtures passed; comparator/explorer fixtures
+checked joins, low-read conflicts, missingness, equal group weights and score
+precision. These are software/QC checks, not independent assay validation.
+
+Two concrete issues were detected and corrected. The received explorer generated
+version-stripping aliases and rounded scores; the integrated path now uses only
+the supplied per-run map and preserves float64score precision, with a regression
+around the0.7cutoff. Its validator also rejected any occurrence of 'pending' in
+model notes, including honest status prose. Tests now distinguish real placeholder
+fields from narrative limitations; all28explorer fixtures passed.
+
+The initial3–5minute comparison estimate was too optimistic. An unfinished run
+showed poor scaling from large dictionary replacement and repeated full-table
+pair filters. The attempt, source and partial outputs were preserved. Exact
+dictionary lookups and one-time unit partitions replace those operations without
+changing scores, group means, populations or statistics;7targeted fixtures passed
+before a fresh output-directory retry. Interrupted final CPU/RSS accounting was
+not flushed, so no missing resource figures are invented.
+
+To resolve Linux execution without resetting the laptop, the assistant published
+a bounded Ubuntu24.04 CI check using the existing recipe and real ten-site
+example. The job passed on the frozen artifact/exact pins; downloaded artifact
+hash/CRC, all result hashes, ten keys and numeric parity were independently
+checked. Maximum score difference was1.49e-8within3e-6. This is Linux-container
+software evidence, not AWS-host verification, retraining or model accuracy.
+The earlier Docker-startup failure and all model/negative-experiment evidence
+remain preserved. The five-page report and genuine human reflections remain
+separate from these assistant-executed analyses.
+
+The completed comparison retry took549.325s; the completed full explorer build
+took240.225s. Two reporter versions took63.758/64.767s; the second only repaired
+overlapping labels and made zero context exclusions visible. Exact ten-CSV
+equality and publication hashes were checked. Independent scientific review
+highlighted the Hct116 training-domain confound and overlapping within/cross-line
+rank-agreement ranges; the narrative keeps these limits explicit.
+
+The actual explorer passed190input checks and189exact cutoff-fraction checks.
+DesktopChrome checked actual-score views, typed gene search, table/chart and
+depth/context controls. One WindowsCP1252 JSON label-encoding issue was repaired
+by literal-preservingUTF8transcoding;132JSONobjects were checked unchanged,
+original bytes archived, and builderUTF8regression added to28passing tests.
+MeanPearson/disjoint-band explorer agreement is labelled separately from report
+Spearman/cumulative-depth analysis. These software checks do not validate m6A
+chemistry or complete public deployment or the five-page report.

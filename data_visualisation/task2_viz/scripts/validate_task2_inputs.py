@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -38,6 +39,18 @@ class Report:
 
     def counts(self) -> dict:
         return {lvl: sum(i["level"] == lvl for i in self.items) for lvl in ("PASS", "WARN", "FAIL")}
+
+
+def model_info_placeholders(text: str) -> list[str]:
+    """Find unfinished model markers, while allowing honest pending-status prose."""
+    patterns = [
+        r"\bPENDING_[A-Z0-9_]+\b",
+        r"(?:\*\*|__|`|\[|<)\s*(?:PENDING|TBD|TODO)\s*(?:\*\*|__|`|\]|>)",
+        r"(?im)^\s*(?:[-*]\s*)?(?:model(?:\s+(?:id|identifier|version|checkpoint|sha256))?|"
+        r"identifier|artifact|sha256|selected\s+model[^:\n]{0,60})\s*[:=]\s*[`*_\s]*(?:PENDING|TBD|TODO)\b",
+    ]
+    return sorted({match.group(0).strip() for pattern in patterns
+                   for match in re.finditer(pattern, text, re.IGNORECASE)})
 
 
 def check_file(row: pd.Series, inputs: Path, public: Path, rep: Report, require_complete: bool = False) -> dict | None:
@@ -127,6 +140,10 @@ def main(argv=None) -> int:
     ap.add_argument("--report", type=Path, default=Path("reports/input_validation.json"))
     ap.add_argument("--require-complete", action="store_true",
                     help="Final hand-off: missing runs/sites/readcounts or incomplete provenance are FAIL")
+    ap.add_argument("--aliases", type=Path,
+                    help="Authoritative explicit per-run aliases; identifiers are never inferred")
+    ap.add_argument("--context-qc", type=Path,
+                    help="Completed cross-run audit directory; required for final comparisons")
     args = ap.parse_args(argv)
     rep = Report()
     incomplete = "FAIL" if args.require_complete else "WARN"
@@ -177,8 +194,11 @@ def main(argv=None) -> int:
     info = args.inputs / "MODEL_INFO.md"
     if not info.exists():
         rep.add(incomplete, "manifest", "MODEL_INFO.md present", "missing: the site cannot describe the model")
-    elif "PENDING" in info.read_text().upper():
-        rep.add(incomplete, "manifest", "MODEL_INFO.md complete", "still lists PENDING fields")
+    else:
+        placeholders = model_info_placeholders(info.read_text())
+        if placeholders:
+            rep.add(incomplete, "manifest", "MODEL_INFO.md complete",
+                    "unfinished model placeholders: " + " | ".join(placeholders))
 
     public_runs = set(pd.read_csv(args.public / "runs_discovered.csv").run_id)
     if args.require_complete:
@@ -201,6 +221,36 @@ def main(argv=None) -> int:
             if s:
                 summaries.append(s)
 
+    context_info = None
+    if args.require_complete and (args.aliases is None or args.context_qc is None):
+        rep.add("FAIL", "context", "final delivery includes explicit aliases and completed context QC",
+                "Supply --aliases and --context-qc; raw prediction completeness remains a separate requirement")
+    if args.aliases is not None or args.context_qc is not None:
+        try:
+            aliases = lib.load_aliases(args.aliases, man.run_id)
+            rep.add("PASS", "context", "aliases are explicit per-run mappings",
+                    f"{sum(len(a) for a in aliases.values()):,} documented mappings; unlisted IDs stay literal")
+            if args.context_qc is not None:
+                if args.aliases is None:
+                    raise ValueError("Context QC requires its explicit alias table")
+                qc, context_info = lib.load_context_qc(args.context_qc, man_path, args.aliases, args.inputs)
+                expected_keys = set()
+                for row in man.itertuples():
+                    pred = lib.read_predictions(lib.prediction_path(args.inputs, row.prediction_file))
+                    positions = pd.to_numeric(pred.transcript_position, errors="raise").astype("int64")
+                    amap = aliases.get(row.run_id, {})
+                    tx = pred.transcript_id.map(lambda value: amap.get(value, value))
+                    expected_keys.update(zip(tx.astype(str), positions))
+                actual_keys = set(zip(qc.transcript_id.astype(str), qc.transcript_position))
+                if expected_keys != actual_keys:
+                    raise ValueError(f"Context QC key set differs from complete predictions: "
+                                     f"{len(expected_keys-actual_keys)} missing, {len(actual_keys-expected_keys)} extra")
+                rep.add("PASS", "context", "completed context QC covers every scored canonical key",
+                        f"{len(qc):,} keys; {int(qc.all_source_consistent.sum()):,} primary context eligible; "
+                        "conflicting scores remain in their original files")
+        except (OSError, KeyError, ValueError, TypeError) as exc:
+            rep.add("FAIL", "context", "completed context QC and current predictions agree", str(exc))
+
     counts = rep.counts()
     width = max(len(i["scope"]) for i in rep.items)
     for i in rep.items:
@@ -211,6 +261,7 @@ def main(argv=None) -> int:
     args.report.parent.mkdir(parents=True, exist_ok=True)
     args.report.write_text(json.dumps({"inputs": str(args.inputs), "require_complete": args.require_complete,
                                        "counts": counts, "model_versions": versions,
+                                       "context_qc": context_info,
                                        "runs": summaries, "items": rep.items}, indent=1))
     print(f"Report: {args.report}")
     return 1 if counts["FAIL"] else 0

@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "counts": {
+    "coverage_union_keys": 451352,
+    "primary_all_source_consistent_keys": 451352,
+    "scored_only_consistent_keys": 451352,
+    "multi_run_source_keys": 451352,
+    "multi_run_scored_keys": 358890,
+    "encoded_conflict_all_source_keys": 0,
+    "encoded_conflict_scored_keys": 0,
+    "literal_difference_only_keys": 0,
+    "ambiguous_all_source_keys": 0,
+    "noncentral_a_all_source_keys": 0,
+    "primary_zero_positive_support_keys": 55253,
+    "primary_lt20_positive_support_keys": 294896,
+    "primary_unseen_training_context_keys": 0
+  },
+  "source_totals": {
+    "source_ambiguous_contexts": 0,
+    "source_reads": 331864925,
+    "source_noncentral_a": 0,
+    "scored_reads": 232253678,
+    "outside_coverage_union_reads": 55344543,
+    "scored_sites": 2983948,
+    "union_source_observations": 8780071,
+    "union_source_reads": 276520382,
+    "outside_coverage_union_sites": 19890009,
+    "explicit_alias_observations_in_union": 374079,
+    "source_sites": 28670080
+  },
+  "policy": {
+    "primary": "all_source_consistent",
+    "sensitivity": "scored_consistent",
+    "scope": "Every coverage-union key; all source observations at those keys, including below20 reads",
+    "outside_union": "All metadata rows counted; cross-run contexts outside the scoreable coverage union are not compared",
+    "encoding": "ASCII uppercase; U becomes T; recognised ambiguous IUPAC letters map to N (model unknown code4)",
+    "primary_rule": "One identical unambiguous central-A model-encoded7mer among all source observations at the key",
+    "scored_rule": "Same rule restricted to observations with source reads>=20",
+    "no_score_based_selection": true,
+    "training_support": "Descriptive only; weak=True if ANY observed known context has<20 data0 positives. False is not assurance for unknown/ambiguous contexts; see training_support_known_for_all_contexts. No support filter",
+    "identifiers": "Literal positions; only exact per-run aliases from the supplied table; no generic stripping or offset"
+  },
+  "interpretation": "Context compatibility is not exact FASTA/offset identity, assay validation, independent lab replication or a causal biological effect",
+  "resources": {
+    "wall_seconds": 578.0988863999955,
+    "process_cpu_seconds": 564.875
+  },
+  "resource_scope": "Current process from after new output directory creation to summary construction; excludes later input rehashes and final receipt/status writes. No child process or peak-memory claim",
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  }
+}

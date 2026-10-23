@@ -1,9 +1,22 @@
 # SG-NEx m6A Explorer (Task 2 visualisation)
 
+**23 October continuation:** all23 selected-model score files now exist, cross-run
+context QC found no conflicts across451,352scoreable keys, and strict validation
+against freshly fetched public counts passed190checks with0warnings/0failures.
+The actual-score rebuild completed:451,352sites/23runs,132JSONfiles,197MB;
+Member4's144coverage-support counts match. All189cutofffractions match the
+scientific tables exactly. DesktopChrome checked gene changes, context/support
+warnings, missingness, chart/table toggle and comparison depth/context controls.
+Full local site: `../outputs/real_scores_v1/site/`; public hosting is pending.
+Read [current context integration and commands](CONTEXT_QC_INTEGRATION.md).
+The19October coverage-only data and received pending-model manifest below are
+historical evidence; use the canonical `../../sgnex_analysis` handoff for new builds.
+
 Integrated into LIFO on 20 October 2026. The received source package and its
 historical evidence are preserved. See [integration notes](INTEGRATION_NOTES.md)
 for narrow validation/packaging fixes and the tests actually run locally.
-Full rebuild and Ubuntu/browser checks have not been run during this integration.
+That20October statement is historical; the23October actual-score rebuild/browser
+checks above supersede it. Separate model prediction passed hosted Ubuntu.
 
 **Working scope: the 23 published m6Anet-processed direct-RNA runs.**
 This imports a coverage-only explorer, not new model predictions. The original
@@ -117,7 +130,9 @@ Check Member 4's manifest with the validator:
 python scripts/validate_task2_inputs.py --inputs team_inputs/member4_2026-10-19 --public public_data --report reports/validation_member4_2026-10-19.json
 ```
 
-It currently ends with `3 PASS, 1 WARN, 24 FAIL`. That is the correct outcome: the model is still pending and the 23 prediction files don't exist yet.
+The received19October check ended with `3 PASS, 1 WARN, 24 FAIL`: its model was
+pending and scores had not yet been supplied. That historical result does not
+describe the completed23October exports or current strict-validation result.
 
 ## Adding the team's predictions
 

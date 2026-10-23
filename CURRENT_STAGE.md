@@ -1,7 +1,10 @@
 # Current project stage — 23 October 2026
 
-**Current stage: Task 2 SG-NEx predictions.** The first run is complete and
-independently verified; the sequential 23-run workflow is running. Task 1 final
+**Current stage: Task 2 analysis and full local actual-score explorer complete; report assembly and hosting next.**
+All 23 runs completed at 05:46:47 Singapore time on 23 October, exit0; the
+checkpoint is complete and no run lock remains. The verified exports contain
+2,983,948 scored run-site observations / 232,253,678 reads. These are repeated
+observations, not unique sites or confirmed modifications. Task 1 final
 training, supplied-data predictions and data1 scoring are complete.
 The original-feature cap128 neural configuration with positive loss weight 3
 completed its fresh **18-epoch all-data0 fit in 679.823 seconds (11.33 minutes)**.
@@ -30,10 +33,10 @@ benchmarks have completed.
 | Task 1: frozen data1 diagnostic | **Complete**: S0.604865501 | Retain already-exposed transfer evidence and all metric tradeoffs; no winner selection |
 | Task 1: predictions on supplied data0/data1/data2 | **Complete**: 121,838 / 90,810 / 1,323 sites | Preserve CSVs and manifests; fitted-data0 scores are separate from OOF validation |
 | Task 1: new unlabelled test submission | Pending actual release/input/instructions | Same frozen artifact, exact coverage/format checks and required submission files; no unavailable label metrics |
-| Code reproducibility | Ubuntu attempt stopped before execution: local Docker backend startup failed | Prepared isolated CPU recipe; still needs a working Ubuntu environment and separate AWS verification |
-| Task 2: real SG-NEx predictions | **First run verified; full 23-run workflow running** | Same-model eligible scores, full source QC and exact Member 4 coverage checks for each run |
-| Task 2: biological/data analysis | Foundations integrated; prediction-based conclusions pending | Replicate-aware common-site comparisons, coverage sensitivity, uncertainty and supported scientific figures |
-| Interactive visualisation | Integrated foundation; currently **coverage-only** | Genuine-score explorer, with any hosted subset explicitly identified |
+| Code reproducibility | **Hosted Ubuntu 24.04 prediction passed**, exact pins and ten-site parity verified; laptop Docker failure preserved | Separate fresh AWS-host verification remains pending; see [actual Linux evidence](model_elgin/ubuntu_prediction_results_2026_10_23/README.md) |
+| Task 2: real SG-NEx predictions | **Complete: 23/23 verified** | Preserve same-model exports, full source QC, coverage checks and completion receipts; do not rerun |
+| Task 2: biological/data analysis | **Complete descriptive comparison**: no context exclusions; all 21 pairs at 20/50/100 reads, separate all-line panels and 0.5/0.7/0.9 summaries | Team review and concise report narrative; retain all outcomes and limitations |
+| Interactive visualisation | **Full local actual-score build complete**, all 23 runs/451,352 sites; 190 validation checks and 189 exact fraction checks passed; desktop Chrome interactions checked | Public hosting/final deployment checks; any hosted subset must be explicitly identified |
 | Final scientific report | Evidence available; final five-page report unfinished | Main-body methods, findings, limitations and scientific figures; appendix is unlimited but ungraded |
 
 **Deadlines:** repositories and new unlabelled-test predictions remain due
@@ -45,15 +48,21 @@ The model is available under `model_elgin/artifacts/cap128_weight3_v1/` with
 SHA256 `b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668`.
 Follow [the runnable model guide](model_elgin/FINAL_MODEL_USAGE.md). The public
 training interface passed an actual full-input/cache/configuration check
-without fitting a second model. A clean Ubuntu execution remains unverified.
+without fitting a second model. The hosted Ubuntu container prediction check
+has now passed; this does not establish a separate fresh AWS-host check.
 Local predictions and their manifests are retained under
 `model_elgin/outputs/final_cap128_v1/`. Independent checks matched every CSV
 key to its supplied label file and verified model/input/output/source hashes;
 the original CV files remain unchanged. Completion receipts, rather than this
 stage tracker alone, establish which commands actually finished.
 
-The first real run scored 135,870 eligible sites using 10,572,838 reads.
-Its 1,166,644 source sites below 20 reads remain explicitly unscored in QC.
+All 23 runs passed the frozen pipeline's source and export checks. Original
+batch completion is recorded in `sgnex_analysis/outputs/elgin_task2_pipeline_v1/`.
+Below-20-read source sites remain explicitly unscored in QC.
 See [actual first-run evidence](sgnex_analysis/first_prediction_qc/README.md)
 and [the sequential-run guide](sgnex_analysis/ELGIN_TASK2_RUNNER.md).
-This is not a completed 23-run comparison, dashboard or biological conclusion.
+The 23-run predictions and [context audit](sgnex_analysis/context_qc_results/README.md)
+are complete. [Actual scientific findings and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md)
+and the full local actual-score explorer are available. Both context policies
+retain the same population, with no exclusions. Final report and public hosting
+remain pending. No project computation is intentionally running at handover.

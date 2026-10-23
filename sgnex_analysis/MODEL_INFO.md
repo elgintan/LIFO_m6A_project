@@ -1,6 +1,6 @@
 # Task 2 selected model and interpretation limits
 
-**23 October 2026: model selected; full 23-run predictions and biological comparisons are not complete.** Samuel's received LightGBM remains comparison evidence; it is not the selected Task 2 application model.
+**23 October 2026: model selected; all 23 prediction runs completed and verified at 05:46:47 SGT. Cross-run context QC passed with no conflicts across all 451,352 scoreable keys; biological comparisons are in progress.** Samuel's received LightGBM remains comparison evidence; it is not the selected Task 2 application model.
 
 ## Frozen model
 
@@ -42,6 +42,12 @@ AAACC,TAACA andTAACC have fewer than20positive training labels each. They accoun
 
 ## Claims supported and not yet supported
 
-Native Windows Task1 prediction is verified. Clean Ubuntu/AWS execution is still unverified; Docker failed before Linux execution. Metadata replicate labels do not independently establish separate laboratory preparations. No compatible independent Task2 assay validation was supplied.
+Native Windows Task1 prediction and a separate hosted Ubuntu 24.04 container check
+are verified on the real ten-site example, using exact pins and the frozen model.
+The prior laptop Docker-startup failure is preserved. Fresh AWS-host execution
+is still unverified. Metadata replicate labels do not independently establish
+separate laboratory preparations. No compatible independent Task2 assay
+validation was supplied. See [Linux evidence](../model_elgin/ubuntu_prediction_results_2026_10_23/README.md)
+and [context QC](context_qc_results/README.md).
 
 Results may describe replicated **predicted m6A patterns** on the documented population. They do not establish modified-molecule fractions, other RNA marks, chemical nucleotide/genomic coordinates, causal lineage effects or formal differential-modification significance. Coverage/common-site/context selection and possible training-cell-line overlap remain explicit limitations.

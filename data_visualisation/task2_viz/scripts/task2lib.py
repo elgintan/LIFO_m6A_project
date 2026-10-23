@@ -6,6 +6,8 @@ counts, annotation, sample metadata and prediction manifests the same way.
 from __future__ import annotations
 
 import csv
+import hashlib
+import json
 import re
 from pathlib import Path
 
@@ -29,7 +31,6 @@ CELL_LINE_INFO = {
     "K562": "leukaemia",
     "MCF7": "breast cancer",
 }
-VERSIONED_ID = re.compile(r"^(ENST\d+)\.\d+$")
 
 
 def parse_run_id(run_id: str) -> dict:
@@ -43,8 +44,9 @@ def parse_run_id(run_id: str) -> dict:
 def load_runs(public_dir: Path) -> pd.DataFrame:
     """Runs found on S3, in display order, with integer `idx` and replicate group `group`/`gidx`.
 
-    A replicate group is one biological replicate of one cell line. Runs within a
-    group are repeat sequencing of the same sample and are not independent repeats.
+    A metadata replicate-number group belongs to one cell line. Runs within a
+    group are not counted as independent replicates. Laboratory independence of
+    different groups is not established by these labels alone.
     """
     runs = pd.read_csv(public_dir / "runs_discovered.csv")
     parsed = pd.DataFrame([parse_run_id(r) for r in runs.run_id])
@@ -58,21 +60,98 @@ def load_runs(public_dir: Path) -> pd.DataFrame:
     return parsed.drop(columns="line_order")
 
 
-def versioned_aliases(ids: pd.Series) -> dict[str, str]:
-    """Explicit alias map for Ensembl IDs written with a version (ENST..9 -> ENST..)."""
-    uniq = pd.Series(ids.unique()).astype(str)
-    m = uniq.str.extract(VERSIONED_ID)[0]
-    return {raw: base for raw, base in zip(uniq[m.notna()], m[m.notna()])}
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as fh:
+        for block in iter(lambda: fh.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def load_aliases(path: Path | None, run_ids=None) -> dict[str, dict[str, str]]:
+    """Only supplied per-run mappings may change an identifier; never infer aliases."""
+    if path is None:
+        return {}
+    table = pd.read_csv(path, dtype=str, keep_default_na=False)
+    cols = ["run_id", "raw_transcript_id", "transcript_id"]
+    if not set(cols).issubset(table.columns) or table[cols].eq("").any().any():
+        raise ValueError("Alias table needs nonempty run_id,raw_transcript_id,transcript_id")
+    if table.duplicated(["run_id", "raw_transcript_id"]).any():
+        raise ValueError("Alias table repeats a run/raw identifier")
+    if run_ids is not None and not set(table.run_id).issubset(set(run_ids)):
+        raise ValueError("Alias table names runs outside the selected scope")
+    return {str(run): dict(zip(frame.raw_transcript_id, frame.transcript_id))
+            for run, frame in table.groupby("run_id", sort=False)}
+
+
+def strict_bool(values: pd.Series, name: str) -> pd.Series:
+    mapped = values.astype(str).str.lower().map({"true": True, "false": False})
+    if mapped.isna().any():
+        raise ValueError(f"Context QC {name} must contain only True/False")
+    return mapped.astype(bool)
+
+
+def load_context_qc(directory: Path, manifest: Path, alias_path: Path,
+                    prediction_root: Path) -> tuple[pd.DataFrame, dict]:
+    """Load a completed context audit bound to the current unmodified prediction files."""
+    complete = directory / "complete.json"
+    receipt = json.loads(complete.read_text())
+    if receipt.get("status") != "complete":
+        raise ValueError("Context QC receipt is not complete")
+    key_file = directory / "key_context_qc.csv.gz"
+    expected = receipt["outputs"][key_file.name]
+    if sha256(key_file) != expected["sha256"] or key_file.stat().st_size != expected["size_bytes"]:
+        raise ValueError("Context QC table differs from its completed receipt")
+    for role, path in (("manifest", manifest), ("aliases", alias_path)):
+        if sha256(path) != receipt["inputs"][role]["sha256"]:
+            raise ValueError(f"Context QC {role} differs from the current build input")
+    current = read_manifest(manifest)
+    source = receipt["inputs"]["predictions"]
+    by_run = {row["run_id"]: row for row in source}
+    if len(by_run) != len(source) or set(by_run) != set(current.run_id):
+        raise ValueError("Context QC prediction run scope differs from the current manifest")
+    for row in current.itertuples():
+        if sha256(prediction_path(prediction_root, row.prediction_file)) != by_run[row.run_id]["sha256"]:
+            raise ValueError(f"Context QC predictions changed for {row.run_id}")
+    if receipt.get("policy", {}).get("primary") != "all_source_consistent" or \
+            receipt.get("policy", {}).get("sensitivity") != "scored_consistent":
+        raise ValueError("Context QC policy is not the declared all-source/scored sensitivity")
+    qc = pd.read_csv(key_file, dtype=str, keep_default_na=False)
+    required = {"transcript_id", "transcript_position", "all_source_consistent", "scored_consistent",
+                "encoded7mer_all_source", "encoded7mer_scored", "weak_positive_support_lt20"}
+    if not required.issubset(qc.columns) or qc.transcript_id.eq("").any():
+        raise ValueError("Context QC table is missing required key/flag/context columns")
+    pos = pd.to_numeric(qc.transcript_position, errors="coerce")
+    if (pos.isna() | ~np.isfinite(pos) | (pos < 0) | (pos >= 2**63) | (pos != np.floor(pos))).any():
+        raise ValueError("Context QC positions must be nonnegative integers")
+    qc["transcript_position"] = pos.astype("int64")
+    if qc.duplicated(["transcript_id", "transcript_position"]).any():
+        raise ValueError("Context QC has duplicate canonical keys")
+    for flag in ("all_source_consistent", "scored_consistent", "weak_positive_support_lt20"):
+        qc[flag] = strict_bool(qc[flag], flag)
+    if "training_support_known_for_all_contexts" in qc:
+        qc["training_support_known_for_all_contexts"] = strict_bool(qc.training_support_known_for_all_contexts,
+                                                                   "training_support_known_for_all_contexts")
+    if (qc.all_source_consistent & ~qc.scored_consistent).any():
+        raise ValueError("Context QC primary flag cannot pass when scored consistency fails")
+    for flag, context in (("all_source_consistent", "encoded7mer_all_source"),
+                          ("scored_consistent", "encoded7mer_scored")):
+        valid = qc[context].str.fullmatch(r"[ACGT]{3}A[ACGT]{3}")
+        if (qc[flag] & ~valid).any():
+            raise ValueError(f"Context QC {flag} requires one encoded central-A seven-base context")
+    info = {"receipt_sha256": sha256(complete), "table_sha256": expected["sha256"],
+            "policy": receipt["policy"], "n_keys": len(qc),
+            "n_primary_eligible": int(qc.all_source_consistent.sum()),
+            "n_scored_consistent": int(qc.scored_consistent.sum()),
+            "n_weak_positive_support": int(qc.weak_positive_support_lt20.sum())}
+    return qc, info
 
 
 def load_readcounts(public_dir: Path, runs: pd.DataFrame, aliases: dict | None = None) -> pd.DataFrame:
     """Long table: run_idx, transcript_id, transcript_position, n_reads (every site with >= 1 read).
 
-    One SG-NEx run (MCF7 replicate 3 run 1) labels transcripts with Ensembl
-    versions while the other runs do not. For such runs an explicit alias map
-    (raw ID -> unversioned ID) is built and applied, and returned through
-    `aliases[run_id]` so it can be checked and published. IDs that are not
-    versioned are never changed.
+    Only mappings supplied in aliases[run_id] are applied. Unlisted identifiers,
+    including versioned IDs, remain literal. Original files are never rewritten.
     """
     frames = []
     for r in runs.itertuples():
@@ -80,13 +159,13 @@ def load_readcounts(public_dir: Path, runs: pd.DataFrame, aliases: dict | None =
                          dtype={"transcript_id": "string", "transcript_position": "int32", "n_reads": "int32"})
         if list(df.columns) != ["transcript_id", "transcript_position", "n_reads"]:
             raise ValueError(f"{r.run_id}: unexpected readcount columns {list(df.columns)}")
-        amap = versioned_aliases(df.transcript_id)
+        amap = (aliases or {}).get(r.run_id, {})
         if amap:
             df["transcript_id"] = df.transcript_id.map(lambda t: amap.get(t, t)).astype("string")
             if df.duplicated(["transcript_id", "transcript_position"]).any():
                 raise ValueError(f"{r.run_id}: applying the alias map created duplicate sites")
-            if aliases is not None:
-                aliases[r.run_id] = amap
+        if df.duplicated(["transcript_id", "transcript_position"]).any():
+            raise ValueError(f"{r.run_id}: duplicate readcount sites")
         df["run_idx"] = np.int16(r.idx)
         frames.append(df)
     rc = pd.concat(frames, ignore_index=True)

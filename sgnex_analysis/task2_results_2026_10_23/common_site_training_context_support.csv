@@ -1,0 +1,13 @@
+coverage_threshold,training_context_support,n_common_sites,n_sites,fraction
+20,zero positive labels,33452,4290,0.12824345330622983
+20,1-19 positive labels,33452,17929,0.535961975367691
+20,>=20 positive labels,33452,11233,0.33579457132607915
+20,unknown support,33452,0,0.0
+50,zero positive labels,11560,1476,0.127681660899654
+50,1-19 positive labels,11560,6217,0.53780276816609
+50,>=20 positive labels,11560,3867,0.33451557093425605
+50,unknown support,11560,0,0.0
+100,zero positive labels,5058,622,0.12297350731514432
+100,1-19 positive labels,5058,2805,0.5545670225385528
+100,>=20 positive labels,5058,1631,0.3224594701463029
+100,unknown support,5058,0,0.0

@@ -1,0 +1,45 @@
+{
+  "validation": {
+    "pass": 190,
+    "warn": 0,
+    "fail": 0
+  },
+  "aggregate_audit": {
+    "numerical_status": "PASS",
+    "n_exact_fraction_checks": 189,
+    "n_fraction_mismatches": 0,
+    "mismatches": [],
+    "observed_overview_encoding": "utf-8",
+    "strict_utf8_error": null,
+    "inputs": {
+      "data_visualisation\\outputs\\real_scores_v1\\site\\data\\overview.json": "320b4cb754a05bf71d3cc9fff86bdb40ea640ff478c404609e43604ed9c3bc7d",
+      "sgnex_analysis\\outputs\\task2_report_v1\\all_line_score_summary.csv": "b1a8cc2c4f9e918a9c15d437c9e2b52cdf1f72fc17dc7884e126e70632269237",
+      "sgnex_analysis\\outputs\\context_qc_v1\\population_effects.csv": "51326604bccf29bf71c348db2791e85b2fade3ef2ebaa6d775a557798d5d47ad",
+      "sgnex_analysis\\outputs\\context_qc_v1\\complete.json": "aaa5190d61f800de3071a57dc4c6247609210d079af8c3872785862353b7a713"
+    },
+    "scope": "Aggregate depth/group/line keys, counts, histogram totals, all63roundedmedians,189cutofffractions and contextreceipt links; no original prediction or source-metadata rescan. Overview has no explicit site IDs, so this audit cannot independently compare site-key membership",
+    "rounding": "Explorer medians3dp and legacyfrac_high4dp checked against report; fractions_by_cutoff checked exactly against integer n_high/n_common_sites",
+    "agreement_definition": {
+      "estimator": "numpy.corrcoef: Pearson correlation; arithmetic mean over valid pairs, rounded3dp",
+      "population": "Primary context-qualified annotated sites; within-cell-line only; each pair has its own shared sites",
+      "bands": "Disjoint20-49/50-99/100+ based on minimum reads across the two compared units",
+      "group_reads": "Sum eligible run read counts within each group; group score is unweighted mean of eligible run scores",
+      "n_sites": "Sum of matched-site observations across pairs; can repeat a site across multiple pairs",
+      "contrast_to_report": "Report uses Spearman per pair on cumulative>=20/50/100 populations; summary median across pairs. Values are not expected to match",
+      "label_issue": "App says generic Correlation/r; should explicitly name mean Pearson r, disjoint read bands, summed group reads, and paired-site observations in tooltip; must not imply Spearman or unique sites"
+    },
+    "no_training_or_inference": true
+  },
+  "agreement_label_resolution": "After the numerical audit, app labels were clarified to mean Pearson r, disjoint bands, summed eligible-run group depth and paired-site observations; separately identifies report Spearman. No statistics changed.",
+  "local_full_site": {
+    "runs": 23,
+    "scoreable_keys": 451352,
+    "json_files": 132
+  },
+  "encoding": {
+    "all_json_strict_utf8": true,
+    "files_transcoded": 1,
+    "unchanged_json_values_and_numeric_literals": true
+  },
+  "limitations": "Aggregate equality does not independently establish per-site key membership; original exports and full validation remain authoritative"
+}

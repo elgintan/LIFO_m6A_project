@@ -1,0 +1,130 @@
+{
+  "status": "complete",
+  "files": [
+    {
+      "file": "agreement_by_metadata_relationship.csv",
+      "size_bytes": 163045,
+      "sha256": "a3fb890d92519e9a0ba48b94c5c3074b8eaa189623018f153ff4653b8ace4501"
+    },
+    {
+      "file": "agreement_summary.csv",
+      "size_bytes": 2040,
+      "sha256": "145c321181e5a4d7f8224e1a2319508dc69ddfb9e21f5dfe456807e93d593aa0"
+    },
+    {
+      "file": "all_line_score_cdf_grid.csv",
+      "size_bytes": 492154,
+      "sha256": "d2043c7c79023a2d68e2cd6eeaa31b59cf007a946536c41b49c97e7850c91509"
+    },
+    {
+      "file": "all_line_score_summary.csv",
+      "size_bytes": 5414,
+      "sha256": "b1a8cc2c4f9e918a9c15d437c9e2b52cdf1f72fc17dc7884e126e70632269237"
+    },
+    {
+      "file": "all_pair_summary.csv",
+      "size_bytes": 11808,
+      "sha256": "2ee3b97b3551c42d40db83291dda7a163cbd8bb00ecb20fe17067b8e608478f8"
+    },
+    {
+      "file": "all_pairwise_effects.png",
+      "size_bytes": 274462,
+      "sha256": "a7f7db8f00909e57bf109e03b794a078dc985ecf63d111f85672abf4788266a9"
+    },
+    {
+      "file": "all_pairwise_effects.svg",
+      "size_bytes": 41131,
+      "sha256": "b287b99baf008a71651ff30e2e11ef08a600108bd8fbd169406a3e029ae2c3b1"
+    },
+    {
+      "file": "analysis_receipt.json",
+      "size_bytes": 8511,
+      "sha256": "5a7c2bfdd32e501da839add815c05fe3dd0fc4f55efdba2a28f0b8163d3b094d"
+    },
+    {
+      "file": "common_site_training_context_support.csv",
+      "size_bytes": 669,
+      "sha256": "3ab81d40212402b50884b32af50deade38e272215b82244c47113a4012c44383"
+    },
+    {
+      "file": "complete.json",
+      "size_bytes": 33663,
+      "sha256": "b7446ca961e7626bd56f9ac5f73448eca88c9162e05218b2d035d720b417d7ee"
+    },
+    {
+      "file": "context_population_consequences.png",
+      "size_bytes": 212598,
+      "sha256": "a95494e2be0be48b4197ac4aa04ce39c368073aaf25dc76f531f308747bae57d"
+    },
+    {
+      "file": "context_population_consequences.svg",
+      "size_bytes": 31837,
+      "sha256": "85dd9b9456402290a4b64cf07a6de820cce48f506f196eaadf74056b94cd1fdd"
+    },
+    {
+      "file": "context_population_effects.csv",
+      "size_bytes": 4418,
+      "sha256": "51326604bccf29bf71c348db2791e85b2fade3ef2ebaa6d775a557798d5d47ad"
+    },
+    {
+      "file": "explorer_checks.json",
+      "size_bytes": 2974,
+      "sha256": "9abb0cd885eae9d7f54cc3345a2bf151aa0c0af68e7358b3ac598f8e29206117"
+    },
+    {
+      "file": "findings.md",
+      "size_bytes": 4919,
+      "sha256": "99845286c2b65808e01986d79a3a64abffdf07cb4288405b3e97fcd4000f02d7"
+    },
+    {
+      "file": "INTERPRETATION.md",
+      "size_bytes": 3322,
+      "sha256": "dc1a4512cb5b07802bdf0f8feb7e4d60d487ddb8d346d6816ca810eb42a1dde9"
+    },
+    {
+      "file": "matched_site_score_patterns.png",
+      "size_bytes": 183611,
+      "sha256": "c08464525e2f9010f1531b8bade7c4d69080f99cc0d6fe4454cfd81dacc3f34b"
+    },
+    {
+      "file": "matched_site_score_patterns.svg",
+      "size_bytes": 37047,
+      "sha256": "9b372fff18d13f898e4f4c956146629c49c21fdc2a25e024e55aa450a13fcdd2"
+    },
+    {
+      "file": "README.md",
+      "size_bytes": 2653,
+      "sha256": "098b1f2f9e2549a3edbb3cc753bf26697f2c77b38bdcd365546ca07dc495b1cf"
+    },
+    {
+      "file": "resources.json",
+      "size_bytes": 4253,
+      "sha256": "6e0a22a66ccd205260721dafb2523bd9cc81f0144d899ce988048927a9dfdb52"
+    },
+    {
+      "file": "run_group_agreement.png",
+      "size_bytes": 162204,
+      "sha256": "1d16de3aa0e745a12bf752362e2e71fe1b72fd03ab53733d364c6e618df1513c"
+    },
+    {
+      "file": "run_group_agreement.svg",
+      "size_bytes": 45618,
+      "sha256": "204c7fc6490004f8ae90fd56a53bab97a64cca89c7b8e3001bf613f5cf33f0e3"
+    },
+    {
+      "file": "score_coverage_dependence.csv",
+      "size_bytes": 4747,
+      "sha256": "f9471857d87c59d1042be2ec9880a5e158533e312da0d8c068a544a6b76e0b11"
+    },
+    {
+      "file": "technical_metadata_counts.csv",
+      "size_bytes": 2204,
+      "sha256": "39c65a09f574485c5cf2ccb954482bd5207e1d97e12f1e0010913c66ff04e537"
+    },
+    {
+      "file": "technical_run_metadata.csv",
+      "size_bytes": 4743,
+      "sha256": "1b43616f1adba70fcefd6b12180569d2ae9ff18aea48d8e7904cb9b560bde1e3"
+    }
+  ]
+}

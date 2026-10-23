@@ -1,9 +1,11 @@
 # Task 2: from Member 4's coverage evidence to actual predictions
 
-Current stage,23October: first full input downloaded and independently audited;
-selected-model adapter software checks have passed; a real small-example check
-precedes whole-run inference. No full-run Task 2 prediction or between-cell-line
-modification conclusion is claimed at this snapshot.
+Current update, 23 October: all 23 runs completed and passed verification at
+05:46:47 SGT, exit0, with 2,983,948 scored run-site observations. The original
+plan below describes the completed application procedure; it is not a request
+to repeat downloads or inference. Cross-run context QC now precedes scientific
+comparison; see [its fixed rules](CROSS_RUN_CONTEXT_QC_PLAN.md). No biological
+conclusion follows merely from completion.
 
 The chain is **Member 1's training-data EDA -> frozen Task 1 model -> Member 4's
 run/coverage/reference design -> real predictions -> replicate-aware analysis
@@ -62,8 +64,10 @@ Use the existing0.5 working reporting cutoff, descriptive0.7/0.9 sensitivity
 and continuous-score comparisons. These are not biological thresholds or
 controlled false-discovery rates. Unusual scores do not become training labels.
 
-The local Docker backend crashed before Ubuntu execution. The isolated
-[Ubuntu check recipe](../model_elgin/reproducibility/README.md) is prepared;
-native Windows work continues while clean Ubuntu/AWS verification stays open.
+The local Docker backend crashed before Ubuntu execution. The same isolated
+[Ubuntu check recipe](../model_elgin/reproducibility/README.md) later passed on
+a hosted Ubuntu24.04 runner with exact pins and ten-site numerical parity;
+[actual evidence](../model_elgin/ubuntu_prediction_results_2026_10_23/README.md)
+is retained. Fresh AWS-host verification remains open.
 New unlabelled final-test inputs/instructions are a separate outstanding Task1
 submission requirement.
