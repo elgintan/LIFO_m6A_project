@@ -65,7 +65,9 @@ ends the planned neural search and prioritises required completion work.
 The final refit, frozen data1 diagnostic and supplied-data predictions are
 complete. Data1 ROC/PR/S is0.827381010/0.382349993/0.604865501; LightGBM's
 S is0.602321536, with better PR and precision but lower recall/F1 at0.5.
-Real SG-NEx predictions remain pending. See
+All23 real SG-NEx runs and context/comparison/case analysis are now complete.
+Hosted Ubuntu prediction passed; [submission readiness](SUBMISSION_READINESS.md)
+separates the recommended AWS preflight from the actual new-test submission. See
 [project stages](../CURRENT_STAGE.md).
 
 ## Available starting point

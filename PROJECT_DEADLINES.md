@@ -28,8 +28,11 @@ requirements must follow the actual release instructions.
    The already-exposed data1 diagnostic is separate from independent testing.
 3. Verify a fresh installation, documented training/prediction commands and
    a small runnable input/output example. The hosted Ubuntu24.04 container check
-   has now passed; retain its evidence and complete separate fresh AWS-host
-   verification. Ensure the repository gives access to the required model artifact.
+   has now passed; retain its evidence. A separate fresh AWS-host check is our
+   recommended preflight because classmates evaluate on AWS Ubuntu; the handout
+   does not explicitly require our own RONIN machine or AWS test receipt.
+   Ensure the repository gives access to the required model artifact. Follow
+   [the readiness checklist](model_elgin/SUBMISSION_READINESS.md).
 4. When the new unlabelled test input is released, predict with that same
    artifact and validate the submission contract. Do not substitute the older
    intermediate dataset CSVs. Labels are unavailable: format/coverage checks

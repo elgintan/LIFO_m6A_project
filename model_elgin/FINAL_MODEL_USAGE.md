@@ -17,13 +17,19 @@ Use Python3.12 and the pinned main-model requirements. For example, from the
 repository root in a Python3.12 environment:
 
 ```text
+python -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -r model_elgin/context_reference_v1/requirements.txt
 ```
 
 This is separate from the legacy Python3.8 Conda environment used for published
-m6Anet. Native Windows execution is checked; the clean AWS Ubuntu installation
-and prediction check remains pending. Installation commands alone do not
-establish that pending check.
+m6Anet. Install the CPU Torch wheel first, as in the passed Docker recipe, to
+avoid requesting a CUDA runtime for this CPU predictor. Native Windows and
+[hosted Ubuntu24.04 prediction](ubuntu_prediction_results_2026_10_23/README.md)
+are checked. A separate direct AWS-host check is recommended before peer review;
+it remains unperformed and is not an additional deliverable stated in the handout.
+See [submission readiness](SUBMISSION_READINESS.md) and the
+[prepared AWS preflight](AWS_PREFLIGHT.md). Installation commands alone do not
+establish a completed prediction check.
 
 ## Small real prediction example
 
@@ -44,6 +50,8 @@ and output paths. Predictions use the saved normalisers and every available
 valid read. No labels are required by the predictor. A training cap of128
 does not truncate prediction bags. Preserve output manifests alongside CSVs;
 the script refuses incompatible existing output rather than silently overwriting.
+For the actual new unlabelled test, follow its supplied naming/upload contract.
+Do not automatically transfer Task2's >=20-read population filter to Task1.
 
 ## Reproduce the fixed final fit
 

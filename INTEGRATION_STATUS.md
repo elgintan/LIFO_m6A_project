@@ -39,7 +39,7 @@ See [the fixed selection decision](model_elgin/FINAL_MODEL_SELECTION.md) and
 First protect the 28 October deliverables: retain the frozen model and
 inference interface, runnable example and installation/prediction
 instructions, retain the [passed hosted Ubuntu prediction check](model_elgin/ubuntu_prediction_results_2026_10_23/README.md),
-complete separate AWS-host verification, then generate and validate
+optionally add the recommended separate AWS-host preflight, then generate and validate
 predictions on the actual newly released test input. Its unlabelled status
 does not permit a measured test ROC/PR claim. Older intermediate prediction
 CSVs do not substitute for that release's submission.
@@ -263,7 +263,7 @@ requirement that Samuel use the same features or architecture.
 | Actual SG-NEx event signals — completed | All 23 original inputs, 33,365,823,342 bytes, retained locally with verified source/audit receipts. No further download is needed for the accepted scope. |
 | Reference/coordinate consistency | Use the delivered checked aliases, preserve original prediction IDs/positions, and verify transcript/reference/event offsets before genomic-region interpretation. Unknowns remain explicit in MODEL_INFO.md. |
 | Selected model and threshold — completed | Original cap128/positive weight3 completed its fresh18-epoch all-data0 fit. The model hash and real prediction example are verified. Retain0.5 as the working reporting rule, with its documented limits; do not imply calibration or a biological threshold. |
-| Repository and new test submission — 28 October | Frozen model/example and hosted Ubuntu container prediction are verified; fresh AWS-host verification remains. Predict the actual newly supplied unlabelled input, validate its own format/names/coverage and submit through the announced route. No new-test AUC is available without labels. |
+| Repository and new test submission — 28 October | Frozen model/example and hosted Ubuntu container prediction are verified. Separate AWS-host preflight is recommended, not an explicitly required own RONIN launch. Predict the actual newly supplied unlabelled input, validate its own format/names/coverage and submit through the announced route. No new-test AUC is available without labels. |
 | Real Task 2 CSVs — completed | All 23 full-precision original-key exports from the same artifact are verified. Keep them intact; context qualification belongs to the analysis layer. |
 | Biological comparisons — completed | Context-qualified all21pairs, separate all-seven panels, all depth/cutoff sensitivities and scientific figures completed. Review interpretation without new model selection. |
 | Explorer rebuild — completed locally; hosting due 8 November | All23actual runs and451,352sites built and desktop-checked. Public hosting/deployment and responsive review remain. A hosted subset must label selection, denominators and omissions. |

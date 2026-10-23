@@ -482,3 +482,30 @@ The assistant prepared case narrative, figure captions, a report paragraph,
 full-precision tables and future explorer payload. No new training/inference,
 RNAmodification-type discovery, causal mechanism or public UI deployment is claimed.
 This is assistant-executed team-project work, not the user's personal AI reflection.
+
+## Prediction/submission readiness clarification — 23 October
+
+The user authorised a final readiness audit and asked whether RONIN was needed.
+The assistant re-read the official handout: classmates evaluate on AWS Ubuntu,
+but our own RONIN launch/AWS test receipt is not an additional explicit course
+deliverable. Earlier wording made the recommended preflight sound compulsory;
+current instructions now distinguish that recommendation from official rules.
+The hosted Ubuntu check already passed. Actual new-test input/release naming/
+upload instructions have not been supplied in this chat, rather than being
+known globally unreleased. Task2's20read filter does not automatically apply.
+
+A bounded read-only audit rechecked all seven public release pins, ten example
+keys/1887 reads, five unchanged inference sources, requirements and saved Linux
+results. A stale 'not executed on Ubuntu' opening in the recipe README was
+corrected while preserving the earlier failed laptop attempt. The installation
+guide now follows the already tested CPU-wheel-first recipe. Direct-host commands
+and an independent inline CSV/hash verification are prepared, not claimed run.
+The proposed small CPU-machine size is an allowance for ten sites, not measured
+full-test capacity. No training, prediction, dependency install or AWS launch
+occurred during this documentation audit. Browser inspection found the RONIN
+login screen; the user must complete their NUS authentication themselves.
+
+Only Markdown changes are being published. The commit skips the otherwise
+automatically triggered repeat Docker check using GitHub's
+[documented skip mechanism](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/skip-workflow-runs).
+No model, inference source, dependency pin, workflow or original receipt changes.
