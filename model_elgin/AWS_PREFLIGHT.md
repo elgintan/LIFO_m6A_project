@@ -36,8 +36,10 @@ uname -m
 python3 --version
 ```
 
-Expected target:Ubuntu24.04, x86_64 and Python3.12. If the offered image differs,
-check compatibility before changing version pins or installing another OS.
+The previously tested target is Ubuntu24.04, x86_64 and Python3.12. An actual
+Ubuntu26.04 x86_64 host reported Python3.14.4, with Python3.12/Docker absent on
+24October. Its direct-host prediction is not verified yet. Use the isolated
+Python3.12 branch below rather than changing the system Python or package pins.
 
 If Git or the Python venv module is missing on this new machine, install those
 standard tools:
@@ -46,6 +48,46 @@ standard tools:
 sudo apt-get update
 sudo apt-get install --no-install-recommends -y git python3-venv ca-certificates
 ```
+
+### Ubuntu26.04 with no Python3.12 or Docker: user-local Python
+
+This branch is prepared from [Astral's Python-management guide](https://docs.astral.sh/uv/guides/install-python/)
+and [official installer](https://docs.astral.sh/uv/getting-started/installation/).
+`uv` is an environment-management tool, not a new model dependency. It can
+download a separate CPython3.12 without replacing `/usr/bin/python3`.
+The managed patch/build may differ from the earlier Ubuntu3.12.3; record its
+actual version and establish parity by running the example before claiming success.
+
+Run each block separately and stop at the first error:
+
+```bash
+sudo apt-get update
+sudo apt-get install --no-install-recommends -y git curl ca-certificates
+curl -LsSf https://astral.sh/uv/install.sh | sh
+"$HOME/.local/bin/uv" --version
+```
+
+Clone into a fresh directory, then create the isolated environment:
+
+```bash
+git clone https://github.com/elgintan/LIFO_m6A_project.git LIFO_m6A_aws_check_20261024
+cd LIFO_m6A_aws_check_20261024
+git rev-parse HEAD
+"$HOME/.local/bin/uv" python install 3.12
+"$HOME/.local/bin/uv" venv --python 3.12 --seed .venv
+source .venv/bin/activate
+python --version
+python -m pip --version
+python -c 'import sys; assert sys.version_info[:2] == (3, 12); assert sys.prefix != sys.base_prefix; print(sys.executable)'
+```
+
+The default installation path is used explicitly, so this shell need not be
+restarted. `--seed` supplies pip inside the new environment. Expected:Python3.12.x
+and pip located inside this clone's `.venv`; this is not already observed output.
+If a clone/environment already exists, preserve it and use a fresh name.
+After this branch, skip the clone/venv commands in section2 and run only its
+two pinned-package installation commands and `pip check`, then section3.
+Keep a terminal record of the actual uv/Python versions and install outcome.
 
 ## 2. Clone into a fresh folder and install the exact CPU environment
 
@@ -86,7 +128,7 @@ Copy this entire block into the same activated Ubuntu terminal:
 
 ```bash
 python - <<'PY'
-import csv, hashlib, json, math, platform, subprocess
+import csv, hashlib, json, math, platform, subprocess, sys
 from importlib.metadata import version
 from pathlib import Path
 root = Path.cwd()
@@ -126,7 +168,11 @@ assert m['output_sha256'] == sha(out / 'predictions.csv')
 for name, expected_sha in m['code_sha256'].items():
     assert sha(root / 'model_elgin/context_reference_v1' / name) == expected_sha
 os_text = Path('/etc/os-release').read_text()
-assert 'ID=ubuntu' in os_text and 'VERSION_ID="24.04"' in os_text
+os_values = {line.split('=', 1)[0]: line.split('=', 1)[1].strip('"')
+             for line in os_text.splitlines() if '=' in line}
+assert os_values.get('ID') == 'ubuntu'
+assert os_values.get('VERSION_ID') in {'24.04', '26.04'}
+assert sys.version_info[:2] == (3, 12)
 assert platform.machine() == 'x86_64'
 versions = {p: version(p) for p in ['numpy', 'pandas', 'scikit-learn', 'psutil', 'torch']}
 assert versions == {'numpy':'2.5.3', 'pandas':'3.0.6', 'scikit-learn':'1.9.1', 'psutil':'7.2.2', 'torch':'2.14.1+cpu'}
@@ -145,7 +191,9 @@ print('PASS: ten keys,1887 reads, exact package/source pins and score parity')
 PY
 ```
 
-The receipt verifies Ubuntu/runtime/software facts. AWS provenance comes from
+The receipt reports the actual OS version; a native26.04 run is not labelled24.04.
+Only the prior hosted24.04 run is currently completed. The receipt verifies
+Ubuntu/runtime/software facts. AWS provenance comes from
 the actual machine being launched in the course RONIN project; this code does
 not query cloud credentials or infer a provider from a filename. Retain the
 three result files and terminal success/error evidence locally for review.

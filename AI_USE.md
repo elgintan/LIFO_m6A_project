@@ -509,3 +509,14 @@ Only Markdown changes are being published. The commit skips the otherwise
 automatically triggered repeat Docker check using GitHub's
 [documented skip mechanism](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/skip-workflow-runs).
 No model, inference source, dependency pin, workflow or original receipt changes.
+
+## Actual Ubuntu26.04 host — 24 October
+
+The user created the RONIN machine and supplied terminal evidence:Ubuntu26.04,
+x86_64, Python3.14.4, Python3.12 absent and Docker absent. The assistant retained
+the existing host and prepared Astral's user-local managedPython3.12 route with
+a fresh seeded virtual environment, preserving system Python and model package
+pins. Actual installation and parity remain unperformed until user output
+confirms them. The direct-host verifier now accepts/reports actual24.04 or26.04
+and explicitly requires Python3.12; earlier Ubuntu24.04 receipts are unchanged.
+This is a documentation adaptation, not a successful26.04 prediction claim.
