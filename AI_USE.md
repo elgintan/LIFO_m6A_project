@@ -543,3 +543,40 @@ submission or training reproduction. The user was asked to Stop the cloud
 machine while preserving disks; stopped state remains unconfirmed. Evidence
 contains no private host address/key names/contents. Documentation and compact
 evidence publication skip redundant Docker CI; no inference/pin/workflow changes.
+
+## Actual-score biological-case interface — 24 October
+
+The assistant implemented four case entry points, literal transcript/position
+links, saved 20/50/100-read and 0.5/0.7/0.9 controls, group/line charts and all
+23 original run records per case. Scientific review independently checked the
+two-group rule, G3BP2's one-group diagnostic, training/literature caveats and
+missing-versus-zero handling. It caught a line-object/name lookup bug before
+final browser verification. Browser checks found height-triggered redraws closing
+evidence disclosures; redraws now follow width changes and retain open sections.
+An initial JavaScript strict-mode/destructured-parameter syntax error was fixed
+before integration. The actual absent-record schema is explicitly handled;
+none of the selected four cases has an absent source record.
+
+The incremental helper validates and copies existing audited data, preserves
+all 132 original score JSONs and the frozen four-case payload byte for byte,
+independently matches 92 case records to their original scores/readcounts, and
+writes completion last into a fresh artifact. Intermediate versions v1–v4 remain
+preserved; the current local version is biological_cases_v5. Copied immutable
+casebook notes retain their bytes; additional navigation files repair their
+relative links and explicitly direct wider analysis to a pinned public commit.
+
+Ten integration/tamper tests and Node route/missing/zero/one-group regressions
+passed. Chrome checks exercised all 36 case/depth/cutoff combinations, four
+literal-site click/reload links, invalid-position rejection, all92 run rows and
+legacy tabs. Phone-size390px checking used viewport emulation, not a physical
+device; horizontal scroll regions remained contained. Screenshots and visible-DOM
+checks were retained. Browser console reported no warnings/errors in the checked
+session. One test initially toggled already-open sections closed; the corrected
+test checked open state before acting. Local preview required a loopback server
+outside the restricted shell network; no cloud machine was restarted.
+
+No model fitting, prediction, original score rewrite, new significance test,
+credential access or public website deployment occurred. Copy/hash timing is
+not prediction timing. Public code and compact verification are separate from
+the ignored full local197MB artifact. The user previously confirmed RONIN stopped;
+no new-test input or submission is implied. Final report/hosting remain pending.

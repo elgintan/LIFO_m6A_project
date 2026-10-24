@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "method": "Incremental byte copy of audited full-score site; tracked frontend overlay; exact published case payload",
+  "counts": {
+    "runs": 23,
+    "cell_lines": 7,
+    "metadata_groups": 17,
+    "scoreable_site_keys": 451352,
+    "scored_run_site_observations": 2983948,
+    "source_data_json_files_preserved": 132,
+    "cases": 4,
+    "case_original_run_records": 92,
+    "case_run_measurement_status_counts": {
+      "scored": 80,
+      "below_20_reads_unscored": 12
+    },
+    "output_files_excluding_this_receipt": 172
+  },
+  "resources": {
+    "wall_seconds": 9.722378199978266,
+    "process_cpu_seconds": 6.4375,
+    "scope": "Function entry through validation, hashing, byte copying, and final hash checks; excludes imports and completion JSON write; child git CPU excluded",
+    "rss_measured": false,
+    "peak_rss_bytes": null
+  },
+  "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+  "all_original_score_json_bytes_unchanged": true,
+  "case_payload_bytes_unchanged": true,
+  "no_training_inference_download_or_score_rebuild": true,
+  "artifact": "data_visualisation/outputs/biological_cases_v5/site",
+  "scope_note": "Compact transcription of completed local integration receipt; original full receipt remains local and immutable."
+}

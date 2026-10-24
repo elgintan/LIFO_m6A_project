@@ -1,0 +1,41 @@
+/* Real saved edge cases plus malformed links; no prediction or data rebuild. */
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
+const c = require("../site/case_logic.js");
+const payload = JSON.parse(fs.readFileSync(path.join(__dirname, "../../..", "sgnex_analysis/biological_case_results_2026_10_23/explorer_cases.json"), "utf8"));
+const lines = ["A549", "H9", "HEYA8", "Hct116", "HepG2", "K562", "MCF7"];
+for (const item of payload.cases) {
+  const row = item.case;
+  assert.deepEqual(c.parseRoute("#" + c.siteToken(row.transcript_id, row.transcript_position)), { tab: "genes", transcript: row.transcript_id, position: row.transcript_position });
+  assert.deepEqual(c.parseRoute("#case-" + row.case_id), { tab: "cases", caseId: row.case_id });
+}
+assert.deepEqual(c.parseRoute("#%ZZ"), { tab: "genes" });
+assert.deepEqual(c.parseRoute("#site-ENST00000340913-9007199254740992"), { tab: "genes" });
+assert.throws(() => c.siteToken("bad/id", 177));
+assert.throws(() => c.siteToken("ENST1", -1));
+assert.deepEqual(c.parseRoute("#gene-ACTB"), { tab: "genes", gene: "ACTB" });
+const g = payload.cases.find((x) => x.case.gene_name === "G3BP2");
+const one = c.lineAt(g, "HepG2", 50);
+assert.equal(one.n_replicates, 1);
+assert.equal(c.lineState(one, .7).score, one.score);
+assert.equal(c.lineState(one, .7).above, null);
+assert.equal(c.lineState(one, .7).eligible, false);
+assert.equal(c.lineAt(g, "HEYA8", 50), null);
+assert.equal(c.lineState(null, .5).score, null);
+assert.equal(c.comparisonAt(g, 20).pair_available, true);
+assert.equal(c.comparisonAt(g, 20).original_flag, false);
+assert.equal(c.comparisonAt(g, 50).pair_available, false);
+assert.equal(c.lineState({ score: 0, n_replicates: 2 }, .5).score, 0);
+assert.equal(c.lineState({ score: 0, n_replicates: 2 }, .5).above, false);
+const low = g.original_runs.find((r) => r.score == null);
+assert.match(c.runStatus(low, 20), /Unscored/);
+assert.equal(c.runStatus({ measurement_status: "absent_from_processed_run", n_reads: null, score: null }, 20), "Not in processed data");
+const retained = g.original_runs.find((r) => r.score != null && r.n_reads < 50);
+assert.match(c.runStatus(retained, 50), /original score retained/);
+const act = payload.cases.find((x) => x.case.gene_name === "ACTG1");
+for (const depth of c.depths) assert.equal(c.sharedAt(act, lines, depth, .9).allAbove, true);
+const hnr = payload.cases.find((x) => x.case.gene_name === "HNRNPA1");
+assert.equal(c.lineState(c.lineAt(hnr, "K562", 20), .5).above, true);
+assert.equal(c.lineState(c.lineAt(hnr, "K562", 20), .7).above, false);
+console.log("PASS: four exact-site routes; malformed links; real one-group/missing/zero/retained-score cases; depth and cutoff rules");

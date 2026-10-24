@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "created_utc": "2026-10-24T12:59:15.971115+00:00",
+  "kind": "local_actual_score_case_interface_verification",
+  "files": {
+    "artifact_check.json": {
+      "sha256": "988661c8ebc49c5c5b7dc7cab7152bee390784732ecf8b560e6b2c0f04be6f9d",
+      "size_bytes": 4566
+    },
+    "browser_qa.json": {
+      "sha256": "af3249183bbe558dd8fc50a0438566c18de105e521470a570a0f1be6d8f8da37",
+      "size_bytes": 52810
+    },
+    "desktop_case_full.png": {
+      "sha256": "55462887559bfc063a050f0bc061c7eb7274c1a5ad1a1a8f28b40b03a3ce25aa",
+      "size_bytes": 208824
+    },
+    "integration_summary.json": {
+      "sha256": "3b4100fbbc7078e35dadb2da240691074e329b426e6566479c0136031026362a",
+      "size_bytes": 1313
+    },
+    "mobile_chart_390.png": {
+      "sha256": "045f50ecf11e827b3cfc02b7de1302d80780f3a0d21e02266e83cf36111d393a",
+      "size_bytes": 37505
+    },
+    "README.md": {
+      "sha256": "c470470ab6146016f72f021791b7a80baac5ea9dca22212f36acc26f7e1d1387",
+      "size_bytes": 3723
+    }
+  },
+  "frontend": {
+    "data_visualisation/task2_viz/site/app.html": {
+      "sha256": "8b3d51aed5e2de690bbd103d6c6230920caa7074e06b723b65223f95c4fc3d30",
+      "size_bytes": 112959
+    },
+    "data_visualisation/task2_viz/site/case_logic.js": {
+      "sha256": "3084575dc5c39df8a61521905bd4c375a2dfdcd164c6a6e7333e1b5cc43f2c96",
+      "size_bytes": 2651
+    },
+    "data_visualisation/task2_viz/site/case_view.js": {
+      "sha256": "72543981f315e81fb793845bafd45c6578a1a847a4257743dbc03fc335b5ffec",
+      "size_bytes": 15395
+    },
+    "data_visualisation/task2_viz/site/index.html": {
+      "sha256": "2c365ce070da72205a706fb6a2f553febf11874aa55b0d548ba7a94e358b97f9",
+      "size_bytes": 115050
+    }
+  },
+  "limits": [
+    "Public compact verification only; full site artifact stays local.",
+    "No model fitting/inference/new-test prediction or public hosting is established."
+  ]
+}

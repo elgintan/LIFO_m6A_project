@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "schema_version": 1,
+  "checked_utc": "2026-10-24T12:54:17.423310+00:00",
+  "executed_by": "assistant independent read-only check",
+  "artifact": "data_visualisation/outputs/biological_cases_v5/site",
+  "integration_receipt": {
+    "sha256": "937dadfe8bff9e038f7285213a5700428d528936e87d96e41172674badc09b8e",
+    "size_bytes": 55953
+  },
+  "checks": {
+    "integration_status_complete": true,
+    "safe_output_paths": true,
+    "every_output_sha256_and_size_matches": true,
+    "all_172_output_files_accounted_for": true,
+    "all_132_original_json_pins_recorded": true,
+    "all_132_original_json_bytes_unchanged": true,
+    "original_data_still_match_prior_completed_utf8_receipt": true,
+    "exact_published_case_payload_bytes": true,
+    "all_31_published_casebook_copies_exact": true,
+    "case_publication_manifest_copied_exactly": true,
+    "exact_four_case_roles_and_literal_keys": true,
+    "each_case_all_23_unique_original_runs": true,
+    "exact_92_records_and_status_counts": true,
+    "eligible_finite_unscored_null": true,
+    "full_scope_preserved": true,
+    "original_model_binding": true,
+    "case_persistent_difference_nontraining_lines_exact_site_present": true,
+    "case_persistent_difference_nontraining_lines_original_scores_and_reads": true,
+    "case_persistent_difference_nontraining_lines_original_context": true,
+    "case_persistent_difference_training_line_exact_site_present": true,
+    "case_persistent_difference_training_line_original_scores_and_reads": true,
+    "case_persistent_difference_training_line_original_context": true,
+    "case_shared_high_exact_site_present": true,
+    "case_shared_high_original_scores_and_reads": true,
+    "case_shared_high_original_context": true,
+    "case_overlapping_groups_inconclusive_exact_site_present": true,
+    "case_overlapping_groups_inconclusive_original_scores_and_reads": true,
+    "case_overlapping_groups_inconclusive_original_context": true,
+    "seven_ui_evidence_links_each_case": true,
+    "absent_status_matches_payload_schema": true,
+    "duplicate_support_plan_is_exact": true,
+    "wider_analysis_support_links_fixed_public_baseline": true,
+    "all_copied_casebook_local_markdown_links_resolve": true,
+    "index.html_script_case_logic.js_exists": true,
+    "index.html_script_case_view.js_exists": true,
+    "app.html_script_case_logic.js_exists": true,
+    "app.html_script_case_view.js_exists": true
+  },
+  "issues": [],
+  "counts": {
+    "checks": 37,
+    "output_files_excluding_integration_receipt": 172,
+    "original_score_json_files": 132,
+    "published_casebook_files": 31,
+    "cases": 4,
+    "original_case_run_records": 92,
+    "case_measurement_statuses": {
+      "scored": 80,
+      "below_20_reads_unscored": 12
+    },
+    "direct_case_run_score_read_checks": 92,
+    "ui_evidence_links_per_case": 7,
+    "case_ui_evidence_link_occurrences": 28,
+    "copied_casebook_markdown_local_links": 6
+  },
+  "case_routes": [
+    {
+      "case_id": "persistent_difference_nontraining_lines",
+      "transcript_id": "ENST00000340913",
+      "transcript_position": 177,
+      "site_fragment": "#site-ENST00000340913-177"
+    },
+    {
+      "case_id": "persistent_difference_training_line",
+      "transcript_id": "ENST00000311481",
+      "transcript_position": 1947,
+      "site_fragment": "#site-ENST00000311481-1947"
+    },
+    {
+      "case_id": "shared_high",
+      "transcript_id": "ENST00000331925",
+      "transcript_position": 607,
+      "site_fragment": "#site-ENST00000331925-607"
+    },
+    {
+      "case_id": "overlapping_groups_inconclusive",
+      "transcript_id": "ENST00000359707",
+      "transcript_position": 2510,
+      "site_fragment": "#site-ENST00000359707-2510"
+    }
+  ],
+  "missing_local_links": [],
+  "original_case_payload": {
+    "sha256": "1821dc0f9aeacabb36815e9f20c2f011e690147901bed653f0f4d3f98374796b",
+    "size_bytes": 233356
+  },
+  "resources": {
+    "wall_seconds": 1.3676294999895617,
+    "process_cpu_seconds": 1.3125,
+    "scope": "After Python standard-library imports through read-only hash, byte-equivalence, payload, direct saved-site reconstruction, count and local-link checks; excludes final JSON receipt write",
+    "rss_measured": false,
+    "peak_rss_bytes": null
+  },
+  "limitations": [
+    "No network or external-link availability check; fixed public reference URL checked as text.",
+    "No browser automation or responsive-layout check in this independent artifact audit; root performs those separately.",
+    "No model inference, score rebuild, raw-data parsing or training."
+  ]
+}

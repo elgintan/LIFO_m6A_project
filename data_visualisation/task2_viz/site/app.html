@@ -1,5 +1,5 @@
 <title>SG-NEx m6A Explorer</title>
-<meta name="description" content="Explore read coverage, replicate support and (once available) predicted m6A scores at candidate sites across SG-NEx direct RNA sequencing runs.">
+<meta name="description" content="Explore actual predicted m6A scores, read support and four biological case studies across 23 SG-NEx RNA sequencing runs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700&family=Chivo+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
@@ -203,6 +203,26 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
   .tab { padding: 12px 10px 10px; font-size: 14.5px; }
   .panel { padding: 16px 14px 18px; }
 }
+.case-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.case-card { display:grid; align-content:start; gap:8px; min-width:0; padding:18px; border:1px solid var(--hairline); border-radius:var(--radius); background:var(--surface); color:var(--ink); text-decoration:none; }
+.case-card p { font-size:14px; color:var(--ink-2); }
+.case-card[aria-current="true"] { border-color:var(--accent); box-shadow:inset 0 3px var(--accent); background:var(--accent-wash); }
+.case-card:hover { border-color:var(--accent); }
+.case-key { overflow-wrap:anywhere; color:var(--ink-2); }
+.case-controls { display:flex; flex-wrap:wrap; margin-block:20px 14px; }
+.case-result { font-size:18px; font-weight:600; line-height:1.5; margin-bottom:10px; }
+.case-chart { margin-top:18px; }
+.case-chart svg text { font-family:var(--font-body); }
+.case-table { width:100%; min-width:650px; font-size:14px; margin-block:14px; }
+.case-table th { white-space:normal; min-width:75px; }
+.case-table td { vertical-align:top; font-variant-numeric:tabular-nums; }
+.case-section { margin-top:22px; padding-top:16px; border-top:1px solid var(--hairline); }
+.case-section summary { cursor:pointer; font-weight:700; font-size:16px; }
+.case-section p { margin-top:12px; max-width:95ch; }
+.case-caution { padding:12px; background:var(--warn-wash); color:var(--warn-ink); border-radius:var(--radius); }
+.case-links { display:flex; flex-wrap:wrap; gap:12px 24px; margin-top:14px; }
+@media(max-width:900px) { .case-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:560px) { .case-grid { grid-template-columns:1fr; } #caseDetail .panel-head { align-items:flex-start; flex-direction:column; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -221,12 +241,21 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
 
   <nav class="tabs" role="tablist" aria-label="Views">
     <button class="tab" role="tab" id="t-genes" aria-controls="v-genes" aria-selected="true">Gene explorer</button>
+    <button class="tab" role="tab" id="t-cases" aria-controls="v-cases" aria-selected="false" tabindex="-1">Biological cases</button>
     <button class="tab" role="tab" id="t-coverage" aria-controls="v-coverage" aria-selected="false" tabindex="-1">Coverage</button>
     <button class="tab" role="tab" id="t-lines" aria-controls="v-lines" aria-selected="false" tabindex="-1">Cell lines</button>
     <button class="tab" role="tab" id="t-about" aria-controls="v-about" aria-selected="false" tabindex="-1">About the data</button>
   </nav>
 
   <main>
+    <section class="view" id="v-cases" role="tabpanel" aria-labelledby="t-cases" hidden>
+      <div class="view-head">
+        <h2>Four cases, four kinds of evidence</h2>
+        <p>Explore a persistent contrast, a training-line caution, a shared high signal and an inconclusive result. These selected examples concern predicted m6A scores, not experimentally confirmed methylation differences.</p>
+      </div>
+      <div class="case-grid" id="caseCards"></div>
+      <section class="panel" id="caseDetail" aria-label="Selected biological case"></section>
+    </section>
     <section class="view" id="v-genes" role="tabpanel" aria-labelledby="t-genes">
       <div class="controls">
         <div class="field">
@@ -443,6 +472,8 @@ footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--hairli
 <div id="tooltip" role="tooltip" hidden></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="case_logic.js"></script>
+<script src="case_view.js"></script>
 <script>
 (() => {
 "use strict";
@@ -456,7 +487,8 @@ const STEP_CELL = 16, GAP = 2, STEP = STEP_CELL + GAP;
 
 const state = {
   ov: null, rows: [], byKey: new Map(), byLabel: new Map(), txIndex: null, lowcov: null, buckets: new Map(),
-  gene: null, geneRow: null, txId: null, site: null,
+  gene: null, geneRow: null, txId: null, site: null, geneRequest: 0,
+  cases: null, caseId: null, caseDepth: 20, caseCutoff: .5,
   rowMode: "runs", minReads: 20, mapTable: false, coverT: 20, supportT: 20, pop: "annotated_human",
   compareT: 20, compareRule: "ge2", comparePolicy: "primary",
 };
@@ -473,6 +505,15 @@ function h(tag, attrs, ...kids) {
   for (const kid of kids) if (kid != null) n.append(kid);
   return n;
 }
+const caseView = window.LifoCaseView({ state, h,
+  selectCase(id) { state.caseId = id; showTab("cases", false); },
+  async openSite(gene, tx, position, depth) {
+    state.minReads = depth; $("minReads").value = String(depth);
+    $("geneSearch").value = tx; showTab("genes", false);
+    await openGene(gene, tx, position);
+    if (state.gene) $("detailPanel").scrollIntoView({ block: "start" });
+  }
+});
 function svgEl(w, hgt, inner) {
   const s = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   s.setAttribute("width", w); s.setAttribute("height", hgt); s.setAttribute("viewBox", `0 0 ${w} ${hgt}`); s.setAttribute("aria-hidden", "true");
@@ -576,9 +617,13 @@ function drawSquiggle() {
 }
 
 /* ---------- tabs ---------- */
-const TABS = ["genes", "coverage", "lines", "about"];
+const TABS = ["genes", "cases", "coverage", "lines", "about"];
 function currentTab() { return TABS.find((t) => !$(`v-${t}`).hidden) || "genes"; }
 function geneHash() {
+  if (state.gene && state.txId && state.site != null) {
+    const site = parseSites(currentTx())[state.site];
+    if (site) return window.LifoCases.siteToken(state.txId, site.pos);
+  }
   const L = state.geneRow && state.geneRow.label;
   return L && /^[A-Za-z0-9._~-]+$/.test(L) ? `gene-${L}` : "genes";
 }
@@ -595,7 +640,7 @@ function showTab(name, focus) {
     view.hidden = !on;
   }
   if (focus) $(`t-${name}`).focus();
-  setHash(name === "genes" ? geneHash() : name);
+  setHash(name === "genes" ? geneHash() : name === "cases" && state.caseId ? `case-${state.caseId}` : name);
   hideTip();
   renderVisible();
 }
@@ -825,28 +870,44 @@ function setupGeneControls() {
   }
 }
 
-async function openGene(ref, txId) {
+async function openGene(ref, txId, position = null) {
+  const request = ++state.geneRequest;
   const row = state.byKey.get(ref) || state.byLabel.get(String(ref).toUpperCase());
   if (!row) { geneMessage(`No site with at least ${state.ov.build.keep_min_reads} reads was found for “${ref}”.`); return; }
   const view = $("geneView");
   view.classList.add("loading");
   try {
     const data = await bucket(row.bucket);
+    if (request !== state.geneRequest) return;
     const g = data[row.key];
     if (!g) throw new Error(`${row.label} is listed but its data file has no entry for it.`);
+    if (txId && !g.tx.some((t) => t.id === txId)) throw new Error(`The requested transcript ${txId} is not included; no other transcript was substituted.`);
+    const chosen = txId ? g.tx.find((t) => t.id === txId) : g.tx[0];
+    const requestedSite = position == null ? null : parseSites(chosen).findIndex((s) => s.pos === position);
+    if (requestedSite === -1) throw new Error(`Site ${position} on ${chosen.id} is not included; no default site was substituted.`);
     state.gene = g; state.geneRow = row;
-    state.txId = txId && g.tx.some((t) => t.id === txId) ? txId : g.tx[0].id;
-    state.site = null;
+    state.txId = chosen.id;
+    state.site = requestedSite;
+    $("mapPanel").hidden = false; $("detailPanel").hidden = false;
     renderGeneHead();
     renderGeneBody();
     if (currentTab() === "genes") setHash(geneHash());
   } catch (err) {
-    geneMessage(err.message);
+    if (request === state.geneRequest) geneMessage(err.message);
   } finally {
-    view.classList.remove("loading");
+    if (request === state.geneRequest) view.classList.remove("loading");
   }
 }
+async function openTranscriptSite(tx, position) {
+  const matches = await searchTranscripts(tx);
+  const exact = matches.find((r) => r.tx === tx);
+  if (!exact) { geneMessage(`Transcript ${tx} is not included in this build.`); return; }
+  $("geneSearch").value = tx;
+  await openGene(exact.row.key, tx, position);
+}
 function geneMessage(text) {
+  state.gene = null; state.geneRow = null; state.txId = null; state.site = null;
+  $("mapPanel").hidden = true; $("detailPanel").hidden = true;
   $("geneName").textContent = "Not found";
   $("geneId").textContent = ""; $("geneKind").textContent = ""; $("geneLoc").textContent = "";
   $("geneDesc").textContent = text; $("geneFacts").replaceChildren();
@@ -956,6 +1017,7 @@ function renderGeneBody() {
   $("mapNote").textContent = notes.join(" ");
   if (state.mapTable) renderSiteTable(tx, sites); else renderSiteMap(tx, sites);
   renderDetail(tx, sites);
+  if (currentTab() === "genes") setHash(geneHash());
 }
 
 function renderMapLegend() {
@@ -1127,6 +1189,8 @@ function renderDetail(tx, sites) {
     h("span", { class: "fact", text: `In processed data of ${observed} of ${runs.length} runs` }),
     h("span", { class: "fact", text: `${thr}+ reads in ${okIdx.length} runs · ${okGroups} of ${nGroups()} replicates · ${okLines} of ${state.ov.lines.length} lines` }),
   ];
+  const linkedCase = state.cases && state.cases.cases.find((item) => item.case.transcript_id === tx.id && item.case.transcript_position === s.pos);
+  if (linkedCase) facts.push(h("a", { class: "fact", href: `#case-${linkedCase.case.case_id}`, text: "View this site's group comparison and biological interpretation" }));
   if (hasScores()) {
     const sc = okIdx.filter((i) => s.scores[i] != null);
     if (sc.length) facts.push(h("span", { class: "fact", text: `Median score ${f2(d3.median(sc, (i) => s.scores[i]))} over ${sc.length} runs` }));
@@ -1567,22 +1631,23 @@ function renderVisible() {
   if (ensurePalette()) { drawSquiggle(); renderMapLegend(); }
   const t = currentTab();
   if (t === "genes") renderGeneBody();
+  if (t === "cases") { caseView.render(); if (state.caseId) setHash(`case-${state.caseId}`); }
   if (t === "coverage") renderCoverage();
   if (t === "lines") renderLines();
 }
 function rethemed() { paletteKey = ""; renderVisible(); if (!state.ov) { ensurePalette(); drawSquiggle(); } }
 function parseHash() {
-  const raw = decodeURIComponent((location.hash || "").slice(1));
-  if (raw.startsWith("gene-")) return { tab: "genes", gene: raw.slice(5) };
-  return { tab: TABS.includes(raw) ? raw : "genes", gene: null };
+  return window.LifoCases.parseRoute(location.hash);
 }
 
 async function init() {
   ensurePalette();
   drawSquiggle();
   try {
-    const [ov, index] = await Promise.all([getJSON("data/overview.json"), getJSON("data/genes_index.json")]);
+    const [ov, index, cases] = await Promise.all([getJSON("data/overview.json"), getJSON("data/genes_index.json"), getJSON("data/biological_cases.json").catch(() => null)]);
     state.ov = ov;
+    state.cases = cases;
+    state.caseId = cases && cases.cases.length ? cases.cases[0].case.case_id : null;
     const f = index.fields;
     state.rows = index.rows.map((row, i) => {
       const o = Object.fromEntries(f.map((k, j) => [k, row[j]]));
@@ -1603,17 +1668,27 @@ async function init() {
   setupToggles();
   renderAbout();
   const start = parseHash();
+  if (!location.hash && state.cases) start.tab = "cases";
+  if (start.caseId) state.caseId = start.caseId;
   showTab(start.tab, false);
   const first = start.gene || state.ov.examples[0];
   $("geneSearch").value = first;
-  await openGene(first);
+  if (start.transcript) await openTranscriptSite(start.transcript, start.position);
+  else await openGene(first);
   if (start.tab !== "genes") renderVisible();
 
-  let rt = null;
-  new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => { drawSquiggle(); renderVisible(); }, 120); }).observe(document.querySelector(".app"));
-  window.addEventListener("hashchange", () => {
+  let rt = null, lastAppWidth = null;
+  new ResizeObserver((entries) => {
+    const width = entries[0].contentRect.width;
+    if (lastAppWidth == null || Math.abs(width - lastAppWidth) < 1) { lastAppWidth = width; return; }
+    lastAppWidth = width;
+    clearTimeout(rt); rt = setTimeout(() => { drawSquiggle(); renderVisible(); }, 120);
+  }).observe(document.querySelector(".app"));
+  window.addEventListener("hashchange", async () => {
     const hsh = parseHash();
-    if (hsh.tab !== currentTab()) showTab(hsh.tab, false);
+    if (hsh.caseId) state.caseId = hsh.caseId;
+    showTab(hsh.tab, false);
+    if (hsh.transcript) { await openTranscriptSite(hsh.transcript, hsh.position); return; }
     if (hsh.gene && (!state.geneRow || hsh.gene.toUpperCase() !== state.geneRow.labelU)) { $("geneSearch").value = hsh.gene; openGene(hsh.gene); }
   });
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", rethemed);

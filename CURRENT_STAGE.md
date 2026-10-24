@@ -6,7 +6,12 @@ HNRNPA1/RAB1B contrasts, ACTG1 shared-high scores and an inconclusive G3BP2 exam
 Case rankings, original23run evidence, training-key exposure, technical metadata,
 primary literature and two figure pairs were checked. This is descriptive
 interpretation, not exact-site assay validation or an exhaustive biological analysis.
-The new case-entry interface remains pending; its data payload is prepared.
+The four-case entry interface is now implemented and locally checked at desktop
+and 390-pixel phone size. All 36 depth/cutoff combinations, four exact-site
+click/reload routes and all 92 original run rows passed. See the
+[interface verification](data_visualisation/biological_case_ui_results_2026_10_24/README.md).
+The current full local artifact is `data_visualisation/outputs/biological_cases_v5/site/`;
+public hosting remains pending.
 All 23 runs completed at 05:46:47 Singapore time on 23 October, exit0; the
 checkpoint is complete and no run lock remains. The verified exports contain
 2,983,948 scored run-site observations / 232,253,678 reads. These are repeated
@@ -42,7 +47,7 @@ benchmarks have completed.
 | Code reproducibility | **Hosted Ubuntu24.04 and native RONIN/AWS Ubuntu26.04 prediction passed**, same artifact/pins and ten-site parity checked; laptop Docker failure preserved | Retain [actual AWS evidence](model_elgin/aws_prediction_results_2026_10_24/README.md). User confirmed the cloud machine stopped24October. Actual new-test input/submission remains separate. See [readiness](model_elgin/SUBMISSION_READINESS.md) |
 | Task 2: real SG-NEx predictions | **Complete: 23/23 verified** | Preserve same-model exports, full source QC, coverage checks and completion receipts; do not rerun |
 | Task 2: biological/data analysis | **Complete descriptive comparison**: no context exclusions; all 21 pairs at 20/50/100 reads, separate all-line panels and 0.5/0.7/0.9 summaries | Team review and concise report narrative; retain all outcomes and limitations |
-| Interactive visualisation | **Full local actual-score build complete**, all 23 runs/451,352 sites; 190 validation checks and 189 exact fraction checks passed; desktop Chrome interactions checked | Public hosting/final deployment checks; any hosted subset must be explicitly identified |
+| Interactive visualisation | **Full local actual-score and four-case interface complete**, all 23 runs/451,352 sites; original 132 JSON files unchanged; 36 case control combinations, literal-site reload links and desktop/phone-size Chrome checks passed | Public hosting/final deployment checks; any hosted subset must be explicitly identified |
 | Final scientific report | Evidence available; final five-page report unfinished | Main-body methods, findings, limitations and scientific figures; appendix is unlimited but ungraded |
 
 **Deadlines:** repositories and new unlabelled-test predictions remain due
