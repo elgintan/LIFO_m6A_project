@@ -39,7 +39,7 @@ benchmarks have completed.
 | Task 1: frozen data1 diagnostic | **Complete**: S0.604865501 | Retain already-exposed transfer evidence and all metric tradeoffs; no winner selection |
 | Task 1: predictions on supplied data0/data1/data2 | **Complete**: 121,838 / 90,810 / 1,323 sites | Preserve CSVs and manifests; fitted-data0 scores are separate from OOF validation |
 | Task 1: new unlabelled test submission | Pending actual input/instructions, not supplied in this chat | Same frozen artifact, exact coverage/format checks and required submission files; no unavailable label metrics |
-| Code reproducibility | **Hosted Ubuntu24.04 and native RONIN/AWS Ubuntu26.04 prediction passed**, same artifact/pins and ten-site parity checked; laptop Docker failure preserved | Retain [actual AWS evidence](model_elgin/aws_prediction_results_2026_10_24/README.md); cloud Stop state still unconfirmed. Actual new-test input/submission remains separate. See [readiness](model_elgin/SUBMISSION_READINESS.md) |
+| Code reproducibility | **Hosted Ubuntu24.04 and native RONIN/AWS Ubuntu26.04 prediction passed**, same artifact/pins and ten-site parity checked; laptop Docker failure preserved | Retain [actual AWS evidence](model_elgin/aws_prediction_results_2026_10_24/README.md). User confirmed the cloud machine stopped24October. Actual new-test input/submission remains separate. See [readiness](model_elgin/SUBMISSION_READINESS.md) |
 | Task 2: real SG-NEx predictions | **Complete: 23/23 verified** | Preserve same-model exports, full source QC, coverage checks and completion receipts; do not rerun |
 | Task 2: biological/data analysis | **Complete descriptive comparison**: no context exclusions; all 21 pairs at 20/50/100 reads, separate all-line panels and 0.5/0.7/0.9 summaries | Team review and concise report narrative; retain all outcomes and limitations |
 | Interactive visualisation | **Full local actual-score build complete**, all 23 runs/451,352 sites; 190 validation checks and 189 exact fraction checks passed; desktop Chrome interactions checked | Public hosting/final deployment checks; any hosted subset must be explicitly identified |
@@ -73,5 +73,6 @@ The 23-run predictions and [context audit](sgnex_analysis/context_qc_results/REA
 are complete. [Actual scientific findings and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md)
 and the full local actual-score explorer are available. Both context policies
 retain the same population, with no exclusions. Final report and public hosting
-remain pending. The AWS example calculation is finished; the user's cloud
-machine Stop state remains unconfirmed. No training or SG-NEx batch is running.
+remain pending. The AWS example calculation is finished; the user confirmed
+the cloud machine stopped24October. This is user-reported shutdown, not a new
+dashboard inspection. No training or SG-NEx batch is running.
