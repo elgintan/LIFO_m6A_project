@@ -520,3 +520,26 @@ pins. Actual installation and parity remain unperformed until user output
 confirms them. The direct-host verifier now accepts/reports actual24.04 or26.04
 and explicitly requires Python3.12; earlier Ubuntu24.04 receipts are unchanged.
 This is a documentation adaptation, not a successful26.04 prediction claim.
+
+## User-executed native AWS example — 24 October
+
+The user ran setup and ten-site prediction in their own RONIN terminal. Actual
+evidence confirms Ubuntu26.04/x86_64, managed CPython3.12.15, uv0.13.5 and all
+five pinned packages; pip check passed. The assistant did not remotely execute
+the commands, access SSH keys, query instance metadata, or run another model.
+The user supplied all CSV rows and complete manifest text. Local independent
+checks matched seven release pins, five source pins, input/readcounts, unique
+finite output scores and the reconstructed CSV's SHA to the remote sidecar.
+Maximum score difference1.490116119e-8 was below3e-6. Independent audit also
+checked the compact evidence. CSV reconstruction is hash-supported; no binary
+download or original remote JSON byte formatting is claimed.
+
+User-local Python avoided changing system3.14 or dependency pins. The earlier
+hosted24.04 result/laptop Docker failure remain. Resource0.027595s wall/0.054654s
+CPU/400.625MiB sampled RSS covers the predictor's measured section, excluding
+imports; installation/end-to-end timing and true instantaneous peak unknown.
+This is software parity on training-data examples, not unseen accuracy, new-test
+submission or training reproduction. The user was asked to Stop the cloud
+machine while preserving disks; stopped state remains unconfirmed. Evidence
+contains no private host address/key names/contents. Documentation and compact
+evidence publication skip redundant Docker CI; no inference/pin/workflow changes.

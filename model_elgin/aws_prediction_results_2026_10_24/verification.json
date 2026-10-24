@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "Assistant comparison of user-executed native AWS example evidence with frozen public inputs/model/source/output and expected scores",
+  "tested_commit": "fc1e369e67b5d298620a5bb8e0062825cc0889c0",
+  "model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+  "input_sha256": "c8e400bf677d228bf8683c5bb61c0cfb105e3a3f7b5b9235c06efdaf015a334e",
+  "prediction_sha256": "819cd36bc62113e32cc0726370e4757f60c48c26ca8ecd4d162a11710ce8e96f",
+  "all_seven_release_file_pins_match": true,
+  "all_five_inference_source_pins_match": true,
+  "n_sites": 10,
+  "n_reads": 1887,
+  "complete_unique_input_expected_keys": true,
+  "scores_finite_in_unit_interval": true,
+  "exact_selected_model_stage_and_flags": true,
+  "actual_python": "3.12.15",
+  "actual_os": "Ubuntu26.04 x86_64",
+  "all_five_pinned_dependencies_match": true,
+  "maximum_absolute_score_difference": 1.4901161193847656e-08,
+  "absolute_tolerance": 3e-06,
+  "inference_resources": {
+    "wall_seconds": 0.02759509200041066,
+    "cpu_seconds": 0.054654250999998766,
+    "sampled_peak_process_tree_rss_mib": 400.625,
+    "sampling_interval_seconds": 0.2,
+    "sampling_errors": 0
+  },
+  "measurement_scope": "input/model hashing and loading, complete parsing, prediction, CSV verification/write; imports excluded",
+  "no_training_or_prediction_rerun_by_auditor": true,
+  "delivery_scope": "User-pasted terminal CSV and complete manifest; no binary cloud download",
+  "csv_exact_bytes_supported_by_remote_manifest_hash": true,
+  "cloud_stop_confirmed": false
+}

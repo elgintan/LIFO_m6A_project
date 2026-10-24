@@ -1,4 +1,4 @@
-# Current project stage — 23 October 2026
+# Current project stage — 24 October 2026
 
 **Current stage: Task 2 analysis and full local actual-score explorer complete; report assembly and hosting next.**
 Focused biological interpretation now includes [four fixed gene/site cases](sgnex_analysis/biological_case_results_2026_10_23/README.md):
@@ -39,7 +39,7 @@ benchmarks have completed.
 | Task 1: frozen data1 diagnostic | **Complete**: S0.604865501 | Retain already-exposed transfer evidence and all metric tradeoffs; no winner selection |
 | Task 1: predictions on supplied data0/data1/data2 | **Complete**: 121,838 / 90,810 / 1,323 sites | Preserve CSVs and manifests; fitted-data0 scores are separate from OOF validation |
 | Task 1: new unlabelled test submission | Pending actual input/instructions, not supplied in this chat | Same frozen artifact, exact coverage/format checks and required submission files; no unavailable label metrics |
-| Code reproducibility | **Hosted Ubuntu 24.04 prediction passed**, exact pins and ten-site parity verified; laptop Docker failure preserved | Recommended separate AWS-host preflight remains unperformed; the handout requires peers to evaluate on AWS, not our own RONIN launch. See [readiness](model_elgin/SUBMISSION_READINESS.md) and [actual Linux evidence](model_elgin/ubuntu_prediction_results_2026_10_23/README.md) |
+| Code reproducibility | **Hosted Ubuntu24.04 and native RONIN/AWS Ubuntu26.04 prediction passed**, same artifact/pins and ten-site parity checked; laptop Docker failure preserved | Retain [actual AWS evidence](model_elgin/aws_prediction_results_2026_10_24/README.md); cloud Stop state still unconfirmed. Actual new-test input/submission remains separate. See [readiness](model_elgin/SUBMISSION_READINESS.md) |
 | Task 2: real SG-NEx predictions | **Complete: 23/23 verified** | Preserve same-model exports, full source QC, coverage checks and completion receipts; do not rerun |
 | Task 2: biological/data analysis | **Complete descriptive comparison**: no context exclusions; all 21 pairs at 20/50/100 reads, separate all-line panels and 0.5/0.7/0.9 summaries | Team review and concise report narrative; retain all outcomes and limitations |
 | Interactive visualisation | **Full local actual-score build complete**, all 23 runs/451,352 sites; 190 validation checks and 189 exact fraction checks passed; desktop Chrome interactions checked | Public hosting/final deployment checks; any hosted subset must be explicitly identified |
@@ -55,7 +55,9 @@ SHA256 `b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668`.
 Follow [the runnable model guide](model_elgin/FINAL_MODEL_USAGE.md). The public
 training interface passed an actual full-input/cache/configuration check
 without fitting a second model. The hosted Ubuntu container prediction check
-has now passed; this does not establish a separate fresh AWS-host check.
+has passed. A separate user-executed native RONIN/AWS example on Ubuntu26.04
+with isolated Python3.12.15 now passed as well; all keys/fingerprints and score
+parity were independently checked from supplied CSV/manifest evidence.
 Local predictions and their manifests are retained under
 `model_elgin/outputs/final_cap128_v1/`. Independent checks matched every CSV
 key to its supplied label file and verified model/input/output/source hashes;
@@ -71,4 +73,5 @@ The 23-run predictions and [context audit](sgnex_analysis/context_qc_results/REA
 are complete. [Actual scientific findings and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md)
 and the full local actual-score explorer are available. Both context policies
 retain the same population, with no exclusions. Final report and public hosting
-remain pending. No project computation is intentionally running at handover.
+remain pending. The AWS example calculation is finished; the user's cloud
+machine Stop state remains unconfirmed. No training or SG-NEx batch is running.

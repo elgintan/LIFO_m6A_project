@@ -25,10 +25,11 @@ This is separate from the legacy Python3.8 Conda environment used for published
 m6Anet. Install the CPU Torch wheel first, as in the passed Docker recipe, to
 avoid requesting a CUDA runtime for this CPU predictor. Native Windows and
 [hosted Ubuntu24.04 prediction](ubuntu_prediction_results_2026_10_23/README.md)
-are checked. A separate direct AWS-host check is recommended before peer review;
-it remains unperformed and is not an additional deliverable stated in the handout.
+are checked. The separate user-executed [native RONIN/AWS Ubuntu26.04 example](aws_prediction_results_2026_10_24/README.md)
+also passed with isolated Python3.12.15 and identical model/package pins. The
+AWS preflight is additional assurance, not an extra deliverable in the handout.
 See [submission readiness](SUBMISSION_READINESS.md) and the
-[prepared AWS preflight](AWS_PREFLIGHT.md). Installation commands alone do not
+[AWS reproduction instructions](AWS_PREFLIGHT.md). Installation commands alone do not
 establish a completed prediction check.
 
 ## Small real prediction example

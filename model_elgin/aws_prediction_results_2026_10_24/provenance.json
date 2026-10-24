@@ -1,0 +1,22 @@
+{
+  "date_singapore": "2026-10-24",
+  "execution_operator": "User, in course RONIN remote Ubuntu terminal",
+  "evidence_delivery": "User-pasted terminal CSV and complete manifest; no binary cloud download",
+  "csv_reconstruction": "ASCII LF reconstruction; SHA matches the user-reported remote output_sha256 exactly",
+  "manifest_reconstruction": "JSON fields transcribed from complete user-pasted sidecar; not claimed byte-identical remote download",
+  "provider": "AWS through course RONIN, user-reported with machine screenshot/terminal evidence; no metadata or credential API queried",
+  "os": "Ubuntu 26.04 LTS x86_64, user terminal diagnostics",
+  "python": "3.12.15, uv environment creation output; system Python3.14.4 remains separate",
+  "uv": "0.13.5",
+  "seeded_pip": "26.2.2",
+  "tested_commit": "fc1e369e67b5d298620a5bb8e0062825cc0889c0",
+  "selected_model_sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+  "limits": [
+    "Ten data0 training sites: software parity, not unseen accuracy",
+    "No new-test input/inference/submission or training reproduction",
+    "Full install and end-to-end command/import timing were not measured",
+    "Sampled RSS is not a guaranteed instantaneous peak",
+    "Cloud Stop state remains unconfirmed"
+  ],
+  "shutdown_status": "Not yet confirmed by user"
+}

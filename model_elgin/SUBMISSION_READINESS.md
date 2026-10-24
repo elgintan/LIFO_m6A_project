@@ -1,4 +1,4 @@
-# Prediction and submission readiness — 23 October 2026
+# Prediction and submission readiness — 24 October 2026
 
 Current stage: final prediction interface and evidence checked; actual new-test
 input, release instructions and submission have not been supplied/completed here.
@@ -20,7 +20,7 @@ RONIN is a way to access AWS resources, not a special model dependency.
 | Prediction interface/example | Complete | Unchanged `context_reference_v1/predict.py`; real ten-site input, expected CSV and completion manifest public |
 | Python/CPU install instructions | Documented | Python3.12; CPU Torch index first, then exact requirements; separate from legacy m6Anet environment |
 | Ubuntu execution | Passed | [Hosted Ubuntu24.04 job and independent check](ubuntu_prediction_results_2026_10_23/README.md), ten sites/1887 reads, max difference1.49e-8<3e-6 |
-| Separate direct AWS-host execution | Unperformed recommended preflight | [Prepared commands](AWS_PREFLIGHT.md); no machine launched by this audit |
+| Separate direct AWS-host execution | Passed, user-executed 24October | [Native RONIN Ubuntu26.04/Python3.12.15 example](aws_prediction_results_2026_10_24/README.md); ten keys/1887reads/all fingerprints and parity checked. Cloud Stop state remains unconfirmed |
 | Actual new-test input and release contract | Not provided in this chat | Obtain the released file(s), naming/header requirements and upload route; do not assume they are globally unreleased |
 | Actual new-test prediction/submission | Pending actual inputs | Same artifact, full input-site coverage, unique keys, finite[0,1]scores, correct release filenames and retained manifests |
 

@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "date_singapore": "2026-10-24",
+  "scope": "Independent assistant file/hash/key/score checks of user-pasted native AWS/RONIN terminal evidence; no server access, binary cloud download, prediction, training or dependency installation by this auditor",
+  "user_execution_vs_assistant_check": "Execution is user-reported and supported by pasted CSV/complete predictor manifest; this independent local audit verifies correspondence to frozen public inputs/code and expected scores, not direct server observation",
+  "tested_commit": "fc1e369e67b5d298620a5bb8e0062825cc0889c0",
+  "release_pins": [
+    {
+      "file": "example/expected.csv",
+      "sha256": "87eeb1e5d03bbb302701acae16ff17c4bed3cb90034ad8bf92bebaa8dbfcf63c",
+      "size_bytes": 453
+    },
+    {
+      "file": "example/expected.csv.manifest.json",
+      "sha256": "3eb0d8eb83dd8596225a0b567602cd0a64c44d8154f280b80925b1d80f962f5f",
+      "size_bytes": 1876
+    },
+    {
+      "file": "example/input.json",
+      "sha256": "c8e400bf677d228bf8683c5bb61c0cfb105e3a3f7b5b9235c06efdaf015a334e",
+      "size_bytes": 106615
+    },
+    {
+      "file": "example_check.txt",
+      "sha256": "4941b7d74c57b92bd2bb0b19cb0e0e00afa445caad187ecac891ffc45fa465c6",
+      "size_bytes": 70
+    },
+    {
+      "file": "metadata.json",
+      "sha256": "32890e837bde8adb56c9c0c832c1394bf1f811d520994ebe1154b70f7d953d2a",
+      "size_bytes": 1043
+    },
+    {
+      "file": "model.pt",
+      "sha256": "b2d38ff29a918cb6213ad7df2c76786c5f56d3640bd055ff179d211b0e979668",
+      "size_bytes": 98043
+    },
+    {
+      "file": "training_specification.json",
+      "sha256": "ce6c40e89477659f7274e27de529c703e75e19881d421fa4aaf12cdcc2ad1e80",
+      "size_bytes": 1965
+    }
+  ],
+  "current_and_tested_commit_inference_source_pins": [
+    {
+      "file": "predict.py",
+      "sha256": "fdc1a6bad52b725265d9f195fe4bf467266827cd6bbb130a8de5394bc4fb63c0"
+    },
+    {
+      "file": "model.py",
+      "sha256": "0fa59b34cd85f1981eccd910d704412cb54de6602fe05fbff8d7ab4362d402c2"
+    },
+    {
+      "file": "data.py",
+      "sha256": "91f8a13e3ecb6cf5461c2f33a640f523e7884362c8545e4125f9f5c4b14ebf70"
+    },
+    {
+      "file": "context_features.py",
+      "sha256": "4a35f26e54aab767af0982f495f6d1abb7f5aa7bc1a3accb76e2bc3e0378c9e0"
+    },
+    {
+      "file": "common.py",
+      "sha256": "6a26cab89aea3155db924244bae1b69080c2f5037fb1ba00dc231d8487d30eaa"
+    }
+  ],
+  "requirements_sha256": "1fa7b45b5160586cbb4c8d15c2f75872d467354425d4adf9451b73c0ceab3355",
+  "n_sites": 10,
+  "n_reads": 1887,
+  "unique_complete_input_expected_prediction_keys": true,
+  "scores_finite_in_unit_interval": true,
+  "prediction_sha256": "819cd36bc62113e32cc0726370e4757f60c48c26ca8ecd4d162a11710ce8e96f",
+  "maximum_absolute_score_difference": 1.4901161193847656e-08,
+  "absolute_tolerance": 3e-06,
+  "reported_inference_resources": {
+    "wall_seconds": 0.02759509200041066,
+    "cpu_seconds": 0.054654250999998766,
+    "sampled_peak_process_tree_rss_mib": 400.625,
+    "sampling_interval_seconds": 0.2,
+    "sampling_errors": 0
+  },
+  "reported_inference_measurement_scope": "input/model hashing and loading, complete parsing, prediction, CSV verification/write; imports excluded",
+  "reported_rss_scope": "Sampled process-tree RSS from the user-pasted predictor manifest, not independently measured or guaranteed instantaneous peak; 0.2-second sampling interval",
+  "reported_environment_pins_match": true,
+  "actual_os_python_provenance": "Ubuntu26.04/Python3.12.15 are user terminal/environment evidence; runtime manifest independently reports Linux AWS platform and Torch/NumPy versions",
+  "source_evidence_hashes": {
+    "predictions.csv": "819cd36bc62113e32cc0726370e4757f60c48c26ca8ecd4d162a11710ce8e96f",
+    "prediction_manifest.json": "88277e578a061f1a5e2ca8bedea242fbb760d196f3af715b56dadeaa8d1e4dc6",
+    "verification.json": "d8c42d81dc50718f2153f8e35cf278b9d3dc68badd61d4f9c39e5352222b5656",
+    "environment.json": "285cbccd6eb25968d5b3585ab12d4e1c7bdd7edec741d9e7cf37bf858b118535",
+    "provenance.json": "2e52849c42404b6f61567aaa7411be6a033504f2f7a40968df4a0d6ced639184",
+    "score_comparison.csv": "cdab29399a60414334e1692d2f1d28a843634cb6095a5da90002ecc1a86497fa"
+  },
+  "privacy_scan": {
+    "files_checked": [
+      "environment.json",
+      "prediction_manifest.json",
+      "predictions.csv",
+      "provenance.json",
+      "README.md",
+      "score_comparison.csv",
+      "verification.json"
+    ],
+    "bounded_patterns": [
+      "private-key blocks",
+      "AWS access-key IDs",
+      "IPv4 literals",
+      "private-host URLs",
+      "personal Windows paths"
+    ],
+    "matches": 0,
+    "no_credentials_or_private_keys_opened": true
+  },
+  "provenance_delivery_checked": "CSV reconstructed as ASCII LF matches user-reported output SHA exactly; sidecar fields transcribed, no remote-sidecar byteidentity claimed",
+  "cloud_stop_confirmed": false,
+  "limitations": [
+    "Ten data0 training sites establish software parity only, not unseen accuracy or training reproduction.",
+    "No actual new unlabelled-test prediction/submission was checked.",
+    "Cloud Stop state remains unconfirmed."
+  ],
+  "audit_resources": {
+    "wall_seconds": 2.1785827999701723,
+    "process_cpu_seconds": 0.25
+  },
+  "audit_resource_scope": "After imports through read-only file/Git-subprocess/hash/table/privacy checks; excludes final JSON write. Wall includes Git subprocesses; process CPU excludes Git children. No auditor RSS sampled."
+}

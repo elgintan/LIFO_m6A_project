@@ -35,8 +35,11 @@ and [the resumable run guide](sgnex_analysis/ELGIN_TASK2_RUNNER.md).
 The earlier local Docker failure is preserved. A separate hosted Ubuntu 24.04
 check now passed with the exact model/pins and verified ten-site numerical parity:
 see [actual Linux evidence](model_elgin/ubuntu_prediction_results_2026_10_23/README.md).
-Recommended separate AWS-host verification remains unperformed; our own RONIN
-launch is not an explicit handout requirement. See [prediction/submission readiness](model_elgin/SUBMISSION_READINESS.md).
+**24 October:** the separate user-executed native RONIN/AWS Ubuntu26.04 check
+also passed using isolated Python3.12.15 and the same artifact/package pins.
+All ten keys/1887reads and model/input/output/source fingerprints matched;
+maximum score difference was1.49e-8<3e-6. See [actual AWS evidence](model_elgin/aws_prediction_results_2026_10_24/README.md)
+and [prediction/submission readiness](model_elgin/SUBMISSION_READINESS.md).
 [Scientific findings, all-pair summaries
 and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md) are available.
 Final five-page report assembly, public explorer hosting and the actual newly
@@ -124,8 +127,8 @@ The [required simple-baseline/m6Anet comparisons](model_evaluation/benchmark_res
 are complete: mean S0.476592 and0.717717 respectively, versus the existing
 cap128 control0.718715. The published reference may overlap in pretraining;
 its fold-stratified scores are not five-fold refitting. Hosted Ubuntu prediction
-has passed; recommended direct AWS preflight, final report and explorer hosting
-remain unfinished. Prioritise a frozen,
+and the separate native AWS example have passed. Final report, explorer hosting
+and actual new-test submission remain unfinished. Retain a frozen,
 runnable inference pipeline and the new unlabelled-test predictions for
 28 October, then complete Task 2 analysis/report/explorer for 8 November.
 The original 28 October deadline is 23:59 Singapore time; **8 November's exact

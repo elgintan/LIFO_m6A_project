@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "date_singapore": "2026-10-24",
+  "tested_commit": "fc1e369e67b5d298620a5bb8e0062825cc0889c0",
+  "scope": "User-executed native RONIN/AWS ten-site prediction, assistant-verified supplied evidence; no new-test submission",
+  "files": [
+    {
+      "file": "environment.json",
+      "sha256": "285cbccd6eb25968d5b3585ab12d4e1c7bdd7edec741d9e7cf37bf858b118535",
+      "size_bytes": 1031
+    },
+    {
+      "file": "independent_check.json",
+      "sha256": "5cc9205e701918e17b78954ca16a0ead3f38d101f511fefab0e65e841b6689f0",
+      "size_bytes": 5615
+    },
+    {
+      "file": "prediction_manifest.json",
+      "sha256": "88277e578a061f1a5e2ca8bedea242fbb760d196f3af715b56dadeaa8d1e4dc6",
+      "size_bytes": 1809
+    },
+    {
+      "file": "predictions.csv",
+      "sha256": "819cd36bc62113e32cc0726370e4757f60c48c26ca8ecd4d162a11710ce8e96f",
+      "size_bytes": 453
+    },
+    {
+      "file": "provenance.json",
+      "sha256": "2e52849c42404b6f61567aaa7411be6a033504f2f7a40968df4a0d6ced639184",
+      "size_bytes": 1356
+    },
+    {
+      "file": "README.md",
+      "sha256": "f802b85500f86748399f0d2222b09be8e58ad5ad6cfb83d9178bf745fc68ba16",
+      "size_bytes": 4128
+    },
+    {
+      "file": "score_comparison.csv",
+      "sha256": "cdab29399a60414334e1692d2f1d28a843634cb6095a5da90002ecc1a86497fa",
+      "size_bytes": 839
+    },
+    {
+      "file": "verification.json",
+      "sha256": "d8c42d81dc50718f2153f8e35cf278b9d3dc68badd61d4f9c39e5352222b5656",
+      "size_bytes": 1601
+    }
+  ]
+}

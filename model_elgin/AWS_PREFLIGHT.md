@@ -1,7 +1,12 @@
-# Prepared direct Ubuntu/AWS prediction check
+# Direct Ubuntu/AWS prediction check and reproduction
 
-Status: commands prepared; no direct AWS-host execution receipt yet. This is a
-recommended software preflight, not a new fit, accuracy experiment or bulk job.
+**24October status: native AWS example PASSED.** The user ran the frozen model
+on RONIN Ubuntu26.04 with managed Python3.12.15; supplied CSV/manifest evidence
+passed exact keys/readcounts/fingerprints and numerical parity checks.
+[Actual evidence and scope](aws_prediction_results_2026_10_24/README.md).
+The following commands reproduce this bounded check; do not rerun completed
+prediction merely to follow the guide. This is software preflight, not a fit,
+accuracy experiment or bulk job.
 
 ## Before launching
 
@@ -38,7 +43,7 @@ python3 --version
 
 The previously tested target is Ubuntu24.04, x86_64 and Python3.12. An actual
 Ubuntu26.04 x86_64 host reported Python3.14.4, with Python3.12/Docker absent on
-24October. Its direct-host prediction is not verified yet. Use the isolated
+24October. Its later direct-host example passed. Use the isolated
 Python3.12 branch below rather than changing the system Python or package pins.
 
 If Git or the Python venv module is missing on this new machine, install those
@@ -192,7 +197,8 @@ PY
 ```
 
 The receipt reports the actual OS version; a native26.04 run is not labelled24.04.
-Only the prior hosted24.04 run is currently completed. The receipt verifies
+Both the earlier hosted24.04 and later user-executed native26.04 examples passed.
+The receipt verifies
 Ubuntu/runtime/software facts. AWS provenance comes from
 the actual machine being launched in the course RONIN project; this code does
 not query cloud credentials or infer a provider from a filename. Retain the

@@ -1,12 +1,13 @@
 # Ubuntu inference reproducibility check
 
-**Current status, 23 October 2026: hosted Ubuntu24.04 check PASSED.**
+**Current status, 24 October 2026: hosted Ubuntu24.04 and native AWS26.04 checks PASSED.**
 The completed [job and independent artifact verification](../ubuntu_prediction_results_2026_10_23/README.md)
 establish exact pins, unchanged model,10 sites/1887 reads and maximum score
 difference1.49e-8 within3e-6. No new training or bulk prediction was performed.
-Separate direct AWS-host execution remains a recommended preflight, not a
-separate submission requirement explicitly imposed by the handout. See the
-[prepared direct-host commands](../AWS_PREFLIGHT.md).
+The separate user-executed [native RONIN/AWS example](../aws_prediction_results_2026_10_24/README.md)
+now passed with managed Python3.12.15 and the same model/package pins. It is
+recommended assurance, not an extra submission requirement. See the
+[direct-host reproduction commands](../AWS_PREFLIGHT.md).
 
 **Earlier laptop attempt, preserved as failure history:** the installed
 Docker Desktop backend crashed during startup while creating its Inference
