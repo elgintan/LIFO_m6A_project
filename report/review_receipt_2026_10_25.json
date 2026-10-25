@@ -1,0 +1,29 @@
+{
+  "status": "first_scientific_draft_for_team_review",
+  "checked_utc": "2026-10-24T16:59:38.470719+00:00",
+  "main_body_word_count": 1520,
+  "word_count_method": "Whitespace-delimited visible body text including headers/captions/tables; image alt text, URLs, Markdown separator rows, references/editor notes excluded",
+  "figures": [
+    "../model_evaluation/benchmark_results_2026_10_22/reference_curves.png",
+    "../sgnex_analysis/task2_results_2026_10_23/matched_site_score_patterns.png",
+    "../sgnex_analysis/biological_case_results_2026_10_23/case_group_score_patterns.png"
+  ],
+  "local_report_links": 93,
+  "layout_rendered": false,
+  "arial11_verified": false,
+  "five_page_limit_verified": false,
+  "submitted": false,
+  "new_test_input_received": false,
+  "new_test_status_source": "User confirmed25October; will update later",
+  "bibliography_metadata_checked_against_primary_sources": [
+    "https://www.nature.com/articles/s41592-022-01666-1",
+    "https://pubmed.ncbi.nlm.nih.gov/40082608/",
+    "https://pubmed.ncbi.nlm.nih.gov/37811887/?dopt=Abstract",
+    "https://pubmed.ncbi.nlm.nih.gov/38190635/"
+  ],
+  "limits": [
+    "Teammates must confirm their actual AI use and final report wording.",
+    "No contribution statement or personal reflection generated.",
+    "Required final typography and page count remain pending."
+  ]
+}

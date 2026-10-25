@@ -1,0 +1,2384 @@
+{
+  "status": "pass",
+  "checked_utc": "2026-10-24T16:48:43.154Z",
+  "url": "https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site/",
+  "case_depth_cutoff_combinations": [
+    {
+      "cutoff": "0.5",
+      "depth": "20",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "20",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "20",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "50",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "50",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "50",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "100",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "100",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "100",
+      "dots": 17,
+      "result": "HepG2 − K562: -0.563482. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.29 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.116238",
+          "0.048–0.185",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.410239",
+          "0.346–0.496",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.338297",
+          "0.245–0.443",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.252343",
+          "0.228–0.277",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.078402",
+          "0.078–0.078",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.641884",
+          "0.587–0.695",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.587215",
+          "0.558–0.617",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "HNRNPA1: K562 and HepG2"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "20",
+      "dots": 17,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.173986",
+          "0.027–0.320",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.187532",
+          "0.066–0.376",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.058395",
+          "0.023–0.097",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.182901",
+          "0.082–0.264",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "20",
+      "dots": 17,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.173986",
+          "0.027–0.320",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.187532",
+          "0.066–0.376",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.058395",
+          "0.023–0.097",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.182901",
+          "0.082–0.264",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "20",
+      "dots": 17,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.173986",
+          "0.027–0.320",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.187532",
+          "0.066–0.376",
+          "3 / 6",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.058395",
+          "0.023–0.097",
+          "3 / 5",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.182901",
+          "0.082–0.264",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "50",
+      "dots": 17,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.173986",
+          "0.027–0.320",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.196908",
+          "0.033–0.340",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.048450",
+          "0.023–0.067",
+          "3 / 4",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.182901",
+          "0.082–0.264",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "50",
+      "dots": 17,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.173986",
+          "0.027–0.320",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.196908",
+          "0.033–0.340",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.048450",
+          "0.023–0.067",
+          "3 / 4",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.182901",
+          "0.082–0.264",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "50",
+      "dots": 17,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.173986",
+          "0.027–0.320",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.196908",
+          "0.033–0.340",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.048450",
+          "0.023–0.067",
+          "3 / 4",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.182901",
+          "0.082–0.264",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "100",
+      "dots": 11,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.320479",
+          "0.320–0.320",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "0.048450",
+          "0.023–0.067",
+          "3 / 4",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.263806",
+          "0.264–0.264",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "100",
+      "dots": 11,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.320479",
+          "0.320–0.320",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "0.048450",
+          "0.023–0.067",
+          "3 / 4",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.263806",
+          "0.264–0.264",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "100",
+      "dots": 11,
+      "result": "Hct116 − HepG2: 0.551011. Group ranges are separated: passes the descriptive contrast screen. Geometric read-depth ratio: 1.18 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.320479",
+          "0.320–0.320",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "0.048450",
+          "0.023–0.067",
+          "3 / 4",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.586144",
+          "0.584–0.588",
+          "2 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.035133",
+          "0.026–0.044",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.263806",
+          "0.264–0.264",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "MCF7",
+          "0.066985",
+          "0.043–0.091",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ]
+      ],
+      "title": "RAB1B: Hct116 and HepG2"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "20",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "20",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "20",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "50",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "50",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "50",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "100",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "100",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "100",
+      "dots": 17,
+      "result": "All seven lines are comparable. Smallest line mean: 0.941538.",
+      "rows": [
+        [
+          "A549",
+          "0.945501",
+          "0.939–0.952",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "H9",
+          "0.952827",
+          "0.946–0.957",
+          "3 / 6",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.958513",
+          "0.954–0.962",
+          "3 / 5",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.957778",
+          "0.955–0.960",
+          "2 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HepG2",
+          "0.941538",
+          "0.941–0.943",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "0.953097",
+          "0.944–0.959",
+          "3 / 3",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "MCF7",
+          "0.942305",
+          "0.938–0.946",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ]
+      ],
+      "title": "ACTG1: seven cell lines"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "20",
+      "dots": 10,
+      "result": "HEYA8 − HepG2: -0.492822. Group ranges overlap: inconclusive under the descriptive screen. Geometric read-depth ratio: 1.98 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.411736",
+          "0.412–0.412",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "H9",
+          "0.635237",
+          "0.518–0.739",
+          "3 / 4",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.292908",
+          "0.031–0.724",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.651078",
+          "0.651–0.651",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "HepG2",
+          "0.785731",
+          "0.709–0.862",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "20",
+      "dots": 10,
+      "result": "HEYA8 − HepG2: -0.492822. Group ranges overlap: inconclusive under the descriptive screen. Geometric read-depth ratio: 1.98 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.411736",
+          "0.412–0.412",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "H9",
+          "0.635237",
+          "0.518–0.739",
+          "3 / 4",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.292908",
+          "0.031–0.724",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.651078",
+          "0.651–0.651",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "HepG2",
+          "0.785731",
+          "0.709–0.862",
+          "2 / 2",
+          "Yes",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "20",
+      "dots": 10,
+      "result": "HEYA8 − HepG2: -0.492822. Group ranges overlap: inconclusive under the descriptive screen. Geometric read-depth ratio: 1.98 (screen requires ≤2).",
+      "rows": [
+        [
+          "A549",
+          "0.411736",
+          "0.412–0.412",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "H9",
+          "0.635237",
+          "0.518–0.739",
+          "3 / 4",
+          "No",
+          "Comparable"
+        ],
+        [
+          "HEYA8",
+          "0.292908",
+          "0.031–0.724",
+          "3 / 3",
+          "No",
+          "Comparable"
+        ],
+        [
+          "Hct116",
+          "0.651078",
+          "0.651–0.651",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "HepG2",
+          "0.785731",
+          "0.709–0.862",
+          "2 / 2",
+          "No",
+          "Comparable"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "50",
+      "dots": 1,
+      "result": "Not eligible at 50 reads: each comparison line needs at least two metadata groups. Available individual scores remain below.",
+      "rows": [
+        [
+          "A549",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "Hct116",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HepG2",
+          "0.709145",
+          "0.709–0.709",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "50",
+      "dots": 1,
+      "result": "Not eligible at 50 reads: each comparison line needs at least two metadata groups. Available individual scores remain below.",
+      "rows": [
+        [
+          "A549",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "Hct116",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HepG2",
+          "0.709145",
+          "0.709–0.709",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "50",
+      "dots": 1,
+      "result": "Not eligible at 50 reads: each comparison line needs at least two metadata groups. Available individual scores remain below.",
+      "rows": [
+        [
+          "A549",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "Hct116",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HepG2",
+          "0.709145",
+          "0.709–0.709",
+          "1 / 1",
+          "Not comparable",
+          "One-group diagnostic"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    },
+    {
+      "cutoff": "0.5",
+      "depth": "100",
+      "dots": 0,
+      "result": "Not eligible at 100 reads: each comparison line needs at least two metadata groups. Available individual scores remain below.",
+      "rows": [
+        [
+          "A549",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "Hct116",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HepG2",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    },
+    {
+      "cutoff": "0.7",
+      "depth": "100",
+      "dots": 0,
+      "result": "Not eligible at 100 reads: each comparison line needs at least two metadata groups. Available individual scores remain below.",
+      "rows": [
+        [
+          "A549",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "Hct116",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HepG2",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    },
+    {
+      "cutoff": "0.9",
+      "depth": "100",
+      "dots": 0,
+      "result": "Not eligible at 100 reads: each comparison line needs at least two metadata groups. Available individual scores remain below.",
+      "rows": [
+        [
+          "A549",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "H9",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HEYA8",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "Hct116",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "HepG2",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "K562",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ],
+        [
+          "MCF7",
+          "—",
+          "—",
+          "0 / 0",
+          "Not comparable",
+          "No eligible groups"
+        ]
+      ],
+      "title": "G3BP2: HepG2 and HEYA8"
+    }
+  ],
+  "literal_site_routes": [
+    {
+      "case": "persistent_difference_nontraining_lines",
+      "title": "Site 177 on ENST00000340913",
+      "clickAndReload": "pass"
+    },
+    {
+      "case": "persistent_difference_training_line",
+      "title": "Site 1,947 on ENST00000311481",
+      "clickAndReload": "pass"
+    },
+    {
+      "case": "shared_high",
+      "title": "Site 607 on ENST00000331925",
+      "clickAndReload": "pass"
+    },
+    {
+      "case": "overlapping_groups_inconclusive",
+      "title": "Site 2,510 on ENST00000359707",
+      "clickAndReload": "pass"
+    }
+  ],
+  "evidence_download": {
+    "file": "case_run_evidence.csv",
+    "size_bytes": 25051,
+    "sha256": "eac092e7f83f4080eb83ed88e4ad38c261f8086e83924f0253a04b3c89cf4ded"
+  },
+  "console_errors_or_warnings": [],
+  "notes": [
+    "Initial short wait expired during an uncached hosted gene load; the intended site was then visible without a console error. Final route checks used explicit20s network-aware waits.",
+    "One combined browser route/download call took unexpectedly long; no model computation was involved.",
+    "Full-page screenshot capture timed out; the documented viewport screenshot API succeeded and its image is retained."
+  ],
+  "limits": [
+    "One desktop Chromium browser in observed dark theme; no separate hosted mobile, physical-device, cross-browser or light-mode check.",
+    "Prior local390px viewport checks apply to byte-identical frontend source, not a separate hosted device test."
+  ]
+}

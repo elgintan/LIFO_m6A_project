@@ -16,11 +16,12 @@ See the [actual results, plots, resource measurements and commands](model_elgin/
 The separate external trial has higher ranking S but remains unpromoted after
 the documented tradeoff review. See [current stages](CURRENT_STAGE.md) and
 [the fixed selection decision](model_elgin/FINAL_MODEL_SELECTION.md).
-The full local explorer now contains **actual scores for all 23 runs and
-451,352 sites**, with context/support warnings. Public hosting is pending.
+The [public explorer](https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site)
+now contains **actual scores for all 23 runs and 451,352 sites**, four biological
+cases and context/support warnings. See [25 October hosted checks](data_visualisation/hosting_results_2026_10_25/README.md).
 The older simulated prototype and received coverage-only dashboard are historical.
 
-**Current stage: Task 2 descriptive analysis and local actual-score explorer complete.**
+**Current stage: Task 2 descriptive analysis and full public actual-score explorer complete; first report draft ready.**
 All 23 runs completed and passed verification at 05:46:47 SGT on 23 October.
 They contain 2,983,948 scored run-site observations / 232,253,678 reads;
 these are not unique sites or assay-confirmed modifications. No training or
@@ -42,8 +43,10 @@ maximum score difference was1.49e-8<3e-6. See [actual AWS evidence](model_elgin/
 and [prediction/submission readiness](model_elgin/SUBMISSION_READINESS.md).
 [Scientific findings, all-pair summaries
 and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md) are available.
-Final five-page report assembly, public explorer hosting and the actual newly
-released test submission remain pending.
+The [first scientific report draft](report/REPORT_DRAFT_2026_10_25.md) and
+[evidence/page plan](report/REPORT_EVIDENCE_MAP_2026_10_25.md) are ready for review.
+Final Arial 11/five-page rendering and actual new-test submission remain pending.
+The user confirmed on 25 October that the new input has not been received.
 
 [Four focused biological cases](sgnex_analysis/biological_case_results_2026_10_23/README.md)
 now connect the score comparisons to named transcripts, primary literature and
@@ -127,8 +130,8 @@ The [required simple-baseline/m6Anet comparisons](model_evaluation/benchmark_res
 are complete: mean S0.476592 and0.717717 respectively, versus the existing
 cap128 control0.718715. The published reference may overlap in pretraining;
 its fold-stratified scores are not five-fold refitting. Hosted Ubuntu prediction
-and the separate native AWS example have passed. Final report, explorer hosting
-and actual new-test submission remain unfinished. Retain a frozen,
+and the separate native AWS example have passed. The full explorer is publicly
+hosted; final report layout/review and actual new-test submission remain unfinished. Retain a frozen,
 runnable inference pipeline and the new unlabelled-test predictions for
 28 October, then complete Task 2 analysis/report/explorer for 8 November.
 The original 28 October deadline is 23:59 Singapore time; **8 November's exact

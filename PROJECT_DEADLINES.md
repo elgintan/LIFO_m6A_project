@@ -6,6 +6,11 @@ announcement in this chat on that date. Its changes supersede the original
 below. This records the supplied announcement; it is not an independent
 check of Canvas or later announcements.
 
+**25 October status:** the user confirmed that the new unlabelled test input
+has not been received and will update later. Do not treat older supplied-data
+CSVs as that submission. The full explorer is now publicly hosted; the first
+report draft still needs team review and verified five-page Arial 11 layout.
+
 | Deliverable | Current deadline | Meaning for our work |
 |---|---|---|
 | Code repositories | **28 October 2026** — original deadline retained | Freeze a usable model/prediction interface, installation instructions, a small test example and reproducible commands. Verify the documented prediction path on clean Ubuntu. |

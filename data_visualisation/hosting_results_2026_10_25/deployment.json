@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "succeeded",
+  "url": "https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site",
+  "project_id": "appgprj_6adcd82d29dc8191be0adcff1bf07528",
+  "deployment_id": "appgdep_6adcd98b21f481919528cbe8c6e599d6",
+  "version_id": "appgprj_6adcd82d29dc8191be0adcff1bf07528~appgver_bf0150132bdc819199c22134e8ca89db",
+  "provider_deployment_id": "site---6adcd82d29dc8191be0adcff1bf07528",
+  "access_mode": "public",
+  "access_revision": 2,
+  "deployment_updated_utc": "2026-10-24T16:16:21.996801+00:00",
+  "access_updated_utc": "2026-10-24T16:16:59.028127+00:00",
+  "main_source_commit": "909da8798acdef71f0430e9ef4e5fafddffaeba9",
+  "sites_source_commit": "17b9f5cd72299efaa89c804e0ce6abb522d87cd3",
+  "static_files": 174,
+  "static_bytes": 199752416,
+  "scope": "Full 23-run actual-score explorer, four biological cases and evidence. No score or identifier changes. Local integration receipt excluded.",
+  "not_a_new_inference_or_test_submission": true
+}

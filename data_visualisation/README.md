@@ -1,6 +1,6 @@
 # Interactive visualisation — current handover
 
-**24 October 2026: actual selected-model scores and the four biological case panels are integrated locally. Desktop and 390-pixel phone-size Chrome checks passed; public hosting remains pending.** Start with [the current explorer guide](task2_viz/README.md).
+**25 October 2026: the full actual-score explorer and four biological cases are publicly hosted.** [Open the explorer](https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site) or read [hosted verification](hosting_results_2026_10_25/README.md). The complete population is displayed, without a hosting subset. Start with [the current explorer guide](task2_viz/README.md) for local maintenance.
 
 The current local artifact is `outputs/biological_cases_v5/site/`. It preserves the completed full explorer: 23 runs, 17 metadata groups, seven cell lines, 451,352 scoreable transcript/position keys and 2,983,948 scored run-site observations. The integration receipt confirms that the original 132 score-data JSON files and published four-case payload are unchanged. This adds case navigation and linked evidence without repeating training, inference, downloads or score building.
 
@@ -8,7 +8,8 @@ The current local artifact is `outputs/biological_cases_v5/site/`. It preserves 
 
 - **Completed:** all 23 selected-model predictions; cross-run context QC; strict validation and the full actual-score explorer build; independent aggregate checks; the four-case interface and scientific source review.
 - **Current artifact:** HNRNPA1 persistent contrast, RAB1B training-line caution, ACTG1 shared high scores and G3BP2 inconclusive overlapping groups. Each opens its exact transcript/site and retains all 23 original run observations.
-- **Pending:** publish and verify a hosted site, then assemble the final report. Local Chrome and phone-size viewport checks do not establish cross-browser or physical-device testing.
+- **Completed hosting:** successful public Sites deployment, 36 hosted case control combinations, four literal-site click/reload routes, original-score download and bounded anonymous HTTP verification.
+- **Pending:** review/layout of the first scientific report draft; broader cross-browser or physical-device assurance is not claimed by the existing Chrome checks.
 
 Task2 scores require at least **20 reads per run**; 50/100-read controls are nested sensitivity checks. Primary comparisons require at least **two metadata groups per line**, mean runs within each group then equal group weights, annotated human sites and agreement among all saved encoded contexts. A one-group diagnostic can remain visible without becoming comparable. Missing/unscored/ineligible values remain distinct from zero. Scores are not modified-molecule fractions or experimentally confirmed m6A.
 

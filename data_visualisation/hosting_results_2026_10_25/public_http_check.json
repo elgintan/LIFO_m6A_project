@@ -1,0 +1,153 @@
+{
+  "status": "fail",
+  "checked_utc": "2026-10-24T16:45:51.586307+00:00",
+  "url": "https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site",
+  "authentication_sent": false,
+  "cookies_sent": false,
+  "files": [
+    {
+      "file": "index.html",
+      "http_status": 200,
+      "size_bytes": 115988,
+      "sha256": "5c6f52201c645a8519fc6ce15b6b797731332463dc8819eac79aec2cec445455",
+      "expected_sha256": "2c365ce070da72205a706fb6a2f553febf11874aa55b0d548ba7a94e358b97f9",
+      "content_type": "text/html",
+      "matches": false
+    },
+    {
+      "file": "app.html",
+      "http_status": 200,
+      "size_bytes": 113897,
+      "sha256": "e26be230573c53b90500d94c3bbb08d79f83612383dc5d8325297d93e5171b4a",
+      "expected_sha256": "8b3d51aed5e2de690bbd103d6c6230920caa7074e06b723b65223f95c4fc3d30",
+      "content_type": "text/html",
+      "matches": false
+    },
+    {
+      "file": "case_logic.js",
+      "http_status": 200,
+      "size_bytes": 2651,
+      "sha256": "3084575dc5c39df8a61521905bd4c375a2dfdcd164c6a6e7333e1b5cc43f2c96",
+      "expected_sha256": "3084575dc5c39df8a61521905bd4c375a2dfdcd164c6a6e7333e1b5cc43f2c96",
+      "content_type": "text/javascript",
+      "matches": true
+    },
+    {
+      "file": "case_view.js",
+      "http_status": 200,
+      "size_bytes": 15395,
+      "sha256": "72543981f315e81fb793845bafd45c6578a1a847a4257743dbc03fc335b5ffec",
+      "expected_sha256": "72543981f315e81fb793845bafd45c6578a1a847a4257743dbc03fc335b5ffec",
+      "content_type": "text/javascript",
+      "matches": true
+    },
+    {
+      "file": "hosting_manifest.json",
+      "http_status": 200,
+      "size_bytes": 28108,
+      "sha256": "023d0774c312e513496d3825be4b134d8679add11694011b2699774417da9545",
+      "expected_sha256": "023d0774c312e513496d3825be4b134d8679add11694011b2699774417da9545",
+      "content_type": "application/json",
+      "matches": true
+    },
+    {
+      "file": "data/overview.json",
+      "http_status": 200,
+      "size_bytes": 98848,
+      "sha256": "320b4cb754a05bf71d3cc9fff86bdb40ea640ff478c404609e43604ed9c3bc7d",
+      "expected_sha256": "320b4cb754a05bf71d3cc9fff86bdb40ea640ff478c404609e43604ed9c3bc7d",
+      "content_type": "application/json",
+      "matches": true
+    },
+    {
+      "file": "data/genes_index.json",
+      "http_status": 200,
+      "size_bytes": 789979,
+      "sha256": "07340b7748de0f0b6e1fd2dbf38a468e35bda1a81d59264da8350d5d722916a8",
+      "expected_sha256": "07340b7748de0f0b6e1fd2dbf38a468e35bda1a81d59264da8350d5d722916a8",
+      "content_type": "application/json",
+      "matches": true
+    },
+    {
+      "file": "data/biological_cases.json",
+      "http_status": 200,
+      "size_bytes": 233356,
+      "sha256": "1821dc0f9aeacabb36815e9f20c2f011e690147901bed653f0f4d3f98374796b",
+      "expected_sha256": "1821dc0f9aeacabb36815e9f20c2f011e690147901bed653f0f4d3f98374796b",
+      "content_type": "application/json",
+      "matches": true
+    },
+    {
+      "file": "data/tx_index.json",
+      "http_status": 200,
+      "size_bytes": 386427,
+      "sha256": "1173f791ed9c3e4688431b7ec72bc14e36e0abd21f8690fc14271a0385e4ad4b",
+      "expected_sha256": "1173f791ed9c3e4688431b7ec72bc14e36e0abd21f8690fc14271a0385e4ad4b",
+      "content_type": "application/json",
+      "matches": true
+    },
+    {
+      "file": "evidence/biological_cases/case_run_evidence.csv",
+      "http_status": 200,
+      "size_bytes": 25051,
+      "sha256": "eac092e7f83f4080eb83ed88e4ad38c261f8086e83924f0253a04b3c89cf4ded",
+      "expected_sha256": "eac092e7f83f4080eb83ed88e4ad38c261f8086e83924f0253a04b3c89cf4ded",
+      "content_type": "text/csv",
+      "matches": true
+    },
+    {
+      "file": "evidence/biological_cases/BIOLOGICAL_CASE_SELECTION_PLAN.md",
+      "http_status": 200,
+      "size_bytes": 4077,
+      "sha256": "55032f50a46974f4c232e8141b41920a5d19ce0759bf3452d263d47ecfc9dcc8",
+      "expected_sha256": "55032f50a46974f4c232e8141b41920a5d19ce0759bf3452d263d47ecfc9dcc8",
+      "content_type": "text/markdown",
+      "matches": true
+    },
+    {
+      "file": "data/genes/b026.json",
+      "http_status": 200,
+      "size_bytes": 1114207,
+      "sha256": "6c21413b47a28f7fdff6859f2f5b9f2365cf14d16b76ee2ddd010953630e64e1",
+      "expected_sha256": "6c21413b47a28f7fdff6859f2f5b9f2365cf14d16b76ee2ddd010953630e64e1",
+      "content_type": "application/json",
+      "matches": true
+    },
+    {
+      "file": "data/genes/b107.json",
+      "http_status": 200,
+      "size_bytes": 1462155,
+      "sha256": "494fdf3c65d5b216517fefe5eb7253c16df62f1d0b69d933cb8c650e0c07558d",
+      "expected_sha256": "494fdf3c65d5b216517fefe5eb7253c16df62f1d0b69d933cb8c650e0c07558d",
+      "content_type": "application/json",
+      "matches": true
+    },
+    {
+      "file": "data/genes/b043.json",
+      "http_status": 200,
+      "size_bytes": 1413262,
+      "sha256": "241bcafdaecd6930596182a711a8691ba52a84fc7dc1d3ab85eecdc4277d7066",
+      "expected_sha256": "241bcafdaecd6930596182a711a8691ba52a84fc7dc1d3ab85eecdc4277d7066",
+      "content_type": "application/json",
+      "matches": true
+    },
+    {
+      "file": "data/genes/b069.json",
+      "http_status": 200,
+      "size_bytes": 1743162,
+      "sha256": "17da7e9cc9d6cedd84d555dc07efdee5fd674af0a36692a923b2df52ff5dde31",
+      "expected_sha256": "17da7e9cc9d6cedd84d555dc07efdee5fd674af0a36692a923b2df52ff5dde31",
+      "content_type": "application/json",
+      "matches": true
+    }
+  ],
+  "checked_files": 15,
+  "checked_bytes": 7546563,
+  "scope": "Selected public HTML/JS/metadata/case/gene-bucket/evidence HTTP responses compared byte-for-byte to deployed source. Not all174 hosted assets were downloaded.",
+  "resources": {
+    "wall_seconds": 9.594934799999464,
+    "process_cpu_seconds": 0.828125,
+    "scope": "After imports/local selection through parallel HTTP and byte comparisons; final JSON write excluded",
+    "rss_measured": false
+  }
+}

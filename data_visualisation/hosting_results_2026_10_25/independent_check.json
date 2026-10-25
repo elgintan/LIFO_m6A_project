@@ -1,0 +1,178 @@
+{
+  "status": "PASS",
+  "schema_version": 1,
+  "checked_utc": "2026-10-25T04:07:50.778189+00:00",
+  "executed_by": "independent assistant audit of saved local evidence",
+  "url": "https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site",
+  "checks": {
+    "exact_174_static_assets_and_all_sha256_sizes": true,
+    "static_asset_bytes_match_deployment": true,
+    "hosting_manifest_matches_release_pin": true,
+    "all_172_original_v5_asset_pins_unchanged": true,
+    "only_nojekyll_and_public_manifest_added": true,
+    "all_132_original_score_jsons_exact": true,
+    "private_integration_receipt_excluded": true,
+    "source_archive_hash_size_and_sidecar_match": true,
+    "source_package_and_prepare_receipts_complete": true,
+    "all_174_source_archive_members_match_dist": true,
+    "native_archive_all_174_static_assets_exact": true,
+    "native_archive_175_files_one_safe_platform_config": true,
+    "native_archive_no_private_receipt_model_credentials": true,
+    "deployment_public_status_and_source_identity": true,
+    "public_receipts_same_returned_site_url": true,
+    "full_scientific_population_manifest": true,
+    "actual_browser_download_sha_size_matches_original": true,
+    "actual_download_has_92_case_run_rows": true,
+    "saved_browser_receipt_36_unique_case_control_checks": true,
+    "saved_browser_receipt_four_exact_click_reload_routes": true,
+    "saved_browser_receipt_records_no_console_issues": true,
+    "raw_http_failure_with_only_two_html_mismatches_preserved": true,
+    "raw_http_expected_pins_match_current_deployment": true,
+    "13_recorded_non_html_http_responses_match_source_hashes": true,
+    "app.html_one_identified_cloudflare_script_reference": true,
+    "app.html_only_938_bytes_added_and_all_original_bytes_exact": true,
+    "app.html_retained_body_and_saved_receipt_pins_match": true,
+    "index.html_one_identified_cloudflare_script_reference": true,
+    "index.html_only_938_bytes_added_and_all_original_bytes_exact": true,
+    "index.html_retained_body_and_saved_receipt_pins_match": true,
+    "verified_http_summary_13_exact_plus_two_html_not_all_hosted_assets": true,
+    "recorded_http_requests_anonymous": true,
+    "audited_input_receipts_unchanged_during_check": true
+  },
+  "issues": [],
+  "counts": {
+    "checks": 33,
+    "static_assets": 174,
+    "static_bytes": 199752416,
+    "original_score_jsons_preserved": 132,
+    "native_archive_regular_files": 175,
+    "native_platform_configuration_files": 1,
+    "sampled_public_http_assets": 15,
+    "recorded_exact_non_html_http_assets": 13,
+    "retained_html_bodies_independently_checked": 2,
+    "browser_case_depth_cutoff_combinations": 36,
+    "literal_site_routes": 4,
+    "downloaded_case_run_records": 92
+  },
+  "inputs": {
+    "data_visualisation/hosting_results_2026_10_25/deployment.json": {
+      "sha256": "1f6a12dd161aa065f1e0be7d1826d826cbf4c9b18b1cd087c01a4362c486c4d3",
+      "size_bytes": 985
+    },
+    "data_visualisation/hosting_results_2026_10_25/browser_qa.json": {
+      "sha256": "e833dcb22513e80f4493c1aa0ffa41a56a9bdc5c0d8f17e598c2de3b875e6b63",
+      "size_bytes": 49419
+    },
+    "data_visualisation/hosting_results_2026_10_25/public_http_check.json": {
+      "sha256": "8661d932e8c0c720554268226682bd8b69a4fef91eae20393c229fb1b8ac6a56",
+      "size_bytes": 5880
+    },
+    "data_visualisation/hosting_results_2026_10_25/public_http_verification.json": {
+      "sha256": "038ca433bc7d5812deb1d807bc7ff52591d42005db9750adf570691baf3f64d9",
+      "size_bytes": 5241
+    },
+    "data_visualisation/outputs/hosting_release_20261024_v1/package_complete.json": {
+      "sha256": "4f971efb070f6d3dfaf51fff5a74ad9c9b16696f5239c576bb48ce0403e911da",
+      "size_bytes": 1599
+    },
+    "data_visualisation/outputs/hosting_release_20261024_v1/release.json": {
+      "sha256": "9f83d21d995578dcf04675c31ddc36be059d2e86ae02ba22ddc864616df4889e",
+      "size_bytes": 974
+    },
+    "data_visualisation/outputs/hosting_release_20261024_v1/hosting_manifest.json": {
+      "sha256": "023d0774c312e513496d3825be4b134d8679add11694011b2699774417da9545",
+      "size_bytes": 28108
+    },
+    "data_visualisation/outputs/hosting_release_20261024_v1/explorer-2026-10-24-v1.tar.gz.sha256": {
+      "sha256": "8a3223a967add05d2aa55b684dd5cf281e00ba94f8fd17653acc24746a7b9f9c",
+      "size_bytes": 97
+    },
+    "data_visualisation/outputs/sites_prepare_20261025.json": {
+      "sha256": "8dfea01796264f33e6a2acede34a30e8f58373401602171b8145a604195e03de",
+      "size_bytes": 465
+    },
+    "data_visualisation/outputs/biological_cases_v5/site/integration_complete.json": {
+      "sha256": "937dadfe8bff9e038f7285213a5700428d528936e87d96e41172674badc09b8e",
+      "size_bytes": 55953
+    },
+    "data_visualisation/outputs/hosted_downloads_20261025/case_run_evidence.csv": {
+      "sha256": "eac092e7f83f4080eb83ed88e4ad38c261f8086e83924f0253a04b3c89cf4ded",
+      "size_bytes": 25051
+    },
+    "data_visualisation/outputs/host_html_diagnostic_20261025/index.html": {
+      "sha256": "da8d6159991b14206d07631e3cf5e972a467399c572bc65366d812e79043f526",
+      "size_bytes": 115988
+    },
+    "data_visualisation/outputs/host_html_diagnostic_20261025/app.html": {
+      "sha256": "080f6fc5b7d7b5dd007e65ce25756fcc9147dc51e990a2c532ebe9e2d6f85d16",
+      "size_bytes": 113897
+    }
+  },
+  "source_hosting_archive": {
+    "sha256": "ec880e675cbf851266dc7568a4d6efe6f308610d5892c25f5c072edc10f5d94d",
+    "size_bytes": 49505191
+  },
+  "native_sites_archive": {
+    "sha256": "ea272dd906c2393d9343112da936c6d2596db6b39f3cbb380a916d87f44f465c",
+    "size_bytes": 50004686
+  },
+  "native_configuration_scope": "One additional dist/.openai/hosting.json containing only matching public project identity and static directory; no secret or model file",
+  "actual_browser_download": {
+    "sha256": "eac092e7f83f4080eb83ed88e4ad38c261f8086e83924f0253a04b3c89cf4ded",
+    "size_bytes": 25051
+  },
+  "html_response_verification": {
+    "app.html": {
+      "observed": {
+        "sha256": "080f6fc5b7d7b5dd007e65ce25756fcc9147dc51e990a2c532ebe9e2d6f85d16",
+        "size_bytes": 113897
+      },
+      "original_source": {
+        "sha256": "8b3d51aed5e2de690bbd103d6c6230920caa7074e06b723b65223f95c4fc3d30",
+        "size_bytes": 112959
+      },
+      "identified_platform_script_added_bytes": 938,
+      "source_bytes_exact_after_only_identified_script_removed_locally": true
+    },
+    "index.html": {
+      "observed": {
+        "sha256": "da8d6159991b14206d07631e3cf5e972a467399c572bc65366d812e79043f526",
+        "size_bytes": 115988
+      },
+      "original_source": {
+        "sha256": "2c365ce070da72205a706fb6a2f553febf11874aa55b0d548ba7a94e358b97f9",
+        "size_bytes": 115050
+      },
+      "identified_platform_script_added_bytes": 938,
+      "source_bytes_exact_after_only_identified_script_removed_locally": true
+    }
+  },
+  "resources": {
+    "wall_seconds": 12.947375099989586,
+    "process_cpu_seconds": 5.25,
+    "scope": "After Python standard-library imports through local file/archive hashing, original-source comparisons, actual downloaded-binary validation, saved-receipt checks and isolated HTML-difference verification; excludes final receipt JSON write",
+    "rss_measured": false,
+    "peak_rss_bytes": null
+  },
+  "limits": [
+    "No new network, browser, model inference, training, score rebuild or credential/Git-configuration access.",
+    "All174 deployment-source/static archive assets were independently hashed locally; this is not a download of all174 hosted URL responses.",
+    "The saved public HTTP check sampled15 assets. Thirteen recorded non-HTML response hashes match source; two retained HTML bodies and the actual downloaded CSV were independently rehashed here.",
+    "Each HTML response has one938-byte identified Cloudflare detection script. Removal occurred only in this local comparison; deployed protection remains active. Raw failed HTML comparisons and request-specific bodies remain retained locally.",
+    "Browser36-combination/four-route/console observations were recorded by the main agent; this independent audit validates the saved receipt and original downloaded binary, not a second browser session.",
+    "No completed course submission, new-test performance or independent biological validation is inferred."
+  ],
+  "audit_correction": {
+    "initial_status": "FAIL",
+    "initial_false_failed_check": "verified_http_summary_13_exact_plus_two_html_not_all_hosted_assets",
+    "initial_receipt_sha256": "f14de4cdea336c3302fdf4e2dca4578f377ec59e929d9abc8f075cd302762984",
+    "cause": "Audit text predicate removed spaces from the receipt limit but not from its search phrase; the receipt already explicitly disclosed not all174 assets were HTTP-sampled. No scientific file or deployment discrepancy.",
+    "correction": "Rechecked all summary fields and searched the equally space-normalized phrase. All other32 audit checks remain unchanged and passed.",
+    "resources": {
+      "wall_seconds": 0.025229700026102364,
+      "process_cpu_seconds": 0.015625,
+      "scope": "After imports through reading existing audit/HTTP receipts, correcting the single scope-text predicate and preparing this correction record; excludes final JSON write",
+      "rss_measured": false
+    }
+  }
+}

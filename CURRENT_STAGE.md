@@ -1,6 +1,12 @@
-# Current project stage — 24 October 2026
+# Current project stage — 25 October 2026
 
-**Current stage: Task 2 analysis and full local actual-score explorer complete; report assembly and hosting next.**
+**Current stage: Task 2 analysis and full public actual-score explorer complete; first report draft ready for team review and five-page layout.**
+
+[Open the public explorer](https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site)
+and [the first report draft](report/REPORT_DRAFT_2026_10_25.md). The draft is not
+yet typeset, page-verified or submitted. [Hosted verification](data_visualisation/hosting_results_2026_10_25/README.md)
+records public access, all 36 case controls, four literal-site reload links,
+an actual evidence download and bounded anonymous HTTP fingerprint checks.
 Focused biological interpretation now includes [four fixed gene/site cases](sgnex_analysis/biological_case_results_2026_10_23/README.md):
 HNRNPA1/RAB1B contrasts, ACTG1 shared-high scores and an inconclusive G3BP2 example.
 Case rankings, original23run evidence, training-key exposure, technical metadata,
@@ -11,7 +17,7 @@ and 390-pixel phone size. All 36 depth/cutoff combinations, four exact-site
 click/reload routes and all 92 original run rows passed. See the
 [interface verification](data_visualisation/biological_case_ui_results_2026_10_24/README.md).
 The current full local artifact is `data_visualisation/outputs/biological_cases_v5/site/`;
-public hosting remains pending.
+public hosting of the full population is now complete.
 All 23 runs completed at 05:46:47 Singapore time on 23 October, exit0; the
 checkpoint is complete and no run lock remains. The verified exports contain
 2,983,948 scored run-site observations / 232,253,678 reads. These are repeated
@@ -43,12 +49,12 @@ benchmarks have completed.
 | Task 1: final model preparation/fitting | **Complete**: fresh 18-epoch fit, saved model and ten-site example | Retain immutable artifact, resumable checkpoints and logs |
 | Task 1: frozen data1 diagnostic | **Complete**: S0.604865501 | Retain already-exposed transfer evidence and all metric tradeoffs; no winner selection |
 | Task 1: predictions on supplied data0/data1/data2 | **Complete**: 121,838 / 90,810 / 1,323 sites | Preserve CSVs and manifests; fitted-data0 scores are separate from OOF validation |
-| Task 1: new unlabelled test submission | Pending actual input/instructions, not supplied in this chat | Same frozen artifact, exact coverage/format checks and required submission files; no unavailable label metrics |
+| Task 1: new unlabelled test submission | Pending: user confirmed on 25 October that the input has not been received and will update later | Same frozen artifact, exact coverage/format checks and required submission files; no unavailable label metrics |
 | Code reproducibility | **Hosted Ubuntu24.04 and native RONIN/AWS Ubuntu26.04 prediction passed**, same artifact/pins and ten-site parity checked; laptop Docker failure preserved | Retain [actual AWS evidence](model_elgin/aws_prediction_results_2026_10_24/README.md). User confirmed the cloud machine stopped24October. Actual new-test input/submission remains separate. See [readiness](model_elgin/SUBMISSION_READINESS.md) |
 | Task 2: real SG-NEx predictions | **Complete: 23/23 verified** | Preserve same-model exports, full source QC, coverage checks and completion receipts; do not rerun |
 | Task 2: biological/data analysis | **Complete descriptive comparison**: no context exclusions; all 21 pairs at 20/50/100 reads, separate all-line panels and 0.5/0.7/0.9 summaries | Team review and concise report narrative; retain all outcomes and limitations |
-| Interactive visualisation | **Full local actual-score and four-case interface complete**, all 23 runs/451,352 sites; original 132 JSON files unchanged; 36 case control combinations, literal-site reload links and desktop/phone-size Chrome checks passed | Public hosting/final deployment checks; any hosted subset must be explicitly identified |
-| Final scientific report | Evidence available; final five-page report unfinished | Main-body methods, findings, limitations and scientific figures; appendix is unlimited but ungraded |
+| Interactive visualisation | **Full public actual-score and four-case explorer deployed**, all 23 runs/451,352 sites; hosted controls/routes/download and anonymous file checks passed | Team usability review; cross-browser/physical-device checks remain broader optional assurance, not a claimed completed test |
+| Final scientific report | First approximately 1,500-word scientific draft and source map ready; final five-page layout unfinished | Team verification, actual AI-use confirmation, readable Arial 11 figures/tables and rendered PDF; appendix is ungraded |
 
 **Deadlines:** repositories and new unlabelled-test predictions remain due
 **28 October 2026** at the original 23:59 Singapore deadline. Report and
@@ -77,7 +83,8 @@ and [the sequential-run guide](sgnex_analysis/ELGIN_TASK2_RUNNER.md).
 The 23-run predictions and [context audit](sgnex_analysis/context_qc_results/README.md)
 are complete. [Actual scientific findings and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md)
 and the full local actual-score explorer are available. Both context policies
-retain the same population, with no exclusions. Final report and public hosting
-remain pending. The AWS example calculation is finished; the user confirmed
+retain the same population, with no exclusions. Public hosting is complete;
+final report review/layout and actual new-test submission remain pending.
+The AWS example calculation is finished; the user confirmed
 the cloud machine stopped24October. This is user-reported shutdown, not a new
 dashboard inspection. No training or SG-NEx batch is running.

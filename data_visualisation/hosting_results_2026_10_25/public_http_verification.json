@@ -1,0 +1,144 @@
+{
+  "status": "pass",
+  "checked_utc": "2026-10-24T16:50:42.346433+00:00",
+  "url": "https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site",
+  "authentication_sent": false,
+  "cookies_sent": false,
+  "checks": [
+    {
+      "file": "index.html",
+      "http_status": 200,
+      "verification": "Only one hosting-platform Cloudflare JavaScript-detection script added; all original HTML bytes remain exact",
+      "observed_sha256": "da8d6159991b14206d07631e3cf5e972a467399c572bc65366d812e79043f526",
+      "retained_source_sha256": "2c365ce070da72205a706fb6a2f553febf11874aa55b0d548ba7a94e358b97f9",
+      "hosting_script_added_bytes": 938,
+      "pass": true
+    },
+    {
+      "file": "app.html",
+      "http_status": 200,
+      "verification": "Only one hosting-platform Cloudflare JavaScript-detection script added; all original HTML bytes remain exact",
+      "observed_sha256": "080f6fc5b7d7b5dd007e65ce25756fcc9147dc51e990a2c532ebe9e2d6f85d16",
+      "retained_source_sha256": "8b3d51aed5e2de690bbd103d6c6230920caa7074e06b723b65223f95c4fc3d30",
+      "hosting_script_added_bytes": 938,
+      "pass": true
+    },
+    {
+      "file": "case_logic.js",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "3084575dc5c39df8a61521905bd4c375a2dfdcd164c6a6e7333e1b5cc43f2c96",
+      "size_bytes": 2651,
+      "pass": true
+    },
+    {
+      "file": "case_view.js",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "72543981f315e81fb793845bafd45c6578a1a847a4257743dbc03fc335b5ffec",
+      "size_bytes": 15395,
+      "pass": true
+    },
+    {
+      "file": "hosting_manifest.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "023d0774c312e513496d3825be4b134d8679add11694011b2699774417da9545",
+      "size_bytes": 28108,
+      "pass": true
+    },
+    {
+      "file": "data/overview.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "320b4cb754a05bf71d3cc9fff86bdb40ea640ff478c404609e43604ed9c3bc7d",
+      "size_bytes": 98848,
+      "pass": true
+    },
+    {
+      "file": "data/genes_index.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "07340b7748de0f0b6e1fd2dbf38a468e35bda1a81d59264da8350d5d722916a8",
+      "size_bytes": 789979,
+      "pass": true
+    },
+    {
+      "file": "data/biological_cases.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "1821dc0f9aeacabb36815e9f20c2f011e690147901bed653f0f4d3f98374796b",
+      "size_bytes": 233356,
+      "pass": true
+    },
+    {
+      "file": "data/tx_index.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "1173f791ed9c3e4688431b7ec72bc14e36e0abd21f8690fc14271a0385e4ad4b",
+      "size_bytes": 386427,
+      "pass": true
+    },
+    {
+      "file": "evidence/biological_cases/case_run_evidence.csv",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "eac092e7f83f4080eb83ed88e4ad38c261f8086e83924f0253a04b3c89cf4ded",
+      "size_bytes": 25051,
+      "pass": true
+    },
+    {
+      "file": "evidence/biological_cases/BIOLOGICAL_CASE_SELECTION_PLAN.md",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "55032f50a46974f4c232e8141b41920a5d19ce0759bf3452d263d47ecfc9dcc8",
+      "size_bytes": 4077,
+      "pass": true
+    },
+    {
+      "file": "data/genes/b026.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "6c21413b47a28f7fdff6859f2f5b9f2365cf14d16b76ee2ddd010953630e64e1",
+      "size_bytes": 1114207,
+      "pass": true
+    },
+    {
+      "file": "data/genes/b107.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "494fdf3c65d5b216517fefe5eb7253c16df62f1d0b69d933cb8c650e0c07558d",
+      "size_bytes": 1462155,
+      "pass": true
+    },
+    {
+      "file": "data/genes/b043.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "241bcafdaecd6930596182a711a8691ba52a84fc7dc1d3ab85eecdc4277d7066",
+      "size_bytes": 1413262,
+      "pass": true
+    },
+    {
+      "file": "data/genes/b069.json",
+      "http_status": 200,
+      "verification": "exact source bytes",
+      "sha256": "17da7e9cc9d6cedd84d555dc07efdee5fd674af0a36692a923b2df52ff5dde31",
+      "size_bytes": 1743162,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "http200_anonymous_assets": 15,
+    "exact_non_html_responses": 13,
+    "html_with_only_identified_platform_addition": 2,
+    "all_original_132_score_jsons_preserved_in_deployment_source": true
+  },
+  "limits": [
+    "Only15 hosted assets were sampled, not all174. Deployment source pins cover all174 packaged assets.",
+    "Raw HTML hashes vary because Cloudflare adds request-specific detection code. The code remains active; it was removed only in the local comparison to identify the difference.",
+    "A default Python user-agent diagnostic received403; the named verification client and interactive Chrome requests worked. No authentication or bypass token was used."
+  ],
+  "raw_comparison": "public_http_check.json",
+  "browser_evidence": "browser_qa.json"
+}

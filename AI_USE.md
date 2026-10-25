@@ -580,3 +580,48 @@ credential access or public website deployment occurred. Copy/hash timing is
 not prediction timing. Public code and compact verification are separate from
 the ignored full local197MB artifact. The user previously confirmed RONIN stopped;
 no new-test input or submission is implied. Final report/hosting remain pending.
+
+## Public explorer and first report draft — 25 October
+
+The assistant reused the already completed hosting archive dated 24 October
+(49,505,191 bytes), rather than repeating scientific computation. Its existing
+receipt was directly inspected and its fingerprints checked. A fresh ignored
+Sites checkout received all174 public static assets, byte-identical to that
+archive. The private local integration receipt was excluded. The native Sites
+workflow pushed the exact source, packaged it and deployed a saved version;
+public access was then set for the researcher-facing hosting requested in the
+continuation. Site identity/version/commit are retained, without credentials.
+Source credentials stayed in session memory and hidden stdin, never files/output.
+An initial restricted-network source push was interrupted after DNS failure;
+the same Site succeeded with network permission. No duplicate Site was created.
+
+Hosted Chrome checks exercised36 case/depth/cutoff combinations,four literal-site
+click/reload routes and an actual CSV download; its SHA matches the frozen case
+run evidence. An initial short wait missed a cold gene load, then explicit
+network-aware waits passed. One combined browser call took unexpectedly long.
+Full-page screenshot capture timed out; documented viewport capture succeeded.
+No browser console warning/error was observed in the checked session. Scope is
+one desktop Chromium browser/observed dark theme, not a new physical/mobile or
+cross-browser test. The live tab was retained as a deliverable.
+
+The anonymous HTTP checker first assumed a verbose gene-index schema; inspecting
+the actual fields/rows format corrected it without changing data. A default
+Python client received403; a named verification client and normal browser worked,
+with no cookies/authentication/bypass token. Of15 sampled assets,13 non-HTML files
+match exact bytes. Two raw HTML hashes differ because Cloudflare adds one 938-byte
+JavaScript-detection script to each. Local comparison isolated that identified
+addition and verified every original HTML byte; no hosting security was disabled.
+Raw mismatches are retained separately instead of claiming exact served HTML.
+All 174 deployment-source assets and original 132 score JSON files remain unchanged.
+
+A separate agent mapped official report requirements to primary saved evidence
+and wrote a first scientific draft with three existing figure slots and a small
+benchmark table. The main agent reviewed source tables, completed hosted status
+and primary bibliography metadata, without another experiment/model search.
+Early five-model history is separated from later strict CV; stronger unpromoted
+external ranking, exposed data1 and Task2 confounding remain. This is an untypeset
+draft for team review, not a five-page/font-verified report, final submission,
+personal reflection or invented contribution statement. Other members' AI use
+still needs their own confirmation. Two documented project-level AI corrections
+remain in the draft. The user confirmed on 25 October that new test input has not
+been received and will update later. No RONIN restart/training/prediction occurred.

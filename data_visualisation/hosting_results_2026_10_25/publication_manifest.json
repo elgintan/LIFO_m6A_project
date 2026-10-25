@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "created_utc": "2026-10-25T04:10:43.522630+00:00",
+  "kind": "public_full_score_explorer_deployment_verification",
+  "url": "https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site",
+  "files": {
+    "browser_qa.json": {
+      "sha256": "e833dcb22513e80f4493c1aa0ffa41a56a9bdc5c0d8f17e598c2de3b875e6b63",
+      "size_bytes": 49419
+    },
+    "deployment.json": {
+      "sha256": "1f6a12dd161aa065f1e0be7d1826d826cbf4c9b18b1cd087c01a4362c486c4d3",
+      "size_bytes": 985
+    },
+    "hosted_explorer.png": {
+      "sha256": "16cae2cb64226d7651722e6e27caa76ff463cdc190f5f51a441ca8e92160d8a0",
+      "size_bytes": 105356
+    },
+    "independent_check.json": {
+      "sha256": "6118b4dabcf4b05bb79d6c71ce13b9d538b406b024305c8ae0266bdf52885740",
+      "size_bytes": 9251
+    },
+    "packaging_summary.json": {
+      "sha256": "ff22d97b22f452a6dedd5a6194a057a17040dc23043cd549a25db5aab7121ac2",
+      "size_bytes": 1473
+    },
+    "public_http_check.json": {
+      "sha256": "8661d932e8c0c720554268226682bd8b69a4fef91eae20393c229fb1b8ac6a56",
+      "size_bytes": 5880
+    },
+    "public_http_verification.json": {
+      "sha256": "038ca433bc7d5812deb1d807bc7ff52591d42005db9750adf570691baf3f64d9",
+      "size_bytes": 5241
+    },
+    "README.md": {
+      "sha256": "85906f14d3cd8f52d82a640d6e430885ede08d71ed435ab2ea75bcb7e3c4f4e4",
+      "size_bytes": 4237
+    }
+  },
+  "limits": [
+    "Public compact evidence only; private/local raw responses and the full site archive stay outside normal Git uploads.",
+    "A successful public site is not a completed course submission or independent biological validation."
+  ]
+}

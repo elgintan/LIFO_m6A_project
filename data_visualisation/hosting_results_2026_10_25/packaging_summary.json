@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "source_archive": {
+    "sha256": "ec880e675cbf851266dc7568a4d6efe6f308610d5892c25f5c072edc10f5d94d",
+    "size_bytes": 49505191
+  },
+  "source_archive_packaged_utc": "2026-10-24T13:25:48.042805+00:00",
+  "source_archive_resources": {
+    "wall_seconds": 52.39956029999303,
+    "process_cpu_seconds": 51.53125,
+    "scope": "Function entry through source/privacy/hash checks, deterministic compression, full archive roundtrip verification and metadata writes; imports/final receipt write excluded",
+    "rss_measured": false
+  },
+  "source_archive_was_reused": true,
+  "sites_preparation": {
+    "status": "complete",
+    "static_files": 174,
+    "static_bytes": 199752416,
+    "source_archive_sha256": "ec880e675cbf851266dc7568a4d6efe6f308610d5892c25f5c072edc10f5d94d",
+    "unchanged_archive_assets": true,
+    "private_local_receipt_excluded": true,
+    "wall_seconds": 6.156808700005058,
+    "process_cpu_seconds": 3.546875,
+    "scope": "After imports: source hashing, verified extraction and full file rehash; final receipt write excluded",
+    "rss_measured": false
+  },
+  "native_sites_archive": {
+    "sha256": "ea272dd906c2393d9343112da936c6d2596db6b39f3cbb380a916d87f44f465c",
+    "size_bytes": 50004686
+  },
+  "native_archive_regular_files": 175,
+  "static_assets": 174,
+  "extra_native_configuration": "One safe platform hosting configuration, not an extra score/data file",
+  "no_training_inference_or_new_test_submission": true
+}

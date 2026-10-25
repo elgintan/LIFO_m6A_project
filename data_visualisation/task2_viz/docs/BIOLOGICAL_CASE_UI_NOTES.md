@@ -26,7 +26,7 @@ routes, all 92 original run rows, invalid-site rejection and existing tabs. A
 390-pixel viewport retained contained horizontal chart/table scrolling with no
 page overflow. No console warnings/errors were observed. This is one-browser,
 dark-theme viewport emulation, not physical-device/cross-browser/light-mode QA.
-Public hosting remains pending. See the separate compact verification package
+Public hosting subsequently completed25October; see `data_visualisation/hosting_results_2026_10_25/`. The preceding paragraph describes the separate local checks. See the separate compact verification package
 `data_visualisation/biological_case_ui_results_2026_10_24/`.
 
 The visible chart explanation now states that scores are not modified-molecule
