@@ -53,6 +53,9 @@ dataset*.json.gz
 /model_evaluation/simple_baseline/outputs/
 /sgnex_analysis/outputs/
 /data_visualisation/outputs/
+/report/outputs/
+/report/layout_v1/
+/report/layout_*/mpl_cache/
 /data_visualisation/task2_viz/site/data/
 /data_visualisation/task2_viz/public_data/readcount/
 /data_visualisation/task2_viz/public_data/annotation/

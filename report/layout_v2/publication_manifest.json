@@ -1,0 +1,39 @@
+{
+  "status": "complete_review_draft",
+  "created_utc": "2026-10-25T04:24:03.784006+00:00",
+  "files": {
+    "DSA4262_LIFO_report_draft.pdf": {
+      "sha256": "cf1167937b2977c8753d0c611320269df8e7b8078fa4b9f8a3f99f079493d160",
+      "size_bytes": 734412
+    },
+    "extracted_text.txt": {
+      "sha256": "dff0f58903270d68ab153db6b2d50ddc8d2f5cab15c50187aae9f7f778e2a567",
+      "size_bytes": 13559
+    },
+    "figures/figure1_benchmarks.png": {
+      "sha256": "668197813838cf7ee5172c587a7328bffb9a6da3dfa4603fec552c1718f45371",
+      "size_bytes": 190120
+    },
+    "figures/figure2_matched_scores.png": {
+      "sha256": "5f32ff44e8287d0e35707e3087a33019d355ad9098eb87accf2088534b4cd5a2",
+      "size_bytes": 152220
+    },
+    "figures/figure3_cases.png": {
+      "sha256": "93a8a2af42c05f8c7e0b9e7a58877b19dfd59837ee250b475933f7a16cad79a8",
+      "size_bytes": 231846
+    },
+    "layout_receipt.json": {
+      "sha256": "cbb765b7165987ddbeb2a8556df244f428be03422797ad196a5a50b38d101b9f",
+      "size_bytes": 18829
+    },
+    "parent_review.json": {
+      "sha256": "3c3c3700e59318cca4de03d1c98fff6e221a61d920e708b9ae46b50dda346163",
+      "size_bytes": 4201
+    },
+    "README.md": {
+      "sha256": "27cf9721604263dc9c45a6c90a7ededb0c32fa3a57b48bfafdd0c86f7445b26c",
+      "size_bytes": 3316
+    }
+  },
+  "not_team_approved_or_submitted": true
+}

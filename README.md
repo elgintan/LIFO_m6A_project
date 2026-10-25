@@ -43,9 +43,11 @@ maximum score difference was1.49e-8<3e-6. See [actual AWS evidence](model_elgin/
 and [prediction/submission readiness](model_elgin/SUBMISSION_READINESS.md).
 [Scientific findings, all-pair summaries
 and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md) are available.
-The [first scientific report draft](report/REPORT_DRAFT_2026_10_25.md) and
+The [formatted scientific report draft](report/layout_v2/DSA4262_LIFO_report_draft.pdf) and
 [evidence/page plan](report/REPORT_EVIDENCE_MAP_2026_10_25.md) are ready for review.
-Final Arial 11/five-page rendering and actual new-test submission remain pending.
+The review PDF has five body pages in Arial 11 plus a separate reference page;
+all six pages were rendered and inspected. Team review/final approval and actual
+new-test submission remain pending.
 The user confirmed on 25 October that the new input has not been received.
 
 [Four focused biological cases](sgnex_analysis/biological_case_results_2026_10_23/README.md)
@@ -131,7 +133,7 @@ are complete: mean S0.476592 and0.717717 respectively, versus the existing
 cap128 control0.718715. The published reference may overlap in pretraining;
 its fold-stratified scores are not five-fold refitting. Hosted Ubuntu prediction
 and the separate native AWS example have passed. The full explorer is publicly
-hosted; final report layout/review and actual new-test submission remain unfinished. Retain a frozen,
+hosted; final report team review/approval and actual new-test submission remain unfinished. Retain a frozen,
 runnable inference pipeline and the new unlabelled-test predictions for
 28 October, then complete Task 2 analysis/report/explorer for 8 November.
 The original 28 October deadline is 23:59 Singapore time; **8 November's exact

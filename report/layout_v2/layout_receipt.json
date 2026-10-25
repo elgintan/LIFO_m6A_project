@@ -1,0 +1,657 @@
+{
+  "status": "rendered_and_visually_checked_draft",
+  "review_status": "draft_for_team_review",
+  "pdf": {
+    "path": "report/layout_v2/DSA4262_LIFO_report_draft.pdf",
+    "sha256": "cf1167937b2977c8753d0c611320269df8e7b8078fa4b9f8a3f99f079493d160",
+    "size_bytes": 734412
+  },
+  "source_draft": {
+    "path": "report/REPORT_DRAFT_2026_10_25.md",
+    "sha256": "4f90ca751a7bdbf22229e64db4ff2264e547213bddc459860e828cae95f0bca8",
+    "size_bytes": 17877
+  },
+  "builder": {
+    "path": "report/scripts/build_report_pdf.py",
+    "sha256": "618abc925c7a3ee397d88316fc4278f7dbfd616c5d51742c28d0ea7c77627402",
+    "size_bytes": 30415
+  },
+  "pages": 6,
+  "main_body_pages": 5,
+  "references_pages": 1,
+  "page_size": "A4",
+  "body_font": "Arial",
+  "body_font_size_pt": 11,
+  "caption_font_size_pt": 9.2,
+  "table_font_size_pt": 9.3,
+  "references_font_size_pt": 10,
+  "text_fonts_observed": [
+    "AAAAAA+Arial-BoldMT",
+    "AAAAAA+Arial-ItalicMT",
+    "AAAAAA+ArialMT"
+  ],
+  "text_sizes_observed_pt": [
+    8.5,
+    9.2,
+    9.3,
+    10.0,
+    11.0,
+    12.3,
+    16.0
+  ],
+  "embedded_text_fonts": [
+    [
+      "/AAAAAA+Arial-BoldMT",
+      true
+    ],
+    [
+      "/AAAAAA+Arial-ItalicMT",
+      true
+    ],
+    [
+      "/AAAAAA+ArialMT",
+      true
+    ]
+  ],
+  "figure_font": "Arial",
+  "figure_font_min_pt_at_design_width": 8,
+  "figure_design_width_inches": 7.1,
+  "figure_placement_width_pt": 515.2755905511812,
+  "scientific_figures": {
+    "sources": [
+      {
+        "basename": "data.info.labelled",
+        "scope": "original data0 labels outside repository",
+        "sha256": "6758f002db36835c188c9d6fb039b4599494ca9dcc816c26cc22a2c04ee42978",
+        "size_bytes": 4702026
+      },
+      {
+        "path": "model_evaluation/evaluate.py",
+        "sha256": "43217301e0c9f9aeac821175763c096a171ec699fe342c04099f0d09a42e7727",
+        "size_bytes": 13864
+      },
+      {
+        "path": "eda/received/shared_folds/data0_folds.csv",
+        "sha256": "986b7872084cf762f1c3944b1eacc1e8f1ff69cb2848630f80685063541da9b0",
+        "size_bytes": 4702028
+      },
+      {
+        "path": "model_evaluation/simple_baseline/outputs/replay_v1/data0_oof.csv",
+        "sha256": "76cab883cbedb01a13a388b48de16d05931a2b42be0703e737f3daad6b26ac95",
+        "size_bytes": 5116131
+      },
+      {
+        "path": "model_samuel/outputs/data0_oof.csv",
+        "sha256": "78ac518c56d16d3a0e97abe749e0950a1d9a8bbe6ad170b4290500b6b1ba9c7b",
+        "size_bytes": 5372964
+      },
+      {
+        "path": "model_elgin/outputs/read_cap_v1/cv/none/data0_oof.csv",
+        "sha256": "0b6b0cbb659f861a096f118b5e9e816feb632a01ee001526a7d368c2fbc8c63c",
+        "size_bytes": 5350298
+      },
+      {
+        "path": "model_evaluation/outputs/m6anet_v1/scored/data0_reference_scores.csv",
+        "sha256": "bce228839c7e4cb8975cc790c25450d897d08abfc76d2817592fdf18a7258d97",
+        "size_bytes": 5067540
+      },
+      {
+        "path": "model_evaluation/benchmark_results_2026_10_22/summary.json",
+        "sha256": "c75bd1e2852804405fbe81185a583b2f150611888f9dde2c582472bb83191e38",
+        "size_bytes": 11990
+      },
+      {
+        "path": "sgnex_analysis/task2_results_2026_10_23/all_line_score_cdf_grid.csv",
+        "sha256": "d2043c7c79023a2d68e2cd6eeaa31b59cf007a946536c41b49c97e7850c91509",
+        "size_bytes": 492154
+      },
+      {
+        "path": "sgnex_analysis/task2_results_2026_10_23/all_line_score_summary.csv",
+        "sha256": "b1a8cc2c4f9e918a9c15d437c9e2b52cdf1f72fc17dc7884e126e70632269237",
+        "size_bytes": 5414
+      },
+      {
+        "path": "sgnex_analysis/biological_case_results_2026_10_23/selected_cases.csv",
+        "sha256": "1872bf56f4893528a3ccc50152ad6ea7d0a0c1eb23642aadcd384d26dabdf6fe",
+        "size_bytes": 5285
+      },
+      {
+        "path": "sgnex_analysis/biological_case_results_2026_10_23/case_run_evidence.csv",
+        "sha256": "eac092e7f83f4080eb83ed88e4ad38c261f8086e83924f0253a04b3c89cf4ded",
+        "size_bytes": 25051
+      },
+      {
+        "path": "sgnex_analysis/biological_case_results_2026_10_23/case_group_scores.csv",
+        "sha256": "7715daab8798b619ece8c17f2a19a0a816fde40728b67457c5dd42e587ffe125",
+        "size_bytes": 22134
+      },
+      {
+        "path": "sgnex_analysis/biological_case_results_2026_10_23/case_line_scores.csv",
+        "sha256": "120eebe71299dabc28c8c9fd94260d7b26f5e1c08a4c0b941c82560bc867714a",
+        "size_bytes": 10871
+      },
+      {
+        "path": "sgnex_analysis/biological_case_results_2026_10_23/training_key_diagnostics.csv",
+        "sha256": "9f1a275fc63868a63184cb269432d134f9bd62906caaac8a1312d8ffcf0ba8d9",
+        "size_bytes": 588
+      }
+    ],
+    "curves": [
+      {
+        "pipeline": "Logistic",
+        "source_path": "model_evaluation/simple_baseline/outputs/replay_v1/data0_oof.csv",
+        "source_type": "saved gene-held-out development scores",
+        "not_final_fitted_data0_predictions": true,
+        "pooled_roc_auc": 0.8039940216996121,
+        "pooled_pr_auc": 0.1489451297601818
+      },
+      {
+        "pipeline": "LightGBM",
+        "source_path": "model_samuel/outputs/data0_oof.csv",
+        "source_type": "saved gene-held-out development scores",
+        "not_final_fitted_data0_predictions": true,
+        "pooled_roc_auc": 0.9217906365048721,
+        "pooled_pr_auc": 0.49807675032014864
+      },
+      {
+        "pipeline": "Selected neural",
+        "source_path": "model_elgin/outputs/read_cap_v1/cv/none/data0_oof.csv",
+        "source_type": "saved gene-held-out development scores",
+        "not_final_fitted_data0_predictions": true,
+        "pooled_roc_auc": 0.9310519604118698,
+        "pooled_pr_auc": 0.5020558540352483
+      },
+      {
+        "pipeline": "m6Anet reference",
+        "source_path": "model_evaluation/outputs/m6anet_v1/scored/data0_reference_scores.csv",
+        "source_type": "pretrained reference; possible HCT116 overlap",
+        "not_final_fitted_data0_predictions": true,
+        "pooled_roc_auc": 0.9321262438981589,
+        "pooled_pr_auc": 0.5029718338381804
+      }
+    ],
+    "layout_only_package_versions": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "scikit-learn": "1.9.1",
+      "reportlab": "4.4.9",
+      "Pillow": "12.3.0"
+    },
+    "model_environment_or_pins_changed": false,
+    "case_context": [
+      [
+        "HNRNPA1",
+        "CGGACTG",
+        "48",
+        "Present; label 1"
+      ],
+      [
+        "RAB1B",
+        "AGGACAA",
+        "41",
+        "Present; label 0"
+      ],
+      [
+        "ACTG1",
+        "TGGACTC",
+        "133",
+        "Present; label 1"
+      ],
+      [
+        "G3BP2",
+        "AGGACAT",
+        "40",
+        "Absent"
+      ]
+    ],
+    "population_checks": {
+      "benchmark_sites": 121838,
+      "benchmark_positives": 5475,
+      "cdf20_points": 3507,
+      "cdf20_sites_per_line": 33452,
+      "case_records": 92,
+      "case_scored": 80,
+      "case_unscored": 12
+    }
+  },
+  "original_figures_preserved": [
+    {
+      "path": "model_evaluation/benchmark_results_2026_10_22/reference_curves.png",
+      "sha256": "42ce85f516a34a5717724014a77044ac3d256832a9e979ad32b0c0db8bdbf952",
+      "size_bytes": 222327
+    },
+    {
+      "path": "sgnex_analysis/task2_results_2026_10_23/matched_site_score_patterns.png",
+      "sha256": "c08464525e2f9010f1531b8bade7c4d69080f99cc0d6fe4454cfd81dacc3f34b",
+      "size_bytes": 183611
+    },
+    {
+      "path": "sgnex_analysis/biological_case_results_2026_10_23/case_group_score_patterns.png",
+      "sha256": "b1c3a4b8a04e7f03c2f0756371a4466d836faacd9de2b408e0a63d5c1d8ddb8a",
+      "size_bytes": 365605
+    }
+  ],
+  "content_preservation": {
+    "all_source_body_and_reference_paragraphs_found": true,
+    "all_source_table_cells_found": true,
+    "paragraphs_checked": 28,
+    "table_cells_checked": 49
+  },
+  "layout": [
+    {
+      "page": 1,
+      "role": "main body",
+      "used_height_pt": 628.0,
+      "remaining_height_pt": 121.89,
+      "elements": [
+        {
+          "kind": "heading: Sequence-aware m6A site prediction and cautious exploration across SG-NEx cell lines",
+          "top": 792.89,
+          "bottom": 755.89,
+          "height": 37.0
+        },
+        {
+          "kind": "heading: Introduction",
+          "top": 737.89,
+          "bottom": 722.89,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 716.89,
+          "bottom": 650.14,
+          "height": 66.75
+        },
+        {
+          "kind": "heading: Problem statement",
+          "top": 637.84,
+          "bottom": 622.84,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 616.84,
+          "bottom": 550.09,
+          "height": 66.75
+        },
+        {
+          "kind": "heading: Methods",
+          "top": 537.79,
+          "bottom": 522.79,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 516.79,
+          "bottom": 463.39,
+          "height": 53.4
+        },
+        {
+          "kind": "body",
+          "top": 457.09,
+          "bottom": 403.69,
+          "height": 53.4
+        },
+        {
+          "kind": "body",
+          "top": 397.39,
+          "bottom": 343.99,
+          "height": 53.4
+        },
+        {
+          "kind": "body",
+          "top": 337.69,
+          "bottom": 244.24,
+          "height": 93.45
+        },
+        {
+          "kind": "body",
+          "top": 237.94,
+          "bottom": 171.19,
+          "height": 66.75
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "role": "main body",
+      "used_height_pt": 664.24,
+      "remaining_height_pt": 85.65,
+      "elements": [
+        {
+          "kind": "heading: Results (1): model evaluation",
+          "top": 786.89,
+          "bottom": 771.89,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 765.89,
+          "bottom": 712.49,
+          "height": 53.4
+        },
+        {
+          "kind": "benchmark table",
+          "top": 704.19,
+          "bottom": 598.19,
+          "height": 106.0
+        },
+        {
+          "kind": "body",
+          "top": 590.19,
+          "bottom": 523.44,
+          "height": 66.75
+        },
+        {
+          "kind": "body",
+          "top": 517.14,
+          "bottom": 450.39,
+          "height": 66.75
+        },
+        {
+          "kind": "body",
+          "top": 444.09,
+          "bottom": 390.69,
+          "height": 53.4
+        },
+        {
+          "kind": "figure 1",
+          "top": 382.39,
+          "bottom": 175.55,
+          "height": 206.84
+        },
+        {
+          "kind": "caption",
+          "top": 169.55,
+          "bottom": 135.65,
+          "height": 33.9
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "role": "main body",
+      "used_height_pt": 616.15,
+      "remaining_height_pt": 133.74,
+      "elements": [
+        {
+          "kind": "heading: Results (2): application to SG-NEx data",
+          "top": 786.89,
+          "bottom": 771.89,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 765.89,
+          "bottom": 685.79,
+          "height": 80.1
+        },
+        {
+          "kind": "body",
+          "top": 679.49,
+          "bottom": 612.74,
+          "height": 66.75
+        },
+        {
+          "kind": "body",
+          "top": 606.44,
+          "bottom": 553.04,
+          "height": 53.4
+        },
+        {
+          "kind": "body",
+          "top": 546.74,
+          "bottom": 453.29,
+          "height": 93.45
+        },
+        {
+          "kind": "figure 2",
+          "top": 444.99,
+          "bottom": 223.64,
+          "height": 221.35
+        },
+        {
+          "kind": "caption",
+          "top": 217.64,
+          "bottom": 183.74,
+          "height": 33.9
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "role": "main body",
+      "used_height_pt": 721.26,
+      "remaining_height_pt": 28.63,
+      "elements": [
+        {
+          "kind": "heading: Results (2): four illustrative sites",
+          "top": 786.89,
+          "bottom": 771.89,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 765.89,
+          "bottom": 685.79,
+          "height": 80.1
+        },
+        {
+          "kind": "body",
+          "top": 679.49,
+          "bottom": 626.09,
+          "height": 53.4
+        },
+        {
+          "kind": "figure 3",
+          "top": 617.79,
+          "bottom": 269.43,
+          "height": 348.36
+        },
+        {
+          "kind": "case annotation table",
+          "top": 263.43,
+          "bottom": 157.43,
+          "height": 106.0
+        },
+        {
+          "kind": "case plot note",
+          "top": 151.43,
+          "bottom": 128.83,
+          "height": 22.6
+        },
+        {
+          "kind": "caption",
+          "top": 123.83,
+          "bottom": 78.63,
+          "height": 45.2
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "role": "main body",
+      "used_height_pt": 478.25,
+      "remaining_height_pt": 271.64,
+      "elements": [
+        {
+          "kind": "heading: Discussion",
+          "top": 786.89,
+          "bottom": 771.89,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 765.89,
+          "bottom": 659.09,
+          "height": 106.8
+        },
+        {
+          "kind": "heading: Code Availability",
+          "top": 646.79,
+          "bottom": 631.79,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 625.79,
+          "bottom": 559.04,
+          "height": 66.75
+        },
+        {
+          "kind": "heading: Use of AI methods",
+          "top": 546.74,
+          "bottom": 531.74,
+          "height": 15
+        },
+        {
+          "kind": "body",
+          "top": 525.74,
+          "bottom": 512.39,
+          "height": 13.35
+        },
+        {
+          "kind": "AI-use table",
+          "top": 504.09,
+          "bottom": 395.69,
+          "height": 108.4
+        },
+        {
+          "kind": "body",
+          "top": 387.69,
+          "bottom": 320.94,
+          "height": 66.75
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "role": "references",
+      "used_height_pt": 166.0,
+      "remaining_height_pt": 583.89,
+      "elements": [
+        {
+          "kind": "heading: References",
+          "top": 786.89,
+          "bottom": 771.89,
+          "height": 15
+        },
+        {
+          "kind": "reference",
+          "top": 765.89,
+          "bottom": 739.89,
+          "height": 26
+        },
+        {
+          "kind": "reference",
+          "top": 727.89,
+          "bottom": 701.89,
+          "height": 26
+        },
+        {
+          "kind": "reference",
+          "top": 689.89,
+          "bottom": 676.89,
+          "height": 13
+        },
+        {
+          "kind": "reference",
+          "top": 664.89,
+          "bottom": 638.89,
+          "height": 26
+        }
+      ]
+    }
+  ],
+  "content_changes": [
+    "SG-NEx comparison methods moved to page 3 before application results.",
+    "Added a continuation heading for four illustrative sites on page 4.",
+    "Original case-plot context/support/training annotations moved to an adjacent table and note.",
+    "Unicode dash characters typeset with ASCII hyphens; Markdown formatting rendered.",
+    "Editor notes excluded; draft status added to page headers and footers."
+  ],
+  "no_training_or_inference": true,
+  "no_case_selection_or_score_filtering": true,
+  "original_sources_unchanged": true,
+  "limitations": [
+    "Team confirmation of authorship, AI tool/model details and bibliography remains pending.",
+    "This PDF does not claim submission, unseen-test results or team approval."
+  ],
+  "visual_review": {
+    "reviewer": "assistant report-layout agent",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "render_tool": "bundled Poppler pdftoppm",
+    "render_dpi": 130,
+    "observed_clipping_or_overlap": false,
+    "scientific_plot_labels_readable": true,
+    "headers_footers_page_numbers_checked": true,
+    "team_approval_claimed": false,
+    "independent_parent_review": "pending"
+  },
+  "post_render_source_hash_checks_passed": 20,
+  "public_hyperlinks_checked": [
+    "https://github.com/elgintan/LIFO_m6A_project",
+    "https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site",
+    "https://doi.org/10.1038/s41592-022-01666-1",
+    "https://doi.org/10.1038/s41592-025-02623-4",
+    "https://doi.org/10.1093/nar/gkad787",
+    "https://doi.org/10.1261/rna.079776.123"
+  ],
+  "rendered_pages": [
+    {
+      "page": 1,
+      "qa_path": "report/outputs/layout_v2/page-1.png",
+      "sha256": "3beda7aef69018806c7c9a3807c141d8df3322351239c4a52e64c8ca2a564428"
+    },
+    {
+      "page": 2,
+      "qa_path": "report/outputs/layout_v2/page-2.png",
+      "sha256": "a0d4d17eb8372ce5ed8dd6e4054766bf4e200582ef3a3b6107539263c597091f"
+    },
+    {
+      "page": 3,
+      "qa_path": "report/outputs/layout_v2/page-3.png",
+      "sha256": "50efa1b82debdde98b68c0e35f666d27fa296a1f54c3be97d71fb2eb3805ecca"
+    },
+    {
+      "page": 4,
+      "qa_path": "report/outputs/layout_v2/page-4.png",
+      "sha256": "665556f28442443efd5525fe4d881445f7ef04dd1ed23f2e1cd258e0604a5804"
+    },
+    {
+      "page": 5,
+      "qa_path": "report/outputs/layout_v2/page-5.png",
+      "sha256": "fac9813e9b42ae721f4d2d0129f6ec41cde922358d0d0e77582c0a57f5d9e12e"
+    },
+    {
+      "page": 6,
+      "qa_path": "report/outputs/layout_v2/page-6.png",
+      "sha256": "f7f419f1e33bdd196264b091420d215db6a2b80c3c2a80e3bce520c27eb5daa6"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "report/layout_v2/figures/figure1_benchmarks.png",
+      "sha256": "668197813838cf7ee5172c587a7328bffb9a6da3dfa4603fec552c1718f45371",
+      "size_bytes": 190120
+    },
+    {
+      "path": "report/layout_v2/figures/figure2_matched_scores.png",
+      "sha256": "5f32ff44e8287d0e35707e3087a33019d355ad9098eb87accf2088534b4cd5a2",
+      "size_bytes": 152220
+    },
+    {
+      "path": "report/layout_v2/figures/figure3_cases.png",
+      "sha256": "93a8a2af42c05f8c7e0b9e7a58877b19dfd59837ee250b475933f7a16cad79a8",
+      "size_bytes": 231846
+    }
+  ]
+}

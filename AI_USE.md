@@ -625,3 +625,34 @@ personal reflection or invented contribution statement. Other members' AI use
 still needs their own confirmation. Two documented project-level AI corrections
 remain in the draft. The user confirmed on 25 October that new test input has not
 been received and will update later. No RONIN restart/training/prediction occurred.
+
+## Formatted report review PDF — 25 October
+
+After the user resumed, the assistant completed the independent hosting audit
+and pushed the reviewed deployment evidence/first Markdown draft. A separate
+layout agent then created a PDF with five main-body pages and one references
+page. The main agent independently inspected every rendered page. Body text
+uses embedded Arial 11, captions 9.2 pt, tables 9.3 pt and references 10 pt. The PDF is a
+review draft, not a team approval or course submission; actual teammate AI use
+and final wording remain for human confirmation.
+
+Original plots became too small at report width. New report-only figures were
+recomposed from the exact original saved OOF/development/reference scores and
+summary/case tables. All four pooled curve areas had to match the saved benchmark
+summary; final fitted-data0 predictions were never used as validation. Original
+figures/data/model/folds stayed unchanged. Figure 2 uses the fixed 33,452-site,
+20-read all-line population; Figure 3 retains every original qualifying case
+point and distinguishes one-group diagnostics/unscored observations. No new
+training, inference, case selection, score filter or significance claim occurred.
+
+The builder checked 28 paragraphs and 49 table cells against extracted PDF text,
+source hashes, public hyperlinks, font embedding and page geometry. Six pages
+were rendered using bundled Poppler and reviewed by both agents. A bibliography
+paragraph split, a cutoff-legend placement and a table-text extraction check
+were repaired. Failed layout v1 is preserved locally; reviewed layout v2 is
+separate. QA images/font caches stay ignored. Layout-only plotting packages
+were reused from an existing compatible environment alongside bundled PDF
+libraries; no install or model dependency-pin change. Versions are recorded
+separately from model software. Full layout CPU/RSS totals were not measured;
+no inference-cost comparison is inferred. The original source Markdown and
+its creation-time receipt remain unchanged beside the new layout evidence.

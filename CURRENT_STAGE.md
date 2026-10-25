@@ -1,10 +1,13 @@
 # Current project stage — 25 October 2026
 
-**Current stage: Task 2 analysis and full public actual-score explorer complete; first report draft ready for team review and five-page layout.**
+**Current stage: Task 2 analysis and full public explorer complete; formatted report review copy ready.**
 
 [Open the public explorer](https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site)
-and [the first report draft](report/REPORT_DRAFT_2026_10_25.md). The draft is not
-yet typeset, page-verified or submitted. [Hosted verification](data_visualisation/hosting_results_2026_10_25/README.md)
+and [the formatted report draft](report/layout_v2/DSA4262_LIFO_report_draft.pdf).
+The copy has five main-body pages plus one references page, with Arial 11 body
+text and readable scientific figures. All six pages were rendered/visually
+reviewed. Team review, final AI-use confirmation and submission remain pending.
+[Hosted verification](data_visualisation/hosting_results_2026_10_25/README.md)
 records public access, all 36 case controls, four literal-site reload links,
 an actual evidence download and bounded anonymous HTTP fingerprint checks.
 Focused biological interpretation now includes [four fixed gene/site cases](sgnex_analysis/biological_case_results_2026_10_23/README.md):
@@ -54,7 +57,7 @@ benchmarks have completed.
 | Task 2: real SG-NEx predictions | **Complete: 23/23 verified** | Preserve same-model exports, full source QC, coverage checks and completion receipts; do not rerun |
 | Task 2: biological/data analysis | **Complete descriptive comparison**: no context exclusions; all 21 pairs at 20/50/100 reads, separate all-line panels and 0.5/0.7/0.9 summaries | Team review and concise report narrative; retain all outcomes and limitations |
 | Interactive visualisation | **Full public actual-score and four-case explorer deployed**, all 23 runs/451,352 sites; hosted controls/routes/download and anonymous file checks passed | Team usability review; cross-browser/physical-device checks remain broader optional assurance, not a claimed completed test |
-| Final scientific report | First approximately 1,500-word scientific draft and source map ready; final five-page layout unfinished | Team verification, actual AI-use confirmation, readable Arial 11 figures/tables and rendered PDF; appendix is ungraded |
+| Final scientific report | **Formatted review PDF ready:** five body pages plus references, embedded Arial 11 body, three readable figures and page/font/source checks passed | Team verification and actual AI-use confirmation; later edits need renewed page/layout checks before final submission |
 
 **Deadlines:** repositories and new unlabelled-test predictions remain due
 **28 October 2026** at the original 23:59 Singapore deadline. Report and
@@ -84,7 +87,7 @@ The 23-run predictions and [context audit](sgnex_analysis/context_qc_results/REA
 are complete. [Actual scientific findings and four figure pairs](sgnex_analysis/task2_results_2026_10_23/README.md)
 and the full local actual-score explorer are available. Both context policies
 retain the same population, with no exclusions. Public hosting is complete;
-final report review/layout and actual new-test submission remain pending.
+final report team review/approval and actual new-test submission remain pending.
 The AWS example calculation is finished; the user confirmed
 the cloud machine stopped24October. This is user-reported shutdown, not a new
 dashboard inspection. No training or SG-NEx batch is running.

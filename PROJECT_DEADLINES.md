@@ -9,7 +9,8 @@ check of Canvas or later announcements.
 **25 October status:** the user confirmed that the new unlabelled test input
 has not been received and will update later. Do not treat older supplied-data
 CSVs as that submission. The full explorer is now publicly hosted; the first
-report draft still needs team review and verified five-page Arial 11 layout.
+report now has a checked five-body-page Arial 11 review PDF plus separate
+references. Team verification and final approval remain pending.
 
 | Deliverable | Current deadline | Meaning for our work |
 |---|---|---|

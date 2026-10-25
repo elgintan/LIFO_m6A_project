@@ -1,0 +1,121 @@
+{
+  "status": "pass_for_review_draft",
+  "checked_utc": "2026-10-25T04:24:03.743368+00:00",
+  "reviewer": "primary assistant independent of layout implementation",
+  "checks": {
+    "pdf_pin_matches": true,
+    "source_draft_pin_matches": true,
+    "builder_pin_matches": true,
+    "source_data.info.labelled": true,
+    "source_model_evaluation/evaluate.py": true,
+    "source_eda/received/shared_folds/data0_folds.csv": true,
+    "source_model_evaluation/simple_baseline/outputs/replay_v1/data0_oof.csv": true,
+    "source_model_samuel/outputs/data0_oof.csv": true,
+    "source_model_elgin/outputs/read_cap_v1/cv/none/data0_oof.csv": true,
+    "source_model_evaluation/outputs/m6anet_v1/scored/data0_reference_scores.csv": true,
+    "source_model_evaluation/benchmark_results_2026_10_22/summary.json": true,
+    "source_sgnex_analysis/task2_results_2026_10_23/all_line_score_cdf_grid.csv": true,
+    "source_sgnex_analysis/task2_results_2026_10_23/all_line_score_summary.csv": true,
+    "source_sgnex_analysis/biological_case_results_2026_10_23/selected_cases.csv": true,
+    "source_sgnex_analysis/biological_case_results_2026_10_23/case_run_evidence.csv": true,
+    "source_sgnex_analysis/biological_case_results_2026_10_23/case_group_scores.csv": true,
+    "source_sgnex_analysis/biological_case_results_2026_10_23/case_line_scores.csv": true,
+    "source_sgnex_analysis/biological_case_results_2026_10_23/training_key_diagnostics.csv": true,
+    "source_model_evaluation/benchmark_results_2026_10_22/reference_curves.png": true,
+    "source_sgnex_analysis/task2_results_2026_10_23/matched_site_score_patterns.png": true,
+    "source_sgnex_analysis/biological_case_results_2026_10_23/case_group_score_patterns.png": true,
+    "figure_figure1_benchmarks.png": true,
+    "figure_figure2_matched_scores.png": true,
+    "figure_figure3_cases.png": true,
+    "rendered_page_1": true,
+    "rendered_page_2": true,
+    "rendered_page_3": true,
+    "rendered_page_4": true,
+    "rendered_page_5": true,
+    "rendered_page_6": true,
+    "six_total_pages": true,
+    "references_only_page_six": true,
+    "only_six_public_https_links": true,
+    "all_observed_text_arial": true,
+    "eleven_point_body_present": true,
+    "all_text_within_page_bounds": true,
+    "all_source_paragraphs_and_table_cells_preserved": true
+  },
+  "visual_review": {
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "rendered_images_inspected_at_original_resolution": true,
+    "clipping_or_overlap_observed": false,
+    "plot_labels_legible": true,
+    "captions_and_tables_legible": true
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_characters": 3383,
+      "all_text_within_page": true
+    },
+    {
+      "page": 2,
+      "text_characters": 2301,
+      "all_text_within_page": true
+    },
+    {
+      "page": 3,
+      "text_characters": 2528,
+      "all_text_within_page": true
+    },
+    {
+      "page": 4,
+      "text_characters": 1756,
+      "all_text_within_page": true
+    },
+    {
+      "page": 5,
+      "text_characters": 2377,
+      "all_text_within_page": true
+    },
+    {
+      "page": 6,
+      "text_characters": 777,
+      "all_text_within_page": true
+    }
+  ],
+  "fonts_observed": [
+    "AAAAAA+Arial-BoldMT",
+    "AAAAAA+Arial-ItalicMT",
+    "AAAAAA+ArialMT"
+  ],
+  "text_sizes_observed_pt": [
+    8.5,
+    9.2,
+    9.3,
+    10.0,
+    11.0,
+    12.3,
+    16.0
+  ],
+  "public_hyperlinks": [
+    "https://github.com/elgintan/LIFO_m6A_project",
+    "https://lifo-sgnex-m6a-explorer.wittylemon1025.chatgpt.site",
+    "https://doi.org/10.1038/s41592-022-01666-1",
+    "https://doi.org/10.1038/s41592-025-02623-4",
+    "https://doi.org/10.1093/nar/gkad787",
+    "https://doi.org/10.1261/rna.079776.123"
+  ],
+  "layout_receipt_pin": {
+    "sha256": "cbb765b7165987ddbeb2a8556df244f428be03422797ad196a5a50b38d101b9f",
+    "size_bytes": 18829
+  },
+  "limits": [
+    "Main body fivepages, separate referencepage; future edits require another render/page check.",
+    "Team approval, teammate AI-use confirmation and actual course submission remain pending.",
+    "No new inference/training/model selection/score filtering; layout CPU/RSS totals were not measured."
+  ]
+}
